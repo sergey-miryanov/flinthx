@@ -82,11 +82,11 @@ class ImageClass extends ImageInitializerBase
 	 * The class to use when creating
 	 * the particles' DisplayObjects.
 	 */
-	public function imageClassGetter():Dynamic
+	private function imageClassGetter():Dynamic
 	{
 		return _imageClass;
 	}
-	public function imageClassSetter( value:Dynamic ):Dynamic
+	private function imageClassSetter( value:Dynamic ):Dynamic
 	{
 		_imageClass = value;
 		if( _usePool )
@@ -100,11 +100,11 @@ class ImageClass extends ImageInitializerBase
 	 * The parameters to pass to the constructor
 	 * for the image class.
 	 */
-	public function parametersGetter():Array<Dynamic>
+	private function parametersGetter():Array<Dynamic>
 	{
 		return _parameters;
 	}
-	public function parametersSetter( value:Array<Dynamic> ):Array<Dynamic>
+	private function parametersSetter( value:Array<Dynamic> ):Array<Dynamic>
 	{
 		_parameters = value;
 		if( _usePool )

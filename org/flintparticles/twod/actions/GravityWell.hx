@@ -96,11 +96,11 @@ class GravityWell extends ActionBase
 	 * The strength of the gravity force - larger numbers produce a 
 	 * stronger force.
 	 */
-	public function powerGetter():Float
+	private function powerGetter():Float
 	{
 		return _power / _gravityConst;
 	}
-	public function powerSetter( value:Float ):Float
+	private function powerSetter( value:Float ):Float
 	{
 		_power = value * _gravityConst;
 		return _power;
@@ -110,11 +110,11 @@ class GravityWell extends ActionBase
 	 * The x coordinate of the point towards which the force draws 
 	 * the particles.
 	 */
-	public function xGetter():Float
+	private function xGetter():Float
 	{
 		return _x;
 	}
-	public function xSetter( value:Float ):Float
+	private function xSetter( value:Float ):Float
 	{
 		_x = value;
 		return _x;
@@ -124,11 +124,11 @@ class GravityWell extends ActionBase
 	 * The y coordinate of the point towards which the force draws 
 	 * the particles.
 	 */
-	public function yGetter():Float
+	private function yGetter():Float
 	{
 		return _y;
 	}
-	public function ySetter( value:Float ):Float
+	private function ySetter( value:Float ):Float
 	{
 		_y = value;
 		return _y;
@@ -142,11 +142,11 @@ class GravityWell extends ActionBase
 	 * a small epsilon ( ~1 ), but for stable visual effects a larger
 	 * epsilon (~100) is often better.
 	 */
-	public function epsilonGetter():Float
+	private function epsilonGetter():Float
 	{
 		return Math.sqrt( _epsilonSq );
 	}
-	public function epsilonSetter( value:Float ):Float
+	private function epsilonSetter( value:Float ):Float
 	{
 		_epsilonSq = value * value;
 		return _epsilonSq;

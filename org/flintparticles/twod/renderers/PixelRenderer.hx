@@ -29,6 +29,7 @@
 */
 
 package org.flintparticles.twoD.renderers;
+
 import nme.geom.Rectangle;
 import org.flintparticles.twoD.particles.Particle2D;
 

@@ -86,11 +86,11 @@ class AlphaInit extends InitializerBase
 	 * The minimum alpha value for particles initialised by 
 	 * this initializer. Should be between 0 and 1.
 	 */
-	public function minAlphaGetter():Float
+	private function minAlphaGetter():Float
 	{
 		return _min;
 	}
-	public function minAlphaSetter( value:Float ):Float
+	private function minAlphaSetter( value:Float ):Float
 	{
 		_min = value;
 		return _min;
@@ -100,11 +100,11 @@ class AlphaInit extends InitializerBase
 	 * The maximum alpha value for particles initialised by 
 	 * this initializer. Should be between 0 and 1.
 	 */
-	public function maxAlphaGetter():Float
+	private function maxAlphaGetter():Float
 	{
 		return _max;
 	}
-	public function maxAlphaSetter( value:Float ):Float
+	private function maxAlphaSetter( value:Float ):Float
 	{
 		_max = value;
 		return _max;
@@ -115,11 +115,11 @@ class AlphaInit extends InitializerBase
 	 * When writing this sets both maxAlpha and minAlpha to the 
 	 * same alpha value.
 	 */
-	public function alphaGetter():Float
+	private function alphaGetter():Float
 	{
 		return _min == _max ? _min : ( _max + _min ) / 2;
 	}
-	public function alphaSetter( value:Float ):Float
+	private function alphaSetter( value:Float ):Float
 	{
 		_max = _min = value;
 		return value;

@@ -78,11 +78,11 @@ class RotateVelocity extends InitializerBase
 	 * The minimum angular velocity value for particles initialised by 
 	 * this initializer. Should be between 0 and 1.
 	 */
-	public function minAngVelocityGetter():Float
+	private function minAngVelocityGetter():Float
 	{
 		return _min;
 	}
-	public function minAngVelocitySetter( value:Float ):Float
+	private function minAngVelocitySetter( value:Float ):Float
 	{
 		_min = value;
 		return _min;
@@ -92,11 +92,11 @@ class RotateVelocity extends InitializerBase
 	 * The maximum angular velocity value for particles initialised by 
 	 * this initializer. Should be between 0 and 1.
 	 */
-	public function maxAngVelocityGetter():Float
+	private function maxAngVelocityGetter():Float
 	{
 		return _max;
 	}
-	public function maxAngVelocitySetter( value:Float ):Float
+	private function maxAngVelocitySetter( value:Float ):Float
 	{
 		_max = value;
 		return _max;
@@ -107,11 +107,11 @@ class RotateVelocity extends InitializerBase
 	 * When writing this sets both maxAngVelocity and minAngVelocity to the 
 	 * same angular velocity value.
 	 */
-	public function angVelocityGetter():Float
+	private function angVelocityGetter():Float
 	{
 		return _min == _max ? _min : ( _max + _min ) / 2;
 	}
-	public function angVelocitySetter( value:Float ):Float
+	private function angVelocitySetter( value:Float ):Float
 	{
 		_max = _min = value;
 		return value;

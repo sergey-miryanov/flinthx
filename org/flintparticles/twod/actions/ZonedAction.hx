@@ -77,11 +77,11 @@ class ZonedAction extends ActionBase
 	/**
 	 * The action to apply when inside the zone.
 	 */
-	public function actionGetter():Action
+	private function actionGetter():Action
 	{
 		return _action;
 	}
-	public function actionSetter( value:Action ):Action
+	private function actionSetter( value:Action ):Action
 	{
 		_action = value;
 		return _action;
@@ -90,11 +90,11 @@ class ZonedAction extends ActionBase
 	/**
 	 * The zone in which to apply the acceleration.
 	 */
-	public function zoneGetter():Zone2D
+	private function zoneGetter():Zone2D
 	{
 		return _zone;
 	}
-	public function zoneSetter( value:Zone2D ):Zone2D
+	private function zoneSetter( value:Zone2D ):Zone2D
 	{
 		_zone = value;
 		return _zone;
@@ -104,11 +104,11 @@ class ZonedAction extends ActionBase
 	 * If false (the default), the action is applied only to particles inside 
 	 * the zone. If true, the action is applied only to particles outside the zone.
 	 */
-	public function invertZoneGetter():Bool
+	private function invertZoneGetter():Bool
 	{
 		return _invert;
 	}
-	public function invertZoneSetter( value:Bool ):Bool
+	private function invertZoneSetter( value:Bool ):Bool
 	{
 		_invert = value;
 		return _invert;
@@ -119,11 +119,11 @@ class ZonedAction extends ActionBase
 	 * 
 	 * @see org.flintparticles.common.actions.Action#getDefaultPriority()
 	 */
-	override public function priorityGetter():Int
+	override private function priorityGetter():Int
 	{
 		return _action.priority;
 	}
-	override public function prioritySetter( value:Int ):Int
+	override private function prioritySetter( value:Int ):Int
 	{
 		_action.priority = value;
 		return value;

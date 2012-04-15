@@ -73,11 +73,11 @@ class ActionBase implements Action
 	 * 
 	 * @see org.flintparticles.common.actions.Action#getDefaultPriority()
 	 */
-	public function priorityGetter():Int
+	private function priorityGetter():Int
 	{
 		return _priority;
 	}
-	public function prioritySetter( value:Int ):Int
+	private function prioritySetter( value:Int ):Int
 	{
 		_priority = value;
 		return value;

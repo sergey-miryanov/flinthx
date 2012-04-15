@@ -63,11 +63,11 @@ class DictionaryInitializer extends InitializerBase
 	 * The object containing the properties for copying to the particle's dictionary.
 	 * May be an object or a dictionary.
 	 */
-	public function initValuesGetter():Dynamic
+	private function initValuesGetter():Dynamic
 	{
 		return _initValues;
 	}
-	public function initValuesSetter( value:Dynamic ):Dynamic
+	private function initValuesSetter( value:Dynamic ):Dynamic
 	{
 		_initValues = value;
 		return _initValues;

@@ -72,11 +72,11 @@ class SharedImage extends InitializerBase
 	/**
 	 * The DisplayObject to use for each particle created by the emitter.
 	 */
-	public function imageGetter():DisplayObject
+	private function imageGetter():DisplayObject
 	{
 		return _image;
 	}
-	public function imageSetter( value:DisplayObject ):DisplayObject
+	private function imageSetter( value:DisplayObject ):DisplayObject
 	{
 		_image = value;
 		return _image;

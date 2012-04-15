@@ -30,6 +30,7 @@
 
 package org.flintparticles.twoD.initializers;
 
+import org.flintparticles.common.particles.Particle;
 import org.flintparticles.common.emitters.Emitter;
 import org.flintparticles.common.initializers.InitializerBase;
 import org.flintparticles.common.utils.WeightedArray;
@@ -69,6 +70,7 @@ class ScaleAllsInit extends InitializerBase
 	 */
 	public function new( scales:Array<Dynamic> = null, weights:Array<Dynamic> = null )
 	{
+		super();
 		priority = -10;
 		_scales = new WeightedArray();
 		if( scales == null )
@@ -80,7 +82,7 @@ class ScaleAllsInit extends InitializerBase
 	
 	override public function addedToEmitter( emitter:Emitter ):Void
 	{
-		if( _mxmlScales )
+		if( _mxmlScales != null )
 		{
 			init( _mxmlScales, _mxmlWeights );
 			_mxmlScales = null;
@@ -119,11 +121,11 @@ class ScaleAllsInit extends InitializerBase
 		_scales.remove( scale );
 	}
 	
-	public function set scales( value:Array<Dynamic> ):Void
+	public function scalesSetter( value:Array<Dynamic> ):Void
 	{
-		if( value.length == 1 && value[0] is String )
+		if( value.length == 1 && Std.is(value[0], String) )
 		{
-			_mxmlScales = String( value[0] ).split( "," );
+			_mxmlScales = cast( value[0],String ).split( "," );
 		}
 		else
 		{
@@ -132,11 +134,11 @@ class ScaleAllsInit extends InitializerBase
 		checkStartValues();
 	}
 	
-	public function set weights( value:Array<Dynamic> ):Void
+	public function weightsSetter( value:Array<Dynamic> ):Void
 	{
-		if( value.length == 1 && value[0] is String )
+		if( value.length == 1 && Std.is(value[0], String) )
 		{
-			_mxmlWeights = String( value[0] ).split( "," );
+			_mxmlWeights = cast( value[0],String ).split( "," );
 		}
 		else
 		{
@@ -147,7 +149,7 @@ class ScaleAllsInit extends InitializerBase
 	
 	private function checkStartValues():Void
 	{
-		if( _mxmlScales && _mxmlWeights )
+		if( _mxmlScales != null && _mxmlWeights != null )
 		{
 			init( _mxmlScales, _mxmlWeights );
 			_mxmlScales = null;

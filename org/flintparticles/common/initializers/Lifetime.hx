@@ -77,11 +77,11 @@ class Lifetime extends InitializerBase
 	 * The minimum lifetime for particles initialised by 
 	 * this initializer. Should be between 0 and 1.
 	 */
-	public function minLifetimeGetter():Float
+	private function minLifetimeGetter():Float
 	{
 		return _min;
 	}
-	public function minLifetimeSetter( value:Float ):Float
+	private function minLifetimeSetter( value:Float ):Float
 	{
 		_min = value;
 		return _min;
@@ -91,11 +91,11 @@ class Lifetime extends InitializerBase
 	 * The maximum lifetime for particles initialised by 
 	 * this initializer. Should be between 0 and 1.
 	 */
-	public function maxLifetimeGetter():Float
+	private function maxLifetimeGetter():Float
 	{
 		return _max;
 	}
-	public function maxLifetimeSetter( value:Float ):Float
+	private function maxLifetimeSetter( value:Float ):Float
 	{
 		_max = value;
 		return _max;
@@ -106,11 +106,11 @@ class Lifetime extends InitializerBase
 	 * When writing this sets both maxLifetime and minLifetime to the 
 	 * same lifetime value.
 	 */
-	public function lifetimeGetter():Float
+	private function lifetimeGetter():Float
 	{
 		return _min == _max ? _min : ( _max + _min ) * 0.5;
 	}
-	public function lifetimeSetter( value:Float ):Float
+	private function lifetimeSetter( value:Float ):Float
 	{
 		_max = _min = value;
 		return value;

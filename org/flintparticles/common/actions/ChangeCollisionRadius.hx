@@ -72,6 +72,7 @@ class ChangeCollisionRadius extends ActionBase
 	 */
 	public function new( startRadius:Float = 1, endRadius:Float = 1 )
 	{
+		super();
 		_diffRadius = startRadius - endRadius;
 		_endRadius = endRadius;
 	}
@@ -80,11 +81,11 @@ class ChangeCollisionRadius extends ActionBase
 	 * The collision radius for the particle when its energy
 	 * is 1 - usually at the start of its lifetime.
 	 */
-	public function startRadiusGetter():Float
+	private function startRadiusGetter():Float
 	{
 		return _endRadius + _diffRadius;
 	}
-	public function startRadiusSetter( value:Float ):Float
+	private function startRadiusSetter( value:Float ):Float
 	{
 		_diffRadius = value - _endRadius;
 		return _diffRadius;
@@ -94,11 +95,11 @@ class ChangeCollisionRadius extends ActionBase
 	 * The collision radius for the particle when its energy
 	 * is 0 - usually at the end of its lifetime.
 	 */
-	public function endRadiusGetter():Float
+	private function endRadiusGetter():Float
 	{
 		return _endRadius;
 	}
-	public function endRadiusSetter( value:Float ):Float
+	private function endRadiusSetter( value:Float ):Float
 	{
 		_diffRadius = _endRadius + _diffRadius - value;
 		_endRadius = value;

@@ -71,11 +71,11 @@ class Accelerate extends ActionBase
 	 * The x coordinate of the acceleration, in
 	 * pixels per second per second.
 	 */
-	public function xGetter():Float
+	private function xGetter():Float
 	{
 		return _x;
 	}
-	public function xSetter( value:Float ):Float
+	private function xSetter( value:Float ):Float
 	{
 		_x = value;
 		return _x;
@@ -85,11 +85,11 @@ class Accelerate extends ActionBase
 	 * The y coordinate of the acceleration, in
 	 * pixels per second per second.
 	 */
-	public function yGetter():Float
+	private function yGetter():Float
 	{
 		return _y;
 	}
-	public function ySetter( value:Float ):Float
+	private function ySetter( value:Float ):Float
 	{
 		_y = value;
 		return _y;

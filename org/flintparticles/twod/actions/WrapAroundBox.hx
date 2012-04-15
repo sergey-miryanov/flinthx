@@ -81,11 +81,11 @@ class WrapAroundBox extends ActionBase
 	/**
 	 * The left coordinate of the box.
 	 */
-	public function leftGetter():Float
+	private function leftGetter():Float
 	{
 		return _left;
 	}
-	public function leftSetter( value:Float ):Float
+	private function leftSetter( value:Float ):Float
 	{
 		_left = value;
 		_width = _right - _left;
@@ -95,11 +95,11 @@ class WrapAroundBox extends ActionBase
 	/**
 	 * The top coordinate of the box.
 	 */
-	public function topGetter():Float
+	private function topGetter():Float
 	{
 		return _top;
 	}
-	public function topSetter( value:Float ):Float
+	private function topSetter( value:Float ):Float
 	{
 		_top = value;
 		_height = _bottom - _top;
@@ -109,11 +109,11 @@ class WrapAroundBox extends ActionBase
 	/**
 	 * The left coordinate of the box.
 	 */
-	public function rightGetter():Float
+	private function rightGetter():Float
 	{
 		return _right;
 	}
-	public function rightSetter( value:Float ):Float
+	private function rightSetter( value:Float ):Float
 	{
 		_right = value;
 		_width = _right - _left;
@@ -123,11 +123,11 @@ class WrapAroundBox extends ActionBase
 	/**
 	 * The left coordinate of the box.
 	 */
-	public function bottomGetter():Float
+	private function bottomGetter():Float
 	{
 		return _bottom;
 	}
-	public function bottomSetter( value:Float ):Float
+	private function bottomSetter( value:Float ):Float
 	{
 		_bottom = value;
 		_height = _bottom - _top;

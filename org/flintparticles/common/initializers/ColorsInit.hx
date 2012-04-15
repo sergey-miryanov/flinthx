@@ -62,6 +62,7 @@ class ColorsInit extends InitializerBase
 	 */
 	public function new( colors:Array<Dynamic> = null, weights:Array<Dynamic> = null )
 	{
+		super();
 		_colors = new WeightedArray();
 		if( colors == null )
 		{

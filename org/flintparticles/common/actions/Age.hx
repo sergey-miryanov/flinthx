@@ -93,11 +93,11 @@ class Age extends ActionBase
 	 * The easing function used to modify the energy over the 
 	 * lifetime of the particle.
 	 */
-	public function easingGetter():Dynamic
+	private function easingGetter():Dynamic
 	{
 		return _easing;
 	}
-	public function easingSetter( value:Dynamic ):Dynamic
+	private function easingSetter( value:Dynamic ):Dynamic
 	{
 		_easing = value;
 		return _easing;

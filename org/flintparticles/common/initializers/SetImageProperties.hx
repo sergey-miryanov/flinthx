@@ -74,11 +74,11 @@ class SetImageProperties extends InitializerBase
 	 * object. The name of the properties on this object must match the names of the 
 	 * properties on the particle's image object.
 	 */
-	public function propertiesGetter():Dynamic
+	private function propertiesGetter():Dynamic
 	{
 		return _properties;
 	}
-	public function propertiesSetter( value:Dynamic ):Dynamic
+	private function propertiesSetter( value:Dynamic ):Dynamic
 	{
 		_properties = value;
 		return _properties;

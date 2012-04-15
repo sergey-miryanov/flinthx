@@ -88,12 +88,11 @@ class DiscZone implements Zone2D
 	/**
 	 * The centre of the disc.
 	 */
-	public function centerGetter() : Point
+	private function centerGetter() : Point
 	{
 		return _center;
 	}
-
-	public function centerSetter( value : Point ) : Point
+	private function centerSetter( value : Point ) : Point
 	{
 		_center = value;
 		return _center;
@@ -102,12 +101,11 @@ class DiscZone implements Zone2D
 	/**
 	 * The x coordinate of the point that is the center of the disc.
 	 */
-	public function centerXGetter() : Float
+	private function centerXGetter() : Float
 	{
 		return _center.x;
 	}
-
-	public function centerXSetter( value : Float ) : Float
+	private function centerXSetter( value : Float ) : Float
 	{
 		_center.x = value;
 		return value;
@@ -116,12 +114,11 @@ class DiscZone implements Zone2D
 	/**
 	 * The y coordinate of the point that is the center of the disc.
 	 */
-	public function centerYGetter() : Float
+	private function centerYGetter() : Float
 	{
 		return _center.y;
 	}
-
-	public function centerYSetter( value : Float ) : Float
+	private function centerYSetter( value : Float ) : Float
 	{
 		_center.y = value;
 		return value;
@@ -130,12 +127,11 @@ class DiscZone implements Zone2D
 	/**
 	 * The radius of the inner edge of the disc.
 	 */
-	public function innerRadiusGetter() : Float
+	private function innerRadiusGetter() : Float
 	{
 		return _innerRadius;
 	}
-
-	public function innerRadiusSetter( value : Float ) : Float
+	private function innerRadiusSetter( value : Float ) : Float
 	{
 		_innerRadius = value;
 		_innerSq = _innerRadius * _innerRadius;
@@ -145,12 +141,11 @@ class DiscZone implements Zone2D
 	/**
 	 * The radius of the outer edge of the disc.
 	 */
-	public function outerRadiusGetter() : Float
+	private function outerRadiusGetter() : Float
 	{
 		return _outerRadius;
 	}
-
-	public function outerRadiusSetter( value : Float ) : Float
+	private function outerRadiusSetter( value : Float ) : Float
 	{
 		_outerRadius = value;
 		_outerSq = _outerRadius * _outerRadius;

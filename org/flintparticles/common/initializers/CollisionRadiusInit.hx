@@ -66,11 +66,11 @@ class CollisionRadiusInit extends InitializerBase
 	 * The collision radius for particles
 	 * initialized by the instance.
 	 */
-	public function radiusGetter():Float
+	private function radiusGetter():Float
 	{
 		return _radius;
 	}
-	public function radiusSetter( value:Float ):Float
+	private function radiusSetter( value:Float ):Float
 	{
 		_radius = value;
 		return _radius;

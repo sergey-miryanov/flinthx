@@ -65,6 +65,7 @@ class ChooseInitializer extends InitializerBase
 	 */
 	public function new( initializers:Array<Dynamic> = null, weights:Array<Dynamic> = null )
 	{
+		super();
 		_initializers = new WeightedArray();
 		if( initializers == null )
 		{
@@ -75,7 +76,7 @@ class ChooseInitializer extends InitializerBase
 	
 	override public function addedToEmitter( emitter:Emitter ):Void
 	{
-		if( _mxmlInitializers )
+		if( _mxmlInitializers != null )
 		{
 			init( _mxmlInitializers, _mxmlWeights );
 			_mxmlInitializers = null;
@@ -124,7 +125,7 @@ class ChooseInitializer extends InitializerBase
 	{
 		if( value.length == 1 && Std.is(value[0], String) )
 		{
-			_mxmlWeights = String( value[0] ).split( "," );
+			_mxmlWeights = cast( value[0],String ).split( "," );
 		}
 		else
 		{
@@ -135,7 +136,7 @@ class ChooseInitializer extends InitializerBase
 	
 	private function checkStartValues():Void
 	{
-		if( _mxmlInitializers && _mxmlWeights )
+		if( _mxmlInitializers != null && _mxmlWeights != null )
 		{
 			init( _mxmlInitializers, _mxmlWeights );
 			_mxmlInitializers = null;

@@ -52,8 +52,8 @@ interface Behaviour
 	 * should be performed last, after other actions have made changes
 	 * to the particle's velocity.</p>
 	 */
-	function priorityGetter():Int;
-	function prioritySetter( value:Int ):Int;
+	private function priorityGetter():Int;
+	private function prioritySetter( value:Int ):Int;
 	
 	/**
 	 * The addedToEmitter method is called by the emitter when the Behaviour is 

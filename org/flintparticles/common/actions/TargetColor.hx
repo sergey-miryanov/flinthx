@@ -44,7 +44,7 @@ import org.flintparticles.common.actions.ActionBase;
 class TargetColor extends ActionBase
 {
 	public var rate(rateGetter,rateSetter):Float;
-	public var targetColor(targetColorGetter, targetColorSetter):Float;
+	public var targetColor(targetColorGetter, targetColorSetter):Int;
 	
 	private var _red:Int;
 	private var _green:Int;
@@ -77,16 +77,16 @@ class TargetColor extends ActionBase
 	/**
 	 * The target color. This is a 32 bit color of the form 0xAARRGGBB.
 	 */
-	public function targetColorGetter():Float
+	private function targetColorGetter():Int
 	{
 		return ( _alpha << 24 ) | ( _red << 16 ) | ( _green << 8 ) | _blue;
 	}
-	public function targetColorSetter( value:Float ):Void
+	private function targetColorSetter( value:Int ):Int
 	{
-		_red = ( value >>> 16 ) & 255;
-		_green = ( value >>> 8 ) & 255;
-		_blue = ( value ) & 255;
-		_alpha = ( value >>> 24 ) & 255;
+		_red 	= Std.int(( value >>> 16 ) & 255);
+		_green 	= Std.int(( value >>> 8 ) & 255);
+		_blue 	= Std.int(( value ) & 255);
+		_alpha 	= Std.int(( value >>> 24 ) & 255);
 		return null;
 	}
 	
@@ -94,11 +94,11 @@ class TargetColor extends ActionBase
 	 * Adjusts how quickly the particle reaches the target color.
 	 * Larger numbers cause it to approach the target color more quickly.
 	 */
-	public function rateGetter():Float
+	private function rateGetter():Float
 	{
 		return _rate;
 	}
-	public function rateSetter( value:Float ):Float
+	private function rateSetter( value:Float ):Float
 	{
 		_rate = value;
 		return _rate;
@@ -147,7 +147,7 @@ class ColorFloat
 	public var blue:Float;
 	public var alpha:Float;
 
-	public function ColorFloat( color:Int )
+	public function new( color:Int )
 	{
 		red = ( color >>> 16 ) & 255;
 		green = ( color >>> 8 ) & 255;

@@ -72,11 +72,11 @@ class TurnTowardsPoint extends ActionBase
 	/**
 	 * The strength of the turn action. Higher values produce a sharper turn.
 	 */
-	public function powerGetter():Float
+	private function powerGetter():Float
 	{
 		return _power;
 	}
-	public function powerSetter( value:Float ):Float
+	private function powerSetter( value:Float ):Float
 	{
 		_power = value;
 		return _power;
@@ -85,11 +85,11 @@ class TurnTowardsPoint extends ActionBase
 	/**
 	 * The x coordinate of the point that the particle turns towards.
 	 */
-	public function xGetter():Float
+	private function xGetter():Float
 	{
 		return _x;
 	}
-	public function xSetter( value:Float ):Float
+	private function xSetter( value:Float ):Float
 	{
 		_x = value;
 		return _x;
@@ -98,11 +98,11 @@ class TurnTowardsPoint extends ActionBase
 	/**
 	 * The y coordinate of the point that the particle turns towards.
 	 */
-	public function yGetter():Float
+	private function yGetter():Float
 	{
 		return _y;
 	}
-	public function ySetter( value:Float ):Float
+	private function ySetter( value:Float ):Float
 	{
 		_y = value;
 		return _y;

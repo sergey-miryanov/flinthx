@@ -73,11 +73,11 @@ class MouseEventHandlers extends InitializerBase
 	/**
 	 * The mouseOver event handler.
 	 */
-	public function overHandlerGetter():Dynamic
+	private function overHandlerGetter():Dynamic
 	{
 		return _overHandler;
 	}
-	public function overHandlerSetter( value:Dynamic ):Dynamic
+	private function overHandlerSetter( value:Dynamic ):Dynamic
 	{
 		_overHandler = value;
 		return _overHandler;
@@ -86,11 +86,11 @@ class MouseEventHandlers extends InitializerBase
 	/**
 	 * The mouseOut event handler.
 	 */
-	public function outHandlerGetter():Dynamic
+	private function outHandlerGetter():Dynamic
 	{
 		return _outHandler;
 	}
-	public function outHandlerSetter( value:Dynamic ):Dynamic
+	private function outHandlerSetter( value:Dynamic ):Dynamic
 	{
 		_outHandler = value;
 		return _outHandler;
@@ -99,11 +99,11 @@ class MouseEventHandlers extends InitializerBase
 	/**
 	 * The mouseUp event handler.
 	 */
-	public function upHandlerGetter():Dynamic
+	private function upHandlerGetter():Dynamic
 	{
 		return _upHandler;
 	}
-	public function upHandlerSetter( value:Dynamic ):Dynamic
+	private function upHandlerSetter( value:Dynamic ):Dynamic
 	{
 		_upHandler = value;
 		return _upHandler;
@@ -112,11 +112,11 @@ class MouseEventHandlers extends InitializerBase
 	/**
 	 * The mouseDown event handler.
 	 */
-	public function downHandlerGetter():Dynamic
+	private function downHandlerGetter():Dynamic
 	{
 		return _downHandler;
 	}
-	public function downHandlerSetter( value:Dynamic ):Dynamic
+	private function downHandlerSetter( value:Dynamic ):Dynamic
 	{
 		_downHandler = value;
 		return _downHandler;
@@ -125,11 +125,11 @@ class MouseEventHandlers extends InitializerBase
 	/**
 	 * The mouseClick event handler.
 	 */
-	public function clickHandlerGetter():Dynamic
+	private function clickHandlerGetter():Dynamic
 	{
 		return _clickHandler;
 	}
-	public function clickHandlerSetter( value:Dynamic ):Dynamic
+	private function clickHandlerSetter( value:Dynamic ):Dynamic
 	{
 		_clickHandler = value;
 		return _clickHandler;

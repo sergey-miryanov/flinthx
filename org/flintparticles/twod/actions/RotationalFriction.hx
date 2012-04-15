@@ -48,7 +48,8 @@ import org.flintparticles.twoD.particles.Particle2D;
 
 class RotationalFriction extends ActionBase
 {
-	public var friction(frictionGetter,frictionSetter):Float;
+	public var friction(frictionGetter, frictionSetter):Float;
+	
 	private var _friction:Float;
 	
 	/**
@@ -70,11 +71,11 @@ class RotationalFriction extends ActionBase
 	 * The amount of friction. A higher number produces a stronger frictional 
 	 * force.
 	 */
-	public function frictionGetter():Float
+	private function frictionGetter():Float
 	{
 		return _friction;
 	}
-	public function frictionSetter( value:Float ):Float
+	private function frictionSetter( value:Float ):Float
 	{
 		_friction = value;
 		return _friction;

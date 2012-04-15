@@ -100,11 +100,11 @@ class DisplayObjectZone implements Zone2D
 	/**
 	 * The DisplayObject that defines the zone.
 	 */
-	public function displayObjectGetter() : DisplayObject
+	private function displayObjectGetter() : DisplayObject
 	{
 		return _displayObject;
 	}
-	public function displayObjectSetter( value : DisplayObject ) : DisplayObject
+	private function displayObjectSetter( value : DisplayObject ) : DisplayObject
 	{
 		_displayObject = value;
 		calculateArea();
@@ -116,11 +116,11 @@ class DisplayObjectZone implements Zone2D
 	 * coordinates of the DisplayObject are translated to the local coordinate 
 	 * space of the emitter.
 	 */
-	public function rendererGetter() : DisplayObject
+	private function rendererGetter() : DisplayObject
 	{
 		return _renderer;
 	}
-	public function rendererSetter( value : DisplayObject ) : DisplayObject
+	private function rendererSetter( value : DisplayObject ) : DisplayObject
 	{
 		_renderer = value;
 		return _renderer;

@@ -66,11 +66,11 @@ class Blast implements Counter
 	/**
 	 * The number of particles to emit when the emitter starts.
 	 */
-	public function startCountGetter():Float
+	private function startCountGetter():Float
 	{
 		return _startCount;
 	}
-	public function startCountSetter( value:Float ):Float
+	private function startCountSetter( value:Float ):Float
 	{
 		_startCount = Std.int(value);
 		return _startCount;

@@ -65,12 +65,11 @@ class PointZone implements Zone2D
 	/**
 	 * The point that is the zone.
 	 */
-	public function pointGetter() : Point
+	private function pointGetter() : Point
 	{
 		return _point;
 	}
-
-	public function pointSetter( value : Point ) : Point
+	private function pointSetter( value : Point ) : Point
 	{
 		_point = value;
 		return _point;
@@ -79,12 +78,11 @@ class PointZone implements Zone2D
 	/**
 	 * The x coordinate of the point that is the zone.
 	 */
-	public function xGetter() : Float
+	private function xGetter() : Float
 	{
 		return _point.x;
 	}
-
-	public function xSetter( value : Float ) : Float
+	private function xSetter( value : Float ) : Float
 	{
 		_point.x = value;
 		return value;
@@ -93,12 +91,11 @@ class PointZone implements Zone2D
 	/**
 	 * The y coordinate of the point that is the zone.
 	 */
-	public function yGetter() : Float
+	private function yGetter() : Float
 	{
 		return _point.y;
 	}
-
-	public function ySetter( value : Float ) : Float
+	private function ySetter( value : Float ) : Float
 	{
 		_point.y = value;
 		return value;

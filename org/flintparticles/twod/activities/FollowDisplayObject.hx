@@ -71,11 +71,11 @@ class FollowDisplayObject extends ActivityBase
 	 * The DisplayObject whose coordinate system the DisplayObject's position is converted to. This
 	 * is usually the renderer for the particle system created by the emitter.
 	 */
-	public function rendererGetter():DisplayObject
+	private function rendererGetter():DisplayObject
 	{
 		return _renderer;
 	}
-	public function rendererSetter( value:DisplayObject ):DisplayObject
+	private function rendererSetter( value:DisplayObject ):DisplayObject
 	{
 		_renderer = value;
 		return _renderer;
@@ -84,11 +84,11 @@ class FollowDisplayObject extends ActivityBase
 	/**
 	 * The display object that the emitter follows.
 	 */
-	public function displayObjectGetter():DisplayObject
+	private function displayObjectGetter():DisplayObject
 	{
 		return _displayObject;
 	}
-	public function displayObjectSetter( value:DisplayObject ):DisplayObject
+	private function displayObjectSetter( value:DisplayObject ):DisplayObject
 	{
 		_displayObject = value;
 		return _displayObject;

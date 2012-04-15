@@ -68,11 +68,11 @@ class RandomDrift extends ActionBase
 	/**
 	 * The maximum amount of horizontal drift in pixels per second.
 	 */
-	public function driftXGetter():Float
+	private function driftXGetter():Float
 	{
 		return _sizeX / 2;
 	}
-	public function driftXSetter( value:Float ):Float
+	private function driftXSetter( value:Float ):Float
 	{
 		_sizeX = value * 2;
 		return _sizeX;
@@ -81,11 +81,11 @@ class RandomDrift extends ActionBase
 	/**
 	 * The maximum amount of vertical drift in pixels per second.
 	 */
-	public function driftYGetter():Float
+	private function driftYGetter():Float
 	{
 		return _sizeY / 2;
 	}
-	public function driftYSetter( value:Float ):Float
+	private function driftYSetter( value:Float ):Float
 	{
 		_sizeY = value * 2;
 		return _sizeY;

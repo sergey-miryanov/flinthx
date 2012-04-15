@@ -142,11 +142,11 @@ class ImageInitializerBase extends InitializerBase
 	/**
 	 * Whether the images should be pooled for reuse when a particle dies
 	 */
-	public function usePoolGetter():Bool
+	private function usePoolGetter():Bool
 	{
 		return _usePool;
 	}
-	public function usePoolSetter( value:Bool ) : Bool
+	private function usePoolSetter( value:Bool ) : Bool
 	{
 		if( _usePool != value )
 		{

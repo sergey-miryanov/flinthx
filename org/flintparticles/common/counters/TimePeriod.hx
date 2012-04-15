@@ -94,11 +94,11 @@ class TimePeriod implements Counter
 	 * The number of particles to emit over the full duration
 	 * of the time period.
 	 */
-	public function numParticlesGetter():Int
+	private function numParticlesGetter():Int
 	{
 		return _particles;
 	}
-	public function numParticlesSetter( value:Int ):Int
+	private function numParticlesSetter( value:Int ):Int
 	{
 		_particles = value;
 		return _particles;
@@ -108,11 +108,11 @@ class TimePeriod implements Counter
 	 * The duration of the time period. After this time is up the
 	 * emitter will not release any more particles.
 	 */
-	public function durationGetter():Float
+	private function durationGetter():Float
 	{
 		return _duration;
 	}
-	public function durationSetter( value:Float ):Float
+	private function durationSetter( value:Float ):Float
 	{
 		_duration = value;
 		return _duration;
@@ -122,11 +122,11 @@ class TimePeriod implements Counter
 	 * An easing function used to distribute the emission of the
 	 * particles over the time period.
 	 */
-	public function easingGetter():Dynamic
+	private function easingGetter():Dynamic
 	{
 		return _easing;
 	}
-	public function easingSetter( value:Dynamic ):Dynamic
+	private function easingSetter( value:Dynamic ):Dynamic
 	{
 		_easing = value;
 		return _easing;

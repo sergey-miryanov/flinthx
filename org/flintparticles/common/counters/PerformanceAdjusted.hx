@@ -199,7 +199,8 @@ class PerformanceAdjusted implements Counter
 		if( _rate > _rateMin && ( _timeToRateCheck -= time ) <= 0 )
 		{
 			// adjust rate
-			var t:Float;
+			//var t:Int = flash.Lib.getTimer();
+			var t:Int;
 			if ( _times.push( t = flash.Lib.getTimer() ) > 9 )
 			{
 				var frameRate:Float = Math.round( 10000 / ( t - _times.shift() ) );
@@ -208,7 +209,7 @@ class PerformanceAdjusted implements Counter
 					_rate = Math.floor( ( _rate + _rateMin ) * 0.5 );
 					_times.length = 0;
 					
-					if( !( _timeToRateCheck = Particle( emitter.particlesArray[0] ).lifetime ) )
+					if( ( _timeToRateCheck = cast( emitter.particlesArray[0],Particle ).lifetime ) == null )
 					{
 						_timeToRateCheck = 2;
 					}

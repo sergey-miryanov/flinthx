@@ -48,7 +48,8 @@ import org.flintparticles.common.particles.ParticleFactory;
 class Particle2D extends Particle
 {
 	public var matrixTransform(matrixTransformGetter,null):Matrix;
-	public var inertia(inertiaGetter,null):Float;
+	public var inertia(inertiaGetter, null):Float;
+	
 	/**
 	 * The x coordinate of the particle in pixels.
 	 */

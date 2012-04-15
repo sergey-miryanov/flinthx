@@ -73,11 +73,11 @@ class PositionAbsolute extends InitializerBase
 	/**
 	 * The zone.
 	 */
-	public function zoneGetter():Zone2D
+	private function zoneGetter():Zone2D
 	{
 		return _zone;
 	}
-	public function zoneSetter( value:Zone2D ):Zone2D
+	private function zoneSetter( value:Zone2D ):Zone2D
 	{
 		_zone = value;
 		return _zone;

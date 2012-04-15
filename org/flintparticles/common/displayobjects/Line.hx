@@ -72,22 +72,22 @@ class Line extends Shape
 		graphics.lineTo( _length * 0.5, 0 );
 	}
 	
-	public function lengthGetter():Float
+	private function lengthGetter():Float
 	{
 		return _length;
 	}
-	public function lengthSetter( value:Float ):Float
+	private function lengthSetter( value:Float ):Float
 	{
 		_length = value;
 		draw();
 		return _length;
 	}
 	
-	public function colorGetter():Int
+	private function colorGetter():Int
 	{
 		return _color;
 	}
-	public function colorSetter( value:Int ):Int
+	private function colorSetter( value:Int ):Int
 	{
 		_color = value;
 		draw();

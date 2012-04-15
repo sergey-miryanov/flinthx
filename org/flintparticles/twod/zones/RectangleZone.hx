@@ -71,12 +71,11 @@ class RectangleZone implements Zone2D
 	/**
 	 * The left coordinate of the rectangle defining the region of the zone.
 	 */
-	public function leftGetter() : Float
+	private function leftGetter() : Float
 	{
 		return _left;
 	}
-
-	public function leftSetter( value : Float ) : Float
+	private function leftSetter( value : Float ) : Float
 	{
 		_left = value;
 		if( !Math.isNaN( _right ) && !Math.isNaN( _left ) )
@@ -89,12 +88,11 @@ class RectangleZone implements Zone2D
 	/**
 	 * The right coordinate of the rectangle defining the region of the zone.
 	 */
-	public function rightGetter() : Float
+	private function rightGetter() : Float
 	{
 		return _right;
 	}
-
-	public function rightSetter( value : Float ) : Float
+	private function rightSetter( value : Float ) : Float
 	{
 		_right = value;
 		if( !Math.isNaN( _right ) && !Math.isNaN( _left ) )
@@ -107,12 +105,11 @@ class RectangleZone implements Zone2D
 	/**
 	 * The top coordinate of the rectangle defining the region of the zone.
 	 */
-	public function topGetter() : Float
+	private function topGetter() : Float
 	{
 		return _top;
 	}
-
-	public function topSetter( value : Float ) : Float
+	private function topSetter( value : Float ) : Float
 	{
 		_top = value;
 		if( !Math.isNaN( _top ) && !Math.isNaN( _bottom ) )
@@ -125,12 +122,11 @@ class RectangleZone implements Zone2D
 	/**
 	 * The bottom coordinate of the rectangle defining the region of the zone.
 	 */
-	public function bottomGetter() : Float
+	private function bottomGetter() : Float
 	{
 		return _bottom;
 	}
-
-	public function bottomSetter( value : Float ) : Float
+	private function bottomSetter( value : Float ) : Float
 	{
 		_bottom = value;
 		if( !Math.isNaN( _top ) && !Math.isNaN( _bottom ) )

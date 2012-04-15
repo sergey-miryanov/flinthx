@@ -75,11 +75,11 @@ class Rotation extends InitializerBase
 	 * The minimum angle for particles initialised by 
 	 * this initializer.
 	 */
-	public function minAngleGetter():Float
+	private function minAngleGetter():Float
 	{
 		return _min;
 	}
-	public function minAngleSetter( value:Float ):Float
+	private function minAngleSetter( value:Float ):Float
 	{
 		_min = value;
 		return _min;
@@ -89,11 +89,11 @@ class Rotation extends InitializerBase
 	 * The maximum angle for particles initialised by 
 	 * this initializer.
 	 */
-	public function maxAngleGetter():Float
+	private function maxAngleGetter():Float
 	{
 		return _max;
 	}
-	public function maxAngleSetter( value:Float ):Float
+	private function maxAngleSetter( value:Float ):Float
 	{
 		_max = value;
 		return _max;
@@ -104,11 +104,11 @@ class Rotation extends InitializerBase
 	 * When writing this sets both maxAngle and minAngle to the 
 	 * same angle value.
 	 */
-	public function angleGetter():Float
+	private function angleGetter():Float
 	{
 		return _min == _max ? _min : ( _max + _min ) / 2;
 	}
-	public function angleSetter( value:Float ):Float
+	private function angleSetter( value:Float ):Float
 	{
 		_max = _min = value;
 		return value;

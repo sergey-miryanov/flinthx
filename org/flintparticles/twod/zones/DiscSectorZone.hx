@@ -152,12 +152,12 @@ class DiscSectorZone implements Zone2D
 	/**
 	 * The centre of the disc.
 	 */
-	public function centerGetter() : Point
+	private function centerGetter() : Point
 	{
 		return _center;
 	}
 
-	public function centerSetter( value : Point ) : Point
+	private function centerSetter( value : Point ) : Point
 	{
 		_center = value;
 		return _center;
@@ -166,12 +166,12 @@ class DiscSectorZone implements Zone2D
 	/**
 	 * The x coordinate of the point that is the center of the disc.
 	 */
-	public function centerXGetter() : Float
+	private function centerXGetter() : Float
 	{
 		return _center.x;
 	}
 
-	public function centerXSetter( value : Float ) : Float
+	private function centerXSetter( value : Float ) : Float
 	{
 		_center.x = value;
 		return value;
@@ -180,12 +180,12 @@ class DiscSectorZone implements Zone2D
 	/**
 	 * The y coordinate of the point that is the center of the disc.
 	 */
-	public function centerYGetter() : Float
+	private function centerYGetter() : Float
 	{
 		return _center.y;
 	}
 
-	public function centerYSetter( value : Float ) : Float
+	private function centerYSetter( value : Float ) : Float
 	{
 		_center.y = value;
 		return value;
@@ -194,12 +194,11 @@ class DiscSectorZone implements Zone2D
 	/**
 	 * The radius of the inner edge of the disc.
 	 */
-	public function innerRadiusGetter() : Float
+	private function innerRadiusGetter() : Float
 	{
 		return _innerRadius;
 	}
-
-	public function innerRadiusSetter( value : Float ) : Float
+	private function innerRadiusSetter( value : Float ) : Float
 	{
 		_innerRadius = value;
 		_innerSq = _innerRadius * _innerRadius;
@@ -209,12 +208,11 @@ class DiscSectorZone implements Zone2D
 	/**
 	 * The radius of the outer edge of the disc.
 	 */
-	public function outerRadiusGetter() : Float
+	private function outerRadiusGetter() : Float
 	{
 		return _outerRadius;
 	}
-
-	public function outerRadiusSetter( value : Float ) : Float
+	private function outerRadiusSetter( value : Float ) : Float
 	{
 		_outerRadius = value;
 		_outerSq = _outerRadius * _outerRadius;
@@ -227,12 +225,11 @@ class DiscSectorZone implements Zone2D
 	 * direction (towards the graphical y axis). Angles are converted to a value between 0 
 	 * and two times PI.
 	 */
-	public function minAngleGetter() : Float
+	private function minAngleGetter() : Float
 	{
 		return _minAngle;
 	}
-
-	public function minAngleSetter( value : Float ) : Float
+	private function minAngleSetter( value : Float ) : Float
 	{
 		_minAngle = clamp( value );
 		calculateNormals();
@@ -245,12 +242,11 @@ class DiscSectorZone implements Zone2D
 	 * direction (towards the graphical y axis). Angles are converted to a value between 0 
 	 * and two times PI.
 	 */
-	public function maxAngleGetter() : Float
+	private function maxAngleGetter() : Float
 	{
 		return _maxAngle;
 	}
-
-	public function maxAngleSetter( value : Float ) : Float
+	private function maxAngleSetter( value : Float ) : Float
 	{
 		_maxAngle = value;
 		while ( _maxAngle > TWOPI )

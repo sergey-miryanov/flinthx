@@ -96,22 +96,22 @@ class Star extends Shape
 		graphics.endFill();
 	}
 	
-	public function radiusGetter():Float
+	private function radiusGetter():Float
 	{
 		return _radius;
 	}
-	public function radiusSetter( value:Float ):Float
+	private function radiusSetter( value:Float ):Float
 	{
 		_radius = value;
 		draw();
 		return _radius;
 	}
 	
-	public function colorGetter():Int
+	private function colorGetter():Int
 	{
 		return _color;
 	}
-	public function colorSetter( value:Int ):Int
+	private function colorSetter( value:Int ):Int
 	{
 		_color = value;
 		draw();

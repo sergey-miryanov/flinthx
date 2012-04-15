@@ -82,11 +82,11 @@ class TweenPosition extends ActionBase
 	/**
 	 * The x position for the particle's position when its energy is 1.
 	 */
-	public function startXGetter():Float
+	private function startXGetter():Float
 	{
 		return _endX + _diffX;
 	}
-	public function startXSetter( value:Float ):Float
+	private function startXSetter( value:Float ):Float
 	{
 		_diffX = value - _endX;
 		return _diffX;
@@ -95,11 +95,11 @@ class TweenPosition extends ActionBase
 	/**
 	 * The X value for the particle's position when its energy is 0.
 	 */
-	public function endXGetter():Float
+	private function endXGetter():Float
 	{
 		return _endX;
 	}
-	public function endXSetter( value:Float ):Float
+	private function endXSetter( value:Float ):Float
 	{
 		_diffX = _endX + _diffX - value;
 		_endX = value;
@@ -109,11 +109,11 @@ class TweenPosition extends ActionBase
 	/**
 	 * The y position for the particle's position when its energy is 1.
 	 */
-	public function startYGetter():Float
+	private function startYGetter():Float
 	{
 		return _endY + _diffY;
 	}
-	public function startYSetter( value:Float ):Float
+	private function startYSetter( value:Float ):Float
 	{
 		_diffY = value - _endY;
 		return _diffY;
@@ -122,11 +122,11 @@ class TweenPosition extends ActionBase
 	/**
 	 * The y value for the particle's position when its energy is 0.
 	 */
-	public function endYGetter():Float
+	private function endYGetter():Float
 	{
 		return _endY;
 	}
-	public function endYSetter( value:Float ):Float
+	private function endYSetter( value:Float ):Float
 	{
 		_diffY = _endY + _diffY - value;
 		_endY = value;

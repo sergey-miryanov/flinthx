@@ -47,7 +47,8 @@ import org.flintparticles.twoD.particles.Particle2D;
 
 class RotationalLinearDrag extends ActionBase
 {
-	public var drag(dragGetter,dragSetter):Float;
+	public var drag(dragGetter, dragSetter):Float;
+	
 	private var _drag:Float;
 	
 	/**
@@ -69,11 +70,11 @@ class RotationalLinearDrag extends ActionBase
 	/**
 	 * The amount of drag. A higher number produces a stronger drag force.
 	 */
-	public function dragGetter():Float
+	private function dragGetter():Float
 	{
 		return _drag;
 	}
-	public function dragSetter( value:Float ):Float
+	private function dragSetter( value:Float ):Float
 	{
 		_drag = value;
 		return _drag;

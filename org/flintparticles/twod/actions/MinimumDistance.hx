@@ -76,11 +76,11 @@ class MinimumDistance extends ActionBase
 	 * The minimum distance, in pixels, that this action maintains between 
 	 * particles.
 	 */
-	public function minimumGetter():Float
+	private function minimumGetter():Float
 	{
 		return _min;
 	}
-	public function minimumSetter( value:Float ):Float
+	private function minimumSetter( value:Float ):Float
 	{
 		_min = value;
 		_minSq = value * value;
@@ -90,11 +90,11 @@ class MinimumDistance extends ActionBase
 	/**
 	 * The acceleration force applied to avoid the other particles.
 	 */
-	public function accelerationGetter():Float
+	private function accelerationGetter():Float
 	{
 		return _acc;
 	}
-	public function accelerationSetter( value:Float ):Float
+	private function accelerationSetter( value:Float ):Float
 	{
 		_acc = value;
 		return _acc;

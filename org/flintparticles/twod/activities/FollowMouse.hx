@@ -67,11 +67,11 @@ class FollowMouse extends ActivityBase
 	 * The display object whose coordinate system the mouse position is converted to. This
 	 * is usually the renderer for the particle system created by the emitter.
 	 */
-	public function rendererGetter():DisplayObject
+	private function rendererGetter():DisplayObject
 	{
 		return _renderer;
 	}
-	public function rendererSetter( value:DisplayObject ):DisplayObject
+	private function rendererSetter( value:DisplayObject ):DisplayObject
 	{
 		_renderer = value;
 		return _renderer;

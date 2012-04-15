@@ -105,11 +105,11 @@ class KeyDownCounter implements Counter
 	/**
 	 * The counter to use when the key is down.
 	 */
-	public function counterGetter():Counter
+	private function counterGetter():Counter
 	{
 		return _counter;
 	}
-	public function counterSetter( value:Counter ):Counter
+	private function counterSetter( value:Counter ):Counter
 	{
 		_counter = value;
 		return _counter;
@@ -118,11 +118,11 @@ class KeyDownCounter implements Counter
 	/**
 	 * The key code of the key that controls the counter.
 	 */
-	public function keyCodeGetter():Int
+	private function keyCodeGetter():Int
 	{
 		return _keyCode;
 	}
-	public function keyCodeSetter( value:Int ):Int
+	private function keyCodeSetter( value:Int ):Int
 	{
 		_keyCode = value;
 		return _keyCode;
@@ -131,11 +131,11 @@ class KeyDownCounter implements Counter
 	/**
 	 * A reference to the stage
 	 */
-	public function stageGetter():Stage
+	private function stageGetter():Stage
 	{
 		return _stage;
 	}
-	public function stageSetter( value:Stage ):Stage
+	private function stageSetter( value:Stage ):Stage
 	{
 		_stage = value;
 		createListeners();

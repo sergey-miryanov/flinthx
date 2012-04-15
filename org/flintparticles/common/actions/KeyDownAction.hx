@@ -50,7 +50,7 @@ class KeyDownAction extends ActionBase
 {
 	public var stage(stageGetter,stageSetter):Stage;
 	public var action(actionGetter,actionSetter):Action;
-	public var priority(priorityGetter,prioritySetter):Int;
+	override public var priority(priorityGetter,prioritySetter):Int;
 	public var keyCode(keyCodeGetter, keyCodeSetter):Int;
 	
 	private var _action:Action;
@@ -71,6 +71,7 @@ class KeyDownAction extends ActionBase
 	 */
 	public function new( action:Action= null, keyCode:Int = 0, stage:Stage = null )
 	{
+		super();
 		_action = action;
 		_keyCode = keyCode;
 		_isDown = false;
@@ -107,11 +108,11 @@ class KeyDownAction extends ActionBase
 	/**
 	 * A reference to the stage
 	 */
-	public function stageGetter():Stage
+	private function stageGetter():Stage
 	{
 		return _stage;
 	}
-	public function stageSetter( value:Stage ):Stage
+	private function stageSetter( value:Stage ):Stage
 	{
 		_stage = value;
 		createListeners();
@@ -121,11 +122,11 @@ class KeyDownAction extends ActionBase
 	/**
 	 * The action to apply when the key is down.
 	 */
-	public function actionGetter():Action
+	private function actionGetter():Action
 	{
 		return _action;
 	}
-	public function actionSetter( value:Action ):Void
+	private function actionSetter( value:Action ):Action
 	{
 		_action = value;
 		return _action;
@@ -134,11 +135,11 @@ class KeyDownAction extends ActionBase
 	/**
 	 * The key code of the key that controls the action.
 	 */
-	public function keyCodeGetter():Int
+	private function keyCodeGetter():Int
 	{
 		return _keyCode;
 	}
-	public function keyCodeSetter( value:Int ):Void
+	private function keyCodeSetter( value:Int ):Int
 	{
 		_keyCode = value;
 		return _keyCode;
@@ -149,11 +150,11 @@ class KeyDownAction extends ActionBase
 	 * 
 	 * @see org.flintparticles.common.actions.Action#getDefaultPriority()
 	 */
-	override public function priorityGetter():Int
+	override private function priorityGetter():Int
 	{
 		return _action.priority;
 	}
-	override public function prioritySetter( value:Int ):Int
+	override private function prioritySetter( value:Int ):Int
 	{
 		_action.priority = value;
 		return value;

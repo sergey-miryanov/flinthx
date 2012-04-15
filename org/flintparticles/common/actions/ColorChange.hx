@@ -79,11 +79,11 @@ class ColorChange extends ActionBase
 	/**
 	 * The color of the particle when its energy is 1.
 	 */
-	public function startColorGetter():Int
+	private function startColorGetter():Int
 	{
 		return _startColor;
 	}
-	public function startColorSetter( value:Int ):Int
+	private function startColorSetter( value:Int ):Int
 	{
 		_startColor = value;
 		return value;
@@ -92,11 +92,11 @@ class ColorChange extends ActionBase
 	/**
 	 * The color of the particle when its energy is zero.
 	 */
-	public function endColorGetter():Int
+	private function endColorGetter():Int
 	{
 		return _endColor;
 	}
-	public function endColorSetter( value:Int ):Int
+	private function endColorSetter( value:Int ):Int
 	{
 		_endColor = value;
 		return value;

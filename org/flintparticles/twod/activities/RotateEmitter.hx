@@ -63,11 +63,11 @@ class RotateEmitter extends ActivityBase
 	 * The angular velocity for the emitter in 
 	 * radians per second.
 	 */
-	public function angularVelocityGetter():Float
+	private function angularVelocityGetter():Float
 	{
 		return _angularVelocity;
 	}
-	public function angularVelocitySetter( value:Float ):Float
+	private function angularVelocitySetter( value:Float ):Float
 	{
 		_angularVelocity = value;
 		return _angularVelocity;

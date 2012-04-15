@@ -41,9 +41,10 @@ import nme.display.BlendMode;
 
 class Rect extends Shape 
 {
-	public var width(widthGetter,widthSetter):Float;
+	override public var width(widthGetter, widthSetter):Float;
+	//override public var width(nmeGetWidth, nmeSetWidth):Float;
+	override public var height(heightGetter, heightSetter):Float;
 	public var color(colorGetter,colorSetter):Int;
-	public var height(heightGetter, heightSetter):Float;
 	
 	private var _width:Float;
 	private var _height:Float;
@@ -59,6 +60,7 @@ class Rect extends Shape
 	 */
 	public function new( width:Float = 1, height:Float = 1, color:Int = 0xFFFFFF, bm:Dynamic = null )
 	{
+		super();
 		_width = width;
 		_height = height;
 		_color = color;
@@ -75,22 +77,22 @@ class Rect extends Shape
 		graphics.endFill();
 	}
 	
-	override public function widthGetter():Float
+	private function widthGetter():Float
 	{
 		return _width;
 	}
-	override public function widthSetter( value:Float ):Float
+	private function widthSetter( value:Float ):Float
 	{
 		_width = value;
 		draw();
 		return _width;
 	}
 	
-	override public function heightGetter():Float
+	public function heightGetter():Float
 	{
 		return _height;
 	}
-	override public function heightSetter( value:Float ):Float
+	public function heightSetter( value:Float ):Float
 	{
 		_height = value;
 		draw();

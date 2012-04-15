@@ -86,11 +86,11 @@ class MouseGravity extends ActionBase
 	/**
 	 * The strength of the gravity force.
 	 */
-	public function powerGetter():Float
+	private function powerGetter():Float
 	{
 		return _power / _gravityConst;
 	}
-	public function powerSetter( value:Float ):Float
+	private function powerSetter( value:Float ):Float
 	{
 		_power = value * _gravityConst;
 		return _power;
@@ -101,11 +101,11 @@ class MouseGravity extends ActionBase
 	 * converted to. This is usually the renderer for the particle system 
 	 * created by the emitter.
 	 */
-	public function rendererGetter():DisplayObject
+	private function rendererGetter():DisplayObject
 	{
 		return _renderer;
 	}
-	public function rendererSetter( value:DisplayObject ):DisplayObject
+	private function rendererSetter( value:DisplayObject ):DisplayObject
 	{
 		_renderer = value;
 		return _renderer;
@@ -117,11 +117,11 @@ class MouseGravity extends ActionBase
 	 * this distance away. This stops the gravity effect blowing up as distances get 
 	 * small.
 	 */
-	public function epsilonGetter():Float
+	private function epsilonGetter():Float
 	{
 		return Math.sqrt( _epsilonSq );
 	}
-	public function epsilonSetter( value:Float ):Float
+	private function epsilonSetter( value:Float ):Float
 	{
 		_epsilonSq = value * value;
 		return _epsilonSq;

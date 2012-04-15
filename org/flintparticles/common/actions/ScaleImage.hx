@@ -57,7 +57,8 @@ import org.flintparticles.common.actions.ActionBase;
 class ScaleImage extends ActionBase
 {
 	public var startScale(startScaleGetter,startScaleSetter):Float;
-	public var endScale(endScaleGetter,endScaleSetter):Float;
+	public var endScale(endScaleGetter, endScaleSetter):Float;
+	
 	private var _diffScale:Float;
 	private var _endScale:Float;
 	
@@ -84,11 +85,11 @@ class ScaleImage extends ActionBase
 	 * The scale factor for the particle when its energy
 	 * is 1 - usually at the start of its lifetime. A scale of 1 is normal size.
 	 */
-	public function startScaleGetter():Float
+	private function startScaleGetter():Float
 	{
 		return _endScale + _diffScale;
 	}
-	public function startScaleSetter( value:Float ):Float
+	private function startScaleSetter( value:Float ):Float
 	{
 		_diffScale = value - _endScale;
 		return _diffScale;
@@ -98,11 +99,11 @@ class ScaleImage extends ActionBase
 	 * The scale factor for the particle when its energy
 	 * is 0 - usually at the end of its lifetime. A scale of 1 is normal size.
 	 */
-	public function endScaleGetter():Float
+	private function endScaleGetter():Float
 	{
 		return _endScale;
 	}
-	public function endScaleSetter( value:Float ):Float
+	private function endScaleSetter( value:Float ):Float
 	{
 		_diffScale = _endScale + _diffScale - value;
 		_endScale = value;

@@ -72,11 +72,11 @@ class TargetVelocity extends ActionBase
 	/**
 	 * The y coordinate of the target velocity, in pixels per second.
 	 */
-	public function targetVelocityYGetter():Float
+	private function targetVelocityYGetter():Float
 	{
 		return _velY;
 	}
-	public function targetVelocityYSetter( value:Float ):Float
+	private function targetVelocityYSetter( value:Float ):Float
 	{
 		_velY = value;
 		return _velY;
@@ -85,11 +85,11 @@ class TargetVelocity extends ActionBase
 	/**
 	 * The x coordinate of the target velocity, in pixels per second.s
 	 */
-	public function targetVelocityXGetter():Float
+	private function targetVelocityXGetter():Float
 	{
 		return _velX;
 	}
-	public function targetVelocityXSetter( value:Float ):Float
+	private function targetVelocityXSetter( value:Float ):Float
 	{
 		_velX = value;
 		return _velX;
@@ -99,11 +99,11 @@ class TargetVelocity extends ActionBase
 	 * Adjusts how quickly the particle reaches the target velocity.
 	 * Larger numbers cause it to approach the target velocity more quickly.
 	 */
-	public function rateGetter():Float
+	private function rateGetter():Float
 	{
 		return _rate;
 	}
-	public function rateSetter( value:Float ):Float
+	private function rateSetter( value:Float ):Float
 	{
 		_rate = value;
 		return _rate;

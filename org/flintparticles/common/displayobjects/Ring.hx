@@ -40,8 +40,8 @@ import nme.display.BlendMode;
 class Ring extends Shape
 {
 	public var outerRadius(outerRadiusGetter,outerRadiusSetter):Float;
-	public var color(colorGetter,colorSetter):Int;
 	public var innerRadius(innerRadiusGetter, innerRadiusSetter):Float;
+	public var color(colorGetter,colorSetter):Int;
 	
 	private var _outerRadius:Float;
 	private var _innerRadius:Float;
@@ -74,33 +74,33 @@ class Ring extends Shape
 		graphics.endFill();
 	}
 
-	public function outerRadiusGetter():Float
+	private function outerRadiusGetter():Float
 	{
 		return _outerRadius;
 	}
-	public function outerRadiusSetter( value:Float ):Float
+	private function outerRadiusSetter( value:Float ):Float
 	{
 		_outerRadius = value;
 		draw();
 		return _outerRadius;
 	}
 
-	public function innerRadiusGetter():Float
+	private function innerRadiusGetter():Float
 	{
 		return _innerRadius;
 	}
-	public function innerRadiusSetter( value:Float ):Float
+	private function innerRadiusSetter( value:Float ):Float
 	{
 		_innerRadius = value;
 		draw();
 		return _innerRadius;
 	}
 
-	public function colorGetter():Int
+	private function colorGetter():Int
 	{
 		return _color;
 	}
-	public function colorSetter( value:Int ):Int
+	private function colorSetter( value:Int ):Int
 	{
 		_color = value;
 		draw();

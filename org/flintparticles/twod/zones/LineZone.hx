@@ -91,12 +91,11 @@ class LineZone implements Zone2D
 	/**
 	 * The point at one end of the line.
 	 */
-	public function startGetter() : Point
+	private function startGetter() : Point
 	{
 		return _start;
 	}
-
-	public function startSetter( value : Point ) : Point
+	private function startSetter( value : Point ) : Point
 	{
 		_start = value;
 		setLengthAndNormal();
@@ -106,12 +105,11 @@ class LineZone implements Zone2D
 	/**
 	 * The point at the other end of the line.
 	 */
-	public function endGetter() : Point
+	private function endGetter() : Point
 	{
 		return _end;
 	}
-
-	public function endSetter( value : Point ) : Point
+	private function endSetter( value : Point ) : Point
 	{
 		_end = value;
 		setLengthAndNormal();
@@ -121,12 +119,11 @@ class LineZone implements Zone2D
 	/**
 	 * The x coordinate of the point at the start of the line.
 	 */
-	public function startXGetter() : Float
+	private function startXGetter() : Float
 	{
 		return _start.x;
 	}
-
-	public function startXSetter( value : Float ) : Float
+	private function startXSetter( value : Float ) : Float
 	{
 		_start.x = value;
 		_length = _end.subtract( _start );
@@ -136,12 +133,11 @@ class LineZone implements Zone2D
 	/**
 	 * The y coordinate of the point at the start of the line.
 	 */
-	public function startYGetter() : Float
+	private function startYGetter() : Float
 	{
 		return _start.y;
 	}
-
-	public function startYSetter( value : Float ) : Float
+	private function startYSetter( value : Float ) : Float
 	{
 		_start.y = value;
 		_length = _end.subtract( _start );
@@ -151,12 +147,11 @@ class LineZone implements Zone2D
 	/**
 	 * The x coordinate of the point at the end of the line.
 	 */
-	public function endXGetter() : Float
+	private function endXGetter() : Float
 	{
 		return _end.x;
 	}
-
-	public function endXSetter( value : Float ) : Float
+	private function endXSetter( value : Float ) : Float
 	{
 		_end.x = value;
 		_length = _end.subtract( _start );
@@ -166,12 +161,11 @@ class LineZone implements Zone2D
 	/**
 	 * The y coordinate of the point at the end of the line.
 	 */
-	public function endYGetter() : Float
+	private function endYGetter() : Float
 	{
 		return _end.y;
 	}
-
-	public function endYSetter( value : Float ) : Float
+	private function endYSetter( value : Float ) : Float
 	{
 		_end.y = value;
 		_length = _end.subtract( _start );

@@ -85,11 +85,11 @@ class Random implements Counter
 	/**
 	 * The minimum number of particles to emit per second.
 	 */
-	public function minRateGetter():Float
+	private function minRateGetter():Float
 	{
 		return _minRate;
 	}
-	public function minRateSetter( value:Float ):Float
+	private function minRateSetter( value:Float ):Float
 	{
 		_minRate = value;
 		return _minRate;
@@ -98,11 +98,11 @@ class Random implements Counter
 	/**
 	 * The maximum number of particles to emit per second.
 	 */
-	public function maxRateGetter():Float
+	private function maxRateGetter():Float
 	{
 		return _maxRate;
 	}
-	public function maxRateSetter( value:Float ):Float
+	private function maxRateSetter( value:Float ):Float
 	{
 		_maxRate = value;
 		return _maxRate;

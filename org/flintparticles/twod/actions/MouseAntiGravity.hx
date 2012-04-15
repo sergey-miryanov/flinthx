@@ -42,7 +42,8 @@ import nme.display.DisplayObject;
 
 class MouseAntiGravity extends MouseGravity
 {
-	public var power(powerGetter,powerSetter):Float;
+	override public var power(powerGetter, powerSetter):Float;
+	
 	/**
 	 * The constructor creates a MouseAntiGravity action for use by an emitter.
 	 * To add a MouseAntiGravity to all particles created by an emitter, use the
@@ -70,13 +71,16 @@ class MouseAntiGravity extends MouseGravity
 	/**
 	 * The strength of the anti-gravity force.
 	 */
-	override public function powerGetter():Float
+	override private function powerGetter():Float
 	{
-		return -super.power;
+		//return -super.power;
+		return -_power;
 	}
-	override public function powerSetter( value:Float ):Float
+	override private function powerSetter( value:Float ):Float
 	{
-		super.power = -value;
-		return -super.power;
+		//super.power = -value;
+		//return -super.power;
+		_power = -value;
+		return _power;
 	}
 }

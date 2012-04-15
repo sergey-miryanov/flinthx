@@ -68,11 +68,11 @@ class MoveEmitter extends ActivityBase
 	 * The x coordinate of the velocity to move the emitter, 
 	 * in pixels per second
 	 */
-	public function xGetter():Float
+	private function xGetter():Float
 	{
 		return _velX;
 	}
-	public function xSetter( value:Float ):Float
+	private function xSetter( value:Float ):Float
 	{
 		_velX = value;
 		return _velX;
@@ -82,11 +82,11 @@ class MoveEmitter extends ActivityBase
 	 * The y coordinate of the velocity to move the emitter, 
 	 * in pixels per second
 	 */
-	public function yGetter():Float
+	private function yGetter():Float
 	{
 		return _velY;
 	}
-	public function ySetter( value:Float ):Float
+	private function ySetter( value:Float ):Float
 	{
 		_velY = value;
 		return _velY;

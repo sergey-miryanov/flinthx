@@ -70,11 +70,11 @@ class ApplyFilter extends InitializerBase
 	/**
 	 * The filter to apply to each particle's image when it is created.
 	 */
-	public function filterGetter():BitmapFilter
+	private function filterGetter():BitmapFilter
 	{
 		return _filter;
 	}
-	public function filterSetter( value:BitmapFilter ):BitmapFilter
+	private function filterSetter( value:BitmapFilter ):BitmapFilter
 	{
 		_filter = value;
 		return _filter;

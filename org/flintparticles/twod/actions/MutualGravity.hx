@@ -90,11 +90,11 @@ class MutualGravity extends ActionBase
 	/**
 	 * The strength of the gravity force.
 	 */
-	public function powerGetter():Float
+	private function powerGetter():Float
 	{
 		return _power / _gravityConst;
 	}
-	public function powerSetter( value:Float ):Float
+	private function powerSetter( value:Float ):Float
 	{
 		_power = value * _gravityConst;
 		return _power;
@@ -107,11 +107,11 @@ class MutualGravity extends ActionBase
 	 * maxDistance since often only the closest other particles have a 
 	 * significant effect on the motion of a particle.
 	 */
-	public function maxDistanceGetter():Float
+	private function maxDistanceGetter():Float
 	{
 		return _maxDistance;
 	}
-	public function maxDistanceSetter( value:Float ):Float
+	private function maxDistanceSetter( value:Float ):Float
 	{
 		_maxDistance = value;
 		_maxDistanceSq = value * value;
@@ -124,11 +124,11 @@ class MutualGravity extends ActionBase
 	 * were this distance away. This stops the gravity effect blowing up as 
 	 * distances get very small.
 	 */
-	public function epsilonGetter():Float
+	private function epsilonGetter():Float
 	{
 		return Math.sqrt( _epsilonSq );
 	}
-	public function epsilonSetter( value:Float ):Float
+	private function epsilonSetter( value:Float ):Float
 	{
 		_epsilonSq = value * value;
 		return _epsilonSq;

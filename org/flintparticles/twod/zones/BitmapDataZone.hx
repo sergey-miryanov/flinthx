@@ -81,11 +81,11 @@ class BitmapDataZone implements Zone2D
 	/**
 	 * The bitmapData object that defines the zone.
 	 */
-	public function bitmapDataGetter() : BitmapData
+	private function bitmapDataGetter() : BitmapData
 	{
 		return _bitmapData;
 	}
-	public function bitmapDataSetter( value : BitmapData ) : BitmapData
+	private function bitmapDataSetter( value : BitmapData ) : BitmapData
 	{
 		_bitmapData = value;
 		invalidate();
@@ -96,11 +96,11 @@ class BitmapDataZone implements Zone2D
 	 * A horizontal offset to apply to the pixels in the BitmapData object 
 	 * to reposition the zone
 	 */
-	public function offsetXGetter() : Float
+	private function offsetXGetter() : Float
 	{
 		return _offsetX;
 	}
-	public function offsetXSetter( value : Float ) : Float
+	private function offsetXSetter( value : Float ) : Float
 	{
 		_offsetX = value;
 		return _offsetX;
@@ -110,11 +110,11 @@ class BitmapDataZone implements Zone2D
 	 * A vertical offset to apply to the pixels in the BitmapData object 
 	 * to reposition the zone
 	 */
-	public function offsetYGetter() : Float
+	private function offsetYGetter() : Float
 	{
 		return _offsetY;
 	}
-	public function offsetYSetter( value : Float ) : Float
+	private function offsetYSetter( value : Float ) : Float
 	{
 		_offsetY = value;
 		return _offsetY;
@@ -123,11 +123,11 @@ class BitmapDataZone implements Zone2D
 	/**
 	 * A scale factor to stretch the bitmap horizontally
 	 */
-	public function scaleXGetter() : Float
+	private function scaleXGetter() : Float
 	{
 		return _scaleX;
 	}
-	public function scaleXSetter( value : Float ) : Float
+	private function scaleXSetter( value : Float ) : Float
 	{
 		_scaleX = value;
 		return _scaleX;
@@ -136,11 +136,11 @@ class BitmapDataZone implements Zone2D
 	/**
 	 * A scale factor to stretch the bitmap vertically
 	 */
-	public function scaleYGetter() : Float
+	private function scaleYGetter() : Float
 	{
 		return _scaleY;
 	}
-	public function scaleYSetter( value : Float ) : Float
+	private function scaleYSetter( value : Float ) : Float
 	{
 		_scaleY = value;
 		return _scaleY;

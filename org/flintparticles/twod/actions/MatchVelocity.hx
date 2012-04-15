@@ -78,11 +78,11 @@ class MatchVelocity extends ActionBase
 	 * The maximum distance, in pixels, over which this action operates.
 	 * The particle will match its velocity other particles that are this close or closer to it.
 	 */
-	public function maxDistanceGetter():Float
+	private function maxDistanceGetter():Float
 	{
 		return _max;
 	}
-	public function maxDistanceSetter( value:Float ):Float
+	private function maxDistanceSetter( value:Float ):Float
 	{
 		_max = value;
 		_maxSq = value * value;
@@ -93,11 +93,11 @@ class MatchVelocity extends ActionBase
 	 * The acceleration applied to adjust each
 	 * particle's velocity to match that of the other particles near it
 	 */
-	public function accelerationGetter():Float
+	private function accelerationGetter():Float
 	{
 		return _acc;
 	}
-	public function accelerationSetter( value:Float ):Float
+	private function accelerationSetter( value:Float ):Float
 	{
 		_acc = value;
 		return _acc;

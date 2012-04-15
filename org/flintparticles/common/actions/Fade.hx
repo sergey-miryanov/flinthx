@@ -85,11 +85,11 @@ class Fade extends ActionBase
 	 * The alpha value for the particle when its energy is 1.
 	 * The value should be between 0 and 1.
 	 */
-	public function startAlphaGetter():Float
+	private function startAlphaGetter():Float
 	{
 		return _endAlpha + _diffAlpha;
 	}
-	public function startAlphaSetter( value:Float ):Float
+	private function startAlphaSetter( value:Float ):Float
 	{
 		_diffAlpha = value - _endAlpha;
 		return _diffAlpha;
@@ -99,11 +99,11 @@ class Fade extends ActionBase
 	 * The alpha value for the particle when its energy is 0.
 	 * The value should be between 0 and 1.
 	 */
-	public function endAlphaGetter():Float
+	private function endAlphaGetter():Float
 	{
 		return _endAlpha;
 	}
-	public function endAlphaSetter( value:Float ):Float
+	private function endAlphaSetter( value:Float ):Float
 	{
 		_diffAlpha = _endAlpha + _diffAlpha - value;
 		_endAlpha = value;

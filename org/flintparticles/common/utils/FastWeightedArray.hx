@@ -92,7 +92,7 @@ class FastWeightedArray
 	/**
 	 * The number of items in the FastWeightedArray
 	 */
-	public function lengthGetter():Int
+	private function lengthGetter():Int
 	{
 		return _values.length;
 	}
@@ -100,7 +100,7 @@ class FastWeightedArray
 	/**
 	 * The sum of the weights of all the values.
 	 */
-	public function totalRatiosGetter():Float
+	private function totalRatiosGetter():Float
 	{
 		return _totalRatios;
 	}

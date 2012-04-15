@@ -47,7 +47,7 @@ class Pulse implements Counter
 	
 	private var _timeToNext:Float;
 	private var _period:Float;
-	private var _quantity:Float;
+	private var _quantity:Int;
 	private var _running:Bool;
 	
 	/**
@@ -85,11 +85,11 @@ class Pulse implements Counter
 	/**
 	 * The time, in seconds, between each pulse.
 	 */
-	public function periodGetter():Float
+	private function periodGetter():Float
 	{
 		return _period;
 	}
-	public function periodSetter( value:Float ):Float
+	private function periodSetter( value:Float ):Float
 	{
 		_period = value;
 		return _period;
@@ -98,11 +98,11 @@ class Pulse implements Counter
 	/**
 	 * The number of particles to emit at each pulse.
 	 */
-	public function quantityGetter():Int
+	private function quantityGetter():Int
 	{
 		return Std.int(_quantity);
 	}
-	public function quantitySetter( value:Int ):Int
+	private function quantitySetter( value:Int ):Int
 	{
 		_quantity = value;
 		return _quantity;

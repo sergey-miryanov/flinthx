@@ -71,6 +71,7 @@ class ChangeMass extends ActionBase
 	 */
 	public function new( startMass:Float = 1, endMass:Float = 1 )
 	{
+		super();
 		_diffMass = startMass - endMass;
 		_endMass = endMass;
 	}
@@ -79,11 +80,11 @@ class ChangeMass extends ActionBase
 	 * The mass for the particle when its energy
 	 * is 1 - usually at the start of its lifetime.
 	 */
-	public function startMassGetter():Float
+	private function startMassGetter():Float
 	{
 		return _endMass + _diffMass;
 	}
-	public function startMassSetter( value:Float ):Float
+	private function startMassSetter( value:Float ):Float
 	{
 		_diffMass = value - _endMass;
 		return _diffMass;
@@ -93,11 +94,11 @@ class ChangeMass extends ActionBase
 	 * The mass for the particle when its energy
 	 * is 0 - usually at the end of its lifetime.
 	 */
-	public function endMassGetter():Float
+	private function endMassGetter():Float
 	{
 		return _endMass;
 	}
-	public function endMassSetter( value:Float ):Void
+	private function endMassSetter( value:Float ):Float
 	{
 		_diffMass = _endMass + _diffMass - value;
 		_endMass = value;

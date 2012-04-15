@@ -85,11 +85,11 @@ class ScaleAllInit extends InitializerBase
 	 * The minimum scale value for particles initialised by 
 	 * this initializer. Should be between 0 and 1.
 	 */
-	public function minScaleGetter():Float
+	private function minScaleGetter():Float
 	{
 		return _min;
 	}
-	public function minScaleSetter( value:Float ):Float
+	private function minScaleSetter( value:Float ):Float
 	{
 		_min = value;
 		return _min;
@@ -99,11 +99,11 @@ class ScaleAllInit extends InitializerBase
 	 * The maximum scale value for particles initialised by 
 	 * this initializer. Should be between 0 and 1.
 	 */
-	public function maxScaleGetter():Float
+	private function maxScaleGetter():Float
 	{
 		return _max;
 	}
-	public function maxScaleSetter( value:Float ):Float
+	private function maxScaleSetter( value:Float ):Float
 	{
 		_max = value;
 		return _max;
@@ -114,11 +114,11 @@ class ScaleAllInit extends InitializerBase
 	 * When writing this sets both maxScale and minScale to the 
 	 * same scale value.
 	 */
-	public function scaleGetter():Float
+	private function scaleGetter():Float
 	{
 		return _min == _max ? _min : ( _max + _min ) / 2;
 	}
-	public function scaleSetter( value:Float ):Float
+	private function scaleSetter( value:Float ):Float
 	{
 		_max = _min = value;
 		return value;

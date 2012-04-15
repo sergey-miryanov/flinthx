@@ -98,11 +98,11 @@ class SineCounter implements Counter
 	 * The number of particles to emit per second at the bottom
 	 * of the sine wave.
 	 */
-	public function rateMinGetter():Float
+	private function rateMinGetter():Float
 	{
 		return _rateMin;
 	}
-	public function rateMinSetter( value:Float ):Float
+	private function rateMinSetter( value:Float ):Float
 	{
 		_rateMin = value;
 		_scale = 0.5 * ( _rateMax - _rateMin );
@@ -113,11 +113,11 @@ class SineCounter implements Counter
 	 * The number of particles emitted per second at the peak of
 	 * the sine wave.
 	 */
-	public function rateMaxGetter():Float
+	private function rateMaxGetter():Float
 	{
 		return _rateMax;
 	}
-	public function rateMaxSetter( value:Float ):Float
+	private function rateMaxSetter( value:Float ):Float
 	{
 		_rateMax = value;
 		_scale = 0.5 * ( _rateMax - _rateMin );
@@ -127,11 +127,11 @@ class SineCounter implements Counter
 	/**
 	 * The period of the sine wave used, in seconds.
 	 */
-	public function periodGetter():Float
+	private function periodGetter():Float
 	{
 		return _period;
 	}
-	public function periodSetter( value:Float ):Float
+	private function periodSetter( value:Float ):Float
 	{
 		_period = value;
 		_factor = 2 * Math.PI / _period;
@@ -179,7 +179,7 @@ class SineCounter implements Counter
 		}
 		_timePassed += time;
 		var count:Int = Math.floor( _rateMax * _timePassed + _scale * ( 1 - Math.cos( _timePassed * _factor ) ) / _factor );
-		var ret:Int = count - _emitted;
+		var ret:Int = count - Std.int(_emitted);
 		_emitted = count;
 		return ret;
 	}

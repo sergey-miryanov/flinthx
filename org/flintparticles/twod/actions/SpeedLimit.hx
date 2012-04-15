@@ -75,11 +75,11 @@ class SpeedLimit extends ActionBase
 	/**
 	 * The speed limit
 	 */
-	public function limitGetter():Float
+	private function limitGetter():Float
 	{
 		return _limit;
 	}
-	public function limitSetter( value:Float ):Float
+	private function limitSetter( value:Float ):Float
 	{
 		_limit = value;
 		_limitSq = value * value;
@@ -89,11 +89,11 @@ class SpeedLimit extends ActionBase
 	/**
 	 * Whether the speed is a minimum (true) or maximum (false) speed.
 	 */
-	public function isMinimumGetter():Bool
+	private function isMinimumGetter():Bool
 	{
 		return _isMinimum;
 	}
-	public function isMinimumSetter( value:Bool ):Bool
+	private function isMinimumSetter( value:Bool ):Bool
 	{
 		_isMinimum = value;
 		return _isMinimum;

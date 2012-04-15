@@ -83,11 +83,11 @@ class Steady implements Counter
 	/**
 	 * The number of particles to emit per second.
 	 */
-	public function rateGetter():Float
+	private function rateGetter():Float
 	{
 		return _rate;
 	}
-	public function rateSetter( value:Float ):Float
+	private function rateSetter( value:Float ):Float
 	{
 		//if( !value || value < 0 )
 		if( value < 0 )

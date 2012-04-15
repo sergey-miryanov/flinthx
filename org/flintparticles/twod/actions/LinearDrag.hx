@@ -68,11 +68,11 @@ class LinearDrag extends ActionBase
 	/**
 	 * The amount of drag. A higher number produces a stronger drag force.
 	 */
-	public function dragGetter():Float
+	private function dragGetter():Float
 	{
 		return _drag;
 	}
-	public function dragSetter( value:Float ):Float
+	private function dragSetter( value:Float ):Float
 	{
 		_drag = value;
 		return _drag;

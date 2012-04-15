@@ -42,7 +42,8 @@ package org.flintparticles.twoD.actions;
 
 class AntiGravity extends GravityWell
 {
-	public var power(powerGetter,powerSetter):Float;
+	override public var power(powerGetter, powerSetter):Float;
+	
 	/**
 	 * The constructor creates an AntiGravity action for use by an emitter. 
 	 * To add an AntiGravity to all particles created by an emitter, use the
@@ -70,13 +71,16 @@ class AntiGravity extends GravityWell
 	 * The strength of the anti-gravity force - larger numbers produce a 
 	 * stronger force.
 	 */
-	override public function powerGetter():Float
+	override private function powerGetter():Float
 	{
-		return -super.power;
+		//return -super.power;
+		return -_power;
 	}
-	override public function powerSetter( value:Float ):Float
+	override private function powerSetter( value:Float ):Float
 	{
-		super.power = -value;
+		//super.power = -value;
+		//return -value;
+		_power = -value;
 		return -value;
 	}
 }

@@ -75,33 +75,33 @@ class Ellipse extends Shape
 		}
 	}
 
-	public function ellipseWidthGetter():Float
+	private function ellipseWidthGetter():Float
 	{
 		return _ellipseWidth;
 	}
-	public function ellipseWidthSetter( value:Float ):Float
+	private function ellipseWidthSetter( value:Float ):Float
 	{
 		_ellipseWidth = value;
 		draw();
 		return _ellipseWidth;
 	}
 
-	public function ellipseHeightGetter():Float
+	private function ellipseHeightGetter():Float
 	{
 		return _ellipseHeight;
 	}
-	public function ellipseHeightSetter( value:Float ):Float
+	private function ellipseHeightSetter( value:Float ):Float
 	{
 		_ellipseHeight = value;
 		draw();
 		return _ellipseHeight;
 	}
 
-	public function colorGetter():Int
+	private function colorGetter():Int
 	{
 		return _color;
 	}
-	public function colorSetter( value:Int ):Int
+	private function colorSetter( value:Int ):Int
 	{
 		_color = value;
 		draw();

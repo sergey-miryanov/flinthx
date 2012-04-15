@@ -79,11 +79,11 @@ class MatchRotateVelocity extends ActionBase
 	 * The particle will match its angular velocity other particles that are 
 	 * at most this close to it.
 	 */
-	public function maxDistanceGetter():Float
+	private function maxDistanceGetter():Float
 	{
 		return _max;
 	}
-	public function maxDistanceSetter( value:Float ):Float
+	private function maxDistanceSetter( value:Float ):Float
 	{
 		_max = value;
 		_maxSq = value * value;
@@ -94,11 +94,11 @@ class MatchRotateVelocity extends ActionBase
 	 * The angular acceleration applied to adjust the angular velocity to 
 	 * match that of the other particles.
 	 */
-	public function accelerationGetter():Float
+	private function accelerationGetter():Float
 	{
 		return _acc;
 	}
-	public function accelerationSetter( value:Float ):Float
+	private function accelerationSetter( value:Float ):Float
 	{
 		_acc = value;
 		return _acc;

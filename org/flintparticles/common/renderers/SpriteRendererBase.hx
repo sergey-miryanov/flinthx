@@ -232,11 +232,11 @@ class SpriteRendererBase extends Sprite, implements Renderer
 	/**
 	 * The array of all emitters being rendered by this renderer.
 	 */
-	public function emittersGetter():Vector<Emitter>
+	private function emittersGetter():Vector<Emitter>
 	{
 		return _emitters;
 	}
-	public function emittersSetter( value:Vector<Emitter> ):Vector<Emitter>
+	private function emittersSetter( value:Vector<Emitter> ):Vector<Emitter>
 	{
 		var e:Emitter;
 		for( e in _emitters )

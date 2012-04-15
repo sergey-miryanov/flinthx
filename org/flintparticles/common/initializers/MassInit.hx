@@ -66,11 +66,11 @@ class MassInit extends InitializerBase
 	 * When writing this sets both minMass and maxMass to the 
 	 * same mass value.
 	 */
-	public function massGetter():Float
+	private function massGetter():Float
 	{
 		return _mass;
 	}
-	public function massSetter( value:Float ):Float
+	private function massSetter( value:Float ):Float
 	{
 		_mass = value;
 		return _mass;

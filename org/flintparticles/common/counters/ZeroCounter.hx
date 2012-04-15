@@ -42,7 +42,8 @@ import org.flintparticles.common.counters.Counter;
 class ZeroCounter implements Counter
 {
 	public var running(runningGetter,null):Bool;
-	public var complete(completeGetter,null):Bool;
+	public var complete(completeGetter, null):Bool;
+	
 	/**
 	 * The constructor creates a Zero counter for use by an emitter. To
 	 * add a Zero counter to an emitter use the emitter's counter property.

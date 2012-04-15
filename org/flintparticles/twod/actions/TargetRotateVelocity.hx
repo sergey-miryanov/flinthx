@@ -69,11 +69,11 @@ class TargetRotateVelocity extends ActionBase
 	/**
 	 * The target angular velocity, in radians per second.
 	 */
-	public function targetVelocityGetter():Float
+	private function targetVelocityGetter():Float
 	{
 		return _vel;
 	}
-	public function targetVelocitySetter( value:Float ):Float
+	private function targetVelocitySetter( value:Float ):Float
 	{
 		_vel = value;
 		return _vel;
@@ -83,11 +83,11 @@ class TargetRotateVelocity extends ActionBase
 	 * Adjusts how quickly the particle reaches the target angular velocity.
 	 * Larger numbers cause it to approach the target angular velocity more quickly.
 	 */
-	public function rateGetter():Float
+	private function rateGetter():Float
 	{
 		return _rate;
 	}
-	public function rateSetter( value:Float ):Float
+	private function rateSetter( value:Float ):Float
 	{
 		_rate = value;
 		return _rate;

@@ -75,11 +75,11 @@ class ColorInit extends InitializerBase
 	 * The minimum color value for particles initialised by 
 	 * this initializer. Should be between 0 and 1.
 	 */
-	public function minColorGetter():Int
+	private function minColorGetter():Int
 	{
 		return _min;
 	}
-	public function minColorSetter( value:Int ):Int
+	private function minColorSetter( value:Int ):Int
 	{
 		_min = value;
 		return _min;
@@ -89,11 +89,11 @@ class ColorInit extends InitializerBase
 	 * The maximum color value for particles initialised by 
 	 * this initializer. Should be between 0 and 1.
 	 */
-	public function maxColorGetter():Int
+	private function maxColorGetter():Int
 	{
 		return _max;
 	}
-	public function maxColorSetter( value:Int ):Int
+	private function maxColorSetter( value:Int ):Int
 	{
 		_max = value;
 		return _max;
@@ -104,11 +104,11 @@ class ColorInit extends InitializerBase
 	 * When writing this sets both maxColor and minColor to the 
 	 * same color.
 	 */
-	public function colorGetter():Int
+	private function colorGetter():Int
 	{
 		return _min == _max ? _min : InterpolateColors.interpolate( _max, _min, 0.5 );
 	}
-	public function colorSetter( value:Int ):Int
+	private function colorSetter( value:Int ):Int
 	{
 		_max = _min = value;
 		return value;

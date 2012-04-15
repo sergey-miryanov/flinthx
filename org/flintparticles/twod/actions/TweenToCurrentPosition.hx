@@ -49,7 +49,8 @@ import org.flintparticles.twoD.zones.Zone2D;
 
 class TweenToCurrentPosition extends ActionBase, implements Initializer
 {
-	public var zone(zoneGetter,zoneSetter):Zone2D;
+	public var zone(zoneGetter, zoneSetter):Zone2D;
+	
 	private var _zone : Zone2D;
 
 	/**
@@ -71,12 +72,12 @@ class TweenToCurrentPosition extends ActionBase, implements Initializer
 	/**
 	 * The zone for the particle's position when its energy is 0.
 	 */
-	public function zoneGetter() : Zone2D
+	private function zoneGetter() : Zone2D
 	{
 		return _zone;
 	}
 
-	public function zoneSetter( value : Zone2D ) : Zone2D
+	private function zoneSetter( value : Zone2D ) : Zone2D
 	{
 		_zone = value;
 		return _zone;

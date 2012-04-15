@@ -82,11 +82,11 @@ class Jet extends ActionBase
 	 * The x component of the acceleration to apply, in 
 	 * pixels per second per second.
 	 */
-	public function xGetter():Float
+	private function xGetter():Float
 	{
 		return _x;
 	}
-	public function xSetter( value:Float ):Float
+	private function xSetter( value:Float ):Float
 	{
 		_x = value;
 		return _x;
@@ -96,11 +96,11 @@ class Jet extends ActionBase
 	 * The y component of the acceleration to apply, in 
 	 * pixels per second per second.
 	 */
-	public function yGetter():Float
+	private function yGetter():Float
 	{
 		return _y;
 	}
-	public function ySetter( value:Float ):Float
+	private function ySetter( value:Float ):Float
 	{
 		_y = value;
 		return _y;
@@ -109,11 +109,11 @@ class Jet extends ActionBase
 	/**
 	 * The zone in which to apply the acceleration.
 	 */
-	public function zoneGetter():Zone2D
+	private function zoneGetter():Zone2D
 	{
 		return _zone;
 	}
-	public function zoneSetter( value:Zone2D ):Zone2D
+	private function zoneSetter( value:Zone2D ):Zone2D
 	{
 		_zone = value;
 		return _zone;
@@ -124,11 +124,11 @@ class Jet extends ActionBase
 	 * only to particles inside the zone. If true the acceleration is applied 
 	 * only to particles outside the zone.
 	 */
-	public function invertZoneGetter():Bool
+	private function invertZoneGetter():Bool
 	{
 		return _invert;
 	}
-	public function invertZoneSetter( value:Bool ):Bool
+	private function invertZoneSetter( value:Bool ):Bool
 	{
 		_invert = value;
 		return _invert;

@@ -172,7 +172,7 @@ class Particle
 		return _colorTransform;
 	}
 	
-	public function alphaGetter():Float
+	private function alphaGetter():Float
 	{
 		return ( ( color & 0xFF000000 ) >>> 24 ) / 255;
 	}

@@ -71,11 +71,11 @@ class ActivityBase implements Activity
 	 * 
 	 * @see org.flintparticles.common.actions.Activity#getDefaultPriority()
 	 */
-	public function priorityGetter():Int
+	private function priorityGetter():Int
 	{
 		return _priority;
 	}
-	public function prioritySetter( value:Int ):Int
+	private function prioritySetter( value:Int ):Int
 	{
 		_priority = value;
 		return _priority;
