@@ -436,7 +436,12 @@ class BitmapRenderer extends SpriteRendererBase
 		}
 		if( _colorMap != null )
 		{
+			/**
+			 * TODO: no palleteMap function in cpp?
+			 */
+			#if flash
 			_bitmapData.paletteMap( _bitmapData, _bitmapData.rect, ZERO_POINT, _colorMap[1] , _colorMap[2] , _colorMap[3] , _colorMap[0] );
+			#end
 		}
 		_bitmapData.unlock();
 	}
@@ -505,8 +510,13 @@ class BitmapRenderer extends SpriteRendererBase
 		{
 			matrix = new Matrix( scale, 0, 0, scale, pos.x + _halfWidth, pos.y + _halfHeight );
 		}
-
+		#if flash
 		_bitmapData.draw( particle.image, matrix, particle.colorTransform, cast( particle.image, DisplayObject ).blendMode, null, _smoothing );
+		#else
+		var pimage:DisplayObject = cast( particle.image, DisplayObject );
+		var blendMode:String = cast( pimage.blendMode, String );
+		_bitmapData.draw( particle.image, matrix, particle.colorTransform, blendMode, null, _smoothing );
+		#end
 	}
 	
 	/**
