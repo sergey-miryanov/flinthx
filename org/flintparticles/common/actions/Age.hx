@@ -120,7 +120,6 @@ class Age extends ActionBase
 		particle.age += time;
 		if( particle.age >= particle.lifetime )
 		{
-			trace("dead");
 			particle.energy = 0;
 			particle.isDead = true;
 		}

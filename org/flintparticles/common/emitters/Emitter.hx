@@ -918,6 +918,7 @@ class Emitter extends EventDispatcher
 	public function removeParticle( particle:Particle ):Bool
 	{
 		//var index:Int = _particles.indexOf( particle );
+		trace("removeParticle");
 		var index:Int = Lambda.indexOf(_particles, particle);
 		if( index != -1 )
 		{
