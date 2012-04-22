@@ -201,7 +201,8 @@ class WeightedArray
 	 */
 	public function clear():Void
 	{
-		_values.length = 0;
+		//_values.length = 0;
+		_values.splice(0,_values.length); 
 		_totalWeights = 0;
 	}
 	
