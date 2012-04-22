@@ -28,7 +28,7 @@
 * THE SOFTWARE.
 */
 
-package org.flintparticles.threeD.actions;
+package org.flintparticles.threed.actions;
 
 import nme.geom.Vector3D;
 import org.flintparticles.common.particles.Particle;
@@ -37,8 +37,8 @@ import org.flintparticles.common.activities.FrameUpdatable;
 import org.flintparticles.common.activities.UpdateOnFrame;
 import org.flintparticles.common.emitters.Emitter;
 import org.flintparticles.common.events.ParticleEvent;
-import org.flintparticles.threeD.emitters.Emitter3D;
-import org.flintparticles.threeD.particles.Particle3D;
+import org.flintparticles.threed.emitters.Emitter3D;
+import org.flintparticles.threed.particles.Particle3D;
 
 /**
  * The Collide action detects collisions between particles and modifies their velocities

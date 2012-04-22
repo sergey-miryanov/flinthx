@@ -28,12 +28,12 @@
 * THE SOFTWARE.
 */
 
-package org.flintparticles.threeD.zones;
+package org.flintparticles.threed.zones;
 
 import nme.geom.Matrix3D;
 import nme.geom.Rectangle;
 import nme.geom.Vector3D;
-import org.flintparticles.threeD.renderers.Camera;
+import org.flintparticles.threed.renderers.Camera;
 
 /**
  * The FrustrumZone zone defines a zone in the shape of a camera frustrum. The

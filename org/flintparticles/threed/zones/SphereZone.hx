@@ -28,10 +28,10 @@
 * THE SOFTWARE.
 */
 
-package org.flintparticles.threeD.zones;
+package org.flintparticles.threed.zones;
 
 import nme.geom.Vector3D;
-import org.flintparticles.threeD.geom.Vector3DUtils;
+import org.flintparticles.threed.geom.Vector3DUtils;
 
 
 /**

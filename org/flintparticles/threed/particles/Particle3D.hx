@@ -28,12 +28,12 @@
 * THE SOFTWARE.
 */
 
-package org.flintparticles.threeD.particles;
+package org.flintparticles.threed.particles;
 
 import nme.geom.Vector3D;
 import org.flintparticles.common.particles.Particle;
 import org.flintparticles.common.particles.ParticleFactory;
-import org.flintparticles.threeD.geom.Quaternion;
+import org.flintparticles.threed.geom.Quaternion;
 
 
 /**

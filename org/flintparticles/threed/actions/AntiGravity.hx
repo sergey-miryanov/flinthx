@@ -28,7 +28,7 @@
 * THE SOFTWARE.
 */
 
-package org.flintparticles.threeD.actions;
+package org.flintparticles.threed.actions;
 
 import nme.geom.Vector3D;
 

@@ -28,15 +28,15 @@
 * THE SOFTWARE.
 */
 
-package org.flintparticles.threeD.renderers;
+package org.flintparticles.threed.renderers;
 
 import nme.errors.Error;
 import nme.geom.Matrix3D;
 import nme.geom.Vector3D;
 import nme.Vector;
-import org.flintparticles.threeD.geom.Matrix3DUtils;
-import org.flintparticles.threeD.geom.Vector3DUtils;
-import org.flintparticles.threeD.renderers.controllers.CameraController;
+import org.flintparticles.threed.geom.Matrix3DUtils;
+import org.flintparticles.threed.geom.Vector3DUtils;
+import org.flintparticles.threed.renderers.controllers.CameraController;
 
 /**
  * The camera class is used by Flint's internal 3D renderers to manage the view on the 3D

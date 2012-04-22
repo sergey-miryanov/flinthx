@@ -1,4 +1,4 @@
-package org.flintparticles.threeD.geom;
+package org.flintparticles.threed.geom;
 
 import nme.geom.Matrix3D;
 import nme.geom.Vector3D;

@@ -28,10 +28,10 @@
 * THE SOFTWARE.
 */
 
-package org.flintparticles.threeD.renderers.controllers;
+package org.flintparticles.threed.renderers.controllers;
 
 import nme.display.DisplayObject;
-import org.flintparticles.threeD.renderers.Camera;
+import org.flintparticles.threed.renderers.Camera;
 
 /**
  * Sets keyboard input to make a renderer's camera track, pan and tilt in response to 

@@ -28,14 +28,14 @@
 * THE SOFTWARE.
 */
 
-package org.flintparticles.threeD.actions;
+package org.flintparticles.threed.actions;
 
 import nme.geom.Vector3D;
 import org.flintparticles.common.particles.Particle;
 import org.flintparticles.common.actions.ActionBase;
 import org.flintparticles.common.emitters.Emitter;
-import org.flintparticles.threeD.geom.Vector3DUtils;
-import org.flintparticles.threeD.particles.Particle3D;
+import org.flintparticles.threed.geom.Vector3DUtils;
+import org.flintparticles.threed.particles.Particle3D;
 
 /**
  * The GravityWell action applies a force on the particle to draw it towards

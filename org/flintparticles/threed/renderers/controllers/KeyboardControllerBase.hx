@@ -28,14 +28,14 @@
 * THE SOFTWARE.
 */
 
-package org.flintparticles.threeD.renderers.controllers;
+package org.flintparticles.threed.renderers.controllers;
 
 import nme.display.DisplayObject;
 import nme.events.KeyboardEvent;
 import nme.ui.Keyboard;
 import org.flintparticles.common.events.UpdateEvent;
 import org.flintparticles.common.utils.FrameUpdater;
-import org.flintparticles.threeD.renderers.Camera;
+import org.flintparticles.threed.renderers.Camera;
 
 /**
  * Base class for keyboard based camera controllers. Tracks the keyboard state for camera controllers.

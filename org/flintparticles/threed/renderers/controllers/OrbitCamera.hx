@@ -28,10 +28,10 @@
 * THE SOFTWARE.
 */
 
-package org.flintparticles.threeD.renderers.controllers;
-import nme.display.DisplayObject;
-import org.flintparticles.threeD.renderers.Camera;
+package org.flintparticles.threed.renderers.controllers;
 
+import nme.display.DisplayObject;
+import org.flintparticles.threed.renderers.Camera;
 
 /**
  * Sets keyboard input to make a renderer's camera orbit around a point in response to 

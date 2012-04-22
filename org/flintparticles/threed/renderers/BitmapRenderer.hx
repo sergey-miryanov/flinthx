@@ -28,10 +28,11 @@
 * THE SOFTWARE.
 */
 
-package org.flintparticles.threeD.renderers;
+package org.flintparticles.threed.renderers;
 
 import nme.display.Bitmap;
 import nme.display.BitmapData;
+import nme.display.BlendMode;
 import nme.display.DisplayObject;
 import nme.display.PixelSnapping;
 import nme.filters.BitmapFilter;
@@ -42,8 +43,8 @@ import nme.geom.Rectangle;
 import nme.geom.Vector3D;
 import nme.Vector;
 import org.flintparticles.common.renderers.SpriteRendererBase;
-import org.flintparticles.threeD.geom.Quaternion;
-import org.flintparticles.threeD.particles.Particle3D;
+import org.flintparticles.threed.geom.Quaternion;
+import org.flintparticles.threed.particles.Particle3D;
 
 /**
  * The BitmapRenderer is a native Flint 3D renderer that draws particles
@@ -514,7 +515,40 @@ class BitmapRenderer extends SpriteRendererBase
 		_bitmapData.draw( particle.image, matrix, particle.colorTransform, cast( particle.image, DisplayObject ).blendMode, null, _smoothing );
 		#else
 		var pimage:DisplayObject = cast( particle.image, DisplayObject );
-		var blendMode:String = cast( pimage.blendMode, String );
+		var blendMode:String = "NORMAL";
+		switch(pimage.blendMode)
+		{
+			case BlendMode.NORMAL:
+				blendMode = "NORMAL";
+			case BlendMode.LAYER:
+				blendMode = "LAYER";
+			case BlendMode.MULTIPLY:
+				blendMode = "MULTIPLY";
+			case BlendMode.SCREEN:
+				blendMode = "SCREEN";
+			case BlendMode.LIGHTEN:
+				blendMode = "LIGHTEN";
+			case BlendMode.DARKEN:
+				blendMode = "DARKEN";
+			case BlendMode.DIFFERENCE:
+				blendMode = "DIFFERENCE";
+			case BlendMode.ADD:
+				blendMode = "ADD";
+			case BlendMode.SUBTRACT:
+				blendMode = "SUBTRACT";
+			case BlendMode.INVERT:
+				blendMode = "INVERT";
+			case BlendMode.ALPHA:
+				blendMode = "ALPHA";
+			case BlendMode.ERASE:
+				blendMode = "ERASE";
+			case BlendMode.OVERLAY:
+				blendMode = "OVERLAY";
+			case BlendMode.HARDLIGHT:
+				blendMode = "HARDLIGHT";
+			default:
+				blendMode = "NORMAL";
+		}
 		_bitmapData.draw( particle.image, matrix, particle.colorTransform, blendMode, null, _smoothing );
 		#end
 	}

@@ -28,13 +28,13 @@
 * THE SOFTWARE.
 */
 
-package org.flintparticles.threeD.actions;
+package org.flintparticles.threed.actions;
 
 import org.flintparticles.common.particles.Particle;
 import org.flintparticles.common.actions.ActionBase;
 import org.flintparticles.common.emitters.Emitter;
-import org.flintparticles.threeD.particles.Particle3D;
-import org.flintparticles.threeD.zones.Zone3D;
+import org.flintparticles.threed.particles.Particle3D;
+import org.flintparticles.threed.zones.Zone3D;
 
 /**
  * The DeathZone action marks the particle as dead if it is inside

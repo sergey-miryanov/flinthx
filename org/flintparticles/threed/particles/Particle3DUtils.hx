@@ -27,7 +27,7 @@
 * THE SOFTWARE.
 */
 
-package org.flintparticles.threeD.particles;
+package org.flintparticles.threed.particles;
 
 import nme.display.Bitmap;
 import nme.display.BitmapData;

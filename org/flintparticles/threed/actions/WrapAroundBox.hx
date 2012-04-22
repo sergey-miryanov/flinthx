@@ -28,12 +28,12 @@
 * THE SOFTWARE.
 */
 
-package org.flintparticles.threeD.actions;
+package org.flintparticles.threed.actions;
 
 import org.flintparticles.common.particles.Particle;
 import org.flintparticles.common.actions.ActionBase;
 import org.flintparticles.common.emitters.Emitter;
-import org.flintparticles.threeD.particles.Particle3D;
+import org.flintparticles.threed.particles.Particle3D;
 
 /**
  * The WrapAroundBox action confines all the particles to a rectangle region. If a

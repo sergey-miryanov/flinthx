@@ -28,7 +28,7 @@
 * THE SOFTWARE.
 */
 
-package org.flintparticles.threeD.zones;
+package org.flintparticles.threed.zones;
 
 import nme.errors.Error;
 import nme.geom.Vector3D;

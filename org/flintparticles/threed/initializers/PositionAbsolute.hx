@@ -28,13 +28,13 @@
 * THE SOFTWARE.
 */
 
-package org.flintparticles.threeD.initializers;
+package org.flintparticles.threed.initializers;
 
 import org.flintparticles.common.emitters.Emitter;
 import org.flintparticles.common.particles.Particle;
 import org.flintparticles.common.initializers.InitializerBase;
-import org.flintparticles.threeD.particles.Particle3D;
-import org.flintparticles.threeD.zones.Zone3D;
+import org.flintparticles.threed.particles.Particle3D;
+import org.flintparticles.threed.zones.Zone3D;
 
 /**
  * The PositionAbsolute Initializer sets the initial location of the particle.

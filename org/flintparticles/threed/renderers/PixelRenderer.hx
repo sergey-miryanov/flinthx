@@ -28,11 +28,11 @@
 * THE SOFTWARE.
 */
 
-package org.flintparticles.threeD.renderers;
+package org.flintparticles.threed.renderers;
 
 import nme.geom.Rectangle;
 import nme.geom.Vector3D;
-import org.flintparticles.threeD.particles.Particle3D;
+import org.flintparticles.threed.particles.Particle3D;
 
 /**
  * The PixelRenderer is a native Flint 3D renderer that draws particles

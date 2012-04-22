@@ -28,16 +28,16 @@
 * THE SOFTWARE.
 */
 
-package org.flintparticles.threeD.initializers;
+package org.flintparticles.threed.initializers;
 
 import nme.geom.Vector3D;
 import org.flintparticles.common.particles.Particle;
 import org.flintparticles.common.emitters.Emitter;
 import org.flintparticles.common.initializers.InitializerBase;
-import org.flintparticles.threeD.emitters.Emitter3D;
-import org.flintparticles.threeD.geom.Quaternion;
-import org.flintparticles.threeD.particles.Particle3D;
-import org.flintparticles.threeD.zones.Zone3D;
+import org.flintparticles.threed.emitters.Emitter3D;
+import org.flintparticles.threed.geom.Quaternion;
+import org.flintparticles.threed.particles.Particle3D;
+import org.flintparticles.threed.zones.Zone3D;
 
 /**
  * The ColorInit Initializer sets the velocity of the particle. It is

@@ -28,13 +28,13 @@
 * THE SOFTWARE.
 */
 
-package org.flintparticles.threeD.activities;
+package org.flintparticles.threed.activities;
 
 import nme.geom.Vector3D;
 import org.flintparticles.common.activities.ActivityBase;
 import org.flintparticles.common.emitters.Emitter;
-import org.flintparticles.threeD.emitters.Emitter3D;
-import org.flintparticles.threeD.geom.Vector3DUtils;
+import org.flintparticles.threed.emitters.Emitter3D;
+import org.flintparticles.threed.geom.Vector3DUtils;
 
 /**
  * The MoveEmitter activity moves the emitter at a constant velocity.

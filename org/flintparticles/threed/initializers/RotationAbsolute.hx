@@ -28,14 +28,14 @@
 * THE SOFTWARE.
 */
 
-package org.flintparticles.threeD.initializers;
+package org.flintparticles.threed.initializers;
 
 import nme.geom.Vector3D;
 import org.flintparticles.common.particles.Particle;
 import org.flintparticles.common.emitters.Emitter;
 import org.flintparticles.common.initializers.InitializerBase;
-import org.flintparticles.threeD.geom.Vector3DUtils;
-import org.flintparticles.threeD.particles.Particle3D;
+import org.flintparticles.threed.geom.Vector3DUtils;
+import org.flintparticles.threed.particles.Particle3D;
 
 /**
  * The RotationAbsolute Initializer sets the rotation of the particle. The rotation is

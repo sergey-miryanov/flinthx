@@ -28,14 +28,14 @@
 * THE SOFTWARE.
 */
 
-package org.flintparticles.threeD.actions;
+package org.flintparticles.threed.actions;
 
 import org.flintparticles.common.emitters.Emitter;
 import org.flintparticles.common.particles.Particle;
 import org.flintparticles.common.actions.Action;
 import org.flintparticles.common.actions.ActionBase;
-import org.flintparticles.threeD.particles.Particle3D;
-import org.flintparticles.threeD.zones.Zone3D;
+import org.flintparticles.threed.particles.Particle3D;
+import org.flintparticles.threed.zones.Zone3D;
 
 /**
  * The ZonedAction Action applies an action to the particle only if it is in the specified zone. 

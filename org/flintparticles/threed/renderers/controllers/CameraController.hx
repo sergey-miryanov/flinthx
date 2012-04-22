@@ -1,6 +1,6 @@
-package org.flintparticles.threeD.renderers.controllers;
+package org.flintparticles.threed.renderers.controllers;
 
-import org.flintparticles.threeD.renderers.Camera;
+import org.flintparticles.threed.renderers.Camera;
 
 /**
  * The interface for classes that manage the camera state based on key presses or other inputs.

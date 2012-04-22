@@ -28,13 +28,13 @@
 * THE SOFTWARE.
 */
 
-package org.flintparticles.threeD.actions;
+package org.flintparticles.threed.actions;
 
 import org.flintparticles.common.emitters.Emitter;
 import org.flintparticles.common.particles.Particle;
 import org.flintparticles.common.actions.ActionBase;
-import org.flintparticles.threeD.geom.Quaternion;
-import org.flintparticles.threeD.particles.Particle3D;
+import org.flintparticles.threed.geom.Quaternion;
+import org.flintparticles.threed.particles.Particle3D;
 
 /**
  * The Rotate action updates the rotation of the particle based on its angular velocity.

@@ -28,7 +28,7 @@
 * THE SOFTWARE.
 */
 
-package org.flintparticles.threeD.renderers;
+package org.flintparticles.threed.renderers;
 
 import nme.display.DisplayObject;
 import nme.geom.Matrix3D;
@@ -36,8 +36,8 @@ import nme.geom.Vector3D;
 import nme.Vector;
 import org.flintparticles.common.particles.Particle;
 import org.flintparticles.common.renderers.SpriteRendererBase;
-import org.flintparticles.threeD.geom.Quaternion;
-import org.flintparticles.threeD.particles.Particle3D;
+import org.flintparticles.threed.geom.Quaternion;
+import org.flintparticles.threed.particles.Particle3D;
 
 /**
  * The DisplayObjectRenderer is a native Flint 3D renderer that draws particles

@@ -28,16 +28,16 @@
 * THE SOFTWARE.
 */
 
-package org.flintparticles.threeD.emitters;
+package org.flintparticles.threed.emitters;
 
 import nme.geom.Matrix3D;
 import nme.geom.Vector3D;
 import org.flintparticles.common.particles.Particle;
 import org.flintparticles.common.emitters.Emitter;
 import org.flintparticles.common.particles.ParticleFactory;
-import org.flintparticles.threeD.geom.Quaternion;
-import org.flintparticles.threeD.particles.Particle3D;
-import org.flintparticles.threeD.particles.ParticleCreator3D;
+import org.flintparticles.threed.geom.Quaternion;
+import org.flintparticles.threed.particles.Particle3D;
+import org.flintparticles.threed.particles.ParticleCreator3D;
 
 
 /**

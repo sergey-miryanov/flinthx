@@ -28,7 +28,7 @@
 * THE SOFTWARE.
 */
 
-package org.flintparticles.threeD.particles;
+package org.flintparticles.threed.particles;
 
 import nme.Vector;
 import org.flintparticles.common.debug.ParticleFactoryStats;

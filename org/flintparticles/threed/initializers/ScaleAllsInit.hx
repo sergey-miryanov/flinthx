@@ -28,7 +28,7 @@
 * THE SOFTWARE.
 */
 
-package org.flintparticles.threeD.initializers;
+package org.flintparticles.threed.initializers;
 
 import org.flintparticles.common.particles.Particle;
 import org.flintparticles.common.emitters.Emitter;

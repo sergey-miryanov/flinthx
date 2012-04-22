@@ -28,15 +28,15 @@
 * THE SOFTWARE.
 */
 
-package org.flintparticles.threeD.zones;
+package org.flintparticles.threed.zones;
 
 import nme.display.BitmapData;
 import nme.geom.Matrix3D;
 import nme.geom.Point;
 import nme.geom.Vector3D;
 import org.flintparticles.common.utils.FastWeightedArray;
-import org.flintparticles.threeD.geom.Matrix3DUtils;
-import org.flintparticles.threeD.geom.Vector3DUtils;
+import org.flintparticles.threed.geom.Matrix3DUtils;
+import org.flintparticles.threed.geom.Vector3DUtils;
 
 /**
  * The Greyscale zone defines a shaped zone based on a BitmapData object.
