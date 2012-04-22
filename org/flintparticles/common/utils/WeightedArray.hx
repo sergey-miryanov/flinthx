@@ -69,7 +69,7 @@ class WeightedArray
 	public function getProperty(name:Dynamic):Dynamic
 	{
 		var index:Int = cast( name,Int );
-		if ( index == name && index < _values.length && _values[ index ] != null )
+		if ( index == name && index < cast(_values.length,Int) && _values[ index ] != null )
 		{
 			return _values[ index ].value;
 		}
@@ -87,7 +87,7 @@ class WeightedArray
 	public function setProperty(name:Dynamic, value:Dynamic):Void
 	{
 		var index:Int = cast( name,Int );
-		if ( index == name && index < _values.length )
+		if ( index == name && index < cast(_values.length,Int) )
 		{
 			_values[index].value = value;
 		}
@@ -98,7 +98,7 @@ class WeightedArray
 	 */
 	public function nextNameIndex( index:Int ):Int
 	{
-		if( index < _values.length )
+		if( index < cast(_values.length,Int) )
 		{
 			return index + 1;
 		}

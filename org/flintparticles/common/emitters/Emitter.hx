@@ -276,7 +276,7 @@ class Emitter extends EventDispatcher
 			initializer.removedFromEmitter( this );
 		}
 		/**
-		 * TODO: check if this is cleaning the vector
+		 * TODO: check if this is cleaning the vector?
 		 */
 		_initializers = _initializers.slice(_initializers.length);
 		//_initializers = value.slice();
