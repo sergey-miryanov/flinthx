@@ -310,7 +310,7 @@ class Emitter extends EventDispatcher
 			++i;
 		}
 		/**
-		 * TODO: check insert value into vector
+		 * TODO: insert value into vector works
 		 */
 		 //_initializers.splice( i, 0, initializer );
 		_initializers = ArrayUtils.insertIntoVector([i, initializer, _initializers]);
@@ -918,7 +918,6 @@ class Emitter extends EventDispatcher
 	public function removeParticle( particle:Particle ):Bool
 	{
 		//var index:Int = _particles.indexOf( particle );
-		trace("removeParticle");
 		var index:Int = Lambda.indexOf(_particles, particle);
 		if( index != -1 )
 		{
@@ -930,8 +929,13 @@ class Emitter extends EventDispatcher
 				//addEventListener( EmitterEvent.EMITTER_UPDATED, function( e:EmitterEvent ) : Void
 				//{
 					//removeEventListener( EmitterEvent.EMITTER_UPDATED, arguments.callee );
-					removeParticle( particle );
+					//removeParticle( particle );
 				//});
+				addEventListener( EmitterEvent.EMITTER_UPDATED, function( e:EmitterEvent ) : Void
+				{
+					removeParticle( particle );
+				});
+				//addEventListener( EmitterEvent.EMITTER_UPDATED, removeParticleProxy);
 			}
 			else
 			{
@@ -941,6 +945,12 @@ class Emitter extends EventDispatcher
 			return true;
 		}
 		return false;
+	}
+	
+	public function removeParticleProxy ( e:EmitterEvent ) : Void
+	{
+		e.target.removeEventListener( EmitterEvent.EMITTER_UPDATED, removeParticleProxy );
+		removeParticle( e.target );
 	}
 	
 	/**
@@ -958,8 +968,12 @@ class Emitter extends EventDispatcher
 			//addEventListener( EmitterEvent.EMITTER_UPDATED, function( e:EmitterEvent ) : Void
 			//{
 				//removeEventListener( EmitterEvent.EMITTER_UPDATED, arguments.callee );
-				removeParticles( particles );
+				//removeParticles( particles );
 			//});
+			addEventListener( EmitterEvent.EMITTER_UPDATED, function( e:EmitterEvent ) : Void
+			{
+				removeParticles( particles );
+			});
 		}
 		else
 		{

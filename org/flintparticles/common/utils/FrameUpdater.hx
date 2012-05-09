@@ -71,9 +71,6 @@ class FrameUpdater extends EventDispatcher
 		return _instance;
 	}
 	
-	/**
-	 * TODO: shape does not fire events?
-	 */
 	private var _shape:Shape;
 	//private var _time:Float;
 	private var _time:Int;
