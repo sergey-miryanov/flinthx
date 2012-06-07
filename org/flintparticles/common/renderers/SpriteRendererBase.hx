@@ -91,7 +91,9 @@ class SpriteRendererBase extends Sprite, implements Renderer
 		_emitters.push( emitter );
 		if( stage != null )
 		{
+			#if (flash||cpp)
 			stage.invalidate();
+			#end
 		}
 		//emitter.addEventListener( EmitterEvent.EMITTER_UPDATED, emitterUpdated, false, 0, true );
 		//emitter.addEventListener( ParticleEvent.PARTICLE_CREATED, particleAdded, false, 0, true );
@@ -145,7 +147,9 @@ class SpriteRendererBase extends Sprite, implements Renderer
 				}
 				else if( stage != null )
 				{
+					#if (flash||cpp)
 					stage.invalidate();
+					#end
 				}
 				return;
 			}
@@ -156,7 +160,9 @@ class SpriteRendererBase extends Sprite, implements Renderer
 	{
 		if( stage != null )
 		{
+			#if (flash||cpp)
 			stage.invalidate();
+			#end
 		}
 	}
 	
@@ -165,7 +171,9 @@ class SpriteRendererBase extends Sprite, implements Renderer
 		addParticle( ev.particle );
 		if( stage != null )
 		{
+			#if (flash||cpp)
 			stage.invalidate();
+			#end
 		}
 	}
 	
@@ -174,7 +182,9 @@ class SpriteRendererBase extends Sprite, implements Renderer
 		removeParticle( ev.particle );
 		if( stage != null )
 		{
+			#if (flash||cpp)
 			stage.invalidate();
+			#end
 		}
 	}
 
@@ -182,7 +192,9 @@ class SpriteRendererBase extends Sprite, implements Renderer
 	{
 		if( stage != null )
 		{
+			#if (flash||cpp)
 			stage.invalidate();
+			#end
 		}
 	}
 	

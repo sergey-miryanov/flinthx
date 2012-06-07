@@ -438,7 +438,9 @@ class BitmapRenderer extends SpriteRendererBase
 			default:
 				blendMode = "NORMAL";
 		}
+		#if flash || cpp
 		_bitmapData.draw( particle.image, matrix, particle.colorTransform, blendMode, null, _smoothing );
+		#end
 		#end
 	}
 	
