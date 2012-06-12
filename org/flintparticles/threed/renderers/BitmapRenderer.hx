@@ -511,12 +511,9 @@ class BitmapRenderer extends SpriteRendererBase
 		{
 			matrix = new Matrix( scale, 0, 0, scale, pos.x + _halfWidth, pos.y + _halfHeight );
 		}
-		#if flash
-		_bitmapData.draw( particle.image, matrix, particle.colorTransform, cast( particle.image, DisplayObject ).blendMode, null, _smoothing );
-		#else
-		var pimage:DisplayObject = cast( particle.image, DisplayObject );
+		#if cpp
 		var blendMode:String = "NORMAL";
-		switch(pimage.blendMode)
+		switch(cast( particle.image, DisplayObject ).blendMode)
 		{
 			case BlendMode.NORMAL:
 				blendMode = "NORMAL";
@@ -550,6 +547,8 @@ class BitmapRenderer extends SpriteRendererBase
 				blendMode = "NORMAL";
 		}
 		_bitmapData.draw( particle.image, matrix, particle.colorTransform, blendMode, null, _smoothing );
+		#else
+		_bitmapData.draw( particle.image, matrix, particle.colorTransform, cast( particle.image, DisplayObject ).blendMode, null, _smoothing );
 		#end
 	}
 	
