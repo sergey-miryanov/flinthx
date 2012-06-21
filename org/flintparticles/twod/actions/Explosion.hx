@@ -28,7 +28,7 @@
 * THE SOFTWARE.
 */
 
-package org.flintparticles.twoD.actions;
+package org.flintparticles.twod.actions;
 
 import org.flintparticles.common.particles.Particle;
 import org.flintparticles.common.actions.ActionBase;
@@ -36,7 +36,7 @@ import org.flintparticles.common.activities.FrameUpdatable;
 import org.flintparticles.common.activities.UpdateOnFrame;
 import org.flintparticles.common.behaviours.Resetable;
 import org.flintparticles.common.emitters.Emitter;
-import org.flintparticles.twoD.particles.Particle2D;
+import org.flintparticles.twod.particles.Particle2D;
 
 /**
  * The Explosion action applies a force on the particles to push them away 

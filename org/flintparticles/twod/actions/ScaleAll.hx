@@ -28,7 +28,7 @@
 * THE SOFTWARE.
 */
 
-package org.flintparticles.twoD.actions;
+package org.flintparticles.twod.actions;
 
 import org.flintparticles.common.particles.Particle;
 import org.flintparticles.common.actions.ActionBase;

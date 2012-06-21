@@ -28,13 +28,13 @@
 * THE SOFTWARE.
 */
 
-package org.flintparticles.twoD.actions;
+package org.flintparticles.twod.actions;
 
 import org.flintparticles.common.particles.Particle;
 import org.flintparticles.common.actions.ActionBase;
 import org.flintparticles.common.emitters.Emitter;
-import org.flintparticles.twoD.particles.Particle2D;
-import org.flintparticles.twoD.zones.Zone2D;
+import org.flintparticles.twod.particles.Particle2D;
+import org.flintparticles.twod.zones.Zone2D;
 
 
 /**
@@ -62,10 +62,10 @@ class DeathZone extends ActionBase
 	 * emitter's addAction method.
 	 * 
 	 * @see org.flintparticles.common.emitters.Emitter#addAction()
-	 * @see org.flintparticles.twoD.zones
+	 * @see org.flintparticles.twod.zones
 	 * 
 	 * @param zone The zone to use. Any item from the 
-	 * org.flintparticles.twoD.zones package can be used.
+	 * org.flintparticles.twod.zones package can be used.
 	 * @param zoneIsSafe If true, the zone is treated as the safe area
 	 * and particles outside the zone are killed. If false, particles
 	 * inside the zone are killed.

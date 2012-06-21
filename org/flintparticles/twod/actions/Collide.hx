@@ -28,7 +28,7 @@
 * THE SOFTWARE.
 */
 
-package org.flintparticles.twoD.actions;
+package org.flintparticles.twod.actions;
 
 import org.flintparticles.common.particles.Particle;
 import org.flintparticles.common.actions.ActionBase;
@@ -36,8 +36,8 @@ import org.flintparticles.common.activities.FrameUpdatable;
 import org.flintparticles.common.activities.UpdateOnFrame;
 import org.flintparticles.common.emitters.Emitter;
 import org.flintparticles.common.events.ParticleEvent;
-import org.flintparticles.twoD.emitters.Emitter2D;
-import org.flintparticles.twoD.particles.Particle2D;
+import org.flintparticles.twod.emitters.Emitter2D;
+import org.flintparticles.twod.particles.Particle2D;
 
 /**
  * The Collide action detects collisions between particles and modifies their 

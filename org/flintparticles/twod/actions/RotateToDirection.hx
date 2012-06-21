@@ -29,12 +29,12 @@
 * THE SOFTWARE.
 */
 
-package org.flintparticles.twoD.actions;
+package org.flintparticles.twod.actions;
 
 import org.flintparticles.common.emitters.Emitter;
 import org.flintparticles.common.particles.Particle;
 import org.flintparticles.common.actions.ActionBase;
-import org.flintparticles.twoD.particles.Particle2D;
+import org.flintparticles.twod.particles.Particle2D;
 
 /**
  * The RotateToDirection action updates the rotation of the particle 

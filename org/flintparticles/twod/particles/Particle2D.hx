@@ -28,7 +28,7 @@
 * THE SOFTWARE.
 */
 
-package org.flintparticles.twoD.particles;
+package org.flintparticles.twod.particles;
 
 import nme.geom.Matrix;
 import org.flintparticles.common.particles.Particle;

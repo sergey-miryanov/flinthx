@@ -28,9 +28,10 @@
 * THE SOFTWARE.
 */
 
-package org.flintparticles.twoD.zones;
+package org.flintparticles.twod.zones;
+
 import nme.geom.Point;
-import org.flintparticles.twoD.particles.Particle2D;
+import org.flintparticles.twod.particles.Particle2D;
 
 /**
  * The RectangleZone zone defines a rectangular shaped zone.

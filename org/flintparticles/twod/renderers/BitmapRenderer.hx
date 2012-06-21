@@ -28,7 +28,7 @@
 * THE SOFTWARE.
 */
 
-package org.flintparticles.twoD.renderers;
+package org.flintparticles.twod.renderers;
 
 import jota.utils.ArrayUtils;
 import nme.display.Bitmap;
@@ -41,7 +41,7 @@ import nme.geom.Matrix;
 import nme.geom.Point;
 import nme.geom.Rectangle;
 import org.flintparticles.common.renderers.SpriteRendererBase;
-import org.flintparticles.twoD.particles.Particle2D;
+import org.flintparticles.twod.particles.Particle2D;
 
 
 /**

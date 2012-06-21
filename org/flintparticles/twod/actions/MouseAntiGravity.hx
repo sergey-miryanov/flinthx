@@ -28,7 +28,8 @@
 * THE SOFTWARE.
 */
 
-package org.flintparticles.twoD.actions;
+package org.flintparticles.twod.actions;
+
 import nme.display.DisplayObject;
 
 /**

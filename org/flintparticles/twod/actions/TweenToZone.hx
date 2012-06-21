@@ -28,15 +28,15 @@
 * THE SOFTWARE.
 */
 
-package org.flintparticles.twoD.actions;
+package org.flintparticles.twod.actions;
 
 import nme.geom.Point;
 import org.flintparticles.common.particles.Particle;
 import org.flintparticles.common.actions.ActionBase;
 import org.flintparticles.common.emitters.Emitter;
 import org.flintparticles.common.initializers.Initializer;
-import org.flintparticles.twoD.particles.Particle2D;
-import org.flintparticles.twoD.zones.Zone2D;
+import org.flintparticles.twod.particles.Particle2D;
+import org.flintparticles.twod.zones.Zone2D;
 
 
 /**

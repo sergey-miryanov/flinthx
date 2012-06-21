@@ -28,10 +28,10 @@
 * THE SOFTWARE.
 */
 
-package org.flintparticles.twoD.renderers;
+package org.flintparticles.twod.renderers;
 
 import nme.geom.Rectangle;
-import org.flintparticles.twoD.particles.Particle2D;
+import org.flintparticles.twod.particles.Particle2D;
 
 /**
  * The PixelRenderer draws particles as single pixels on a Bitmap display object. The

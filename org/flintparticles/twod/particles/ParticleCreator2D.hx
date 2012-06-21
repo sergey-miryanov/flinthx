@@ -28,7 +28,7 @@
 * THE SOFTWARE.
 */
 
-package org.flintparticles.twoD.particles;
+package org.flintparticles.twod.particles;
 
 import nme.Vector;
 import org.flintparticles.common.debug.ParticleFactoryStats;

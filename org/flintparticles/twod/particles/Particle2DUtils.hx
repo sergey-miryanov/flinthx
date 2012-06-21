@@ -27,7 +27,7 @@
 * THE SOFTWARE.
 */
 
-package org.flintparticles.twoD.particles;
+package org.flintparticles.twod.particles;
 
 import nme.display.Bitmap;
 import nme.display.BitmapData;

@@ -28,11 +28,11 @@
 * THE SOFTWARE.
 */
 
-package org.flintparticles.twoD.activities;
+package org.flintparticles.twod.activities;
 
 import org.flintparticles.common.activities.ActivityBase;
 import org.flintparticles.common.emitters.Emitter;
-import org.flintparticles.twoD.emitters.Emitter2D;
+import org.flintparticles.twod.emitters.Emitter2D;
 
 /**
  * The RotateEmitter activity rotates the emitter at a constant rate.

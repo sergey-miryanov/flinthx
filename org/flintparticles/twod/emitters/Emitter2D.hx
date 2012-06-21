@@ -28,13 +28,13 @@
 * THE SOFTWARE.
 */
 
-package org.flintparticles.twoD.emitters;
+package org.flintparticles.twod.emitters;
 
 import org.flintparticles.common.emitters.Emitter;
 import org.flintparticles.common.particles.ParticleFactory;
 import org.flintparticles.common.utils.Maths;
-import org.flintparticles.twoD.particles.Particle2D;
-import org.flintparticles.twoD.particles.ParticleCreator2D;
+import org.flintparticles.twod.particles.Particle2D;
+import org.flintparticles.twod.particles.ParticleCreator2D;
 import org.flintparticles.common.particles.Particle;
 
 /**

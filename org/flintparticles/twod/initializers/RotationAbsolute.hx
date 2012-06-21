@@ -28,12 +28,12 @@
 * THE SOFTWARE.
 */
 
-package org.flintparticles.twoD.initializers;
+package org.flintparticles.twod.initializers;
 
 import org.flintparticles.common.particles.Particle;
 import org.flintparticles.common.emitters.Emitter;
 import org.flintparticles.common.initializers.InitializerBase;
-import org.flintparticles.twoD.particles.Particle2D;
+import org.flintparticles.twod.particles.Particle2D;
 
 /**
  * The RotationAbsolute Initializer sets the rotation of the particle. The rotation is

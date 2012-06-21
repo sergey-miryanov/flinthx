@@ -28,13 +28,13 @@
 * THE SOFTWARE.
 */
 
-package org.flintparticles.twoD.actions;
+package org.flintparticles.twod.actions;
 
 import org.flintparticles.common.particles.Particle;
 import org.flintparticles.common.actions.ActionBase;
 import org.flintparticles.common.emitters.Emitter;
-import org.flintparticles.twoD.emitters.Emitter2D;
-import org.flintparticles.twoD.particles.Particle2D;
+import org.flintparticles.twod.emitters.Emitter2D;
+import org.flintparticles.twod.particles.Particle2D;
 
 /**
  * The ApproachNeighbours action applies an acceleration to the particle to 
@@ -51,8 +51,8 @@ import org.flintparticles.twoD.particles.Particle2D;
  * <p>This action has a priority of 10, so that it executes 
  * before other actions.</p>
  * 
-* 	 * @see org.flintparticles.twoD.actions.MinimumDistance
- * @see org.flintparticles.twoD.actions.MatchVelocity
+* 	 * @see org.flintparticles.twod.actions.MinimumDistance
+ * @see org.flintparticles.twod.actions.MatchVelocity
  */
 
 class ApproachNeighbours extends ActionBase

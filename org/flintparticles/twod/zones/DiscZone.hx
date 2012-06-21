@@ -28,11 +28,11 @@
 * THE SOFTWARE.
 */
 
-package org.flintparticles.twoD.zones;
+package org.flintparticles.twod.zones;
 
 import nme.errors.Error;
 import nme.geom.Point;
-import org.flintparticles.twoD.particles.Particle2D;
+import org.flintparticles.twod.particles.Particle2D;
 
 /**
  * The DiscZone zone defines a circular zone. The zone may

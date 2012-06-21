@@ -28,7 +28,7 @@
 * THE SOFTWARE.
 */
 
-package org.flintparticles.twoD.initializers;
+package org.flintparticles.twod.initializers;
 
 import org.flintparticles.common.particles.Particle;
 import org.flintparticles.common.emitters.Emitter;

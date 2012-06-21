@@ -28,12 +28,12 @@
 * THE SOFTWARE.
 */
 
-package org.flintparticles.twoD.zones;
+package org.flintparticles.twod.zones;
 
 import nme.display.DisplayObject;
 import nme.geom.Point;
 import nme.geom.Rectangle;
-import org.flintparticles.twoD.particles.Particle2D;
+import org.flintparticles.twod.particles.Particle2D;
 
 /**
  * The DisplayObjectZone zone defines a shaped zone based on a DisplayObject.

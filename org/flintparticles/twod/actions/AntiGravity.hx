@@ -28,7 +28,7 @@
 * THE SOFTWARE.
 */
 
-package org.flintparticles.twoD.actions;
+package org.flintparticles.twod.actions;
 
 /**
  * The AntiGravity action applies a force to the particle to push it away from
@@ -37,7 +37,7 @@ package org.flintparticles.twoD.actions;
  * 
  * <p>This is the same as the GravityWell action with a negative force.</p>
  * 
- * @see org.flintparticles.twoD.actions.GravityWell
+ * @see org.flintparticles.twod.actions.GravityWell
  */
 
 class AntiGravity extends GravityWell
