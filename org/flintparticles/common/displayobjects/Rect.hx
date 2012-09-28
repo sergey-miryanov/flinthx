@@ -28,7 +28,7 @@
 * THE SOFTWARE.
 */
 
-package org.flintparticles.common.displayObjects;
+package org.flintparticles.common.displayobjects;
 
 import nme.display.Shape;
 import nme.display.BlendMode;
