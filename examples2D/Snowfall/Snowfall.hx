@@ -46,6 +46,8 @@ class Snowfall extends Emitter2D
 
 	public function new()
 	{
+    super ();
+
 		counter = new Steady(150);
 		addInitializer(new ImageClass(RadialDot, [2]));
 		addInitializer(new Position(new LineZone(new Point(-5, -5), new Point(605, -5))));

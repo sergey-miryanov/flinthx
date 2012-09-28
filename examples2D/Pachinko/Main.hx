@@ -43,6 +43,8 @@ class Main extends Sprite
 	var startButton : TextField;
 	public function new()
 	{
+    super ();
+
 		drawBackground();
 		emitter = new Pachinko();
 		var renderer : BitmapRenderer = new BitmapRenderer(new Rectangle(0, 0, 500, 425));

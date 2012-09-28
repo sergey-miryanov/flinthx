@@ -46,6 +46,8 @@ class Rain extends Emitter2D
 
 	public function new()
 	{
+    super ();
+
 		counter = new Steady(1000);
 		addInitializer(new Position(new LineZone(new Point(-55, -5), new Point(605, -5))));
 		addInitializer(new Velocity(new DiscZone(new Point(60, 400), 20)));

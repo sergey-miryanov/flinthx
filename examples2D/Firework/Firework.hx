@@ -48,6 +48,8 @@ class Firework extends Emitter2D
 
 	public function new()
 	{
+    super ();
+
 		counter = new Blast(700);
 		addInitializer(new SharedImage(new Dot(2)));
 		addInitializer(new ColorInit(0xFFFFFF00, 0xFFFF6600));

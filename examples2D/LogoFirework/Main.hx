@@ -40,6 +40,8 @@ class Main extends Sprite
 	var emitter : Emitter2D;
 	public function new()
 	{
+    super ();
+
 		emitter = new LogoFirework();
 		var renderer : PixelRenderer = new PixelRenderer(new Rectangle(0, 0, 500, 300));
 		renderer.addFilter(new BlurFilter(2, 2, 1));

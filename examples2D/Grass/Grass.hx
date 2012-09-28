@@ -45,6 +45,8 @@ class Grass extends Emitter2D
 
 	public function new()
 	{
+    super ();
+
 		counter = new Blast(100);
 		addInitializer(new Position(new DiscZone(new Point(0, 0), 40)));
 		addInitializer(new Velocity(new DiscSectorZone(new Point(0, 0), 80, 40, -5 * Math.PI / 8, -3 * Math.PI / 8)));

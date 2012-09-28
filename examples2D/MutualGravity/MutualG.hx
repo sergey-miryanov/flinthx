@@ -43,6 +43,8 @@ class MutualG extends Emitter2D
 
 	public function new()
 	{
+    super ();
+
 		counter = new Blast(40);
 		addInitializer(new SharedImage(new Dot(2)));
 		addInitializer(new ColorInit(0xFFFF00FF, 0xFF00FFFF));

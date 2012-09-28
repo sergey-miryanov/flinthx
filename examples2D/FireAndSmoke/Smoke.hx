@@ -46,6 +46,8 @@ class Smoke extends Emitter2D
 
 	public function new()
 	{
+    super ();
+
 		counter = new Steady(10);
 		addInitializer(new Lifetime(11, 12));
 		addInitializer(new Velocity(new DiscSectorZone(new Point(0, 0), 40, 30, -4 * Math.PI / 7, -3 * Math.PI / 7)));

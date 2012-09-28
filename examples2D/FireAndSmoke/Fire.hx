@@ -48,6 +48,8 @@ class Fire extends Emitter2D
 
 	public function new()
 	{
+    super ();
+
 		counter = new Steady(60);
 		addInitializer(new Lifetime(2, 3));
 		addInitializer(new Velocity(new DiscSectorZone(new Point(0, 0), 20, 10, -Math.PI, 0)));

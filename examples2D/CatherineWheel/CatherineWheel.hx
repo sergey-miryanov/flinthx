@@ -48,6 +48,8 @@ class CatherineWheel extends Emitter2D
 
 	public function new()
 	{
+    super ();
+
 		counter = new Steady(200);
 		addActivity(new RotateEmitter(-7));
 		addInitializer(new SharedImage(new Line(3)));

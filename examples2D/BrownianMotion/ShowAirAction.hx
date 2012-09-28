@@ -39,7 +39,8 @@ import org.flintparticles.common.particles.Particle;
  * to the particles only if a specified key is down.
  * 
  * @see org.flintparticles.common.actions.Action
- */class ShowAirAction extends ActionBase
+ */
+class ShowAirAction extends ActionBase
 {
 
 	var _isDown : Bool;
@@ -53,8 +54,11 @@ import org.flintparticles.common.particles.Particle;
 	 * @param action The action to apply when the key is down.
 	 * @param keyCode The key code of the key that controls the action.
 	 * @param stage A reference to the stage.
-	 */	public function new(stage : DisplayObject)
+	 */
+  public function new(stage : DisplayObject)
 	{
+    super ();
+
 		_isDown = false;
 		stage.addEventListener(KeyboardEvent.KEY_DOWN, keyDownListener, false, 0, true);
 		stage.addEventListener(KeyboardEvent.KEY_UP, keyUpListener, false, 0, true);
@@ -88,7 +92,8 @@ import org.flintparticles.common.particles.Particle;
 	 * @param time The duration of the frame - used for time based updates.
 	 * 
 	 * @see org.flintparticles.common.actions.Action#update()
-	 */	override public function update(emitter : Emitter, particle : Particle, time : Float) : Void
+	 */
+  override public function update(emitter : Emitter, particle : Particle, time : Float) : Void
 	{
 		if(particle.mass == 1) 
 		{

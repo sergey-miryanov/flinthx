@@ -50,6 +50,8 @@ class LogoFire extends Emitter2D
 
 	public function new()
 	{
+    super ();
+
 		counter = new Steady(600);
 		addInitializer(new Lifetime(0.8));
 		addInitializer(new Velocity(new DiscSectorZone(new Point(0, 0), 10, 5, -Math.PI * 0.75, -Math.PI * 0.25)));

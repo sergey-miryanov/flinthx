@@ -46,6 +46,8 @@ class Sparkler extends Emitter2D
 
 	public function new(renderer : DisplayObject)
 	{
+    super ();
+
 		counter = new Steady(150);
 		addInitializer(new SharedImage(new Line(8)));
 		addInitializer(new ColorInit(0xFFFFCC00, 0xFFFFCC00));

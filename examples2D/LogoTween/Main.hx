@@ -44,6 +44,8 @@ class Main extends Sprite
 	var tween2Emitter : Emitter2D;
 	public function new()
 	{
+    super ();
+
 		startEmitter = new FirstEmitter();
 		tween1Emitter = new TweenToFlint();
 		tween2Emitter = new TweenToParticles();

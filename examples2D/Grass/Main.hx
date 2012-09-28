@@ -38,6 +38,7 @@ class Main extends Sprite
 	var emitter : Emitter2D;
 	public function new()
 	{
+    super ();
 		emitter = new Grass();
 		emitter.x = 250;
 		emitter.y = 450;

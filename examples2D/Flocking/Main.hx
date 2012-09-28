@@ -37,6 +37,8 @@ class Main extends Sprite
 	var emitter : Emitter2D;
 	public function new()
 	{
+    super ();
+
 		emitter = new Flock();
 		var renderer : DisplayObjectRenderer = new DisplayObjectRenderer();
 		renderer.addEmitter(emitter);

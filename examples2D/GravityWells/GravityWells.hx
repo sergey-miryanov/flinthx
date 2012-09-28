@@ -38,18 +38,20 @@ import flash.geom.Point;
 class GravityWells extends Emitter2D
 {
 
-	public function new()
-	{
-		counter = new Blast(10000);
-		addInitializer(new ColorInit(0xFFFF00FF, 0xFF00FFFF));
-		addInitializer(new Position(new DiscZone(new Point(200, 200), 200)));
-		addAction(new Move());
-		addAction(new GravityWell(25, 200, 200));
-		addAction(new GravityWell(25, 75, 75));
-		addAction(new GravityWell(25, 325, 325));
-		addAction(new GravityWell(25, 75, 325));
-		addAction(new GravityWell(25, 325, 75));
-	}
+  public function new()
+  {
+    super ();
+
+    counter = new Blast(10000);
+    addInitializer(new ColorInit(0xFFFF00FF, 0xFF00FFFF));
+    addInitializer(new Position(new DiscZone(new Point(200, 200), 200)));
+    addAction(new Move());
+    addAction(new GravityWell(25, 200, 200));
+    addAction(new GravityWell(25, 75, 75));
+    addAction(new GravityWell(25, 325, 325));
+    addAction(new GravityWell(25, 75, 325));
+    addAction(new GravityWell(25, 325, 75));
+  }
 
 }
 

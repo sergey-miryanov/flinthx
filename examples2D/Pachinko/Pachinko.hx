@@ -51,6 +51,8 @@ import flash.geom.Point;
 
 	public function new()
 	{
+    super ();
+
 		counter = new TimePeriod(100, 1);
 		addInitializer(new SharedImage(new Dot(4)));
 		addInitializer(new CollisionRadiusInit(5));

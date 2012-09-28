@@ -37,12 +37,12 @@ class Main extends Sprite
 	var emitter : Emitter2D;
 	public function new()
 	{
+    super ();
 		emitter = new BrownianMotion(stage);
 		var renderer : DisplayObjectRenderer = new DisplayObjectRenderer();
 		renderer.addEmitter(emitter);
 		addChild(renderer);
 		emitter.start();
 	}
-
 }
 

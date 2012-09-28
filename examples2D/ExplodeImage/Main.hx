@@ -50,6 +50,8 @@ class Main extends Sprite
 	var explosion : Explosion;
 	public function new()
 	{
+    super ();
+
 		bitmap = new Image1(384, 255);
 		emitter = new Emitter2D();
 		emitter.addAction(new DeathZone(new RectangleZone(-5, -5, 505, 355), true));

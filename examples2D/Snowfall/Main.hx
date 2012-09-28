@@ -38,6 +38,8 @@ class Main extends Sprite
 	var emitter : Emitter2D;
 	public function new()
 	{
+    super ();
+
 		emitter = new Snowfall();
 		addChild(new Bitmap(new SnowBackground(600, 400)));
 		var renderer : DisplayObjectRenderer = new DisplayObjectRenderer();

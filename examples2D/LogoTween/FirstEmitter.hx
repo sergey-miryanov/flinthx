@@ -41,6 +41,8 @@ class FirstEmitter extends Emitter2D
 
 	public function new()
 	{
+    super ();
+
 		counter = new Blast(5000);
 		addInitializer(new ColorInit(0xFFFFFF00, 0xCC6600));
 		addInitializer(new Lifetime(6));

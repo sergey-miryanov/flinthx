@@ -36,13 +36,15 @@ import flash.geom.Rectangle;
  * This example creates fire and smoke using two emitters.
  * 
  * <p>This is the document class for the Flex project.</p>
- */class Main extends Sprite
+ */
+class Main extends Sprite
 {
 
 	var smoke : Emitter2D;
 	var fire : Emitter2D;
 	public function new()
 	{
+    super ();
 		smoke = new Smoke();
 		smoke.x = 150;
 		smoke.y = 380;

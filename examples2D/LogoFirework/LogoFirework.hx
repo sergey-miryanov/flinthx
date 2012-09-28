@@ -48,6 +48,8 @@ class LogoFirework extends Emitter2D
 
 	public function new()
 	{
+    super ();
+
 		counter = new Blast(4000);
 		addInitializer(new ColorInit(0xFFFF3300, 0xFFFFFF00));
 		addInitializer(new Lifetime(6));

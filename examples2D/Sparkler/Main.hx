@@ -40,6 +40,8 @@ class Main extends Sprite
 	var emitter : Emitter2D;
 	public function new()
 	{
+    super ();
+
 		var renderer : BitmapRenderer = new BitmapRenderer(new Rectangle(0, 0, 400, 400));
 		renderer.addFilter(new BlurFilter(2, 2, 1));
 		renderer.addFilter(new ColorMatrixFilter([1, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0.95, 0]));

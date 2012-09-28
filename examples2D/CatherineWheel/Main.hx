@@ -40,6 +40,8 @@ class Main extends Sprite
 	var emitter : Emitter2D;
 	public function new()
 	{
+    super ();
+
 		emitter = new CatherineWheel();
 		var renderer : BitmapRenderer = new BitmapRenderer(new Rectangle(0, 0, 500, 500));
 		renderer.addFilter(new BlurFilter(2, 2, 1));
@@ -50,6 +52,5 @@ class Main extends Sprite
 		emitter.y = 250;
 		emitter.start();
 	}
-
 }
 

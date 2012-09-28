@@ -37,17 +37,19 @@ import flash.geom.Rectangle;
 class Main extends Sprite
 {
 
-	var emitter : Emitter2D;
-	public function new()
-	{
-		emitter = new GravityWells();
-		var renderer : PixelRenderer = new PixelRenderer(new Rectangle(0, 0, 400, 400));
-		renderer.addFilter(new BlurFilter(2, 2, 1));
-		renderer.addFilter(new ColorMatrixFilter([1, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0.99, 0]));
-		renderer.addEmitter(emitter);
-		addChild(renderer);
-		emitter.start();
-	}
+  var emitter : Emitter2D;
+  public function new()
+  {
+    super ();
+
+    emitter = new GravityWells();
+    var renderer : PixelRenderer = new PixelRenderer(new Rectangle(0, 0, 400, 400));
+    renderer.addFilter(new BlurFilter(2, 2, 1));
+    renderer.addFilter(new ColorMatrixFilter([1, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0.99, 0]));
+    renderer.addEmitter(emitter);
+    addChild(renderer);
+    emitter.start();
+  }
 
 }
 

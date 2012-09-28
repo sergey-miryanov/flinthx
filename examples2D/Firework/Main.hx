@@ -38,12 +38,14 @@ import flash.geom.Rectangle;
  * This example creates a firework like effect.
  * 
  * <p>This is the document class for the Flex project.</p>
- */class Main extends Sprite
+ */
+class Main extends Sprite
 {
 
 	var emitter : Emitter2D;
 	public function new()
 	{
+    super ();
 		emitter = new Firework();
 		var renderer : BitmapRenderer = new BitmapRenderer(new Rectangle(0, 0, 500, 400));
 		renderer.addFilter(new BlurFilter(2, 2, 1));

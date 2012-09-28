@@ -39,6 +39,8 @@ class Main extends Sprite
 	var emitter : Emitter2D;
 	public function new()
 	{
+    super ();
+
 		emitter = new Rain();
 		addChild(new Bitmap(new Image1(600, 400)));
 		var renderer : PixelRenderer = new PixelRenderer(new Rectangle(0, 0, 600, 400));

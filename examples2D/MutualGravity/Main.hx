@@ -39,6 +39,8 @@ class Main extends Sprite
 	var emitter : Emitter2D;
 	public function new()
 	{
+    super ();
+
 		emitter = new MutualG();
 		var renderer : BitmapRenderer = new BitmapRenderer(new Rectangle(0, 0, 400, 400));
 		renderer.addFilter(new BlurFilter(2, 2, 1));

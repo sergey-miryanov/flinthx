@@ -38,6 +38,8 @@ class TweenToParticles extends Emitter2D
 
 	public function new()
 	{
+    super ();
+
 		addInitializer(new Lifetime(6));
 		addAction(new Age(Quadratic.easeInOut));
 		addAction(new TweenToZone(new BitmapDataZone(new ParticlesImage(320, 80), 40, 60)));

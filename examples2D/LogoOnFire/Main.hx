@@ -39,6 +39,8 @@ class Main extends Sprite
 	var emitter : Emitter2D;
 	public function new()
 	{
+    super ();
+
 		var bitmap : Bitmap = new Bitmap(new Logo(265, 80));
 		addChild(bitmap);
 		bitmap.x = 118;
