@@ -87,7 +87,7 @@ class TargetColor extends ActionBase
 		_green 	= Std.int(( value >>> 8 ) & 255);
 		_blue 	= Std.int(( value ) & 255);
 		_alpha 	= Std.int(( value >>> 24 ) & 255);
-		return null;
+		return value;
 	}
 	
 	/**

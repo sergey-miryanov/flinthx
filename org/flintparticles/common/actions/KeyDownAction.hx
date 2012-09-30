@@ -50,7 +50,6 @@ class KeyDownAction extends ActionBase
 {
 	public var stage(stageGetter,stageSetter):Stage;
 	public var action(actionGetter,actionSetter):Action;
-	override public var priority(priorityGetter,prioritySetter):Int;
 	public var keyCode(keyCodeGetter, keyCodeSetter):Int;
 	
 	private var _action:Action;
@@ -92,14 +91,14 @@ class KeyDownAction extends ActionBase
 	
 	private function keyDownListener( ev:KeyboardEvent ):Void
 	{
-		if( ev.keyCode == _keyCode )
+		if( Std.int (ev.keyCode) == _keyCode )
 		{
 			_isDown = true;
 		}
 	}
 	private function keyUpListener( ev:KeyboardEvent ):Void
 	{
-		if( ev.keyCode == _keyCode )
+		if( Std.int (ev.keyCode) == _keyCode )
 		{
 			_isDown = false;
 		}

@@ -42,8 +42,6 @@ package org.flintparticles.twod.actions;
 
 class AntiGravity extends GravityWell
 {
-	override public var power(powerGetter, powerSetter):Float;
-	
 	/**
 	 * The constructor creates an AntiGravity action for use by an emitter. 
 	 * To add an AntiGravity to all particles created by an emitter, use the

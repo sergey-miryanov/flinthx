@@ -47,7 +47,6 @@ class ZonedAction extends ActionBase
 	public var zone(zoneGetter,zoneSetter):Zone2D;
 	public var invertZone(invertZoneGetter,invertZoneSetter):Bool;
 	public var action(actionGetter,actionSetter):Action;
-	override public var priority(priorityGetter, prioritySetter):Int;
 	
 	private var _action:Action;
 	private var _zone:Zone2D;

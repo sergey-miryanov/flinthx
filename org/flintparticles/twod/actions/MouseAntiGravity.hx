@@ -43,8 +43,6 @@ import nme.display.DisplayObject;
 
 class MouseAntiGravity extends MouseGravity
 {
-	override public var power(powerGetter, powerSetter):Float;
-	
 	/**
 	 * The constructor creates a MouseAntiGravity action for use by an emitter.
 	 * To add a MouseAntiGravity to all particles created by an emitter, use the
