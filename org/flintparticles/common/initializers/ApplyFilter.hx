@@ -90,7 +90,7 @@ class ApplyFilter extends InitializerBase
 			var img:DisplayObject = particle.image;
 			if( img.filters != null )
 			{
-				var filters:Array<Dynamic> = img.filters;
+				var filters:Array<BitmapFilter> = img.filters;
 				filters.push( _filter );
 				img.filters = filters;
 			}
