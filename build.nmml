@@ -29,5 +29,6 @@
   <haxeflag name="-debug" />
   -->
   <haxeflag name="-swf-version 10" />
+  <include path="custom.nmml" />
 
 </project>

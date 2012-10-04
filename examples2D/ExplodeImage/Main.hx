@@ -51,8 +51,11 @@ class Main extends Sprite
 	public function new()
 	{
     super ();
+  }
 
-		bitmap = new Image1(384, 255);
+  function _init () : Void
+  {
+		bitmap = new Image1 (384, 255);
 		emitter = new Emitter2D();
 		emitter.addAction(new DeathZone(new RectangleZone(-5, -5, 505, 355), true));
 		emitter.addAction(new Move());
@@ -72,7 +75,7 @@ class Main extends Sprite
 			emitter.removeAction(explosion);
 			explosion = null;
 		}
-		var particles : Array<Particle> = Particle2DUtils.createRectangleParticlesFromBitmapData(bitmap, 8, emitter.particleFactory, 56, 47);
+		var particles = Particle2DUtils.createRectangleParticlesFromBitmapData(bitmap, 8, emitter.particleFactory, 56, 47);
 		emitter.addParticles(particles, false);
 	}
 
