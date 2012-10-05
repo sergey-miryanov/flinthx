@@ -34,6 +34,7 @@ import flash.display.Sprite;
 import flash.filters.BlurFilter;
 import flash.filters.ColorMatrixFilter;
 import flash.geom.Rectangle;
+import nme.Vector;
 
 @:meta(SWF(width="400",height="200",frameRate="60",backgroundColor="#000000"))
 class Main extends Sprite
@@ -67,13 +68,13 @@ class Main extends Sprite
 	function moveToTween1(event : ParticleEvent) : Void
 	{
 		event.particle.revive();
-		tween1Emitter.addParticles(cast [event.particle], true);
+		tween1Emitter.addParticle(event.particle, true);
 	}
 
 	function moveToTween2(event : ParticleEvent) : Void
 	{
 		event.particle.revive();
-		tween2Emitter.addParticles(cast [event.particle], true);
+		tween2Emitter.addParticle(event.particle, true);
 	}
 
 }
