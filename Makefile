@@ -1,66 +1,67 @@
 TARGET=flash
+BUILD=build.nmml
 
 BrownianMotion:
-	cp build.nmml examples2D/BrownianMotion
+	cp ${BUILD} examples2D/BrownianMotion/build.nmml
 	cd examples2D/BrownianMotion && haxelib run nme test build.nmml ${TARGET}
 
 CatherineWheel:
-	cp build.nmml examples2D/CatherineWheel
+	cp ${BUILD} examples2D/CatherineWheel/build.nmml
 	cd examples2D/CatherineWheel && haxelib run nme test build.nmml ${TARGET}
 
 ExplodeImage:
-	cp build.nmml examples2D/ExplodeImage
+	cp ${BUILD} examples2D/ExplodeImage/build.nmml
 	cd examples2D/ExplodeImage && haxelib run nme test build.nmml ${TARGET}
 
 FireAndSmoke:
-	cp build.nmml examples2D/FireAndSmoke
+	cp ${BUILD} examples2D/FireAndSmoke/build.nmml
 	cd examples2D/FireAndSmoke && haxelib run nme test build.nmml ${TARGET}
 
 Firework:
-	cp build.nmml examples2D/Firework
+	cp ${BUILD} examples2D/Firework/build.nmml
 	cd examples2D/Firework && haxelib run nme test build.nmml ${TARGET}
 
 Flocking:
-	cp build.nmml examples2D/Flocking
+	cp ${BUILD} examples2D/Flocking/build.nmml
 	cd examples2D/Flocking && haxelib run nme test build.nmml ${TARGET}
 
 Grass:
-	cp build.nmml examples2D/Grass
+	cp ${BUILD} examples2D/Grass/build.nmml
 	cd examples2D/Grass && haxelib run nme test build.nmml ${TARGET}
 
 GravityWells:
-	cp build.nmml examples2D/GravityWells
+	cp ${BUILD} examples2D/GravityWells/build.nmml
 	cd examples2D/GravityWells && haxelib run nme test build.nmml ${TARGET}
 
 LogoFirework:
-	cp build.nmml examples2D/LogoFirework
+	cp ${BUILD} examples2D/LogoFirework/build.nmml
 	cd examples2D/LogoFirework && haxelib run nme test build.nmml ${TARGET}
 
 LogoOnFire:
-	cp build.nmml examples2D/LogoOnFire
+	cp ${BUILD} examples2D/LogoOnFire/build.nmml
 	cd examples2D/LogoOnFire && haxelib run nme test build.nmml ${TARGET}
 
 LogoTween:
-	cp build.nmml examples2D/LogoTween
+	cp ${BUILD} examples2D/LogoTween/build.nmml
 	cd examples2D/LogoTween && haxelib run nme test build.nmml ${TARGET}
 
 MutualGravity:
-	cp build.nmml examples2D/MutualGravity
+	cp ${BUILD} examples2D/MutualGravity/build.nmml
 	cd examples2D/MutualGravity && haxelib run nme test build.nmml ${TARGET}
 
 Pachinko:
-	cp build.nmml examples2D/Pachinko
+	cp ${BUILD} examples2D/Pachinko/build.nmml
 	cd examples2D/Pachinko && haxelib run nme test build.nmml ${TARGET}
 
 Rain:
-	cp build.nmml examples2D/Rain
+	cp ${BUILD} examples2D/Rain/build.nmml
 	cd examples2D/Rain && haxelib run nme test build.nmml ${TARGET}
 
 Snowfall:
-	cp build.nmml examples2D/Snowfall
+	cp ${BUILD} examples2D/Snowfall/build.nmml
 	cd examples2D/Snowfall && haxelib run nme test build.nmml ${TARGET}
 
 Sparkler:
-	cp build.nmml examples2D/Sparkler
+	cp ${BUILD} examples2D/Sparkler/build.nmml
 	cd examples2D/Sparkler && haxelib run nme test build.nmml ${TARGET}
 
