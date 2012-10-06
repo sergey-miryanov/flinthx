@@ -142,11 +142,22 @@ class MinimumDistance extends ActionBase
 		while( i >= 0 )
 		{
 			other = particles[i];
-			if( ( d.x = p.position.x - other.position.x ) > _min ) break;
+			if( ( d.x = p.position.x - other.position.x ) > _min )
+      {
+        break;
+      }
 			d.y = p.position.y - other.position.y;
-			if( d.y > _min || d.y < -_min ) continue;
+			if( d.y > _min || d.y < -_min )
+      {
+        --i;
+        continue;
+      }
 			d.z = p.position.z - other.position.z;
-			if( d.z > _min || d.z < -_min ) continue;
+			if( d.z > _min || d.z < -_min )
+      {
+        --i;
+        continue;
+      }
 			distanceSq = d.lengthSquared;
 			if( distanceSq <= _minSq && distanceSq > 0 )
 			{
@@ -161,11 +172,22 @@ class MinimumDistance extends ActionBase
 		while( i < len )
 		{
 			other = particles[i];
-			if( ( d.x = p.position.x - other.position.x ) < -_min ) break;
+			if( ( d.x = p.position.x - other.position.x ) < -_min )
+      {
+        break;
+      }
 			d.y = p.position.y - other.position.y;
-			if( d.y > _min || d.y < -_min ) continue;
+			if( d.y > _min || d.y < -_min )
+      {
+        ++i;
+        continue;
+      }
 			d.z = p.position.z - other.position.z;
-			if( d.z > _min || d.z < -_min ) continue;
+			if( d.z > _min || d.z < -_min )
+      {
+        ++i;
+        continue;
+      }
 			distanceSq = d.lengthSquared;
 			if( distanceSq <= _minSq && distanceSq > 0 )
 			{

@@ -147,9 +147,16 @@ class MinimumDistance extends ActionBase
 		while( i >= 0 )
 		{
 			other = particles[i];
-			if( ( dx = p.x - other.x ) > _min ) break;
+			if( ( dx = p.x - other.x ) > _min )
+      {
+        break;
+      }
 			dy = p.y - other.y;
-			if( dy > _min || dy < -_min ) continue;
+			if( dy > _min || dy < -_min )
+      {
+        --i;
+        continue;
+      }
 			distanceSq = dy * dy + dx * dx;
 			if( distanceSq <= _minSq && distanceSq > 0 )
 			{
@@ -164,9 +171,16 @@ class MinimumDistance extends ActionBase
 		while( i < len )
 		{
 			other = particles[i];
-			if( ( dx = p.x - other.x ) < -_min ) break;
+			if( ( dx = p.x - other.x ) < -_min )
+      {
+        break;
+      }
 			dy = p.y - other.y;
-			if( dy > _min || dy < -_min ) continue;
+			if( dy > _min || dy < -_min )
+      {
+        ++i;
+        continue;
+      }
 			distanceSq = dy * dy + dx * dx;
 			if( distanceSq <= _minSq && distanceSq > 0 )
 			{

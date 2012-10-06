@@ -144,11 +144,22 @@ class MatchRotateVelocity extends ActionBase
 		while( i >= 0 )
 		{
 			other = particles[i];
-			if( ( d.x = other.position.x - p.position.x ) < -_max ) break;
+			if( ( d.x = other.position.x - p.position.x ) < -_max )
+      {
+        break;
+      }
 			d.y = other.position.y - p.position.y;
-			if( d.y > _max || d.y < -_max ) continue;
+			if( d.y > _max || d.y < -_max )
+      {
+        --i;
+        continue;
+      }
 			d.z = other.position.z - p.position.z;
-			if( d.z > _max || d.z < -_max ) continue;
+			if( d.z > _max || d.z < -_max )
+      {
+        --i;
+        continue;
+      }
 			distanceSq = d.lengthSquared;
 			if( distanceSq <= _maxSq && distanceSq > 0 )
 			{
@@ -162,11 +173,22 @@ class MatchRotateVelocity extends ActionBase
 		while( i < len )
 		{
 			other = particles[i];
-			if( ( d.x = other.position.x - p.position.x ) > _max ) break;
+			if( ( d.x = other.position.x - p.position.x ) > _max )
+      {
+        break;
+      }
 			d.y = other.position.y - p.position.y;
-			if( d.y > _max || d.y < -_max ) continue;
+			if( d.y > _max || d.y < -_max )
+      {
+        ++i;
+        continue;
+      }
 			d.z = other.position.z - p.position.z;
-			if( d.z > _max || d.z < -_max ) continue;
+			if( d.z > _max || d.z < -_max )
+      {
+        ++i;
+        continue;
+      }
 			distanceSq = d.lengthSquared;
 			if( distanceSq <= _maxSq && distanceSq > 0 )
 			{

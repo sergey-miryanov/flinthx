@@ -158,9 +158,16 @@ class ApproachNeighbours extends ActionBase
 		while( i >= 0 )
 		{
 			other = particles[i];
-			if( ( dx = other.x - p.x ) < - _max ) break;
+			if( ( dx = other.x - p.x ) < - _max )
+      {
+        break;
+      }
 			dy = other.y - p.y;
-			if( dy > _max || dy < -_max ) continue;
+			if( dy > _max || dy < -_max )
+      {
+        --i;
+        continue;
+      }
 			distanceSq = dy * dy + dx * dx;
 			if( distanceSq <= _maxSq && distanceSq > 0 )
 			{
@@ -175,9 +182,16 @@ class ApproachNeighbours extends ActionBase
 		while( i < len )
 		{
 			other = particles[i];
-			if( ( dx = other.x - p.x ) > _max ) break;
+			if( ( dx = other.x - p.x ) > _max )
+      {
+        break;
+      }
 			dy = other.y - p.y;
-			if( dy > _max || dy < -_max ) continue;
+			if( dy > _max || dy < -_max )
+      {
+        ++i;
+        continue;
+      }
 			distanceSq = dy * dy + dx * dx;
 			if( distanceSq <= _maxSq && distanceSq > 0 )
 			{

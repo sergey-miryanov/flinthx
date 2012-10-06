@@ -208,11 +208,22 @@ class Collide extends ActionBase, implements FrameUpdatable
 		while( i < len && i >= 0 )
 		{
 			other = particles[i];
-			if( ( dx = other.x - p.x ) * _sign > _maxDistance ) break;
+			if( ( dx = other.x - p.x ) * _sign > _maxDistance )
+      {
+        break;
+      }
 			collisionDist = other.collisionRadius + p.collisionRadius;
-			if( dx * _sign > collisionDist ) continue;
+			if( dx * _sign > collisionDist )
+      {
+        i += _sign;
+        continue;
+      }
 			dy = other.y - p.y;
-			if( dy > collisionDist || dy < -collisionDist ) continue;
+			if( dy > collisionDist || dy < -collisionDist )
+      {
+        i += _sign;
+        continue;
+      }
 			distanceSq = dy * dy + dx * dx;
 			if( distanceSq <= collisionDist * collisionDist && distanceSq > 0 )
 			{

@@ -184,11 +184,19 @@ class MutualGravity extends ActionBase
 			other = particles[i];
 			if( other.mass == 0 )
 			{
+        ++i;
 				continue;
 			}
-			if( ( dx = other.x - p.x ) > _maxDistance ) break;
+			if( ( dx = other.x - p.x ) > _maxDistance )
+      {
+        break;
+      }
 			dy = other.y - p.y;
-			if( dy > _maxDistance || dy < -_maxDistance ) continue;
+			if( dy > _maxDistance || dy < -_maxDistance )
+      {
+        ++i;
+        continue;
+      }
 			distanceSq = dy * dy + dx * dx;
 			if( distanceSq <= _maxDistanceSq && distanceSq > 0 )
 			{

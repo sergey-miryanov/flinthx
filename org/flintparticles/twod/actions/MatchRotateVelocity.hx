@@ -150,9 +150,16 @@ class MatchRotateVelocity extends ActionBase
 		while( i >= 0 )
 		{
 			other = particles[i];
-			if( ( dx = p.x - other.x ) > _max ) break;
+			if( ( dx = p.x - other.x ) > _max )
+      {
+        break;
+      }
 			dy = other.y - p.y;
-			if( dy > _max || dy < -_max ) continue;
+			if( dy > _max || dy < -_max )
+      {
+        --i;
+        continue;
+      }
 			distanceSq = dy * dy + dx * dx;
 			if( distanceSq <= _maxSq )
 			{
@@ -166,9 +173,16 @@ class MatchRotateVelocity extends ActionBase
 		while( i < len )
 		{
 			other = particles[i];
-			if( ( dx = other.x - p.x ) > _max ) break;
+			if( ( dx = other.x - p.x ) > _max )
+      {
+        break;
+      }
 			dy = other.y - p.y;
-			if( dy > _max || dy < -_max ) continue;
+			if( dy > _max || dy < -_max )
+      {
+        ++i;
+        continue;
+      }
 			distanceSq = dy * dy + dx * dx;
 			if( distanceSq <= _maxSq )
 			{
