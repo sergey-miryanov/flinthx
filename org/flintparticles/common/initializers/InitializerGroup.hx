@@ -112,7 +112,7 @@ class InitializerGroup extends InitializerBase
 			}
 		}
 		//_initializers.splice( i, 0, initializer );
-		ArrayUtils.insertIntoVector([idx, initializer, _initializers]);
+		_initializers = ArrayUtils.insertIntoVector([idx, initializer, _initializers]);
 		if( _emitter != null )
 		{
 			initializer.addedToEmitter( _emitter );
