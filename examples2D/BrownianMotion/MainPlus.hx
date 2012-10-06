@@ -60,6 +60,8 @@ class MainPlus extends Main
 		txt.y = 480;
 		addChild(txt);
 		addChild(new Stats());
+
+    _init ();
 	}
 
 }
