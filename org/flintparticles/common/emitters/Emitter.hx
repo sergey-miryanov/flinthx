@@ -803,14 +803,12 @@ class Emitter extends EventDispatcher
 	private function createParticle():Particle
 	{
 		var particle:Particle = _particleFactory.createParticle();
-		var len:Int = _initializers.length;
 		initParticle( particle );
-		var i:Int = 0;
-		while( i < len )
-		{
-			cast( _initializers[i], Initializer ).initialize( this, particle );
-			++i;
-		}
+    for (initializer in _initializers)
+    {
+      initializer.initialize (this, particle);
+    }
+
 		_particles.push( particle );
 		if( hasEventListener( ParticleEvent.PARTICLE_CREATED ) )
 		{
@@ -848,13 +846,10 @@ class Emitter extends EventDispatcher
 	{
 		if( applyInitializers )
 		{
-			var len:Int = _initializers.length;
-			var i:Int = 0;
-			while ( i < len )
-			{
-				_initializers[i].initialize( this, particle );
-				++i;
-			}
+      for (initializer in _initializers)
+      {
+        initializer.initialize (this, particle);
+      }
 		}
 		_particles.push( particle );
 		if ( hasEventListener( ParticleEvent.PARTICLE_ADDED ) )
@@ -1031,15 +1026,11 @@ class Emitter extends EventDispatcher
 		}
 		_started = true;
 		_running = true;
-		var len:Int = _activities.length;
-		var i:Int = 0;
-		while ( i < len )
-		{
-			cast( _activities[i], Activity ).initialize( this );
-			++i;
-		}
-		len = _counter.startEmitter( this );
-		for (i in 0...len) 
+    for (activity in _activities)
+    {
+      activity.initialize (this);
+    }
+		for (i in 0..._counter.startEmitter( this )) 
 		{
 			createParticle();
 		}

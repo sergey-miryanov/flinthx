@@ -146,22 +146,18 @@ class InitializerGroup extends InitializerBase
 	override public function addedToEmitter( emitter:Emitter ):Void
 	{
 		_emitter = emitter;
-		var len:Int = _initializers.length;
-		//for( var i:uint = 0; i < len; ++i )
-		for( i in 0 ... len )
-		{
-			_initializers[i].addedToEmitter( emitter );
-		}
+    for (initializer in _initializers)
+    {
+      initializer.addedToEmitter (emitter);
+    }
 	}
 
 	override public function removedFromEmitter( emitter:Emitter ):Void
 	{
-		var len:Int = _initializers.length;
-		//for( var i:Int = 0; i < len; ++i )
-		for( i in 0 ... len )
-		{
-			_initializers[i].removedFromEmitter( emitter );
-		}
+    for (initializer in _initializers)
+    {
+      initializer.removedFromEmitter (emitter);
+    }
 		_emitter = null;
 	}
 
@@ -170,12 +166,10 @@ class InitializerGroup extends InitializerBase
 	 */
 	override public function initialize( emitter:Emitter, particle:Particle ):Void
 	{
-		var len:Int = _initializers.length;
-		//for( var i:uint = 0; i < len; ++i )
-		for( i in 0 ... len )
-		{
-			_initializers[i].initialize( emitter, particle );
-		}
+    for (initializer in _initializers)
+    {
+      initializer.initialize (emitter, particle);
+    }
 	}
 	
 	private function prioritySort( b1:Initializer, b2:Initializer ):Int

@@ -197,14 +197,10 @@ class Emitter2D extends Emitter
 			 */
 			_particles.sort( function(a,b) return Reflect.compare(a.x,b.x) );
 			//_particles.sortOn( "x", Array<Dynamic>.NUMERIC );
-			var len:Int = _particles.length;
-			var i:Int = 0;
-			//for ( var i:Int = 0; i < len; ++i )
-			while (i < len)
-			{
-				cast( _particles[ i ], Particle2D ).sortID = i;
-				++i;
-			}
+      for (i in 0..._particles.length)
+      {
+        _particles[i].sortID = i;
+      }
 		}
 	}
 }
