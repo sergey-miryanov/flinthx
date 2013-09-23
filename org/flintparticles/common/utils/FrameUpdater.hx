@@ -31,10 +31,10 @@
 package org.flintparticles.common.utils;
 
 import flash.display.Sprite;
-import nme.display.Shape;
-import nme.events.Event;
-import nme.events.EventDispatcher;
-import nme.Lib;
+import flash.display.Shape;
+import flash.events.Event;
+import flash.events.EventDispatcher;
+import flash.Lib;
 import org.flintparticles.common.events.UpdateEvent;
 import org.flintparticles.common.utils.FrameUpdater;
 

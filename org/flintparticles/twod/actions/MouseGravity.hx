@@ -30,7 +30,7 @@
 
 package org.flintparticles.twod.actions;
 
-import nme.display.DisplayObject;
+import flash.display.DisplayObject;
 import org.flintparticles.common.particles.Particle;
 import org.flintparticles.common.actions.ActionBase;
 import org.flintparticles.common.emitters.Emitter;
@@ -46,9 +46,9 @@ import org.flintparticles.twod.particles.Particle2D;
 
 class MouseGravity extends ActionBase
 {
-	public var renderer(rendererGetter,rendererSetter):DisplayObject;
-	public var power(powerGetter,powerSetter):Float;
-	public var epsilon(epsilonGetter, epsilonSetter):Float;
+	public var renderer(get, set):DisplayObject;
+	public var power(get, set):Float;
+	public var epsilon(get, set):Float;
 	
 	private var _power:Float;
 	private var _epsilonSq:Float;
@@ -86,11 +86,11 @@ class MouseGravity extends ActionBase
 	/**
 	 * The strength of the gravity force.
 	 */
-	private function powerGetter():Float
+	private function get_power():Float
 	{
 		return _power / _gravityConst;
 	}
-	private function powerSetter( value:Float ):Float
+	private function set_power( value:Float ):Float
 	{
 		_power = value * _gravityConst;
 		return _power;
@@ -101,11 +101,11 @@ class MouseGravity extends ActionBase
 	 * converted to. This is usually the renderer for the particle system 
 	 * created by the emitter.
 	 */
-	private function rendererGetter():DisplayObject
+	private function get_renderer():DisplayObject
 	{
 		return _renderer;
 	}
-	private function rendererSetter( value:DisplayObject ):DisplayObject
+	private function set_renderer( value:DisplayObject ):DisplayObject
 	{
 		_renderer = value;
 		return _renderer;
@@ -117,11 +117,11 @@ class MouseGravity extends ActionBase
 	 * this distance away. This stops the gravity effect blowing up as distances get 
 	 * small.
 	 */
-	private function epsilonGetter():Float
+	private function get_epsilon():Float
 	{
 		return Math.sqrt( _epsilonSq );
 	}
-	private function epsilonSetter( value:Float ):Float
+	private function set_epsilon( value:Float ):Float
 	{
 		_epsilonSq = value * value;
 		return _epsilonSq;

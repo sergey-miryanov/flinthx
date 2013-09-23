@@ -8,7 +8,7 @@
       width="${WIDTH}"
       height="${HEIGHT}"
       orientation="landscape"
-      fps="120"
+      fps="60"
       background="0x555588"
       resizeable="true"
       hardware="true"

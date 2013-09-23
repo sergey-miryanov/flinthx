@@ -30,7 +30,7 @@
 
 package org.flintparticles.twod.zones;
 
-import nme.geom.Point;
+import flash.geom.Point;
 import org.flintparticles.twod.particles.Particle2D;
 
 
@@ -40,12 +40,12 @@ import org.flintparticles.twod.particles.Particle2D;
 
 class LineZone implements Zone2D
 {
-	public var end(endGetter,endSetter):Point;
-	public var endY(endYGetter,endYSetter):Float;
-	public var start(startGetter,startSetter):Point;
-	public var endX(endXGetter,endXSetter):Float;
-	public var startY(startYGetter,startYSetter):Float;
-	public var startX(startXGetter, startXSetter):Float;
+	public var end(get, set):Point;
+	public var endY(get, set):Float;
+	public var start(get, set):Point;
+	public var endX(get, set):Float;
+	public var startY(get, set):Float;
+	public var startX(get, set):Float;
 	
 	private var _start:Point;
 	private var _end:Point;
@@ -91,11 +91,11 @@ class LineZone implements Zone2D
 	/**
 	 * The point at one end of the line.
 	 */
-	private function startGetter() : Point
+	private function get_start() : Point
 	{
 		return _start;
 	}
-	private function startSetter( value : Point ) : Point
+	private function set_start( value : Point ) : Point
 	{
 		_start = value;
 		setLengthAndNormal();
@@ -105,11 +105,11 @@ class LineZone implements Zone2D
 	/**
 	 * The point at the other end of the line.
 	 */
-	private function endGetter() : Point
+	private function get_end() : Point
 	{
 		return _end;
 	}
-	private function endSetter( value : Point ) : Point
+	private function set_end( value : Point ) : Point
 	{
 		_end = value;
 		setLengthAndNormal();
@@ -119,11 +119,11 @@ class LineZone implements Zone2D
 	/**
 	 * The x coordinate of the point at the start of the line.
 	 */
-	private function startXGetter() : Float
+	private function get_startX() : Float
 	{
 		return _start.x;
 	}
-	private function startXSetter( value : Float ) : Float
+	private function set_startX( value : Float ) : Float
 	{
 		_start.x = value;
 		_length = _end.subtract( _start );
@@ -133,11 +133,11 @@ class LineZone implements Zone2D
 	/**
 	 * The y coordinate of the point at the start of the line.
 	 */
-	private function startYGetter() : Float
+	private function get_startY() : Float
 	{
 		return _start.y;
 	}
-	private function startYSetter( value : Float ) : Float
+	private function set_startY( value : Float ) : Float
 	{
 		_start.y = value;
 		_length = _end.subtract( _start );
@@ -147,11 +147,11 @@ class LineZone implements Zone2D
 	/**
 	 * The x coordinate of the point at the end of the line.
 	 */
-	private function endXGetter() : Float
+	private function get_endX() : Float
 	{
 		return _end.x;
 	}
-	private function endXSetter( value : Float ) : Float
+	private function set_endX( value : Float ) : Float
 	{
 		_end.x = value;
 		_length = _end.subtract( _start );
@@ -161,11 +161,11 @@ class LineZone implements Zone2D
 	/**
 	 * The y coordinate of the point at the end of the line.
 	 */
-	private function endYGetter() : Float
+	private function get_endY() : Float
 	{
 		return _end.y;
 	}
-	private function endYSetter( value : Float ) : Float
+	private function set_endY( value : Float ) : Float
 	{
 		_end.y = value;
 		_length = _end.subtract( _start );

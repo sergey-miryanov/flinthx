@@ -30,8 +30,8 @@
 
 package org.flintparticles.common.initializers;
 
-import nme.display.DisplayObject;
-import nme.filters.BitmapFilter;
+import flash.display.DisplayObject;
+import flash.filters.BitmapFilter;
 import org.flintparticles.common.particles.Particle;
 import org.flintparticles.common.emitters.Emitter;
 import org.flintparticles.common.initializers.InitializerBase;
@@ -44,7 +44,7 @@ import org.flintparticles.common.initializers.ApplyFilter;
 
 class ApplyFilter extends InitializerBase
 {
-	public var filter(filterGetter, filterSetter):BitmapFilter;
+	public var filter(get, set):BitmapFilter;
 	private var _filter:BitmapFilter;
 	
 	/**
@@ -70,11 +70,11 @@ class ApplyFilter extends InitializerBase
 	/**
 	 * The filter to apply to each particle's image when it is created.
 	 */
-	private function filterGetter():BitmapFilter
+	private function get_filter():BitmapFilter
 	{
 		return _filter;
 	}
-	private function filterSetter( value:BitmapFilter ):BitmapFilter
+	private function set_filter( value:BitmapFilter ):BitmapFilter
 	{
 		_filter = value;
 		return _filter;

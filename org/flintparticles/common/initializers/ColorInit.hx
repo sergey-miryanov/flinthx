@@ -42,9 +42,9 @@ import org.flintparticles.common.utils.InterpolateColors;
 
 class ColorInit extends InitializerBase
 {
-	public var minColor(minColorGetter,minColorSetter):Int;
-	public var maxColor(maxColorGetter,maxColorSetter):Int;
-	public var color(colorGetter,colorSetter):Int;
+	public var minColor(get, set):Int;
+	public var maxColor(get, set):Int;
+	public var color(get, set):Int;
 	
 	private var _min:Int;
 	private var _max:Int;
@@ -75,11 +75,11 @@ class ColorInit extends InitializerBase
 	 * The minimum color value for particles initialised by 
 	 * this initializer. Should be between 0 and 1.
 	 */
-	private function minColorGetter():Int
+	private function get_minColor():Int
 	{
 		return _min;
 	}
-	private function minColorSetter( value:Int ):Int
+	private function set_minColor( value:Int ):Int
 	{
 		_min = value;
 		return _min;
@@ -89,11 +89,11 @@ class ColorInit extends InitializerBase
 	 * The maximum color value for particles initialised by 
 	 * this initializer. Should be between 0 and 1.
 	 */
-	private function maxColorGetter():Int
+	private function get_maxColor():Int
 	{
 		return _max;
 	}
-	private function maxColorSetter( value:Int ):Int
+	private function set_maxColor( value:Int ):Int
 	{
 		_max = value;
 		return _max;
@@ -104,11 +104,11 @@ class ColorInit extends InitializerBase
 	 * When writing this sets both maxColor and minColor to the 
 	 * same color.
 	 */
-	private function colorGetter():Int
+	private function get_color():Int
 	{
 		return _min == _max ? _min : InterpolateColors.interpolate( _max, _min, 0.5 );
 	}
-	private function colorSetter( value:Int ):Int
+	private function set_color( value:Int ):Int
 	{
 		_max = _min = value;
 		return value;

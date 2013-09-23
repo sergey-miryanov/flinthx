@@ -46,8 +46,8 @@ import org.flintparticles.threed.zones.Zone3D;
 
 class DeathZone extends ActionBase
 {
-	public var zone(zoneGetter,zoneSetter):Zone3D;
-	public var zoneIsSafe(zoneIsSafeGetter, zoneIsSafeSetter):Bool;
+	public var zone(get, set):Zone3D;
+	public var zoneIsSafe(get, set):Bool;
 	
 	private var _zone:Zone3D;
 	private var _invertZone:Bool;
@@ -77,11 +77,11 @@ class DeathZone extends ActionBase
 	/**
 	 * The zone.
 	 */
-	private function zoneGetter():Zone3D
+	private function get_zone():Zone3D
 	{
 		return _zone;
 	}
-	private function zoneSetter( value:Zone3D ):Zone3D
+	private function set_zone( value:Zone3D ):Zone3D
 	{
 		_zone = value;
 		return _zone;
@@ -91,11 +91,11 @@ class DeathZone extends ActionBase
 	 * If true, the zone is treated as the safe area and particles ouside the 
 	 * zone are killed. If false, particles inside the zone are killed.
 	 */
-	private function zoneIsSafeGetter():Bool
+	private function get_zoneIsSafe():Bool
 	{
 		return _invertZone;
 	}
-	private function zoneIsSafeSetter( value:Bool ):Bool
+	private function set_zoneIsSafe( value:Bool ):Bool
 	{
 		_invertZone = value;
 		return _invertZone;

@@ -51,10 +51,10 @@ import org.flintparticles.twod.particles.Particle2D;
 
 class GravityWell extends ActionBase
 {
-	public var x(xGetter,xSetter):Float;
-	public var y(yGetter,ySetter):Float;
-	public var power(powerGetter,powerSetter):Float;
-	public var epsilon(epsilonGetter, epsilonSetter):Float;
+	public var x(get, set):Float;
+	public var y(get, set):Float;
+	public var power(get, set):Float;
+	public var epsilon(get, set):Float;
 	
 	private var _x:Float;
 	private var _y:Float;
@@ -96,11 +96,11 @@ class GravityWell extends ActionBase
 	 * The strength of the gravity force - larger numbers produce a 
 	 * stronger force.
 	 */
-	private function powerGetter():Float
+	private function get_power():Float
 	{
 		return _power / _gravityConst;
 	}
-	private function powerSetter( value:Float ):Float
+	private function set_power( value:Float ):Float
 	{
 		_power = value * _gravityConst;
 		return _power;
@@ -110,11 +110,11 @@ class GravityWell extends ActionBase
 	 * The x coordinate of the point towards which the force draws 
 	 * the particles.
 	 */
-	private function xGetter():Float
+	private function get_x():Float
 	{
 		return _x;
 	}
-	private function xSetter( value:Float ):Float
+	private function set_x( value:Float ):Float
 	{
 		_x = value;
 		return _x;
@@ -124,11 +124,11 @@ class GravityWell extends ActionBase
 	 * The y coordinate of the point towards which the force draws 
 	 * the particles.
 	 */
-	private function yGetter():Float
+	private function get_y():Float
 	{
 		return _y;
 	}
-	private function ySetter( value:Float ):Float
+	private function set_y( value:Float ):Float
 	{
 		_y = value;
 		return _y;
@@ -142,11 +142,11 @@ class GravityWell extends ActionBase
 	 * a small epsilon ( ~1 ), but for stable visual effects a larger
 	 * epsilon (~100) is often better.
 	 */
-	private function epsilonGetter():Float
+	private function get_epsilon():Float
 	{
 		return Math.sqrt( _epsilonSq );
 	}
-	private function epsilonSetter( value:Float ):Float
+	private function set_epsilon( value:Float ):Float
 	{
 		_epsilonSq = value * value;
 		return _epsilonSq;

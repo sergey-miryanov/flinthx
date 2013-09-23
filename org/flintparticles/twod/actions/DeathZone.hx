@@ -47,8 +47,8 @@ import org.flintparticles.twod.zones.Zone2D;
 
 class DeathZone extends ActionBase
 {
-	public var zone(zoneGetter,zoneSetter):Zone2D;
-	public var zoneIsSafe(zoneIsSafeGetter, zoneIsSafeSetter):Bool;
+	public var zone(get, set):Zone2D;
+	public var zoneIsSafe(get, set):Bool;
 	
 	private var _zone:Zone2D;
 	private var _invertZone:Bool;
@@ -81,11 +81,11 @@ class DeathZone extends ActionBase
 	/**
 	 * The zone.
 	 */
-	public function zoneGetter():Zone2D
+	public function get_zone():Zone2D
 	{
 		return _zone;
 	}
-	public function zoneSetter( value:Zone2D ):Zone2D
+	public function set_zone( value:Zone2D ):Zone2D
 	{
 		_zone = value;
 		return _zone;
@@ -95,11 +95,11 @@ class DeathZone extends ActionBase
 	 * If true, the zone is treated as the safe area and particles ouside the 
 	 * zone are killed. If false, particles inside the zone are killed.
 	 */
-	public function zoneIsSafeGetter():Bool
+	public function get_zoneIsSafe():Bool
 	{
 		return _invertZone;
 	}
-	public function zoneIsSafeSetter( value:Bool ):Bool
+	public function set_zoneIsSafe( value:Bool ):Bool
 	{
 		_invertZone = value;
 		return _invertZone;

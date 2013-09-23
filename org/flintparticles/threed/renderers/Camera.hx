@@ -30,10 +30,10 @@
 
 package org.flintparticles.threed.renderers;
 
-import nme.errors.Error;
-import nme.geom.Matrix3D;
-import nme.geom.Vector3D;
-import nme.Vector;
+import flash.errors.Error;
+import flash.geom.Matrix3D;
+import flash.geom.Vector3D;
+import flash.Vector;
 import org.flintparticles.threed.geom.Matrix3DUtils;
 import org.flintparticles.threed.geom.Vector3DUtils;
 import org.flintparticles.threed.renderers.controllers.CameraController;
@@ -45,19 +45,19 @@ import org.flintparticles.threed.renderers.controllers.CameraController;
  */
 class Camera 
 {
-	public var controller(controllerGetter,controllerSetter):CameraController;
-	public var down(downGetter,downSetter):Vector3D;
-	public var target(targetGetter,targetSetter):Vector3D;
-	public var _direction(_directionGetter,null):Vector3D;
-	public var nearPlaneDistance(nearPlaneDistanceGetter,nearPlaneDistanceSetter):Float;
-	public var spaceTransform(spaceTransformGetter,null):Matrix3D;
-	public var _front(_frontGetter,null):Vector3D;
-	public var _track(_trackGetter,null):Vector3D;
-	public var transform(transformGetter,null):Matrix3D;
-	public var projectionDistance(projectionDistanceGetter,projectionDistanceSetter):Float;
-	public var direction(directionGetter,directionSetter):Vector3D;
-	public var farPlaneDistance(farPlaneDistanceGetter,farPlaneDistanceSetter):Float;
-	public var position(positionGetter,positionSetter):Vector3D;
+	public var controller(get, set):CameraController;
+	public var down(get, set):Vector3D;
+	public var target(get, set):Vector3D;
+	public var _direction(get, never):Vector3D;
+	public var nearPlaneDistance(get, set):Float;
+	public var spaceTransform(get, never):Matrix3D;
+	public var _front(get, never):Vector3D;
+	public var _track(get, never):Vector3D;
+	public var transform(get, never):Matrix3D;
+	public var projectionDistance(get, set):Float;
+	public var direction(get, set):Vector3D;
+	public var farPlaneDistance(get, set):Float;
+	public var position(get, set):Vector3D;
 	
 	private var _projectionDistance:Float;
 	private var _nearDistance:Float;
@@ -108,11 +108,11 @@ class Camera
 	 * 
 	 * @see #direction
 	 */
-	private function targetGetter():Vector3D
+	private function get_target():Vector3D
 	{
 		return _target.clone();
 	}
-	private function targetSetter( value:Vector3D ):Vector3D
+	private function set_target( value:Vector3D ):Vector3D
 	{
 		_target = Vector3DUtils.clonePoint( value );
 		_pDirection = null;
@@ -124,11 +124,11 @@ class Camera
 	/**
 	 * The location of the camera.
 	 */
-	private function positionGetter():Vector3D
+	private function get_position():Vector3D
 	{
 		return _position.clone();
 	}
-	private function positionSetter( value:Vector3D ):Vector3D
+	private function set_position( value:Vector3D ):Vector3D
 	{
 		_position = Vector3DUtils.clonePoint( value );
 		_spaceTransform = null;
@@ -147,11 +147,11 @@ class Camera
 	 * 
 	 * @see #target
 	 */
-	private function directionGetter():Vector3D
+	private function get_direction():Vector3D
 	{
 		return _direction.clone();
 	}
-	private function directionSetter( value:Vector3D ):Vector3D
+	private function set_direction( value:Vector3D ):Vector3D
 	{
 		_pDirection = Vector3DUtils.cloneUnit( value );
 		_target = null;
@@ -164,11 +164,11 @@ class Camera
 	 * The down direction for the camera. If this is not perpendicular to the direction the camera points, 
 	 * the camera is tilted down or up from this up direction to point in the direction or at the target.
 	 */
-	private function downGetter():Vector3D
+	private function get_down():Vector3D
 	{
 		return _down.clone();
 	}
-	private function downSetter( value:Vector3D ):Vector3D
+	private function set_down( value:Vector3D ):Vector3D
 	{
 		_down = Vector3DUtils.cloneUnit( value );
 		_spaceTransform = null;
@@ -181,7 +181,7 @@ class Camera
 	 * The projection transform is part of this transform - so vectors need only to have their
 	 * project method called to get their position in 2D camera space.
 	 */
-	private function transformGetter():Matrix3D
+	private function get_transform():Matrix3D
 	{
 		if( _spaceTransform == null || _transform == null )
 		{
@@ -219,7 +219,7 @@ class Camera
 	 * The transform matrix that converts positions in world space to positions in camera space.
 	 * The projection transform is not part of this transform.
 	 */
-	private function spaceTransformGetter():Matrix3D
+	private function get_spaceTransform():Matrix3D
 	{
 		if( _spaceTransform == null )
 		{
@@ -348,11 +348,11 @@ class Camera
 	 * 
 	 * The default value is 10.
 	 */
-	private function nearPlaneDistanceGetter():Float
+	private function get_nearPlaneDistance():Float
 	{
 		return _nearDistance;
 	}
-	private function nearPlaneDistanceSetter( value:Float ):Float
+	private function set_nearPlaneDistance( value:Float ):Float
 	{
 		_nearDistance = value;
 		return value;
@@ -364,11 +364,11 @@ class Camera
 	 * 
 	 * The default value is 2000.
 	 */
-	private function farPlaneDistanceGetter():Float
+	private function get_farPlaneDistance():Float
 	{
 		return _farDistance;
 	}
-	private function farPlaneDistanceSetter( value:Float ):Float
+	private function set_farPlaneDistance( value:Float ):Float
 	{
 		_farDistance = value;
 		return value;
@@ -382,11 +382,11 @@ class Camera
 	 * 
 	 * The default value is 400.
 	 */
-	private function projectionDistanceGetter():Float
+	private function get_projectionDistance():Float
 	{
 		return _projectionDistance;
 	}
-	private function projectionDistanceSetter( value:Float ):Float
+	private function set_projectionDistance( value:Float ):Float
 	{
 		_projectionDistance = value;
 		_transform = null;
@@ -396,7 +396,7 @@ class Camera
 	/*
 	 * private getters for properties that can be invaliadated.
 	 */
-	private function _trackGetter():Vector3D
+	private function get__track():Vector3D
 	{
 		if( _pTrack == null )
 		{
@@ -406,7 +406,7 @@ class Camera
 		return _pTrack;
 	}
 
-	private function _frontGetter():Vector3D
+	private function get__front():Vector3D
 	{
 		if( _pFront == null )
 		{
@@ -415,7 +415,7 @@ class Camera
 		return _pFront;
 	}
 	
-	private function _directionGetter():Vector3D
+	private function get__direction():Vector3D
 	{
 		if( _pDirection == null && _target != null )
 		{
@@ -425,20 +425,18 @@ class Camera
 		return _pDirection;
 	}
 	
-	public function controllerGetter():CameraController
+	public function get_controller():CameraController
 	{
 		return _controller;
 	}
-	public function controllerSetter( value:CameraController ):CameraController
+	public function set_controller( value:CameraController ):CameraController
 	{
 		if( _controller != null )
 		{
-			//_controller.camera = null;
-			_controller.cameraSetter(null);
+			_controller.camera = null;
 		}
 		_controller = value;
-		//_controller.camera = this;
-		_controller.cameraSetter(null);
+		_controller.camera = this;
 		return _controller;
 	}
 }

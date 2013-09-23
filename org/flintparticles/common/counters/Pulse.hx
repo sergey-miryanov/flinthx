@@ -40,10 +40,10 @@ import org.flintparticles.common.counters.Counter;
  */
 class Pulse implements Counter
 {
-	public var running(runningGetter,null):Bool;
-	public var period(periodGetter,periodSetter):Float;
-	public var quantity(quantityGetter,quantitySetter):Int;
-	public var complete(completeGetter, null):Bool;
+	public var running(get, never):Bool;
+	public var period(get, set):Float;
+	public var quantity(get, set):Int;
+	public var complete(get, never):Bool;
 	
 	private var _timeToNext:Float;
 	private var _period:Float;
@@ -85,11 +85,11 @@ class Pulse implements Counter
 	/**
 	 * The time, in seconds, between each pulse.
 	 */
-	private function periodGetter():Float
+	private function get_period():Float
 	{
 		return _period;
 	}
-	private function periodSetter( value:Float ):Float
+	private function set_period( value:Float ):Float
 	{
 		_period = value;
 		return _period;
@@ -98,11 +98,11 @@ class Pulse implements Counter
 	/**
 	 * The number of particles to emit at each pulse.
 	 */
-	private function quantityGetter():Int
+	private function get_quantity():Int
 	{
 		return Std.int(_quantity);
 	}
-	private function quantitySetter( value:Int ):Int
+	private function set_quantity( value:Int ):Int
 	{
 		_quantity = value;
 		return _quantity;
@@ -160,7 +160,7 @@ class Pulse implements Counter
 	 * Indicates if the counter has emitted all its particles. For this counter
 	 * this will always be false.
 	 */
-	public function completeGetter():Bool
+	public function get_complete():Bool
 	{
 		return false;
 	}
@@ -168,7 +168,7 @@ class Pulse implements Counter
 	/**
 	 * Indicates if the counter is currently emitting particles
 	 */
-	public function runningGetter():Bool
+	public function get_running():Bool
 	{
 		return _running;
 	}

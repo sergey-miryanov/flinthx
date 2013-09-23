@@ -46,7 +46,7 @@ import org.flintparticles.twod.particles.Particle2D;
 
 class QuadraticDrag extends ActionBase
 {
-	public var drag(dragGetter, dragSetter):Float;
+	public var drag(get, set):Float;
 	
 	private var _drag:Float;
 	
@@ -69,11 +69,11 @@ class QuadraticDrag extends ActionBase
 	/**
 	 * The amount of drag. A higher number produces a stronger drag force.
 	 */
-	private function dragGetter():Float
+	private function get_drag():Float
 	{
 		return _drag;
 	}
-	private function dragSetter( value:Float ):Float
+	private function set_drag( value:Float ):Float
 	{
 		_drag = value;
 		return _drag;

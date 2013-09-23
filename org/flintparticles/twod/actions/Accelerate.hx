@@ -42,8 +42,8 @@ import org.flintparticles.twod.particles.Particle2D;
  */
 class Accelerate extends ActionBase
 {
-	public var x(xGetter,xSetter):Float;
-	public var y(yGetter,ySetter):Float;
+	public var x(get, set):Float;
+	public var y(get, set):Float;
 	
 	private var _x:Float;
 	private var _y:Float;
@@ -71,11 +71,11 @@ class Accelerate extends ActionBase
 	 * The x coordinate of the acceleration, in
 	 * pixels per second per second.
 	 */
-	private function xGetter():Float
+	private function get_x():Float
 	{
 		return _x;
 	}
-	private function xSetter( value:Float ):Float
+	private function set_x( value:Float ):Float
 	{
 		_x = value;
 		return _x;
@@ -85,11 +85,11 @@ class Accelerate extends ActionBase
 	 * The y coordinate of the acceleration, in
 	 * pixels per second per second.
 	 */
-	private function yGetter():Float
+	private function get_y():Float
 	{
 		return _y;
 	}
-	private function ySetter( value:Float ):Float
+	private function set_y( value:Float ):Float
 	{
 		_y = value;
 		return _y;

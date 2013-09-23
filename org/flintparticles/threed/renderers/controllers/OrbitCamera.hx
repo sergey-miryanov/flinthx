@@ -30,7 +30,7 @@
 
 package org.flintparticles.threed.renderers.controllers;
 
-import nme.display.DisplayObject;
+import flash.display.DisplayObject;
 import org.flintparticles.threed.renderers.Camera;
 
 /**
@@ -49,8 +49,8 @@ import org.flintparticles.threed.renderers.Camera;
  */
 class OrbitCamera extends KeyboardControllerBase
 {
-	public var rotationRate(rotationRateGetter,rotationRateSetter):Float;
-	public var trackRate(trackRateGetter,trackRateSetter):Float;
+	public var rotationRate(get, set):Float;
+	public var trackRate(get, set):Float;
 	
 	private var _rotationRate:Float;
 	private var _trackRate:Float;
@@ -89,11 +89,11 @@ class OrbitCamera extends KeyboardControllerBase
 	 * The rate at which to rotate the camera when the appropriate keys are 
 	 * pressed, in radians per second.
 	 */
-	private function rotationRateGetter():Float
+	private function get_rotationRate():Float
 	{
 		return _rotationRate;
 	}
-	private function rotationRateSetter( value:Float ):Float
+	private function set_rotationRate( value:Float ):Float
 	{
 		_rotationRate = value;
 		return _rotationRate;
@@ -103,11 +103,11 @@ class OrbitCamera extends KeyboardControllerBase
 	 * The rate at which to track the camera when the appropriate keys are 
 	 * pressed, in units per second.
 	 */
-	private function trackRateGetter():Float
+	private function get_trackRate():Float
 	{
 		return _trackRate;
 	}
-	private function trackRateSetter( value:Float ):Float
+	private function set_trackRate( value:Float ):Float
 	{
 		_trackRate = value;
 		return _trackRate;

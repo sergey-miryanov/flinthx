@@ -61,7 +61,7 @@ import org.flintparticles.common.actions.ActionBase;
 class Age extends ActionBase
 {
 	
-	public var easing(easingGetter,easingSetter):Dynamic;
+	public var easing(get, set):Dynamic;
 	
 	private var _easing:Dynamic;
 	
@@ -93,11 +93,11 @@ class Age extends ActionBase
 	 * The easing function used to modify the energy over the 
 	 * lifetime of the particle.
 	 */
-	private function easingGetter():Dynamic
+	private function get_easing():Dynamic
 	{
 		return _easing;
 	}
-	private function easingSetter( value:Dynamic ):Dynamic
+	private function set_easing( value:Dynamic ):Dynamic
 	{
 		_easing = value;
 		return _easing;

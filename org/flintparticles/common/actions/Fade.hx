@@ -50,8 +50,8 @@ import org.flintparticles.common.actions.ActionBase;
 
 class Fade extends ActionBase
 {
-	public var endAlpha(endAlphaGetter,endAlphaSetter):Float;
-	public var startAlpha(startAlphaGetter, startAlphaSetter):Float;
+	public var endAlpha(get, set):Float;
+	public var startAlpha(get, set):Float;
 	
 	private var _diffAlpha:Float;
 	private var _endAlpha:Float;
@@ -85,11 +85,11 @@ class Fade extends ActionBase
 	 * The alpha value for the particle when its energy is 1.
 	 * The value should be between 0 and 1.
 	 */
-	private function startAlphaGetter():Float
+	private function get_startAlpha():Float
 	{
 		return _endAlpha + _diffAlpha;
 	}
-	private function startAlphaSetter( value:Float ):Float
+	private function set_startAlpha( value:Float ):Float
 	{
 		_diffAlpha = value - _endAlpha;
 		return _diffAlpha;
@@ -99,11 +99,11 @@ class Fade extends ActionBase
 	 * The alpha value for the particle when its energy is 0.
 	 * The value should be between 0 and 1.
 	 */
-	private function endAlphaGetter():Float
+	private function get_endAlpha():Float
 	{
 		return _endAlpha;
 	}
-	private function endAlphaSetter( value:Float ):Float
+	private function set_endAlpha( value:Float ):Float
 	{
 		_diffAlpha = _endAlpha + _diffAlpha - value;
 		_endAlpha = value;

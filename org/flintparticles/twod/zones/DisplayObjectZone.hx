@@ -30,9 +30,9 @@
 
 package org.flintparticles.twod.zones;
 
-import nme.display.DisplayObject;
-import nme.geom.Point;
-import nme.geom.Rectangle;
+import flash.display.DisplayObject;
+import flash.geom.Point;
+import flash.geom.Rectangle;
 import org.flintparticles.twod.particles.Particle2D;
 
 /**
@@ -44,8 +44,8 @@ import org.flintparticles.twod.particles.Particle2D;
 
 class DisplayObjectZone implements Zone2D
 {
-	public var displayObject(displayObjectGetter,displayObjectSetter):DisplayObject;
-	public var renderer(rendererGetter, rendererSetter):DisplayObject;
+	public var displayObject(get, set):DisplayObject;
+	public var renderer(get, set):DisplayObject;
 	
 	private var _displayObject : DisplayObject;
 	private var _renderer : DisplayObject;
@@ -100,11 +100,11 @@ class DisplayObjectZone implements Zone2D
 	/**
 	 * The DisplayObject that defines the zone.
 	 */
-	private function displayObjectGetter() : DisplayObject
+	private function get_displayObject() : DisplayObject
 	{
 		return _displayObject;
 	}
-	private function displayObjectSetter( value : DisplayObject ) : DisplayObject
+	private function set_displayObject( value : DisplayObject ) : DisplayObject
 	{
 		_displayObject = value;
 		calculateArea();
@@ -116,11 +116,11 @@ class DisplayObjectZone implements Zone2D
 	 * coordinates of the DisplayObject are translated to the local coordinate 
 	 * space of the emitter.
 	 */
-	private function rendererGetter() : DisplayObject
+	private function get_renderer() : DisplayObject
 	{
 		return _renderer;
 	}
-	private function rendererSetter( value : DisplayObject ) : DisplayObject
+	private function set_renderer( value : DisplayObject ) : DisplayObject
 	{
 		_renderer = value;
 		return _renderer;

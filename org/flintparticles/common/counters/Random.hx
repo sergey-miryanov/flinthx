@@ -40,10 +40,10 @@ import org.flintparticles.common.counters.Counter;
  */
 class Random implements Counter
 {
-	public var minRate(minRateGetter,minRateSetter):Float;
-	public var maxRate(maxRateGetter,maxRateSetter):Float;
-	public var running(runningGetter,null):Bool;
-	public var complete(completeGetter, null):Bool;
+	public var minRate(get, set):Float;
+	public var maxRate(get, set):Float;
+	public var running(get, never):Bool;
+	public var complete(get, never):Bool;
 	
 	private var _timeToNext:Float;
 	private var _minRate:Float;
@@ -85,11 +85,11 @@ class Random implements Counter
 	/**
 	 * The minimum number of particles to emit per second.
 	 */
-	private function minRateGetter():Float
+	private function get_minRate():Float
 	{
 		return _minRate;
 	}
-	private function minRateSetter( value:Float ):Float
+	private function set_minRate( value:Float ):Float
 	{
 		_minRate = value;
 		return _minRate;
@@ -98,11 +98,11 @@ class Random implements Counter
 	/**
 	 * The maximum number of particles to emit per second.
 	 */
-	private function maxRateGetter():Float
+	private function get_maxRate():Float
 	{
 		return _maxRate;
 	}
-	private function maxRateSetter( value:Float ):Float
+	private function set_maxRate( value:Float ):Float
 	{
 		_maxRate = value;
 		return _maxRate;
@@ -166,7 +166,7 @@ class Random implements Counter
 	 * Indicates if the counter has emitted all its particles. For this counter
 	 * this will always be false.
 	 */
-	public function completeGetter():Bool
+	public function get_complete():Bool
 	{
 		return false;
 	}
@@ -174,7 +174,7 @@ class Random implements Counter
 	/**
 	 * Indicates if the counter is currently emitting particles
 	 */
-	public function runningGetter():Bool
+	public function get_running():Bool
 	{
 		return _running;
 	}

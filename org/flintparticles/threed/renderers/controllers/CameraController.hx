@@ -7,6 +7,5 @@ import org.flintparticles.threed.renderers.Camera;
  */
 interface CameraController
 {
-	public function cameraGetter():Camera;
-	public function cameraSetter( value:Camera ):Camera;
+    public var camera(get, set) : Camera;
 }

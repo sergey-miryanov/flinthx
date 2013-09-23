@@ -30,7 +30,7 @@
 
 package org.flintparticles.threed.zones;
 
-import nme.geom.Vector3D;
+import flash.geom.Vector3D;
 import org.flintparticles.threed.geom.Vector3DUtils;
 
 /**
@@ -39,7 +39,7 @@ import org.flintparticles.threed.geom.Vector3DUtils;
 
 class PointZone implements Zone3D 
 {
-	public var point(pointGetter,pointSetter):Vector3D;
+	public var point(get, set):Vector3D;
 	
 	private var _point:Vector3D;
 	
@@ -56,11 +56,11 @@ class PointZone implements Zone3D
 	/**
 	 * The point that is the zone.
 	 */
-	private function pointGetter() : Vector3D
+	private function get_point() : Vector3D
 	{
 		return _point.clone();
 	}
-	private function pointSetter( value : Vector3D ) : Vector3D
+	private function set_point( value : Vector3D ) : Vector3D
 	{
 		_point = Vector3DUtils.clonePoint( value );
 		return _point;

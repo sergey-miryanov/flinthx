@@ -30,9 +30,9 @@
 
 package org.flintparticles.twod.renderers;
 
-import nme.display.Shape;
-import nme.events.Event;
-import nme.geom.Rectangle;
+import flash.display.Shape;
+import flash.events.Event;
+import flash.geom.Rectangle;
 import org.flintparticles.common.emitters.Emitter;
 import org.flintparticles.common.events.EmitterEvent;
 import org.flintparticles.twod.particles.Particle2D;

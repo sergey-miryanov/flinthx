@@ -85,10 +85,10 @@ interface Counter
 	/**
 	 * Indicates if the counter has emitted all its particles
 	 */
-	function completeGetter():Bool;
+	public var complete(get, never):Bool;
 	
 	/**
 	 * Indicates if the counter is currently emitting particles
 	 */
-	function runningGetter():Bool;
+	public var running(get, never):Bool;
 }

@@ -30,10 +30,10 @@
 
 package org.flintparticles.threed.renderers;
 
-import nme.display.DisplayObject;
-import nme.geom.Matrix3D;
-import nme.geom.Vector3D;
-import nme.Vector;
+import flash.display.DisplayObject;
+import flash.geom.Matrix3D;
+import flash.geom.Vector3D;
+import flash.Vector;
 import org.flintparticles.common.particles.Particle;
 import org.flintparticles.common.renderers.SpriteRendererBase;
 import org.flintparticles.threed.geom.Quaternion;
@@ -61,8 +61,8 @@ import org.flintparticles.threed.particles.Particle3D;
  */
 class DisplayObjectRenderer extends SpriteRendererBase
 {
-	public var camera(cameraGetter,cameraSetter):Camera;
-	public var zSort(zSortGetter,zSortSetter):Bool;
+	public var camera(get, set):Camera;
+	public var zSort(get, set):Bool;
 	
 	/**
 	 * @private
@@ -97,11 +97,11 @@ class DisplayObjectRenderer extends SpriteRendererBase
 	/**
 	 * Indicates whether the particles should be sorted in distance order for display.
 	 */
-	private function zSortGetter():Bool
+	private function get_zSort():Bool
 	{
 		return _zSort;
 	}
-	private function zSortSetter( value:Bool ):Bool
+	private function set_zSort( value:Bool ):Bool
 	{
 		_zSort = value;
 		return _zSort;
@@ -110,11 +110,11 @@ class DisplayObjectRenderer extends SpriteRendererBase
 	/**
 	 * The camera controls the view for the renderer
 	 */
-	private function cameraGetter():Camera
+	private function get_camera():Camera
 	{
 		return _camera;
 	}
-	private function cameraSetter( value:Camera ):Camera
+	private function set_camera( value:Camera ):Camera
 	{
 		_camera = value;
 		return _camera;

@@ -30,7 +30,7 @@
 
 package org.flintparticles.threed.particles;
 
-import nme.geom.Vector3D;
+import flash.geom.Vector3D;
 import org.flintparticles.common.particles.Particle;
 import org.flintparticles.common.particles.ParticleFactory;
 import org.flintparticles.threed.geom.Quaternion;
@@ -42,7 +42,7 @@ import org.flintparticles.threed.geom.Quaternion;
  */
 class Particle3D extends Particle
 {
-	public var inertia(inertiaGetter,null):Float;
+	public var inertia(get, never):Float;
 	/**
 	 * The position of the particle (in the renderer's units).
 	 */
@@ -76,7 +76,7 @@ class Particle3D extends Particle
 	/**
 	 * The moment of inertia of the particle about its center point
 	 */
-	private function inertiaGetter():Float
+	private function get_inertia():Float
 	{
 		if( mass != _previousMass || collisionRadius != _previousRadius )
 		{

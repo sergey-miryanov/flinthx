@@ -39,8 +39,8 @@ import org.flintparticles.twod.emitters.Emitter2D;
  */
 class MoveEmitter extends ActivityBase
 {
-	public var x(xGetter, xSetter):Float;
-	public var y(yGetter, ySetter):Float;
+	public var x(get, set):Float;
+	public var y(get, set):Float;
 	
 	private var _velX:Float;
 	private var _velY:Float;
@@ -68,11 +68,11 @@ class MoveEmitter extends ActivityBase
 	 * The x coordinate of the velocity to move the emitter, 
 	 * in pixels per second
 	 */
-	private function xGetter():Float
+	private function get_x():Float
 	{
 		return _velX;
 	}
-	private function xSetter( value:Float ):Float
+	private function set_x( value:Float ):Float
 	{
 		_velX = value;
 		return _velX;
@@ -82,11 +82,11 @@ class MoveEmitter extends ActivityBase
 	 * The y coordinate of the velocity to move the emitter, 
 	 * in pixels per second
 	 */
-	private function yGetter():Float
+	private function get_y():Float
 	{
 		return _velY;
 	}
-	private function ySetter( value:Float ):Float
+	private function set_y( value:Float ):Float
 	{
 		_velY = value;
 		return _velY;

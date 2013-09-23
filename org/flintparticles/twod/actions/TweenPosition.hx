@@ -44,10 +44,10 @@ import org.flintparticles.twod.particles.Particle2D;
 
 class TweenPosition extends ActionBase
 {
-	public var endY(endYGetter,endYSetter):Float;
-	public var endX(endXGetter,endXSetter):Float;
-	public var startY(startYGetter,startYSetter):Float;
-	public var startX(startXGetter, startXSetter):Float;
+	public var endY(get, set):Float;
+	public var endX(get, set):Float;
+	public var startY(get, set):Float;
+	public var startX(get, set):Float;
 	
 	private var _diffX:Float;
 	private var _endX:Float;
@@ -82,11 +82,11 @@ class TweenPosition extends ActionBase
 	/**
 	 * The x position for the particle's position when its energy is 1.
 	 */
-	private function startXGetter():Float
+	private function get_startX():Float
 	{
 		return _endX + _diffX;
 	}
-	private function startXSetter( value:Float ):Float
+	private function set_startX( value:Float ):Float
 	{
 		_diffX = value - _endX;
 		return _diffX;
@@ -95,11 +95,11 @@ class TweenPosition extends ActionBase
 	/**
 	 * The X value for the particle's position when its energy is 0.
 	 */
-	private function endXGetter():Float
+	private function get_endX():Float
 	{
 		return _endX;
 	}
-	private function endXSetter( value:Float ):Float
+	private function set_endX( value:Float ):Float
 	{
 		_diffX = _endX + _diffX - value;
 		_endX = value;
@@ -109,11 +109,11 @@ class TweenPosition extends ActionBase
 	/**
 	 * The y position for the particle's position when its energy is 1.
 	 */
-	private function startYGetter():Float
+	private function get_startY():Float
 	{
 		return _endY + _diffY;
 	}
-	private function startYSetter( value:Float ):Float
+	private function set_startY( value:Float ):Float
 	{
 		_diffY = value - _endY;
 		return _diffY;
@@ -122,11 +122,11 @@ class TweenPosition extends ActionBase
 	/**
 	 * The y value for the particle's position when its energy is 0.
 	 */
-	private function endYGetter():Float
+	private function get_endY():Float
 	{
 		return _endY;
 	}
-	private function endYSetter( value:Float ):Float
+	private function set_endY( value:Float ):Float
 	{
 		_diffY = _endY + _diffY - value;
 		_endY = value;

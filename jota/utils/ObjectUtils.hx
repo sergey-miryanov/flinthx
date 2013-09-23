@@ -1,7 +1,7 @@
 package jota.utils;
 
-import nme.display.DisplayObject;
-import nme.display.DisplayObjectContainer;
+import flash.display.DisplayObject;
+import flash.display.DisplayObjectContainer;
 
 class ObjectUtils
 {

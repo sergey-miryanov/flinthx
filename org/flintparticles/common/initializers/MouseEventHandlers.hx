@@ -30,8 +30,8 @@
 
 package org.flintparticles.common.initializers;
 
-import nme.events.IEventDispatcher;
-import nme.events.MouseEvent;
+import flash.events.IEventDispatcher;
+import flash.events.MouseEvent;
 import org.flintparticles.common.particles.Particle;
 import org.flintparticles.common.events.ParticleEvent;
 import org.flintparticles.common.emitters.Emitter;
@@ -46,11 +46,11 @@ import org.flintparticles.common.initializers.InitializerBase;
 
 class MouseEventHandlers extends InitializerBase
 {
-	public var downHandler(downHandlerGetter,downHandlerSetter):Dynamic;
-	public var overHandler(overHandlerGetter,overHandlerSetter):Dynamic;
-	public var upHandler(upHandlerGetter,upHandlerSetter):Dynamic;
-	public var outHandler(outHandlerGetter,outHandlerSetter):Dynamic;
-	public var clickHandler(clickHandlerGetter,clickHandlerSetter):Dynamic;
+	public var downHandler(get, set):Dynamic;
+	public var overHandler(get, set):Dynamic;
+	public var upHandler(get, set):Dynamic;
+	public var outHandler(get, set):Dynamic;
+	public var clickHandler(get, set):Dynamic;
 	
 	private var _overHandler:Dynamic;
 	private var _outHandler:Dynamic;
@@ -73,11 +73,11 @@ class MouseEventHandlers extends InitializerBase
 	/**
 	 * The mouseOver event handler.
 	 */
-	private function overHandlerGetter():Dynamic
+	private function get_overHandler():Dynamic
 	{
 		return _overHandler;
 	}
-	private function overHandlerSetter( value:Dynamic ):Dynamic
+	private function set_overHandler( value:Dynamic ):Dynamic
 	{
 		_overHandler = value;
 		return _overHandler;
@@ -86,11 +86,11 @@ class MouseEventHandlers extends InitializerBase
 	/**
 	 * The mouseOut event handler.
 	 */
-	private function outHandlerGetter():Dynamic
+	private function get_outHandler():Dynamic
 	{
 		return _outHandler;
 	}
-	private function outHandlerSetter( value:Dynamic ):Dynamic
+	private function set_outHandler( value:Dynamic ):Dynamic
 	{
 		_outHandler = value;
 		return _outHandler;
@@ -99,11 +99,11 @@ class MouseEventHandlers extends InitializerBase
 	/**
 	 * The mouseUp event handler.
 	 */
-	private function upHandlerGetter():Dynamic
+	private function get_upHandler():Dynamic
 	{
 		return _upHandler;
 	}
-	private function upHandlerSetter( value:Dynamic ):Dynamic
+	private function set_upHandler( value:Dynamic ):Dynamic
 	{
 		_upHandler = value;
 		return _upHandler;
@@ -112,11 +112,11 @@ class MouseEventHandlers extends InitializerBase
 	/**
 	 * The mouseDown event handler.
 	 */
-	private function downHandlerGetter():Dynamic
+	private function get_downHandler():Dynamic
 	{
 		return _downHandler;
 	}
-	private function downHandlerSetter( value:Dynamic ):Dynamic
+	private function set_downHandler( value:Dynamic ):Dynamic
 	{
 		_downHandler = value;
 		return _downHandler;
@@ -125,11 +125,11 @@ class MouseEventHandlers extends InitializerBase
 	/**
 	 * The mouseClick event handler.
 	 */
-	private function clickHandlerGetter():Dynamic
+	private function get_clickHandler():Dynamic
 	{
 		return _clickHandler;
 	}
-	private function clickHandlerSetter( value:Dynamic ):Dynamic
+	private function set_clickHandler( value:Dynamic ):Dynamic
 	{
 		_clickHandler = value;
 		return _clickHandler;

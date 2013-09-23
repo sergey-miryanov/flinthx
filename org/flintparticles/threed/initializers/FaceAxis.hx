@@ -30,7 +30,7 @@
 
 package org.flintparticles.threed.initializers;
 
-import nme.geom.Vector3D;
+import flash.geom.Vector3D;
 import org.flintparticles.common.particles.Particle;
 import org.flintparticles.common.emitters.Emitter;
 import org.flintparticles.common.initializers.InitializerBase;
@@ -50,7 +50,7 @@ import org.flintparticles.threed.particles.Particle3D;
 
 class FaceAxis extends InitializerBase
 {
-	public var axis(axisGetter,axisSetter):Vector3D;
+	public var axis(get, set):Vector3D;
 	
 	private var _axis : Vector3D;
 
@@ -72,11 +72,11 @@ class FaceAxis extends InitializerBase
 	/**
 	 * The face axis of the particles.
 	 */
-	private function axisGetter():Vector3D
+	private function get_axis():Vector3D
 	{
 		return _axis;
 	}
-	private function axisSetter( value:Vector3D ):Vector3D
+	private function set_axis( value:Vector3D ):Vector3D
 	{
 		_axis = Vector3DUtils.cloneUnit( value );
 		return _axis;

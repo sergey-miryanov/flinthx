@@ -44,12 +44,12 @@ import org.flintparticles.threed.particles.Particle3D;
  */
 class WrapAroundBox extends ActionBase
 {
-	public var minY(minYGetter,minYSetter):Float;
-	public var minX(minXGetter,minXSetter):Float;
-	public var maxX(maxXGetter,maxXSetter):Float;
-	public var maxY(maxYGetter,maxYSetter):Float;
-	public var maxZ(maxZGetter,maxZSetter):Float;
-	public var minZ(minZGetter,minZSetter):Float;
+	public var minY(get, set):Float;
+	public var minX(get, set):Float;
+	public var maxX(get, set):Float;
+	public var maxY(get, set):Float;
+	public var maxZ(get, set):Float;
+	public var minZ(get, set):Float;
 	
 	private var _minX : Float;
 	private var _maxX : Float;
@@ -90,11 +90,11 @@ class WrapAroundBox extends ActionBase
 	/**
 	 * The minX coordinate of the box.
 	 */
-	private function minXGetter():Float
+	private function get_minX():Float
 	{
 		return _minX;
 	}
-	private function minXSetter( value:Float ):Float
+	private function set_minX( value:Float ):Float
 	{
 		_minX = value;
 		_width = _maxX - _minX;
@@ -104,11 +104,11 @@ class WrapAroundBox extends ActionBase
 	/**
 	 * The maxX coordinate of the box.
 	 */
-	private function maxXGetter():Float
+	private function get_maxX():Float
 	{
 		return _maxX;
 	}
-	private function maxXSetter( value:Float ):Float
+	private function set_maxX( value:Float ):Float
 	{
 		_maxX = value;
 		_width = _maxX - _minX;
@@ -118,11 +118,11 @@ class WrapAroundBox extends ActionBase
 	/**
 	 * The minY coordinate of the box.
 	 */
-	private function minYGetter():Float
+	private function get_minY():Float
 	{
 		return _minY;
 	}
-	private function minYSetter( value:Float ):Float
+	private function set_minY( value:Float ):Float
 	{
 		_minY = value;
 		_height = _maxY - _minY;
@@ -132,11 +132,11 @@ class WrapAroundBox extends ActionBase
 	/**
 	 * The maxY coordinate of the box.
 	 */
-	private function maxYGetter():Float
+	private function get_maxY():Float
 	{
 		return _maxY;
 	}
-	private function maxYSetter( value:Float ):Float
+	private function set_maxY( value:Float ):Float
 	{
 		_maxY = value;
 		_height = _maxY - _minY;
@@ -146,11 +146,11 @@ class WrapAroundBox extends ActionBase
 	/**
 	 * The minZ coordinate of the box.
 	 */
-	private function minZGetter():Float
+	private function get_minZ():Float
 	{
 		return _minZ;
 	}
-	private function minZSetter( value:Float ):Float
+	private function set_minZ( value:Float ):Float
 	{
 		_minZ = value;
 		_depth = _maxZ - _minZ;
@@ -160,11 +160,11 @@ class WrapAroundBox extends ActionBase
 	/**
 	 * The maxZ coordinate of the box.
 	 */
-	private function maxZGetter():Float
+	private function get_maxZ():Float
 	{
 		return _maxZ;
 	}
-	private function maxZSetter( value:Float ):Float
+	private function set_maxZ( value:Float ):Float
 	{
 		_maxZ = value;
 		_depth = _maxZ - _minZ;

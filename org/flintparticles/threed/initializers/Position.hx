@@ -30,7 +30,7 @@
 
 package org.flintparticles.threed.initializers;
 
-import nme.geom.Vector3D;
+import flash.geom.Vector3D;
 import org.flintparticles.common.particles.Particle;
 import org.flintparticles.common.emitters.Emitter;
 import org.flintparticles.common.initializers.InitializerBase;
@@ -52,7 +52,7 @@ import org.flintparticles.threed.zones.Zone3D;
 
 class Position extends InitializerBase
 {
-	public var zone(zoneGetter,zoneSetter):Zone3D;
+	public var zone(get, set):Zone3D;
 	
 	private var _zone : Zone3D;
 
@@ -74,11 +74,11 @@ class Position extends InitializerBase
 	/**
 	 * The zone.
 	 */
-	private function zoneGetter():Zone3D
+	private function get_zone():Zone3D
 	{
 		return _zone;
 	}
-	private function zoneSetter( value:Zone3D ):Zone3D
+	private function set_zone( value:Zone3D ):Zone3D
 	{
 		_zone = value;
 		return _zone;

@@ -40,9 +40,9 @@ import org.flintparticles.common.initializers.AlphaInit;
  */
 class AlphaInit extends InitializerBase
 {
-	public var minAlpha(minAlphaGetter,minAlphaSetter):Float;
-	public var alpha(alphaGetter,alphaSetter):Float;
-	public var maxAlpha(maxAlphaGetter, maxAlphaSetter):Float;
+	public var minAlpha(get, set):Float;
+	public var alpha(get, set):Float;
+	public var maxAlpha(get, set):Float;
 	
 	private var _min:Float;
 	private var _max:Float;
@@ -86,11 +86,11 @@ class AlphaInit extends InitializerBase
 	 * The minimum alpha value for particles initialised by 
 	 * this initializer. Should be between 0 and 1.
 	 */
-	private function minAlphaGetter():Float
+	private function get_minAlpha():Float
 	{
 		return _min;
 	}
-	private function minAlphaSetter( value:Float ):Float
+	private function set_minAlpha( value:Float ):Float
 	{
 		_min = value;
 		return _min;
@@ -100,11 +100,11 @@ class AlphaInit extends InitializerBase
 	 * The maximum alpha value for particles initialised by 
 	 * this initializer. Should be between 0 and 1.
 	 */
-	private function maxAlphaGetter():Float
+	private function get_maxAlpha():Float
 	{
 		return _max;
 	}
-	private function maxAlphaSetter( value:Float ):Float
+	private function set_maxAlpha( value:Float ):Float
 	{
 		_max = value;
 		return _max;
@@ -115,11 +115,11 @@ class AlphaInit extends InitializerBase
 	 * When writing this sets both maxAlpha and minAlpha to the 
 	 * same alpha value.
 	 */
-	private function alphaGetter():Float
+	private function get_alpha():Float
 	{
 		return _min == _max ? _min : ( _max + _min ) / 2;
 	}
-	private function alphaSetter( value:Float ):Float
+	private function set_alpha( value:Float ):Float
 	{
 		_max = _min = value;
 		return value;

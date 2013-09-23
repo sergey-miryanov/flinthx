@@ -30,8 +30,8 @@
 
 package org.flintparticles.common.displayobjects;
 
-import nme.display.Shape;
-import nme.display.BlendMode;
+import flash.display.Shape;
+import flash.display.BlendMode;
 
 /**
  * The Ellipse class is a DisplayObject with a oval shape. The registration point
@@ -39,9 +39,9 @@ import nme.display.BlendMode;
  */
 class Ellipse extends Shape
 {
-	public var ellipseWidth(ellipseWidthGetter,ellipseWidthSetter):Float;
-	public var ellipseHeight(ellipseHeightGetter,ellipseHeightSetter):Float;
-	public var color(colorGetter, colorSetter):Int;
+	public var ellipseWidth(get, set):Float;
+	public var ellipseHeight(get, set):Float;
+	public var color(get, set):Int;
 	
 	private var _ellipseWidth:Float;
 	private var _ellipseHeight:Float;
@@ -75,33 +75,33 @@ class Ellipse extends Shape
 		}
 	}
 
-	private function ellipseWidthGetter():Float
+	private function get_ellipseWidth():Float
 	{
 		return _ellipseWidth;
 	}
-	private function ellipseWidthSetter( value:Float ):Float
+	private function set_ellipseWidth( value:Float ):Float
 	{
 		_ellipseWidth = value;
 		draw();
 		return _ellipseWidth;
 	}
 
-	private function ellipseHeightGetter():Float
+	private function get_ellipseHeight():Float
 	{
 		return _ellipseHeight;
 	}
-	private function ellipseHeightSetter( value:Float ):Float
+	private function set_ellipseHeight( value:Float ):Float
 	{
 		_ellipseHeight = value;
 		draw();
 		return _ellipseHeight;
 	}
 
-	private function colorGetter():Int
+	private function get_color():Int
 	{
 		return _color;
 	}
-	private function colorSetter( value:Int ):Int
+	private function set_color( value:Int ):Int
 	{
 		_color = value;
 		draw();

@@ -42,8 +42,8 @@ import org.flintparticles.twod.particles.Particle2D;
 
 class RandomDrift extends ActionBase
 {
-	public var driftY(driftYGetter, driftYSetter):Float;
-	public var driftX(driftXGetter, driftXSetter):Float;
+	public var driftY(get, set):Float;
+	public var driftX(get, set):Float;
 	
 	private var _sizeX:Float;
 	private var _sizeY:Float;
@@ -68,11 +68,11 @@ class RandomDrift extends ActionBase
 	/**
 	 * The maximum amount of horizontal drift in pixels per second.
 	 */
-	private function driftXGetter():Float
+	private function get_driftX():Float
 	{
 		return _sizeX / 2;
 	}
-	private function driftXSetter( value:Float ):Float
+	private function set_driftX( value:Float ):Float
 	{
 		_sizeX = value * 2;
 		return _sizeX;
@@ -81,11 +81,11 @@ class RandomDrift extends ActionBase
 	/**
 	 * The maximum amount of vertical drift in pixels per second.
 	 */
-	private function driftYGetter():Float
+	private function get_driftY():Float
 	{
 		return _sizeY / 2;
 	}
-	private function driftYSetter( value:Float ):Float
+	private function set_driftY( value:Float ):Float
 	{
 		_sizeY = value * 2;
 		return _sizeY;

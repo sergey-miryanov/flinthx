@@ -30,8 +30,8 @@
 
 package org.flintparticles.threed.zones;
 
-import nme.geom.Matrix3D;
-import nme.geom.Vector3D;
+import flash.geom.Matrix3D;
+import flash.geom.Vector3D;
 import org.flintparticles.threed.geom.Matrix3DUtils;
 import org.flintparticles.threed.geom.Vector3DUtils;
 
@@ -42,12 +42,12 @@ import org.flintparticles.threed.geom.Vector3DUtils;
 
 class BoxZone implements Zone3D 
 {
-	public var depth(depthGetter,depthSetter):Float;
-	public var width(widthGetter,widthSetter):Float;
-	public var upAxis(upAxisGetter,upAxisSetter):Vector3D;
-	public var depthAxis(depthAxisGetter,depthAxisSetter):Vector3D;
-	public var height(heightGetter,heightSetter):Float;
-	public var center(centerGetter,centerSetter):Vector3D;
+	public var depth(get, set):Float;
+	public var width(get, set):Float;
+	public var upAxis(get, set):Vector3D;
+	public var depthAxis(get, set):Vector3D;
+	public var height(get, set):Float;
+	public var center(get, set):Vector3D;
 	
 	private var _width:Float;
 	private var _height:Float;
@@ -94,11 +94,11 @@ class BoxZone implements Zone3D
 	/**
 	 * The width of the box.
 	 */
-	private function widthGetter() : Float
+	private function get_width() : Float
 	{
 		return _width;
 	}
-	private function widthSetter( value : Float ) : Float
+	private function set_width( value : Float ) : Float
 	{
 		_width = value;
 		_dirty = true;
@@ -108,11 +108,11 @@ class BoxZone implements Zone3D
 	/**
 	 * The height of the box.
 	 */
-	private function heightGetter() : Float
+	private function get_height() : Float
 	{
 		return _height;
 	}
-	private function heightSetter( value : Float ) : Float
+	private function set_height( value : Float ) : Float
 	{
 		_height = value;
 		_dirty = true;
@@ -122,11 +122,11 @@ class BoxZone implements Zone3D
 	/**
 	 * The depth of the box.
 	 */
-	private function depthGetter() : Float
+	private function get_depth() : Float
 	{
 		return _depth;
 	}
-	private function depthSetter( value : Float ) : Float
+	private function set_depth( value : Float ) : Float
 	{
 		_depth = value;
 		_dirty = true;
@@ -136,11 +136,11 @@ class BoxZone implements Zone3D
 	/**
 	 * The point at the center of the box.
 	 */
-	private function centerGetter() : Vector3D
+	private function get_center() : Vector3D
 	{
 		return _center.clone();
 	}
-	private function centerSetter( value : Vector3D ) : Vector3D
+	private function set_center( value : Vector3D ) : Vector3D
 	{
 		_center = Vector3DUtils.clonePoint( value );
 		_dirty = true;
@@ -151,11 +151,11 @@ class BoxZone implements Zone3D
 	 * The axis along which the height is measured. The box is rotated
 	 * so that the height is in this direction.
 	 */
-	private function upAxisGetter() : Vector3D
+	private function get_upAxis() : Vector3D
 	{
 		return _upAxis.clone();
 	}
-	private function upAxisSetter( value : Vector3D ) : Vector3D
+	private function set_upAxis( value : Vector3D ) : Vector3D
 	{
 		_upAxis = Vector3DUtils.cloneUnit( value );
 		_dirty = true;
@@ -166,11 +166,11 @@ class BoxZone implements Zone3D
 	 * The axis along which the depth is measured. The box is rotated
 	 * so that the depth is in this direction.
 	 */
-	private function depthAxisGetter() : Vector3D
+	private function get_depthAxis() : Vector3D
 	{
 		return _depthAxis.clone();
 	}
-	private function depthAxisSetter( value : Vector3D ) : Vector3D
+	private function set_depthAxis( value : Vector3D ) : Vector3D
 	{
 		_depthAxis = Vector3DUtils.cloneUnit( value );
 		_dirty = true;

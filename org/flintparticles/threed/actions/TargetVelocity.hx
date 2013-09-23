@@ -30,7 +30,7 @@
 
 package org.flintparticles.threed.actions;
 
-import nme.geom.Vector3D;
+import flash.geom.Vector3D;
 import org.flintparticles.common.particles.Particle;
 import org.flintparticles.common.actions.ActionBase;
 import org.flintparticles.common.emitters.Emitter;
@@ -42,11 +42,11 @@ import org.flintparticles.threed.particles.Particle3D;
  */
 class TargetVelocity extends ActionBase
 {
-	public var x(xGetter,xSetter):Float;
-	public var y(yGetter,ySetter):Float;
-	public var z(zGetter,zSetter):Float;
-	public var rate(rateGetter,rateSetter):Float;
-	public var targetVelocity(targetVelocityGetter,targetVelocitySetter):Vector3D;
+	public var x(get, set):Float;
+	public var y(get, set):Float;
+	public var z(get, set):Float;
+	public var rate(get, set):Float;
+	public var targetVelocity(get, set):Vector3D;
 	
 	private var _vel:Vector3D;
 	private var _rate:Float;
@@ -73,11 +73,11 @@ class TargetVelocity extends ActionBase
 	/**
 	 * The x coordinate of the target velocity, in pixels per second.s
 	 */
-	private function targetVelocityGetter():Vector3D
+	private function get_targetVelocity():Vector3D
 	{
 		return _vel;
 	}
-	private function targetVelocitySetter( value:Vector3D ):Vector3D
+	private function set_targetVelocity( value:Vector3D ):Vector3D
 	{
 		_vel = Vector3DUtils.cloneVector( value );
 		return _vel;
@@ -87,11 +87,11 @@ class TargetVelocity extends ActionBase
 	 * Adjusts how quickly the particle reaches the target angular velocity.
 	 * Larger numbers cause it to approach the target angular velocity more quickly.
 	 */
-	private function rateGetter():Float
+	private function get_rate():Float
 	{
 		return _rate;
 	}
-	private function rateSetter( value:Float ):Float
+	private function set_rate( value:Float ):Float
 	{
 		_rate = value;
 		return value;
@@ -100,11 +100,11 @@ class TargetVelocity extends ActionBase
 	/**
 	 * The x coordinate of the target velocity.
 	 */
-	private function xGetter():Float
+	private function get_x():Float
 	{
 		return _vel.x;
 	}
-	private function xSetter( value:Float ):Float
+	private function set_x( value:Float ):Float
 	{
 		_vel.x = value;
 		return value;
@@ -113,11 +113,11 @@ class TargetVelocity extends ActionBase
 	/**
 	 * The y coordinate of  the target velocity.
 	 */
-	private function yGetter():Float
+	private function get_y():Float
 	{
 		return _vel.y;
 	}
-	private function ySetter( value:Float ):Float
+	private function set_y( value:Float ):Float
 	{
 		_vel.y = value;
 		return value;
@@ -126,11 +126,11 @@ class TargetVelocity extends ActionBase
 	/**
 	 * The z coordinate of the target velocity.
 	 */
-	private function zGetter():Float
+	private function get_z():Float
 	{
 		return _vel.z;
 	}
-	private function zSetter( value:Float ):Float
+	private function set_z( value:Float ):Float
 	{
 		_vel.z = value;
 		return value;

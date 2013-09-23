@@ -37,8 +37,11 @@ import org.flintparticles.common.utils.Maths;
  */
 class Maths 
 {
-	private static inline var RADTODEG:Float = 180 / Math.PI;
-	private static inline var DEGTORAD:Float = Math.PI / 180;
+    // 180 / Math.PI
+	private static inline var RADTODEG:Float = 57.2957795131;
+
+    // Math.PI / 180
+	private static inline var DEGTORAD:Float = 0.0174532925199;
 	
 	/**
 	 * Converts an angle from radians to degrees

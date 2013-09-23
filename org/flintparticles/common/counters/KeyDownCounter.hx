@@ -30,8 +30,8 @@
 
 package org.flintparticles.common.counters;
 
-import nme.display.Stage;
-import nme.events.KeyboardEvent;
+import flash.display.Stage;
+import flash.events.KeyboardEvent;
 import org.flintparticles.common.emitters.Emitter;
 import org.flintparticles.common.counters.KeyDownCounter;
 import org.flintparticles.common.counters.Counter;
@@ -43,11 +43,11 @@ import org.flintparticles.common.counters.Counter;
  */
 class KeyDownCounter implements Counter
 {
-	public var stage(stageGetter,stageSetter):Stage;
-	public var running(runningGetter,null):Bool;
-	public var counter(counterGetter,counterSetter):Counter;
-	public var complete(completeGetter,null):Bool;
-	public var keyCode(keyCodeGetter, keyCodeSetter):Int;
+	public var stage(get, set):Stage;
+	public var running(get, never):Bool;
+	public var counter(get, set):Counter;
+	public var complete(get, never):Bool;
+	public var keyCode(get, set):Int;
 	
 	private var _counter:Counter;
 	private var _keyCode:Int;
@@ -105,11 +105,11 @@ class KeyDownCounter implements Counter
 	/**
 	 * The counter to use when the key is down.
 	 */
-	private function counterGetter():Counter
+	private function get_counter():Counter
 	{
 		return _counter;
 	}
-	private function counterSetter( value:Counter ):Counter
+	private function set_counter( value:Counter ):Counter
 	{
 		_counter = value;
 		return _counter;
@@ -118,11 +118,11 @@ class KeyDownCounter implements Counter
 	/**
 	 * The key code of the key that controls the counter.
 	 */
-	private function keyCodeGetter():Int
+	private function get_keyCode():Int
 	{
 		return _keyCode;
 	}
-	private function keyCodeSetter( value:Int ):Int
+	private function set_keyCode( value:Int ):Int
 	{
 		_keyCode = value;
 		return _keyCode;
@@ -131,11 +131,11 @@ class KeyDownCounter implements Counter
 	/**
 	 * A reference to the stage
 	 */
-	private function stageGetter():Stage
+	private function get_stage():Stage
 	{
 		return _stage;
 	}
-	private function stageSetter( value:Stage ):Stage
+	private function set_stage( value:Stage ):Stage
 	{
 		_stage = value;
 		createListeners();
@@ -184,7 +184,7 @@ class KeyDownCounter implements Counter
 	/**
 	 * Indicates if the counter has emitted all its particles.
 	 */
-	public function completeGetter():Bool
+	public function get_complete():Bool
 	{
 		return _counter.complete;
 	}
@@ -192,7 +192,7 @@ class KeyDownCounter implements Counter
 	/**
 	 * Indicates if the counter is currently emitting particles
 	 */
-	public function runningGetter():Bool
+	public function get_running():Bool
 	{
 		return _counter.running;
 	}

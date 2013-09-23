@@ -30,7 +30,7 @@
 
 package org.flintparticles.common.initializers;
 
-import nme.errors.Error;
+import flash.errors.Error;
 import org.flintparticles.common.particles.Particle;
 import org.flintparticles.common.events.ParticleEvent;
 import org.flintparticles.common.emitters.Emitter;
@@ -44,7 +44,7 @@ import org.flintparticles.common.initializers.ImageInitializerBase;
  */
 class ImageInitializerBase extends InitializerBase
 {
-	public var usePool(usePoolGetter, usePoolSetter):Bool;
+	public var usePool(get, set):Bool;
 	
 	private var _usePool:Bool;
 	private var _pool:Array<Dynamic>;
@@ -142,11 +142,11 @@ class ImageInitializerBase extends InitializerBase
 	/**
 	 * Whether the images should be pooled for reuse when a particle dies
 	 */
-	private function usePoolGetter():Bool
+	private function get_usePool():Bool
 	{
 		return _usePool;
 	}
-	private function usePoolSetter( value:Bool ) : Bool
+	private function set_usePool( value:Bool ) : Bool
 	{
 		if( _usePool != value )
 		{

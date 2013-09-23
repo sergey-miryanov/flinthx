@@ -52,8 +52,8 @@ import org.flintparticles.common.actions.ActionBase;
 class ChangeCollisionRadius extends ActionBase
 {
 	
-	public var startRadius(startRadiusGetter,startRadiusSetter):Float;
-	public var endRadius(endRadiusGetter,endRadiusSetter):Float;
+	public var startRadius(get, set):Float;
+	public var endRadius(get, set):Float;
 	
 	private var _diffRadius:Float;
 	private var _endRadius:Float;
@@ -81,11 +81,11 @@ class ChangeCollisionRadius extends ActionBase
 	 * The collision radius for the particle when its energy
 	 * is 1 - usually at the start of its lifetime.
 	 */
-	private function startRadiusGetter():Float
+	private function get_startRadius():Float
 	{
 		return _endRadius + _diffRadius;
 	}
-	private function startRadiusSetter( value:Float ):Float
+	private function set_startRadius( value:Float ):Float
 	{
 		_diffRadius = value - _endRadius;
 		return _diffRadius;
@@ -95,11 +95,11 @@ class ChangeCollisionRadius extends ActionBase
 	 * The collision radius for the particle when its energy
 	 * is 0 - usually at the end of its lifetime.
 	 */
-	private function endRadiusGetter():Float
+	private function get_endRadius():Float
 	{
 		return _endRadius;
 	}
-	private function endRadiusSetter( value:Float ):Float
+	private function set_endRadius( value:Float ):Float
 	{
 		_diffRadius = _endRadius + _diffRadius - value;
 		_endRadius = value;

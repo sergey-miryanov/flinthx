@@ -30,7 +30,7 @@
 
 package org.flintparticles.threed.zones;
 
-import nme.geom.Vector3D;
+import flash.geom.Vector3D;
 
 /**
  * The Zones interface must be implemented by all zones.

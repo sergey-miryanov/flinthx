@@ -29,9 +29,9 @@
 
 package org.flintparticles.common.renderers;
 
-import nme.display.Sprite;
-import nme.events.Event;
-import nme.Vector;
+import flash.display.Sprite;
+import flash.events.Event;
+import flash.Vector;
 import org.flintparticles.common.particles.Particle;
 import org.flintparticles.common.events.ParticleEvent;
 import org.flintparticles.common.events.EmitterEvent;
@@ -50,9 +50,9 @@ import org.flintparticles.common.renderers.Renderer;
  * and renderParticles at the appropriate times. Many derived classes need 
  * only implement these three methods to manage the rendering of the particles.</p>
  */
-class SpriteRendererBase extends Sprite, implements Renderer 
+class SpriteRendererBase extends Sprite implements Renderer 
 {
-	public var emitters(emittersGetter,emittersSetter):Vector<Emitter>;
+	public var emitters(get, set):Vector<Emitter>;
 	/**
 	 * @private
 	 * 
@@ -244,11 +244,11 @@ class SpriteRendererBase extends Sprite, implements Renderer
 	/**
 	 * The array of all emitters being rendered by this renderer.
 	 */
-	private function emittersGetter():Vector<Emitter>
+	private function get_emitters():Vector<Emitter>
 	{
 		return _emitters;
 	}
-	private function emittersSetter( value:Vector<Emitter> ):Vector<Emitter>
+	private function set_emitters( value:Vector<Emitter> ):Vector<Emitter>
 	{
 		var e:Emitter;
 		for( e in _emitters )

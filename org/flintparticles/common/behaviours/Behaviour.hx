@@ -39,7 +39,7 @@ import org.flintparticles.common.behaviours.Behaviour;
  */
 interface Behaviour
 {
-	public var priority(priorityGetter,prioritySetter) : Int;
+	public var priority(get, set) : Int;
 	
 	/**
 	 * The priority property is used to order the execution of behaviours.
@@ -52,8 +52,8 @@ interface Behaviour
 	 * should be performed last, after other actions have made changes
 	 * to the particle's velocity.</p>
 	 */
-	private function priorityGetter():Int;
-	private function prioritySetter( value:Int ):Int;
+	private function get_priority():Int;
+	private function set_priority( value:Int ):Int;
 	
 	/**
 	 * The addedToEmitter method is called by the emitter when the Behaviour is 

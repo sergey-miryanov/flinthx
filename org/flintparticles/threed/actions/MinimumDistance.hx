@@ -30,7 +30,7 @@
 
 package org.flintparticles.threed.actions;
 
-import nme.geom.Vector3D;
+import flash.geom.Vector3D;
 import org.flintparticles.common.emitters.Emitter;
 import org.flintparticles.common.particles.Particle;
 import org.flintparticles.common.actions.ActionBase;
@@ -48,8 +48,8 @@ import org.flintparticles.threed.particles.Particle3D;
 
 class MinimumDistance extends ActionBase
 {
-	public var acceleration(accelerationGetter,accelerationSetter):Float;
-	public var minimum(minimumGetter,minimumSetter):Float;
+	public var acceleration(get, set):Float;
+	public var minimum(get, set):Float;
 	
 	private var _min:Float;
 	private var _acc:Float;
@@ -86,11 +86,11 @@ class MinimumDistance extends ActionBase
 	 * The minimum distance, in pixels, that this action maintains between 
 	 * particles.
 	 */
-	private function minimumGetter():Float
+	private function get_minimum():Float
 	{
 		return _min;
 	}
-	private function minimumSetter( value:Float ):Float
+	private function set_minimum( value:Float ):Float
 	{
 		_min = value;
 		_minSq = value * value;
@@ -100,11 +100,11 @@ class MinimumDistance extends ActionBase
 	/**
 	 * The acceleration force applied to avoid the other particles.
 	 */
-	private function accelerationGetter():Float
+	private function get_acceleration():Float
 	{
 		return _acc;
 	}
-	private function accelerationSetter( value:Float ):Float
+	private function set_acceleration( value:Float ):Float
 	{
 		_acc = value;
 		return _acc;

@@ -30,7 +30,7 @@
 
 package org.flintparticles.twod.zones;
 
-import nme.geom.Point;
+import flash.geom.Point;
 import org.flintparticles.twod.particles.Particle2D;
 
 /**
@@ -39,10 +39,10 @@ import org.flintparticles.twod.particles.Particle2D;
 
 class RectangleZone implements Zone2D
 {
-	public var top(topGetter,topSetter):Float;
-	public var right(rightGetter,rightSetter):Float;
-	public var left(leftGetter,leftSetter):Float;
-	public var bottom(bottomGetter,bottomSetter):Float;
+	public var top(get, set):Float;
+	public var right(get, set):Float;
+	public var left(get, set):Float;
+	public var bottom(get, set):Float;
 	
 	private var _left : Float;
 	private var _top : Float;
@@ -72,11 +72,11 @@ class RectangleZone implements Zone2D
 	/**
 	 * The left coordinate of the rectangle defining the region of the zone.
 	 */
-	private function leftGetter() : Float
+	private function get_left() : Float
 	{
 		return _left;
 	}
-	private function leftSetter( value : Float ) : Float
+	private function set_left( value : Float ) : Float
 	{
 		_left = value;
 		if( !Math.isNaN( _right ) && !Math.isNaN( _left ) )
@@ -89,11 +89,11 @@ class RectangleZone implements Zone2D
 	/**
 	 * The right coordinate of the rectangle defining the region of the zone.
 	 */
-	private function rightGetter() : Float
+	private function get_right() : Float
 	{
 		return _right;
 	}
-	private function rightSetter( value : Float ) : Float
+	private function set_right( value : Float ) : Float
 	{
 		_right = value;
 		if( !Math.isNaN( _right ) && !Math.isNaN( _left ) )
@@ -106,11 +106,11 @@ class RectangleZone implements Zone2D
 	/**
 	 * The top coordinate of the rectangle defining the region of the zone.
 	 */
-	private function topGetter() : Float
+	private function get_top() : Float
 	{
 		return _top;
 	}
-	private function topSetter( value : Float ) : Float
+	private function set_top( value : Float ) : Float
 	{
 		_top = value;
 		if( !Math.isNaN( _top ) && !Math.isNaN( _bottom ) )
@@ -123,11 +123,11 @@ class RectangleZone implements Zone2D
 	/**
 	 * The bottom coordinate of the rectangle defining the region of the zone.
 	 */
-	private function bottomGetter() : Float
+	private function get_bottom() : Float
 	{
 		return _bottom;
 	}
-	private function bottomSetter( value : Float ) : Float
+	private function set_bottom( value : Float ) : Float
 	{
 		_bottom = value;
 		if( !Math.isNaN( _top ) && !Math.isNaN( _bottom ) )

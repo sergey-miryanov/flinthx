@@ -30,8 +30,8 @@
 
 package org.flintparticles.common.actions;
 
-import nme.display.Stage;
-import nme.events.KeyboardEvent;
+import flash.display.Stage;
+import flash.events.KeyboardEvent;
 import org.flintparticles.common.particles.Particle;
 import org.flintparticles.common.emitters.Emitter;
 import org.flintparticles.common.actions.Action;
@@ -48,9 +48,9 @@ import org.flintparticles.common.actions.ActionBase;
 
 class KeyDownAction extends ActionBase
 {
-	public var stage(stageGetter,stageSetter):Stage;
-	public var action(actionGetter,actionSetter):Action;
-	public var keyCode(keyCodeGetter, keyCodeSetter):Int;
+	public var stage(get, set):Stage;
+	public var action(get, set):Action;
+	public var keyCode(get, set):Int;
 	
 	private var _action:Action;
 	private var _keyCode:Int;
@@ -107,11 +107,11 @@ class KeyDownAction extends ActionBase
 	/**
 	 * A reference to the stage
 	 */
-	private function stageGetter():Stage
+	private function get_stage():Stage
 	{
 		return _stage;
 	}
-	private function stageSetter( value:Stage ):Stage
+	private function set_stage( value:Stage ):Stage
 	{
 		_stage = value;
 		createListeners();
@@ -121,11 +121,11 @@ class KeyDownAction extends ActionBase
 	/**
 	 * The action to apply when the key is down.
 	 */
-	private function actionGetter():Action
+	private function get_action():Action
 	{
 		return _action;
 	}
-	private function actionSetter( value:Action ):Action
+	private function set_action( value:Action ):Action
 	{
 		_action = value;
 		return _action;
@@ -134,11 +134,11 @@ class KeyDownAction extends ActionBase
 	/**
 	 * The key code of the key that controls the action.
 	 */
-	private function keyCodeGetter():Int
+	private function get_keyCode():Int
 	{
 		return _keyCode;
 	}
-	private function keyCodeSetter( value:Int ):Int
+	private function set_keyCode( value:Int ):Int
 	{
 		_keyCode = value;
 		return _keyCode;
@@ -149,11 +149,11 @@ class KeyDownAction extends ActionBase
 	 * 
 	 * @see org.flintparticles.common.actions.Action#getDefaultPriority()
 	 */
-	override private function priorityGetter():Int
+	override private function get_priority():Int
 	{
 		return _action.priority;
 	}
-	override private function prioritySetter( value:Int ):Int
+	override private function set_priority( value:Int ):Int
 	{
 		_action.priority = value;
 		return value;

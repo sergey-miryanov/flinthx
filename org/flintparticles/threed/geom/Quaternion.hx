@@ -29,10 +29,10 @@
 
 package org.flintparticles.threed.geom;
 
-import nme.errors.Error;
-import nme.geom.Matrix3D;
-import nme.geom.Vector3D;
-import nme.Vector;
+import flash.errors.Error;
+import flash.geom.Matrix3D;
+import flash.geom.Vector3D;
+import flash.Vector;
 
 /**
  * Quaternion represents a rotational transform in three-dimensional cartesian 
@@ -40,10 +40,10 @@ import nme.Vector;
  */
 class Quaternion 
 {
-	public var ZERO(ZEROGetter,null):Quaternion;
-	public var magnitude(magnitudeGetter,null):Float;
-	public var IDENTITY(IDENTITYGetter,null):Quaternion;
-	public var magnitudeSquared(magnitudeSquaredGetter,null):Float;
+	public var ZERO(get, never):Quaternion;
+	public var magnitude(get, never):Float;
+	public var IDENTITY(get, never):Quaternion;
+	public var magnitudeSquared(get, never):Float;
 	/**
 	 * A zero quaternion.
 	 */
@@ -52,7 +52,7 @@ class Quaternion
 		return new Quaternion( 0, 0, 0, 0 );
 	}
 	
-	public function ZEROGetter() : Quaternion
+	public function get_ZERO() : Quaternion
 	{
 		return new Quaternion( 0, 0, 0, 0 );
 	}
@@ -66,7 +66,7 @@ class Quaternion
 		return identity;
 	}
 	
-	public function IDENTITYGetter() : Quaternion
+	public function get_IDENTITY() : Quaternion
 	{
 		return new Quaternion( 1, 0, 0, 0 );
 	}
@@ -391,7 +391,7 @@ class Quaternion
 	/**
 	 * The magnitude of this quaternion.
 	 */
-	public function magnitudeGetter():Float
+	public function get_magnitude():Float
 	{
 		return Math.sqrt( w * w + x * x + y * y + z * z );
 	}
@@ -399,7 +399,7 @@ class Quaternion
 	/**
 	 * The square of the magnitude of this quaternion.
 	 */
-	public function magnitudeSquaredGetter():Float
+	public function get_magnitudeSquared():Float
 	{
 		return ( w * w + x * x + y * y + z * z );
 	}

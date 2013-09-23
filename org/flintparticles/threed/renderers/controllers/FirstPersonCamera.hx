@@ -30,7 +30,7 @@
 
 package org.flintparticles.threed.renderers.controllers;
 
-import nme.display.DisplayObject;
+import flash.display.DisplayObject;
 import org.flintparticles.threed.renderers.Camera;
 
 /**
@@ -55,8 +55,8 @@ import org.flintparticles.threed.renderers.Camera;
  */
 class FirstPersonCamera extends KeyboardControllerBase
 {
-	public var rotationRate(rotationRateGetter,rotationRateSetter):Float;
-	public var trackRate(trackRateGetter,trackRateSetter):Float;
+	public var rotationRate(get, set):Float;
+	public var trackRate(get, set):Float;
 	
 	private var _rotationRate:Float;
 	private var _trackRate:Float;
@@ -94,11 +94,11 @@ class FirstPersonCamera extends KeyboardControllerBase
 	 * The rate at which to rotate the camera when the appropriate keys are 
 	 * pressed, in radians per second.
 	 */
-	public function rotationRateGetter():Float
+	public function get_rotationRate():Float
 	{
 		return _rotationRate;
 	}
-	public function rotationRateSetter( value:Float ):Float
+	public function set_rotationRate( value:Float ):Float
 	{
 		_rotationRate = value;
 		return value;
@@ -108,11 +108,11 @@ class FirstPersonCamera extends KeyboardControllerBase
 	 * The rate at which to track the camera when the appropriate keys are 
 	 * pressed, in units per second.
 	 */
-	public function trackRateGetter():Float
+	public function get_trackRate():Float
 	{
 		return _trackRate;
 	}
-	public function trackRateSetter( value:Float ):Float
+	public function set_trackRate( value:Float ):Float
 	{
 		_trackRate = value;
 		return value;

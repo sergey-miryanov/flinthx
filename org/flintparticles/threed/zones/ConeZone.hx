@@ -30,7 +30,7 @@
 
 package org.flintparticles.threed.zones;
 
-import nme.geom.Vector3D;
+import flash.geom.Vector3D;
 import org.flintparticles.threed.geom.Vector3DUtils;
 
 /**
@@ -41,11 +41,11 @@ import org.flintparticles.threed.geom.Vector3DUtils;
 
 class ConeZone implements Zone3D 
 {
-	public var truncatedHeight(truncatedHeightGetter,truncatedHeightSetter):Float;
-	public var angle(angleGetter,angleSetter):Float;
-	public var apex(apexGetter,apexSetter):Vector3D;
-	public var height(heightGetter,heightSetter):Float;
-	public var axis(axisGetter,axisSetter):Vector3D;
+	public var truncatedHeight(get, set):Float;
+	public var angle(get, set):Float;
+	public var apex(get, set):Vector3D;
+	public var height(get, set):Float;
+	public var axis(get, set):Vector3D;
 	
 	private var _apex:Vector3D;
 	private var _axis:Vector3D;
@@ -92,11 +92,11 @@ class ConeZone implements Zone3D
 	/**
 	 * The point at the apex of the cone.
 	 */
-	private function apexGetter() : Vector3D
+	private function get_apex() : Vector3D
 	{
 		return _apex.clone();
 	}
-	private function apexSetter( value : Vector3D ) : Vector3D
+	private function set_apex( value : Vector3D ) : Vector3D
 	{
 		_apex = Vector3DUtils.clonePoint( value );
 		return _apex;
@@ -105,11 +105,11 @@ class ConeZone implements Zone3D
 	/**
 	 * The central axis of the cone, from the apex towards the base.
 	 */
-	private function axisGetter() : Vector3D
+	private function get_axis() : Vector3D
 	{
 		return _axis.clone();
 	}
-	private function axisSetter( value : Vector3D ) : Vector3D
+	private function set_axis( value : Vector3D ) : Vector3D
 	{
 		_axis = Vector3DUtils.cloneVector( value );
 		_dirty = true;
@@ -119,11 +119,11 @@ class ConeZone implements Zone3D
 	/**
 	 * The angle at the apex of the cone.
 	 */
-	private function angleGetter() : Float
+	private function get_angle() : Float
 	{
 		return _angle;
 	}
-	private function angleSetter( value : Float ) : Float
+	private function set_angle( value : Float ) : Float
 	{
 		_angle = value;
 		return _angle;
@@ -132,11 +132,11 @@ class ConeZone implements Zone3D
 	/**
 	 * The height of the cone.
 	 */
-	private function heightGetter() : Float
+	private function get_height() : Float
 	{
 		return _maxDist;
 	}
-	private function heightSetter( value : Float ) : Float
+	private function set_height( value : Float ) : Float
 	{
 		_maxDist = value;
 		return _maxDist;
@@ -146,11 +146,11 @@ class ConeZone implements Zone3D
 	 * The height at which the top of the cone is removed, leaving 
 	 * just the base from height to truncatedHeight.
 	 */
-	private function truncatedHeightGetter() : Float
+	private function get_truncatedHeight() : Float
 	{
 		return _minDist;
 	}
-	private function truncatedHeightSetter( value : Float ) : Float
+	private function set_truncatedHeight( value : Float ) : Float
 	{
 		_minDist = value;
 		return _minDist;

@@ -44,10 +44,10 @@ import org.flintparticles.twod.particles.Particle2D;
  */
 class WrapAroundBox extends ActionBase
 {
-	public var top(topGetter,topSetter):Float;
-	public var right(rightGetter,rightSetter):Float;
-	public var left(leftGetter,leftSetter):Float;
-	public var bottom(bottomGetter, bottomSetter):Float;
+	public var top(get, set):Float;
+	public var right(get, set):Float;
+	public var left(get, set):Float;
+	public var bottom(get, set):Float;
 	
 	private var _left : Float;
 	private var _top : Float;
@@ -81,11 +81,11 @@ class WrapAroundBox extends ActionBase
 	/**
 	 * The left coordinate of the box.
 	 */
-	private function leftGetter():Float
+	private function get_left():Float
 	{
 		return _left;
 	}
-	private function leftSetter( value:Float ):Float
+	private function set_left( value:Float ):Float
 	{
 		_left = value;
 		_width = _right - _left;
@@ -95,11 +95,11 @@ class WrapAroundBox extends ActionBase
 	/**
 	 * The top coordinate of the box.
 	 */
-	private function topGetter():Float
+	private function get_top():Float
 	{
 		return _top;
 	}
-	private function topSetter( value:Float ):Float
+	private function set_top( value:Float ):Float
 	{
 		_top = value;
 		_height = _bottom - _top;
@@ -109,11 +109,11 @@ class WrapAroundBox extends ActionBase
 	/**
 	 * The left coordinate of the box.
 	 */
-	private function rightGetter():Float
+	private function get_right():Float
 	{
 		return _right;
 	}
-	private function rightSetter( value:Float ):Float
+	private function set_right( value:Float ):Float
 	{
 		_right = value;
 		_width = _right - _left;
@@ -123,11 +123,11 @@ class WrapAroundBox extends ActionBase
 	/**
 	 * The left coordinate of the box.
 	 */
-	private function bottomGetter():Float
+	private function get_bottom():Float
 	{
 		return _bottom;
 	}
-	private function bottomSetter( value:Float ):Float
+	private function set_bottom( value:Float ):Float
 	{
 		_bottom = value;
 		_height = _bottom - _top;

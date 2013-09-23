@@ -42,9 +42,9 @@ import org.flintparticles.twod.particles.Particle2D;
 
 class Rotation extends InitializerBase
 {
-	public var angle(angleGetter,angleSetter):Float;
-	public var maxAngle(maxAngleGetter,maxAngleSetter):Float;
-	public var minAngle(minAngleGetter, minAngleSetter):Float;
+	public var angle(get, set):Float;
+	public var maxAngle(get, set):Float;
+	public var minAngle(get, set):Float;
 	
 	private var _min : Float;
 	private var _max : Float;
@@ -75,11 +75,11 @@ class Rotation extends InitializerBase
 	 * The minimum angle for particles initialised by 
 	 * this initializer.
 	 */
-	private function minAngleGetter():Float
+	private function get_minAngle():Float
 	{
 		return _min;
 	}
-	private function minAngleSetter( value:Float ):Float
+	private function set_minAngle( value:Float ):Float
 	{
 		_min = value;
 		return _min;
@@ -89,11 +89,11 @@ class Rotation extends InitializerBase
 	 * The maximum angle for particles initialised by 
 	 * this initializer.
 	 */
-	private function maxAngleGetter():Float
+	private function get_maxAngle():Float
 	{
 		return _max;
 	}
-	private function maxAngleSetter( value:Float ):Float
+	private function set_maxAngle( value:Float ):Float
 	{
 		_max = value;
 		return _max;
@@ -104,11 +104,11 @@ class Rotation extends InitializerBase
 	 * When writing this sets both maxAngle and minAngle to the 
 	 * same angle value.
 	 */
-	private function angleGetter():Float
+	private function get_angle():Float
 	{
 		return _min == _max ? _min : ( _max + _min ) / 2;
 	}
-	private function angleSetter( value:Float ):Float
+	private function set_angle( value:Float ):Float
 	{
 		_max = _min = value;
 		return value;

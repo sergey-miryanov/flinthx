@@ -30,7 +30,7 @@
 
 package org.flintparticles.common.utils;
 
-import nme.Vector;
+import flash.Vector;
 import org.flintparticles.common.utils.WeightedArray;
 
 /**
@@ -48,8 +48,8 @@ import org.flintparticles.common.utils.WeightedArray;
  */
 class WeightedArray
 {
-	public var totalWeights(totalWeightsGetter,null):Float;
-	public var length(lengthGetter, null):Int;
+	public var totalWeights(get, never):Float;
+	public var length(get, never):Int;
 	
 	private var _values:Vector<Pair>;
 	private var _totalWeights:Float;
@@ -209,7 +209,7 @@ class WeightedArray
 	/**
 	 * The number of items in the WeightedArray
 	 */
-	public function lengthGetter():Int
+	public function get_length():Int
 	{
 		return _values.length;
 	}
@@ -217,7 +217,7 @@ class WeightedArray
 	/**
 	 * The sum of the weights of all the values.
 	 */
-	public function totalWeightsGetter():Float
+	public function get_totalWeights():Float
 	{
 		return _totalWeights;
 	}

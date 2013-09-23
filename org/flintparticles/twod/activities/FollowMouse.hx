@@ -30,7 +30,7 @@
 
 package org.flintparticles.twod.activities;
 
-import nme.display.DisplayObject;
+import flash.display.DisplayObject;
 import org.flintparticles.common.activities.ActivityBase;
 import org.flintparticles.common.emitters.Emitter;
 import org.flintparticles.twod.emitters.Emitter2D;
@@ -43,7 +43,7 @@ import org.flintparticles.twod.emitters.Emitter2D;
  */
 class FollowMouse extends ActivityBase
 {
-	public var renderer(rendererGetter, rendererSetter):DisplayObject;
+	public var renderer(get, set):DisplayObject;
 	
 	private var _renderer:DisplayObject;
 	
@@ -67,11 +67,11 @@ class FollowMouse extends ActivityBase
 	 * The display object whose coordinate system the mouse position is converted to. This
 	 * is usually the renderer for the particle system created by the emitter.
 	 */
-	private function rendererGetter():DisplayObject
+	private function get_renderer():DisplayObject
 	{
 		return _renderer;
 	}
-	private function rendererSetter( value:DisplayObject ):DisplayObject
+	private function set_renderer( value:DisplayObject ):DisplayObject
 	{
 		_renderer = value;
 		return _renderer;

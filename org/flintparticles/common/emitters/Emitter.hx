@@ -31,8 +31,8 @@
 package org.flintparticles.common.emitters;
 
 import jota.utils.ArrayUtils;
-import nme.events.EventDispatcher;
-import nme.Vector;
+import flash.events.EventDispatcher;
+import flash.Vector;
 import org.flintparticles.common.behaviours.Behaviour;
 import org.flintparticles.common.particles.Particle;
 import org.flintparticles.common.utils.FrameUpdater;
@@ -138,17 +138,17 @@ import org.flintparticles.common.events.ParticleEvent;
 
 class Emitter extends EventDispatcher
 {
-	public var maximumFrameTime(maximumFrameTimeGetter,maximumFrameTimeSetter):Float;
-	public var actions(actionsGetter,actionsSetter):Vector<Action>;
-	public var particles(particlesGetter,particlesSetter):Vector<Particle>;
-	public var running(runningGetter,null):Bool;
-	public var activities(activitiesGetter,activitiesSetter):Vector<Activity>;
-	public var particleFactory(particleFactoryGetter,particleFactorySetter):ParticleFactory;
-	public var useInternalTick(useInternalTickGetter,useInternalTickSetter):Bool;
-	public var fixedFrameTime(fixedFrameTimeGetter,fixedFrameTimeSetter):Float;
-	public var counter(counterGetter,counterSetter):Counter;
-	public var particlesArray(particlesArrayGetter,null):Array<Dynamic>;
-	public var initializers(initializersGetter,initializersSetter):Vector<Initializer>;
+	public var maximumFrameTime(get, set):Float;
+	public var actions(get, set):Vector<Action>;
+	public var particles(get, set):Vector<Particle>;
+	public var running(get, never):Bool;
+	public var activities(get, set):Vector<Activity>;
+	public var particleFactory(get, set):ParticleFactory;
+	public var useInternalTick(get, set):Bool;
+	public var fixedFrameTime(get, set):Float;
+	public var counter(get, set):Counter;
+	public var particlesArray(get, never):Array<Dynamic>;
+	public var initializers(get, set):Vector<Initializer>;
 	/**
 	 * @private
 	 */
@@ -251,11 +251,11 @@ class Emitter extends EventDispatcher
 	 * this duration are ignored. The default value is 0.5 seconds. Developers don't usually
 	 * need to change this from the default value.</p>
 	 */
-	private function maximumFrameTimeGetter() : Float
+	private function get_maximumFrameTime() : Float
 	{
 		return _maximumFrameTime;
 	}
-	private function maximumFrameTimeSetter( value : Float ) : Float
+	private function set_maximumFrameTime( value : Float ) : Float
 	{
 		_maximumFrameTime = value;
 		return _maximumFrameTime;
@@ -264,11 +264,11 @@ class Emitter extends EventDispatcher
 	/**
 	 * The array of all initializers being used by this emitter.
 	 */
-	private function initializersGetter():Vector<Initializer>
+	private function get_initializers():Vector<Initializer>
 	{
 		return _initializers;
 	}
-	private function initializersSetter( value:Vector<Initializer> ):Vector<Initializer>
+	private function set_initializers( value:Vector<Initializer> ):Vector<Initializer>
 	{
 		var initializer:Initializer;
 		for( initializer in _initializers )
@@ -396,11 +396,11 @@ class Emitter extends EventDispatcher
 	/**
 	 * The array of all actions being used by this emitter.
 	 */
-	private function actionsGetter():Vector<Action>
+	private function get_actions():Vector<Action>
 	{
 		return _actions;
 	}
-	private function actionsSetter( value:Vector<Action> ):Vector<Action>
+	private function set_actions( value:Vector<Action> ):Vector<Action>
 	{
 		var action:Action;
 		for( action in _actions )
@@ -527,11 +527,11 @@ class Emitter extends EventDispatcher
 	/**
 	 * The array of all actions being used by this emitter.
 	 */
-	private function activitiesGetter():Vector<Activity>
+	private function get_activities():Vector<Activity>
 	{
 		return _activities;
 	}
-	private function activitiesSetter( value:Vector<Activity> ):Vector<Activity>
+	private function set_activities( value:Vector<Activity> ):Vector<Activity>
 	{
 		var activity:Activity;
 		for( activity in _activities )
@@ -660,11 +660,11 @@ class Emitter extends EventDispatcher
 	 * The Counter for the Emitter. The counter defines when and
 	 * with what frequency the emitter emits particles.
 	 */		
-	private function counterGetter():Counter
+	private function get_counter():Counter
 	{
 		return _counter;
 	}
-	private function counterSetter( value:Counter ):Counter
+	private function set_counter( value:Counter ):Counter
 	{
 		_counter = value;
 		if( running )
@@ -691,11 +691,11 @@ class Emitter extends EventDispatcher
 	 * the emitter's update method with the appropriate time parameter every
 	 * time they want the emitter to update the particle system.</p>
 	 */		
-	private function useInternalTickGetter():Bool
+	private function get_useInternalTick():Bool
 	{
 		return _useInternalTick;
 	}
-	private function useInternalTickSetter( value:Bool ):Bool
+	private function set_useInternalTick( value:Bool ):Bool
 	{
 		if( _useInternalTick != value )
 		{
@@ -729,11 +729,11 @@ class Emitter extends EventDispatcher
 	 * 
 	 * @see #useInternalTick
 	 */		
-	private function fixedFrameTimeGetter():Float
+	private function get_fixedFrameTime():Float
 	{
 		return _fixedFrameTime;
 	}
-	private function fixedFrameTimeSetter( value:Float ):Float
+	private function set_fixedFrameTime( value:Float ):Float
 	{
 		_fixedFrameTime = value;
 		return _fixedFrameTime;
@@ -742,7 +742,7 @@ class Emitter extends EventDispatcher
 	/**
 	 * Indicates if the emitter is currently running.
 	 */
-	private function runningGetter():Bool
+	private function get_running():Bool
 	{
 		return _running;
 	}
@@ -754,11 +754,11 @@ class Emitter extends EventDispatcher
 	 * particle factory should implement the ParticleFactory interface.
 	 * @see org.flintparticles.common.particles.ParticleFactory
 	 */		
-	private function particleFactoryGetter():ParticleFactory
+	private function get_particleFactory():ParticleFactory
 	{
 		return _particleFactory;
 	}
-	private function particleFactorySetter( value:ParticleFactory ):ParticleFactory
+	private function set_particleFactory( value:ParticleFactory ):ParticleFactory
 	{
 		_particleFactory = value;
 		return _particleFactory;
@@ -767,18 +767,18 @@ class Emitter extends EventDispatcher
 	/**
 	 * The collection of all particles being managed by this emitter.
 	 */
-	//public function particlesGetter():Vector<Particle>
+	//public function Get_particles():Vector<Particle>
 	//{
 		//return cast(_particles, Vector);
 	//}
 	/**
 	 * TODO: check if this retrieves correct vector
 	 */
-	private function particlesGetter():Dynamic
+	private function get_particles():Dynamic
 	{
 		return cast(_particles, Vector<Dynamic>);
 	}
-	private function particlesSetter( value:Vector<Particle> ):Dynamic
+	private function set_particles( value:Vector<Particle> ):Dynamic
 	{
 		killAllParticles();
 		addParticles( value, false );
@@ -792,7 +792,7 @@ class Emitter extends EventDispatcher
 	 * 
 	 * @see #particles
 	 */
-	private function particlesArrayGetter():Array<Dynamic>
+	private function get_particlesArray():Array<Dynamic>
 	{
 		return _particles;
 	}

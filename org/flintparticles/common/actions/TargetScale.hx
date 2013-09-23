@@ -43,8 +43,8 @@ import org.flintparticles.common.actions.ActionBase;
  */
 class TargetScale extends ActionBase
 {
-	public var targetScale(targetScaleGetter,targetScaleSetter):Float;
-	public var rate(rateGetter, rateSetter):Float;
+	public var targetScale(get, set):Float;
+	public var rate(get, set):Float;
 	
 	private var _scale:Float;
 	private var _rate:Float;
@@ -70,11 +70,11 @@ class TargetScale extends ActionBase
 	/**
 	 * The target scale for the particle. 1 is normal size.
 	 */
-	private function targetScaleGetter():Float
+	private function get_targetScale():Float
 	{
 		return _scale;
 	}
-	private function targetScaleSetter( value:Float ):Float
+	private function set_targetScale( value:Float ):Float
 	{
 		_scale = value;
 		return _scale;
@@ -84,11 +84,11 @@ class TargetScale extends ActionBase
 	 * Adjusts how quickly the particle reaches the target scale.
 	 * Larger numbers cause it to approach the target scale more quickly.
 	 */
-	private function rateGetter():Float
+	private function get_rate():Float
 	{
 		return _rate;
 	}
-	private function rateSetter( value:Float ):Float
+	private function set_rate( value:Float ):Float
 	{
 		_rate = value;
 		return _rate;

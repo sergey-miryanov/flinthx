@@ -30,7 +30,7 @@
 
 package org.flintparticles.threed.actions;
 
-import nme.geom.Vector3D;
+import flash.geom.Vector3D;
 import org.flintparticles.common.particles.Particle;
 import org.flintparticles.common.actions.ActionBase;
 import org.flintparticles.common.activities.FrameUpdatable;
@@ -47,16 +47,16 @@ import org.flintparticles.threed.particles.Particle3D;
  * of the explosion and then ripples out in a shock wave.
  */
 
-class Explosion extends ActionBase, implements Resetable, implements FrameUpdatable
+class Explosion extends ActionBase implements Resetable implements FrameUpdatable
 {
-	public var x(xGetter,xSetter):Float;
-	public var depth(depthGetter,depthSetter):Float;
-	public var y(yGetter,ySetter):Float;
-	public var z(zGetter,zSetter):Float;
-	public var power(powerGetter,powerSetter):Float;
-	public var epsilon(epsilonGetter,epsilonSetter):Float;
-	public var expansionRate(expansionRateGetter,expansionRateSetter):Float;
-	public var center(centerGetter,centerSetter):Vector3D;
+	public var x(get, set):Float;
+	public var depth(get, set):Float;
+	public var y(get, set):Float;
+	public var z(get, set):Float;
+	public var power(get, set):Float;
+	public var epsilon(get, set):Float;
+	public var expansionRate(get, set):Float;
+	public var center(get, set):Vector3D;
 	
 	private static inline var POWER_FACTOR:Float = 100000;
 	
@@ -106,11 +106,11 @@ class Explosion extends ActionBase, implements Resetable, implements FrameUpdata
 	/**
 	 * The strength of the explosion - larger numbers produce a stronger force.
 	 */
-	private function powerGetter():Float
+	private function get_power():Float
 	{
 		return _power / POWER_FACTOR;
 	}
-	private function powerSetter( value:Float ):Float
+	private function set_power( value:Float ):Float
 	{
 		_power = value * POWER_FACTOR;
 		return _power;
@@ -119,11 +119,11 @@ class Explosion extends ActionBase, implements Resetable, implements FrameUpdata
 	/**
 	 * The strength of the explosion - larger numbers produce a stronger force.
 	 */
-	private function expansionRateGetter():Float
+	private function get_expansionRate():Float
 	{
 		return _expansionRate;
 	}
-	private function expansionRateSetter( value:Float ):Float
+	private function set_expansionRate( value:Float ):Float
 	{
 		_expansionRate = value;
 		return _expansionRate;
@@ -132,11 +132,11 @@ class Explosion extends ActionBase, implements Resetable, implements FrameUpdata
 	/**
 	 * The strength of the explosion - larger numbers produce a stronger force.
 	 */
-	private function depthGetter():Float
+	private function get_depth():Float
 	{
 		return _depth * 2;
 	}
-	private function depthSetter( value:Float ):Float
+	private function set_depth( value:Float ):Float
 	{
 		_depth = value * 0.5;
 		_invDepth = 1 / _depth;
@@ -146,11 +146,11 @@ class Explosion extends ActionBase, implements Resetable, implements FrameUpdata
 	/**
 	 * The center of the explosion.
 	 */
-	private function centerGetter():Vector3D
+	private function get_center():Vector3D
 	{
 		return _center;
 	}
-	private function centerSetter( value:Vector3D ):Vector3D
+	private function set_center( value:Vector3D ):Vector3D
 	{
 		_center = Vector3DUtils.clonePoint( value );
 		return _center;
@@ -159,11 +159,11 @@ class Explosion extends ActionBase, implements Resetable, implements FrameUpdata
 	/**
 	 * The x coordinate of the center of the explosion.
 	 */
-	private function xGetter():Float
+	private function get_x():Float
 	{
 		return _center.x;
 	}
-	private function xSetter( value:Float ):Float
+	private function set_x( value:Float ):Float
 	{
 		_center.x = value;
 		return value;
@@ -172,11 +172,11 @@ class Explosion extends ActionBase, implements Resetable, implements FrameUpdata
 	/**
 	 * The y coordinate of  the center of the explosion.
 	 */
-	private function yGetter():Float
+	private function get_y():Float
 	{
 		return _center.y;
 	}
-	private function ySetter( value:Float ):Float
+	private function set_y( value:Float ):Float
 	{
 		_center.y = value;
 		return value;
@@ -185,11 +185,11 @@ class Explosion extends ActionBase, implements Resetable, implements FrameUpdata
 	/**
 	 * The z coordinate of the center of the explosion.
 	 */
-	private function zGetter():Float
+	private function get_z():Float
 	{
 		return _center.z;
 	}
-	private function zSetter( value:Float ):Float
+	private function set_z( value:Float ):Float
 	{
 		_center.z = value;
 		return value;
@@ -201,11 +201,11 @@ class Explosion extends ActionBase, implements Resetable, implements FrameUpdata
 	 * this distance away. This stops the explosion effect blowing up as distances get 
 	 * small.
 	 */
-	private function epsilonGetter():Float
+	private function get_epsilon():Float
 	{
 		return Math.sqrt( _epsilonSq );
 	}
-	private function epsilonSetter( value:Float ):Float
+	private function set_epsilon( value:Float ):Float
 	{
 		_epsilonSq = value * value;
 		return _epsilonSq;

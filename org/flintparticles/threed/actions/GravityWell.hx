@@ -30,7 +30,7 @@
 
 package org.flintparticles.threed.actions;
 
-import nme.geom.Vector3D;
+import flash.geom.Vector3D;
 import org.flintparticles.common.particles.Particle;
 import org.flintparticles.common.actions.ActionBase;
 import org.flintparticles.common.emitters.Emitter;
@@ -45,12 +45,12 @@ import org.flintparticles.threed.particles.Particle3D;
 
 class GravityWell extends ActionBase
 {
-	public var x(xGetter,xSetter):Float;
-	public var y(yGetter,ySetter):Float;
-	public var z(zGetter,zSetter):Float;
-	public var power(powerGetter,powerSetter):Float;
-	public var epsilon(epsilonGetter,epsilonSetter):Float;
-	public var position(positionGetter, positionSetter):Vector3D;
+	public var x(get, set):Float;
+	public var y(get, set):Float;
+	public var z(get, set):Float;
+	public var power(get, set):Float;
+	public var epsilon(get, set):Float;
+	public var position(get, set):Vector3D;
 	
 	private var _position:Vector3D;
 	private var _power:Float;
@@ -84,11 +84,11 @@ class GravityWell extends ActionBase
 	/**
 	 * The strength of the gravity force.
 	 */
-	private function powerGetter():Float
+	private function get_power():Float
 	{
 		return _power / _gravityConst;
 	}
-	private function powerSetter( value:Float ):Float
+	private function set_power( value:Float ):Float
 	{
 		_power = value * _gravityConst;
 		return value;
@@ -97,11 +97,11 @@ class GravityWell extends ActionBase
 	/**
 	 * The x coordinate of the center of the gravity force.
 	 */
-	private function positionGetter():Vector3D
+	private function get_position():Vector3D
 	{
 		return _position;
 	}
-	private function positionSetter( value:Vector3D ):Vector3D
+	private function set_position( value:Vector3D ):Vector3D
 	{
 		_position = Vector3DUtils.clonePoint( value );
 		return value;
@@ -110,11 +110,11 @@ class GravityWell extends ActionBase
 	/**
 	 * The x coordinate of the point that the force pulls the particles towards.
 	 */
-	private function xGetter():Float
+	private function get_x():Float
 	{
 		return _position.x;
 	}
-	private function xSetter( value:Float ):Float
+	private function set_x( value:Float ):Float
 	{
 		_position.x = value;
 		return value;
@@ -123,11 +123,11 @@ class GravityWell extends ActionBase
 	/**
 	 * The y coordinate of the point that the force pulls the particles towards.
 	 */
-	private function yGetter():Float
+	private function get_y():Float
 	{
 		return _position.y;
 	}
-	private function ySetter( value:Float ):Float
+	private function set_y( value:Float ):Float
 	{
 		_position.y = value;
 		return value;
@@ -136,11 +136,11 @@ class GravityWell extends ActionBase
 	/**
 	 * The z coordinate of the point that the force pulls the particles towards.
 	 */
-	private function zGetter():Float
+	private function get_z():Float
 	{
 		return _position.z;
 	}
-	private function zSetter( value:Float ):Float
+	private function set_z( value:Float ):Float
 	{
 		_position.z = value;
 		return value;
@@ -152,11 +152,11 @@ class GravityWell extends ActionBase
 	 * this distance away. This stops the gravity effect blowing up as distances get 
 	 * small.
 	 */
-	private function epsilonGetter():Float
+	private function get_epsilon():Float
 	{
 		return Math.sqrt( _epsilonSq );
 	}
-	private function epsilonSetter( value:Float ):Float
+	private function set_epsilon( value:Float ):Float
 	{
 		_epsilonSq = value * value;
 		return _epsilonSq;

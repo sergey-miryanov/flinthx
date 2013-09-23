@@ -49,13 +49,13 @@ import org.flintparticles.threed.particles.Particle3D;
 
 class BoundingBox extends ActionBase
 {
-	public var minY(minYGetter,minYSetter):Float;
-	public var minX(minXGetter,minXSetter):Float;
-	public var bounce(bounceGetter,bounceSetter):Float;
-	public var maxX(maxXGetter,maxXSetter):Float;
-	public var maxY(maxYGetter,maxYSetter):Float;
-	public var maxZ(maxZGetter,maxZSetter):Float;
-	public var minZ(minZGetter,minZSetter):Float;
+	public var minY(get, set):Float;
+	public var minX(get, set):Float;
+	public var bounce(get, set):Float;
+	public var maxX(get, set):Float;
+	public var maxY(get, set):Float;
+	public var maxZ(get, set):Float;
+	public var minZ(get, set):Float;
 	
 	private var _minX : Float;
 	private var _maxX : Float;
@@ -99,11 +99,11 @@ class BoundingBox extends ActionBase
 	/**
 	 * The minX coordinate of the box.
 	 */
-	private function minXGetter():Float
+	private function get_minX():Float
 	{
 		return _minX;
 	}
-	private function minXSetter( value:Float ):Float
+	private function set_minX( value:Float ):Float
 	{
 		_minX = value;
 		return _minX;
@@ -112,11 +112,11 @@ class BoundingBox extends ActionBase
 	/**
 	 * The maxX coordinate of the box.
 	 */
-	private function maxXGetter():Float
+	private function get_maxX():Float
 	{
 		return _maxX;
 	}
-	private function maxXSetter( value:Float ):Float
+	private function set_maxX( value:Float ):Float
 	{
 		_maxX = value;
 		return _maxX;
@@ -125,11 +125,11 @@ class BoundingBox extends ActionBase
 	/**
 	 * The minY coordinate of the box.
 	 */
-	private function minYGetter():Float
+	private function get_minY():Float
 	{
 		return _minY;
 	}
-	private function minYSetter( value:Float ):Float
+	private function set_minY( value:Float ):Float
 	{
 		_minY = value;
 		return _minY;
@@ -138,11 +138,11 @@ class BoundingBox extends ActionBase
 	/**
 	 * The maxY coordinate of the box.
 	 */
-	private function maxYGetter():Float
+	private function get_maxY():Float
 	{
 		return _maxY;
 	}
-	private function maxYSetter( value:Float ):Float
+	private function set_maxY( value:Float ):Float
 	{
 		_maxY = value;
 		return _maxY;
@@ -151,11 +151,11 @@ class BoundingBox extends ActionBase
 	/**
 	 * The minZ coordinate of the box.
 	 */
-	private function minZGetter():Float
+	private function get_minZ():Float
 	{
 		return _minZ;
 	}
-	private function minZSetter( value:Float ):Float
+	private function set_minZ( value:Float ):Float
 	{
 		_minZ = value;
 		return _minZ;
@@ -164,11 +164,11 @@ class BoundingBox extends ActionBase
 	/**
 	 * The maxZ coordinate of the box.
 	 */
-	private function maxZGetter():Float
+	private function get_maxZ():Float
 	{
 		return _maxZ;
 	}
-	private function maxZSetter( value:Float ):Float
+	private function set_maxZ( value:Float ):Float
 	{
 		_maxZ = value;
 		return _maxZ;
@@ -180,11 +180,11 @@ class BoundingBox extends ActionBase
 	 * A value between 0 and 1 causes the particle to loose enegy in the collision. A value 
 	 * greater than 1 causes the particle to gain energy in the collision.
 	 */
-	private function bounceGetter():Float
+	private function get_bounce():Float
 	{
 		return _bounce;
 	}
-	private function bounceSetter( value:Float ):Float
+	private function set_bounce( value:Float ):Float
 	{
 		_bounce = value;
 		return _bounce;

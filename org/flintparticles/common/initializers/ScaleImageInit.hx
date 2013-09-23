@@ -47,9 +47,9 @@ import org.flintparticles.common.initializers.InitializerBase;
 
 class ScaleImageInit extends InitializerBase
 {
-	public var maxScale(maxScaleGetter,maxScaleSetter):Float;
-	public var minScale(minScaleGetter,minScaleSetter):Float;
-	public var scale(scaleGetter,scaleSetter):Float;
+	public var maxScale(get, set):Float;
+	public var minScale(get, set):Float;
+	public var scale(get, set):Float;
 	
 	private var _min:Float;
 	private var _max:Float;
@@ -89,11 +89,11 @@ class ScaleImageInit extends InitializerBase
 	 * The minimum scale value for particles initialised by 
 	 * this initializer. Should be between 0 and 1.
 	 */
-	private function minScaleGetter():Float
+	private function get_minScale():Float
 	{
 		return _min;
 	}
-	private function minScaleSetter( value:Float ):Float
+	private function set_minScale( value:Float ):Float
 	{
 		_min = value;
 		return _min;
@@ -103,11 +103,11 @@ class ScaleImageInit extends InitializerBase
 	 * The maximum scale value for particles initialised by 
 	 * this initializer. Should be between 0 and 1.
 	 */
-	private function maxScaleGetter():Float
+	private function get_maxScale():Float
 	{
 		return _max;
 	}
-	private function maxScaleSetter( value:Float ):Float
+	private function set_maxScale( value:Float ):Float
 	{
 		_max = value;
 		return _max;
@@ -118,11 +118,11 @@ class ScaleImageInit extends InitializerBase
 	 * When writing this sets both maxScale and minScale to the 
 	 * same scale value.
 	 */
-	private function scaleGetter():Float
+	private function get_scale():Float
 	{
 		return _min == _max ? _min : ( _max + _min ) / 2;
 	}
-	private function scaleSetter( value:Float ):Float
+	private function set_scale( value:Float ):Float
 	{
 		_max = _min = value;
 		return value;

@@ -42,7 +42,7 @@ package org.flintparticles.integration.flare3d.initializers;
 	 */
 	class F3DCloneObject extends ImageInitializerBase
 	{
-		public var object(objectGetter,null):Pivot3D;
+		public var object(get, set):Pivot3D;
 		private var _object:Pivot3D;
 		
 		/**
@@ -70,17 +70,18 @@ package org.flintparticles.integration.flare3d.initializers;
 		/**
 		 * The Object3D to clone for each particle created by the emitter.
 		 */
-		public function objectGetter():Pivot3D
+		public function get_object():Pivot3D
 		{
 			return _object;
 		}
-		public function set object( value:Pivot3D ):Void
+		public function set_object( value:Pivot3D ):Pivot3D
 		{
 			_object = value;
 			if( _usePool )
 			{
 				clearPool();
 			}
+            return value;
 		}
 		
 		/**

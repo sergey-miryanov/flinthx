@@ -55,9 +55,9 @@ import org.flintparticles.twod.particles.Particle2D;
  * after other actions.</p>
  */
 
-class Collide extends ActionBase, implements FrameUpdatable
+class Collide extends ActionBase implements FrameUpdatable
 {
-	public var bounce(bounceGetter, bounceSetter):Float;
+	public var bounce(get, set):Float;
 	
 	private var _bounce:Float;
 	private var _maxDistance:Float;
@@ -93,11 +93,11 @@ class Collide extends ActionBase, implements FrameUpdatable
 	 * between 0 and 1 causes the particles to loose enegy in the collision. 
 	 * A value greater than 1 causes the particles to gain energy in the collision.
 	 */
-	public function bounceGetter():Float
+	public function get_bounce():Float
 	{
 		return _bounce;
 	}
-	public function bounceSetter( value:Float ):Float
+	public function set_bounce( value:Float ):Float
 	{
 		_bounce = value;
 		return _bounce;

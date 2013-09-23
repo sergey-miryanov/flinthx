@@ -34,7 +34,7 @@ import flash.display.Sprite;
 import flash.filters.BlurFilter;
 import flash.filters.ColorMatrixFilter;
 import flash.geom.Rectangle;
-import nme.Vector;
+import flash.Vector;
 
 @:meta(SWF(width="400",height="200",frameRate="60",backgroundColor="#000000"))
 class Main extends Sprite

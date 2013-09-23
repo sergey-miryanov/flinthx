@@ -30,7 +30,7 @@
 
 package org.flintparticles.threed.actions;
 
-import nme.geom.Vector3D;
+import flash.geom.Vector3D;
 
 /**
  * The AntiGravity action applies a force to the particle to push it away from
@@ -40,7 +40,7 @@ import nme.geom.Vector3D;
 
 class AntiGravity extends GravityWell
 {
-	override public var power(powerGetter,powerSetter):Float;
+	override public var power(get, set):Float;
 	
 	/**
 	 * The constructor creates an AntiGravity action for use by an emitter. 
@@ -67,12 +67,12 @@ class AntiGravity extends GravityWell
 	 * The strength of the anti-gravity force - larger numbers produce a 
 	 * stronger force.
 	 */
-	override private function powerGetter():Float
+	override private function get_power():Float
 	{
 		//return -super.power;
 		return -power;
 	}
-	override private function powerSetter( value:Float ):Float
+	override private function set_power( value:Float ):Float
 	{
 		//super.power = -value;
 		//return value;

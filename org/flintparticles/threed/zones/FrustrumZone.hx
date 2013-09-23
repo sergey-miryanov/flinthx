@@ -30,9 +30,9 @@
 
 package org.flintparticles.threed.zones;
 
-import nme.geom.Matrix3D;
-import nme.geom.Rectangle;
-import nme.geom.Vector3D;
+import flash.geom.Matrix3D;
+import flash.geom.Rectangle;
+import flash.geom.Vector3D;
 import org.flintparticles.threed.renderers.Camera;
 
 /**
@@ -48,8 +48,8 @@ import org.flintparticles.threed.renderers.Camera;
 
 class FrustrumZone implements Zone3D 
 {
-	public var camera(cameraGetter,cameraSetter):Camera;
-	public var viewRect(viewRectGetter,viewRectSetter):Rectangle;
+	public var camera(get, set):Camera;
+	public var viewRect(get, set):Rectangle;
 	
 	private var _camera:Camera;
 	private var _viewRect:Rectangle;
@@ -75,11 +75,11 @@ class FrustrumZone implements Zone3D
 	/**
 	 * The flint camera whose frustrum should be used.
 	 */
-	public function cameraGetter() : Camera
+	public function get_camera() : Camera
 	{
 		return _camera;
 	}
-	public function cameraSetter( value : Camera ) : Camera
+	public function set_camera( value : Camera ) : Camera
 	{
 		_camera = value;
 		return _camera;
@@ -95,11 +95,11 @@ class FrustrumZone implements Zone3D
 	 * removing particles via a DeathZone action to allow for the
 	 * size of the particles.
 	 */
-	public function viewRectGetter() : Rectangle
+	public function get_viewRect() : Rectangle
 	{
 		return _viewRect;
 	}
-	public function viewRectSetter( value : Rectangle ) : Rectangle
+	public function set_viewRect( value : Rectangle ) : Rectangle
 	{
 		_viewRect = value;
 		return _viewRect;

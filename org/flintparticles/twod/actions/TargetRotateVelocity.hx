@@ -41,8 +41,8 @@ import org.flintparticles.twod.particles.Particle2D;
  */
 class TargetRotateVelocity extends ActionBase
 {
-	public var rate(rateGetter,rateSetter):Float;
-	public var targetVelocity(targetVelocityGetter, targetVelocitySetter):Float;
+	public var rate(get, set):Float;
+	public var targetVelocity(get, set):Float;
 	
 	private var _vel:Float;
 	private var _rate:Float;
@@ -69,11 +69,11 @@ class TargetRotateVelocity extends ActionBase
 	/**
 	 * The target angular velocity, in radians per second.
 	 */
-	private function targetVelocityGetter():Float
+	private function get_targetVelocity():Float
 	{
 		return _vel;
 	}
-	private function targetVelocitySetter( value:Float ):Float
+	private function set_targetVelocity( value:Float ):Float
 	{
 		_vel = value;
 		return _vel;
@@ -83,11 +83,11 @@ class TargetRotateVelocity extends ActionBase
 	 * Adjusts how quickly the particle reaches the target angular velocity.
 	 * Larger numbers cause it to approach the target angular velocity more quickly.
 	 */
-	private function rateGetter():Float
+	private function get_rate():Float
 	{
 		return _rate;
 	}
-	private function rateSetter( value:Float ):Float
+	private function set_rate( value:Float ):Float
 	{
 		_rate = value;
 		return _rate;

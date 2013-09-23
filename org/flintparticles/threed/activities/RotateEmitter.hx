@@ -30,7 +30,7 @@
 
 package org.flintparticles.threed.activities;
 
-import nme.geom.Vector3D;
+import flash.geom.Vector3D;
 import org.flintparticles.common.activities.ActivityBase;
 import org.flintparticles.common.emitters.Emitter;
 import org.flintparticles.threed.emitters.Emitter3D;
@@ -42,8 +42,8 @@ import org.flintparticles.threed.geom.Vector3DUtils;
  */
 class RotateEmitter extends ActivityBase
 {
-	public var rotateSpeed(rotateSpeedGetter,rotateSpeedSetter):Float;
-	public var axis(axisGetter,axisSetter):Vector3D;
+	public var rotateSpeed(get, set):Float;
+	public var axis(get, set):Vector3D;
 	
 	private var _rotateSpeed:Float;
 	private var _axis:Vector3D;
@@ -77,11 +77,11 @@ class RotateEmitter extends ActivityBase
 	/**
 	 * The axis for the target angular velocity.
 	 */
-	private function axisGetter():Vector3D
+	private function get_axis():Vector3D
 	{
 		return _axis;
 	}
-	private function axisSetter( value:Vector3D ):Vector3D
+	private function set_axis( value:Vector3D ):Vector3D
 	{
 		_axis = Vector3DUtils.cloneUnit( value );
 		var temp:Vector3D = _axis.clone();
@@ -93,11 +93,11 @@ class RotateEmitter extends ActivityBase
 	/**
 	 * The size of the target angular velocity.
 	 */
-	private function rotateSpeedGetter():Float
+	private function get_rotateSpeed():Float
 	{
 		return _rotateSpeed;
 	}
-	private function rotateSpeedSetter( value:Float ):Float
+	private function set_rotateSpeed( value:Float ):Float
 	{
 		_rotateSpeed = value;
 		if( _axis != null )

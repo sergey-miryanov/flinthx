@@ -45,8 +45,8 @@ import org.flintparticles.twod.particles.Particle2D;
 
 class SpeedLimit extends ActionBase
 {
-	public var isMinimum(isMinimumGetter,isMinimumSetter):Bool;
-	public var limit(limitGetter, limitSetter):Float;
+	public var isMinimum(get, set):Bool;
+	public var limit(get, set):Float;
 	
 	private var _limit:Float;
 	private var _limitSq:Float;
@@ -75,11 +75,11 @@ class SpeedLimit extends ActionBase
 	/**
 	 * The speed limit
 	 */
-	private function limitGetter():Float
+	private function get_limit():Float
 	{
 		return _limit;
 	}
-	private function limitSetter( value:Float ):Float
+	private function set_limit( value:Float ):Float
 	{
 		_limit = value;
 		_limitSq = value * value;
@@ -89,11 +89,11 @@ class SpeedLimit extends ActionBase
 	/**
 	 * Whether the speed is a minimum (true) or maximum (false) speed.
 	 */
-	private function isMinimumGetter():Bool
+	private function get_isMinimum():Bool
 	{
 		return _isMinimum;
 	}
-	private function isMinimumSetter( value:Bool ):Bool
+	private function set_isMinimum( value:Bool ):Bool
 	{
 		_isMinimum = value;
 		return _isMinimum;

@@ -1,8 +1,8 @@
 package org.flintparticles.threed.geom;
 
-import nme.geom.Matrix3D;
-import nme.geom.Vector3D;
-import nme.Vector;
+import flash.geom.Matrix3D;
+import flash.geom.Vector3D;
+import flash.Vector;
 
 /**
  * Utility methods for working with the Matrix3D class.

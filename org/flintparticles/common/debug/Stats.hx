@@ -1,11 +1,11 @@
 package org.flintparticles.common.debug;
 
-import nme.Lib;
-import nme.events.Event;
-import nme.system.System;
-import nme.text.TextField;
-import nme.text.TextFieldAutoSize;
-import nme.text.TextFormat;
+import flash.Lib;
+import flash.events.Event;
+import flash.system.System;
+import flash.text.TextField;
+import flash.text.TextFieldAutoSize;
+import flash.text.TextFormat;
 import org.flintparticles.common.debug.ParticleFactoryStats;
 import org.flintparticles.common.debug.Stats;
 

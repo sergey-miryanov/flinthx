@@ -43,8 +43,8 @@ import org.flintparticles.common.actions.ActionBase;
  */
 class TargetColor extends ActionBase
 {
-	public var rate(rateGetter,rateSetter):Float;
-	public var targetColor(targetColorGetter, targetColorSetter):Int;
+	public var rate(get, set):Float;
+	public var targetColor(get, set):Int;
 	
 	private var _red:Int;
 	private var _green:Int;
@@ -77,11 +77,11 @@ class TargetColor extends ActionBase
 	/**
 	 * The target color. This is a 32 bit color of the form 0xAARRGGBB.
 	 */
-	private function targetColorGetter():Int
+	private function get_targetColor():Int
 	{
 		return ( _alpha << 24 ) | ( _red << 16 ) | ( _green << 8 ) | _blue;
 	}
-	private function targetColorSetter( value:Int ):Int
+	private function set_targetColor( value:Int ):Int
 	{
 		_red 	= Std.int(( value >>> 16 ) & 255);
 		_green 	= Std.int(( value >>> 8 ) & 255);
@@ -94,11 +94,11 @@ class TargetColor extends ActionBase
 	 * Adjusts how quickly the particle reaches the target color.
 	 * Larger numbers cause it to approach the target color more quickly.
 	 */
-	private function rateGetter():Float
+	private function get_rate():Float
 	{
 		return _rate;
 	}
-	private function rateSetter( value:Float ):Float
+	private function set_rate( value:Float ):Float
 	{
 		_rate = value;
 		return _rate;

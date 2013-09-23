@@ -30,8 +30,8 @@
 
 package org.flintparticles.common.displayobjects;
 
-import nme.display.BlendMode;
-import nme.display.Shape;
+import flash.display.BlendMode;
+import flash.display.Shape;
 
 /**
  * The LineShape class is a DisplayObject with a simple line shape. The line is
@@ -41,8 +41,8 @@ import nme.display.Shape;
 
 class Line extends Shape
 {
-	public var length(lengthGetter,lengthSetter):Float;
-	public var color(colorGetter, colorSetter):Int;
+	public var length(get, set):Float;
+	public var color(get, set):Int;
 	
 	private var _length:Float;
 	private var _color:Int;
@@ -72,22 +72,22 @@ class Line extends Shape
 		graphics.lineTo( _length * 0.5, 0 );
 	}
 	
-	private function lengthGetter():Float
+	private function get_length():Float
 	{
 		return _length;
 	}
-	private function lengthSetter( value:Float ):Float
+	private function set_length( value:Float ):Float
 	{
 		_length = value;
 		draw();
 		return _length;
 	}
 	
-	private function colorGetter():Int
+	private function get_color():Int
 	{
 		return _color;
 	}
-	private function colorSetter( value:Int ):Int
+	private function set_color( value:Int ):Int
 	{
 		_color = value;
 		draw();

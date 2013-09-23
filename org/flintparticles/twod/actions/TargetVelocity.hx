@@ -41,9 +41,9 @@ import org.flintparticles.twod.particles.Particle2D;
  */
 class TargetVelocity extends ActionBase
 {
-	public var targetVelocityX(targetVelocityXGetter,targetVelocityXSetter):Float;
-	public var targetVelocityY(targetVelocityYGetter,targetVelocityYSetter):Float;
-	public var rate(rateGetter, rateSetter):Float;
+	public var targetVelocityX(get, set):Float;
+	public var targetVelocityY(get, set):Float;
+	public var rate(get, set):Float;
 	
 	private var _velX:Float;
 	private var _velY:Float;
@@ -72,11 +72,11 @@ class TargetVelocity extends ActionBase
 	/**
 	 * The y coordinate of the target velocity, in pixels per second.
 	 */
-	private function targetVelocityYGetter():Float
+	private function get_targetVelocityY():Float
 	{
 		return _velY;
 	}
-	private function targetVelocityYSetter( value:Float ):Float
+	private function set_targetVelocityY( value:Float ):Float
 	{
 		_velY = value;
 		return _velY;
@@ -85,11 +85,11 @@ class TargetVelocity extends ActionBase
 	/**
 	 * The x coordinate of the target velocity, in pixels per second.s
 	 */
-	private function targetVelocityXGetter():Float
+	private function get_targetVelocityX():Float
 	{
 		return _velX;
 	}
-	private function targetVelocityXSetter( value:Float ):Float
+	private function set_targetVelocityX( value:Float ):Float
 	{
 		_velX = value;
 		return _velX;
@@ -99,11 +99,11 @@ class TargetVelocity extends ActionBase
 	 * Adjusts how quickly the particle reaches the target velocity.
 	 * Larger numbers cause it to approach the target velocity more quickly.
 	 */
-	private function rateGetter():Float
+	private function get_rate():Float
 	{
 		return _rate;
 	}
-	private function rateSetter( value:Float ):Float
+	private function set_rate( value:Float ):Float
 	{
 		_rate = value;
 		return _rate;

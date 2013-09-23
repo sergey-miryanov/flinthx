@@ -30,7 +30,7 @@
 
 package org.flintparticles.threed.actions;
 
-import nme.geom.Vector3D;
+import flash.geom.Vector3D;
 import org.flintparticles.common.particles.Particle;
 import org.flintparticles.common.actions.ActionBase;
 import org.flintparticles.common.emitters.Emitter;
@@ -42,9 +42,9 @@ import org.flintparticles.threed.particles.Particle3D;
  */
 class TargetRotateVelocity extends ActionBase
 {
-	public var rotateSpeed(rotateSpeedGetter,rotateSpeedSetter):Float;
-	public var rate(rateGetter,rateSetter):Float;
-	public var axis(axisGetter,axisSetter):Vector3D;
+	public var rotateSpeed(get, set):Float;
+	public var rate(get, set):Float;
+	public var axis(get, set):Vector3D;
 	
 	private var _rotateSpeed:Float;
 	private var _axis:Vector3D;
@@ -79,11 +79,11 @@ class TargetRotateVelocity extends ActionBase
 	 * Adjusts how quickly the particle reaches the target angular velocity.
 	 * Larger numbers cause it to approach the target angular velocity more quickly.
 	 */
-	private function rateGetter():Float
+	private function get_rate():Float
 	{
 		return _rate;
 	}
-	private function rateSetter( value:Float ):Float
+	private function set_rate( value:Float ):Float
 	{
 		_rate = value;
 		return _rate;
@@ -92,11 +92,11 @@ class TargetRotateVelocity extends ActionBase
 	/**
 	 * The axis for the target angular velocity.
 	 */
-	private function axisGetter():Vector3D
+	private function get_axis():Vector3D
 	{
 		return _axis;
 	}
-	private function axisSetter( value:Vector3D ):Vector3D
+	private function set_axis( value:Vector3D ):Vector3D
 	{
 		_axis = Vector3DUtils.cloneUnit( value );
 		_angVel = _axis.clone();
@@ -107,11 +107,11 @@ class TargetRotateVelocity extends ActionBase
 	/**
 	 * The size of the target angular velocity.
 	 */
-	private function rotateSpeedGetter():Float
+	private function get_rotateSpeed():Float
 	{
 		return _rotateSpeed;
 	}
-	private function rotateSpeedSetter( value:Float ):Float
+	private function set_rotateSpeed( value:Float ):Float
 	{
 		_rotateSpeed = value;
 		if( _axis != null )

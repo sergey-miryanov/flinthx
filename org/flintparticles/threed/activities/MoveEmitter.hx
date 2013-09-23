@@ -30,7 +30,7 @@
 
 package org.flintparticles.threed.activities;
 
-import nme.geom.Vector3D;
+import flash.geom.Vector3D;
 import org.flintparticles.common.activities.ActivityBase;
 import org.flintparticles.common.emitters.Emitter;
 import org.flintparticles.threed.emitters.Emitter3D;
@@ -41,10 +41,10 @@ import org.flintparticles.threed.geom.Vector3DUtils;
  */
 class MoveEmitter extends ActivityBase
 {
-	public var x(xGetter,xSetter):Float;
-	public var y(yGetter,ySetter):Float;
-	public var z(zGetter,zSetter):Float;
-	public var velocity(velocityGetter,velocitySetter):Vector3D;
+	public var x(get, set):Float;
+	public var y(get, set):Float;
+	public var z(get, set):Float;
+	public var velocity(get, set):Vector3D;
 	
 	private var _vel:Vector3D;
 	
@@ -69,11 +69,11 @@ class MoveEmitter extends ActivityBase
 	/**
 	 * The velocity to move the emitter, in pixels per second.
 	 */
-	private function velocityGetter():Vector3D
+	private function get_velocity():Vector3D
 	{
 		return _vel;
 	}
-	private function velocitySetter( value:Vector3D ):Vector3D
+	private function set_velocity( value:Vector3D ):Vector3D
 	{
 		_vel = Vector3DUtils.cloneVector( value );
 		return _vel;
@@ -82,11 +82,11 @@ class MoveEmitter extends ActivityBase
 	/**
 	 * The x coordinate of the velocity to move the emitter, in pixels per second.
 	 */
-	private function xGetter():Float
+	private function get_x():Float
 	{
 		return _vel.x;
 	}
-	private function xSetter( value:Float ):Float
+	private function set_x( value:Float ):Float
 	{
 		_vel.x = value;
 		return value;
@@ -95,11 +95,11 @@ class MoveEmitter extends ActivityBase
 	/**
 	 * The y coordinate of  the velocity to move the emitter, in pixels per second.
 	 */
-	private function yGetter():Float
+	private function get_y():Float
 	{
 		return _vel.y;
 	}
-	private function ySetter( value:Float ):Float
+	private function set_y( value:Float ):Float
 	{
 		_vel.y = value;
 		return value;
@@ -108,11 +108,11 @@ class MoveEmitter extends ActivityBase
 	/**
 	 * The z coordinate of the velocity to move the emitter, in pixels per second.
 	 */
-	private function zGetter():Float
+	private function get_z():Float
 	{
 		return _vel.z;
 	}
-	private function zSetter( value:Float ):Float
+	private function set_z( value:Float ):Float
 	{
 		_vel.z = value;
 		return value;

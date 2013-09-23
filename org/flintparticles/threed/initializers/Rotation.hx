@@ -30,7 +30,7 @@
 
 package org.flintparticles.threed.initializers;
 
-import nme.geom.Vector3D;
+import flash.geom.Vector3D;
 import org.flintparticles.common.emitters.Emitter;
 import org.flintparticles.common.particles.Particle;
 import org.flintparticles.common.initializers.InitializerBase;
@@ -45,10 +45,10 @@ import org.flintparticles.threed.particles.Particle3D;
 
 class Rotation extends InitializerBase
 {
-	public var angle(angleGetter,null):Float;
-	public var maxAngle(maxAngleGetter,null):Float;
-	public var minAngle(minAngleGetter,null):Float;
-	public var axis(axisGetter,null):Vector3D;
+	public var angle(get, set):Float;
+	public var maxAngle(get, set):Float;
+	public var minAngle(get, set):Float;
+	public var axis(get, set):Vector3D;
 	
 	private var _axis : Vector3D;
 	private var _min : Float;
@@ -83,11 +83,11 @@ class Rotation extends InitializerBase
 	/**
 	 * The axis for the rotation.
 	 */
-	private function axisGetter():Vector3D
+	private function get_axis():Vector3D
 	{
 		return _axis;
 	}
-	private function axisSetter( value:Vector3D ):Vector3D
+	private function set_axis( value:Vector3D ):Vector3D
 	{
 		_axis = Vector3DUtils.cloneUnit( value );
 		return _axis;
@@ -97,11 +97,11 @@ class Rotation extends InitializerBase
 	 * The minimum angle for particles initialised by 
 	 * this initializer.
 	 */
-	private function minAngleGetter():Float
+	private function get_minAngle():Float
 	{
 		return _min;
 	}
-	private function minAngleSetter( value:Float ):Float
+	private function set_minAngle( value:Float ):Float
 	{
 		_min = value;
 		return value;
@@ -111,11 +111,11 @@ class Rotation extends InitializerBase
 	 * The maximum angle for particles initialised by 
 	 * this initializer.
 	 */
-	private function maxAngleGetter():Float
+	private function get_maxAngle():Float
 	{
 		return _max;
 	}
-	private function maxAngleSetter( value:Float ):Float
+	private function set_maxAngle( value:Float ):Float
 	{
 		_max = value;
 		return value;
@@ -126,7 +126,7 @@ class Rotation extends InitializerBase
 	 * When writing this sets both maxAngle and minAngle to the 
 	 * same angle value.
 	 */
-	private function angleGetter():Float
+	private function get_angle():Float
 	{
 		if( Math.isNaN( _max ) || _min == _max )
 		{
@@ -134,7 +134,7 @@ class Rotation extends InitializerBase
 		}
 		return ( _max + _min ) / 2;
 	}
-	private function angleSetter( value:Float ):Float
+	private function set_angle( value:Float ):Float
 	{
 		_max = _min = value;
 		return value;

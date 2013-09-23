@@ -30,7 +30,7 @@
 
 package org.flintparticles.twod.initializers;
 
-import nme.geom.Point;
+import flash.geom.Point;
 import org.flintparticles.common.particles.Particle;
 import org.flintparticles.common.emitters.Emitter;
 import org.flintparticles.common.initializers.InitializerBase;
@@ -51,7 +51,7 @@ import org.flintparticles.twod.zones.Zone2D;
 
 class PositionAbsolute extends InitializerBase
 {
-	public var zone(zoneGetter, zoneSetter):Zone2D;
+	public var zone(get, set):Zone2D;
 	
 	private var _zone : Zone2D;
 
@@ -73,11 +73,11 @@ class PositionAbsolute extends InitializerBase
 	/**
 	 * The zone.
 	 */
-	private function zoneGetter():Zone2D
+	private function get_zone():Zone2D
 	{
 		return _zone;
 	}
-	private function zoneSetter( value:Zone2D ):Zone2D
+	private function set_zone( value:Zone2D ):Zone2D
 	{
 		_zone = value;
 		return _zone;
