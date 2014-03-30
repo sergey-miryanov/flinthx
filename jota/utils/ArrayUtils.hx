@@ -28,9 +28,9 @@ package jota.utils;
 			]);
 		 * get values by using: hash.get(o);
 		 */
-		public static function hashify<T>(values:Array<{key:Dynamic, val:T}>):Map<Dynamic,T>
+		public static function hashify<T>(values:Array<{key:Dynamic, val:T}>):ObjectMap<Dynamic,T>
 		{
-           var h:Map<Dynamic, T> = new ObjectMap<Dynamic, T>();
+           var h = new ObjectMap<Dynamic, T>();
 		   var pair:{key:Dynamic, val:T};
 		   for (pair in values) {
 			  h.set(pair.key, pair.val);

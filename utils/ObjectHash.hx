@@ -20,7 +20,7 @@ class ObjectHash {
 	
 	#if flash
 	
-	private var dictionary:Map <Dynamic,Dynamic>;
+	private var dictionary:ObjectMap <Dynamic,Dynamic>;
 	
 	#else
 	
