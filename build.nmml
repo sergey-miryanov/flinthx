@@ -14,21 +14,16 @@
       hardware="true"
    />
 
-  <app title="flinthx example" file="flinthx" main="MainPlus" version="1.0" company="flinthx" swf-version="10" />
+  <app title="flinthx example" file="flinthx" main="MainPlus" version="1.0" company="flinthx" swf-version="11" />
 
   <classpath name="../.." />
 
-  <haxelib name="nme" />
-
-  <ndll name="std" />
-  <ndll name="regexp" />
-  <ndll name="zlib" />
-  <ndll name="nme" haxelib="nme" />
+  <haxelib name="openfl" />
 
   <!--
   <haxeflag name="-debug" />
   -->
-  <haxeflag name="-swf-version 10" />
+  <haxeflag name="-swf-version 11" />
   <include path="custom.nmml" />
 
 </project>
