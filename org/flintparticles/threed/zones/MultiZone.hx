@@ -30,8 +30,8 @@
 
 package org.flintparticles.threed.zones;
 
-import nme.errors.Error;
-import nme.geom.Vector3D;
+import flash.errors.Error;
+import flash.geom.Vector3D;
 
 /**
  * The MutiZone zone defines a zone that combines other zones into one larger zone.

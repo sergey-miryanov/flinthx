@@ -29,7 +29,7 @@
 
 package org.flintparticles.threed.geom;
 
-import nme.geom.Vector3D;
+import flash.geom.Vector3D;
 
 /**
  * Utility methods for working with the Vector3D class.

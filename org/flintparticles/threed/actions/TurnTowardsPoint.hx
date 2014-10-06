@@ -30,7 +30,7 @@
 
 package org.flintparticles.threed.actions;
 
-import nme.geom.Vector3D;
+import flash.geom.Vector3D;
 import org.flintparticles.common.particles.Particle;
 import org.flintparticles.common.actions.ActionBase;
 import org.flintparticles.common.emitters.Emitter;
@@ -44,11 +44,11 @@ import org.flintparticles.threed.particles.Particle3D;
  */
 class TurnTowardsPoint extends ActionBase
 {
-	public var x(xGetter,xSetter):Float;
-	public var y(yGetter,ySetter):Float;
-	public var z(zGetter,zSetter):Float;
-	public var power(powerGetter,powerSetter):Float;
-	public var point(pointGetter,pointSetter):Vector3D;
+	public var x(get, set):Float;
+	public var y(get, set):Float;
+	public var z(get, set):Float;
+	public var power(get, set):Float;
+	public var point(get, set):Vector3D;
 	
 	private var _point:Vector3D;
 	private var _power:Float;
@@ -77,11 +77,11 @@ class TurnTowardsPoint extends ActionBase
 	/**
 	 * The strength of theturn action. Higher values produce a sharper turn.
 	 */
-	private function powerGetter():Float
+	private function get_power():Float
 	{
 		return _power;
 	}
-	private function powerSetter( value:Float ):Float
+	private function set_power( value:Float ):Float
 	{
 		_power = value;
 		return value;
@@ -90,11 +90,11 @@ class TurnTowardsPoint extends ActionBase
 	/**
 	 * The point that the particle turns towards.
 	 */
-	private function pointGetter():Vector3D
+	private function get_point():Vector3D
 	{
 		return _point;
 	}
-	private function pointSetter( value:Vector3D ):Vector3D
+	private function set_point( value:Vector3D ):Vector3D
 	{
 		_point = Vector3DUtils.clonePoint( value );
 		return _point;
@@ -103,11 +103,11 @@ class TurnTowardsPoint extends ActionBase
 	/**
 	 * The x coordinate of the point that the particle turns towards.
 	 */
-	private function xGetter():Float
+	private function get_x():Float
 	{
 		return _point.x;
 	}
-	private function xSetter( value:Float ):Float
+	private function set_x( value:Float ):Float
 	{
 		_point.x = value;
 		return value;
@@ -116,11 +116,11 @@ class TurnTowardsPoint extends ActionBase
 	/**
 	 * The y coordinate of  the point that the particle turns towards.
 	 */
-	private function yGetter():Float
+	private function get_y():Float
 	{
 		return _point.y;
 	}
-	private function ySetter( value:Float ):Float
+	private function set_y( value:Float ):Float
 	{
 		_point.y = value;
 		return value;
@@ -129,11 +129,11 @@ class TurnTowardsPoint extends ActionBase
 	/**
 	 * The z coordinate of the point that the particle turns towards.
 	 */
-	private function zGetter():Float
+	private function get_z():Float
 	{
 		return _point.z;
 	}
-	private function zSetter( value:Float ):Float
+	private function set_z( value:Float ):Float
 	{
 		_point.z = value;
 		return value;

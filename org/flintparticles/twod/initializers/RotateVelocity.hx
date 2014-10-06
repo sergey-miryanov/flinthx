@@ -43,9 +43,9 @@ import org.flintparticles.twod.particles.Particle2D;
 
 class RotateVelocity extends InitializerBase
 {
-	public var maxAngVelocity(maxAngVelocityGetter,maxAngVelocitySetter):Float;
-	public var angVelocity(angVelocityGetter,angVelocitySetter):Float;
-	public var minAngVelocity(minAngVelocityGetter, minAngVelocitySetter):Float;
+	public var maxAngVelocity(get, set):Float;
+	public var angVelocity(get, set):Float;
+	public var minAngVelocity(get, set):Float;
 	
 	private var _max:Float;
 	private var _min:Float;
@@ -78,11 +78,11 @@ class RotateVelocity extends InitializerBase
 	 * The minimum angular velocity value for particles initialised by 
 	 * this initializer. Should be between 0 and 1.
 	 */
-	private function minAngVelocityGetter():Float
+	private function get_minAngVelocity():Float
 	{
 		return _min;
 	}
-	private function minAngVelocitySetter( value:Float ):Float
+	private function set_minAngVelocity( value:Float ):Float
 	{
 		_min = value;
 		return _min;
@@ -92,11 +92,11 @@ class RotateVelocity extends InitializerBase
 	 * The maximum angular velocity value for particles initialised by 
 	 * this initializer. Should be between 0 and 1.
 	 */
-	private function maxAngVelocityGetter():Float
+	private function get_maxAngVelocity():Float
 	{
 		return _max;
 	}
-	private function maxAngVelocitySetter( value:Float ):Float
+	private function set_maxAngVelocity( value:Float ):Float
 	{
 		_max = value;
 		return _max;
@@ -107,11 +107,11 @@ class RotateVelocity extends InitializerBase
 	 * When writing this sets both maxAngVelocity and minAngVelocity to the 
 	 * same angular velocity value.
 	 */
-	private function angVelocityGetter():Float
+	private function get_angVelocity():Float
 	{
 		return _min == _max ? _min : ( _max + _min ) / 2;
 	}
-	private function angVelocitySetter( value:Float ):Float
+	private function set_angVelocity( value:Float ):Float
 	{
 		_max = _min = value;
 		return value;

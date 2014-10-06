@@ -30,7 +30,7 @@
 
 package org.flintparticles.common.initializers;
 
-import nme.errors.Error;
+import flash.errors.Error;
 import org.flintparticles.common.particles.Particle;
 import org.flintparticles.common.emitters.Emitter;
 import org.flintparticles.common.initializers.SetImageProperties;
@@ -47,7 +47,7 @@ import org.flintparticles.common.initializers.InitializerBase;
 
 class SetImageProperties extends InitializerBase
 {
-	public var properties(propertiesGetter, propertiesSetter):Dynamic;
+	public var properties(get, set):Dynamic;
 	
 	private var _properties:Dynamic;
 	
@@ -74,11 +74,11 @@ class SetImageProperties extends InitializerBase
 	 * object. The name of the properties on this object must match the names of the 
 	 * properties on the particle's image object.
 	 */
-	private function propertiesGetter():Dynamic
+	private function get_properties():Dynamic
 	{
 		return _properties;
 	}
-	private function propertiesSetter( value:Dynamic ):Dynamic
+	private function set_properties( value:Dynamic ):Dynamic
 	{
 		_properties = value;
 		return _properties;

@@ -30,10 +30,10 @@
 
 package org.flintparticles.threed.zones;
 
-import nme.display.BitmapData;
-import nme.geom.Matrix3D;
-import nme.geom.Point;
-import nme.geom.Vector3D;
+import flash.display.BitmapData;
+import flash.geom.Matrix3D;
+import flash.geom.Point;
+import flash.geom.Vector3D;
 import org.flintparticles.common.utils.FastWeightedArray;
 import org.flintparticles.threed.geom.Matrix3DUtils;
 import org.flintparticles.threed.geom.Vector3DUtils;
@@ -48,10 +48,10 @@ import org.flintparticles.threed.zones.Zone3D;
 
 class BitmapDataZone implements Zone3D 
 {
-	public var top(topGetter,topSetter):Vector3D;
-	public var left(leftGetter,leftSetter):Vector3D;
-	public var corner(cornerGetter,cornerSetter):Vector3D;
-	public var bitmapData(bitmapDataGetter,bitmapDataSetter):BitmapData;
+	public var top(get, set):Vector3D;
+	public var left(get, set):Vector3D;
+	public var corner(get, set):Vector3D;
+	public var bitmapData(get, set):BitmapData;
 	
 	private var _bitmapData : BitmapData;
 	private var _corner : Vector3D;
@@ -96,11 +96,11 @@ class BitmapDataZone implements Zone3D
 	/**
 	 * The bitmapData object that defines the zone.
 	 */
-	private function bitmapDataGetter() : BitmapData
+	private function get_bitmapData() : BitmapData
 	{
 		return _bitmapData;
 	}
-	private function bitmapDataSetter( value : BitmapData ) : BitmapData
+	private function set_bitmapData( value : BitmapData ) : BitmapData
 	{
 		_bitmapData = value;
 		invalidate();
@@ -110,12 +110,12 @@ class BitmapDataZone implements Zone3D
 	/**
 	 * The position for the top left corner of the bitmap data for the zone.
 	 */
-	private function cornerGetter() : Vector3D
+	private function get_corner() : Vector3D
 	{
 		return _corner.clone();
 	}
 
-	private function cornerSetter( value : Vector3D ) : Vector3D
+	private function set_corner( value : Vector3D ) : Vector3D
 	{
 		_corner = Vector3DUtils.clonePoint( value );
 		return _corner;
@@ -125,12 +125,12 @@ class BitmapDataZone implements Zone3D
 	 * The top side of the zone from the corner. The length of the vector 
 	 * indicates how long the side is.
 	 */
-	private function topGetter() : Vector3D
+	private function get_top() : Vector3D
 	{
 		return _top.clone();
 	}
 
-	private function topSetter( value : Vector3D ) : Vector3D
+	private function set_top( value : Vector3D ) : Vector3D
 	{
 		_top = Vector3DUtils.cloneVector( value );
 		_dirty = true;
@@ -141,12 +141,12 @@ class BitmapDataZone implements Zone3D
 	 * The left side of the zone from the corner. The length of the
 	 * vector indicates how long the side is.
 	 */
-	private function leftGetter() : Vector3D
+	private function get_left() : Vector3D
 	{
 		return _left.clone();
 	}
 
-	private function leftSetter( value : Vector3D ) : Vector3D
+	private function set_left( value : Vector3D ) : Vector3D
 	{
 		_left = Vector3DUtils.cloneVector( value );
 		_dirty = true;

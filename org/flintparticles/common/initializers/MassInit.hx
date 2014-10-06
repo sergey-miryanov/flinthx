@@ -41,7 +41,7 @@ import org.flintparticles.common.initializers.InitializerBase;
 
 class MassInit extends InitializerBase
 {
-	public var mass(massGetter, massSetter):Float;
+	public var mass(get, set):Float;
 	
 	private var _mass:Float;
 	
@@ -66,11 +66,11 @@ class MassInit extends InitializerBase
 	 * When writing this sets both minMass and maxMass to the 
 	 * same mass value.
 	 */
-	private function massGetter():Float
+	private function get_mass():Float
 	{
 		return _mass;
 	}
-	private function massSetter( value:Float ):Float
+	private function set_mass( value:Float ):Float
 	{
 		_mass = value;
 		return _mass;

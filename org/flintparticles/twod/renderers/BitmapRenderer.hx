@@ -31,15 +31,15 @@
 package org.flintparticles.twod.renderers;
 
 import jota.utils.ArrayUtils;
-import nme.display.Bitmap;
-import nme.display.BitmapData;
-import nme.display.BlendMode;
-import nme.display.DisplayObject;
-import nme.display.PixelSnapping;
-import nme.filters.BitmapFilter;
-import nme.geom.Matrix;
-import nme.geom.Point;
-import nme.geom.Rectangle;
+import flash.display.Bitmap;
+import flash.display.BitmapData;
+import flash.display.BlendMode;
+import flash.display.DisplayObject;
+import flash.display.PixelSnapping;
+import flash.filters.BitmapFilter;
+import flash.geom.Matrix;
+import flash.geom.Point;
+import flash.geom.Rectangle;
 import org.flintparticles.common.renderers.SpriteRendererBase;
 import org.flintparticles.twod.particles.Particle2D;
 
@@ -71,14 +71,14 @@ import org.flintparticles.twod.particles.Particle2D;
  */
 class BitmapRenderer extends SpriteRendererBase
 {
-	public var clearBetweenFrames(clearBetweenFramesGetter,clearBetweenFramesSetter):Bool;
-	public var preFilters(preFiltersGetter,preFiltersSetter):Array<Dynamic>;
-	public var postFilters(postFiltersGetter,postFiltersSetter):Array<Dynamic>;
-	public var canvas(canvasGetter,canvasSetter):Rectangle;
-	public var smoothing(smoothingGetter,smoothingSetter):Bool;
-	public var bitmapData(bitmapDataGetter, null):BitmapData;
+	public var clearBetweenFrames(get, set):Bool;
+	public var preFilters(get, set):Array<Dynamic>;
+	public var postFilters(get, set):Array<Dynamic>;
+	public var canvas(get, set):Rectangle;
+	public var smoothing(get, set):Bool;
+	public var bitmapData(get, never):BitmapData;
 	
-	public static inline var ZERO_POINT:Point = new Point( 0, 0 );
+	public static var ZERO_POINT:Point = new Point( 0, 0 );
 	
 	/**
 	 * @private
@@ -194,7 +194,7 @@ class BitmapRenderer extends SpriteRendererBase
 	/**
 	 * The array of all filters being applied before rendering.
 	 */
-	private function preFiltersGetter():Array<Dynamic>
+	private function get_preFilters():Array<Dynamic>
 	{
 		/**
 		 * TODO: check if clears array
@@ -202,7 +202,7 @@ class BitmapRenderer extends SpriteRendererBase
 		ArrayUtils.clear(_preFilters);
 		return _preFilters;
 	}
-	private function preFiltersSetter( value:Array<Dynamic> ):Array<Dynamic>
+	private function set_preFilters( value:Array<Dynamic> ):Array<Dynamic>
 	{
 		var filter:BitmapFilter;
 		for( filter in _preFilters.iterator() )
@@ -219,7 +219,7 @@ class BitmapRenderer extends SpriteRendererBase
 	/**
 	 * The array of all filters being applied before rendering.
 	 */
-	private function postFiltersGetter():Array<Dynamic>
+	private function get_postFilters():Array<Dynamic>
 	{
 		/**
 		 * TODO: check if clears array
@@ -227,7 +227,7 @@ class BitmapRenderer extends SpriteRendererBase
 		ArrayUtils.clear(_preFilters);
 		return _postFilters;
 	}
-	private function postFiltersSetter( value:Array<Dynamic> ):Array<Dynamic>
+	private function set_postFilters( value:Array<Dynamic> ):Array<Dynamic>
 	{
 		var filter:BitmapFilter;
 		for( filter in _postFilters.iterator() )
@@ -293,11 +293,11 @@ class BitmapRenderer extends SpriteRendererBase
 	 * The canvas is the area within the renderer on which particles can be drawn.
 	 * Particles outside this area will not be drawn.
 	 */
-	private function canvasGetter():Rectangle
+	private function get_canvas():Rectangle
 	{
 		return _canvas;
 	}
-	private function canvasSetter( value:Rectangle ):Rectangle
+	private function set_canvas( value:Rectangle ):Rectangle
 	{
 		_canvas = value;
 		createBitmap();
@@ -313,21 +313,21 @@ class BitmapRenderer extends SpriteRendererBase
 	 * <p>For BitmapRenderer and PixelRenderer, this value defaults to true.
 	 * For BitmapLineRenderer it defaults to false.</p>
 	 */
-	private function clearBetweenFramesGetter():Bool
+	private function get_clearBetweenFrames():Bool
 	{
 		return _clearBetweenFrames;
 	}
-	private function clearBetweenFramesSetter( value:Bool ):Bool
+	private function set_clearBetweenFrames( value:Bool ):Bool
 	{
 		_clearBetweenFrames = value;
 		return _clearBetweenFrames;
 	}
 	
-	private function smoothingGetter():Bool
+	private function get_smoothing():Bool
 	{
 		return _smoothing;
 	}
-	private function smoothingSetter( value:Bool ):Bool
+	private function set_smoothing( value:Bool ):Bool
 	{
 		_smoothing = value;
 		if( _bitmap != null )
@@ -441,7 +441,7 @@ class BitmapRenderer extends SpriteRendererBase
 	/**
 	 * The bitmap data of the renderer.
 	 */
-	private function bitmapDataGetter() : BitmapData
+	private function get_bitmapData() : BitmapData
 	{
 		return _bitmapData;
 	}

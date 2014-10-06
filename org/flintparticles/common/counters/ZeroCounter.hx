@@ -41,8 +41,8 @@ import org.flintparticles.common.counters.Counter;
  */
 class ZeroCounter implements Counter
 {
-	public var running(runningGetter,null):Bool;
-	public var complete(completeGetter, null):Bool;
+	public var running(get, never):Bool;
+	public var complete(get, never):Bool;
 	
 	/**
 	 * The constructor creates a Zero counter for use by an emitter. To
@@ -106,7 +106,7 @@ class ZeroCounter implements Counter
 	 * Indicates if the counter has emitted all its particles. For the ZeroCounter
 	 * this will always be true.
 	 */
-	public function completeGetter():Bool
+	public function get_complete():Bool
 	{
 		return true;
 	}
@@ -114,7 +114,7 @@ class ZeroCounter implements Counter
 	/**
 	 * Indicates if the counter is currently emitting particles
 	 */
-	public function runningGetter():Bool
+	public function get_running():Bool
 	{
 		return false;
 	}

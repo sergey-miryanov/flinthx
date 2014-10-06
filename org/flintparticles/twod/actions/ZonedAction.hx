@@ -44,9 +44,9 @@ import org.flintparticles.twod.zones.Zone2D;
 
 class ZonedAction extends ActionBase
 {
-	public var zone(zoneGetter,zoneSetter):Zone2D;
-	public var invertZone(invertZoneGetter,invertZoneSetter):Bool;
-	public var action(actionGetter,actionSetter):Action;
+	public var zone(get, set):Zone2D;
+	public var invertZone(get, set):Bool;
+	public var action(get, set):Action;
 	
 	private var _action:Action;
 	private var _zone:Zone2D;
@@ -76,11 +76,11 @@ class ZonedAction extends ActionBase
 	/**
 	 * The action to apply when inside the zone.
 	 */
-	private function actionGetter():Action
+	private function get_action():Action
 	{
 		return _action;
 	}
-	private function actionSetter( value:Action ):Action
+	private function set_action( value:Action ):Action
 	{
 		_action = value;
 		return _action;
@@ -89,11 +89,11 @@ class ZonedAction extends ActionBase
 	/**
 	 * The zone in which to apply the acceleration.
 	 */
-	private function zoneGetter():Zone2D
+	private function get_zone():Zone2D
 	{
 		return _zone;
 	}
-	private function zoneSetter( value:Zone2D ):Zone2D
+	private function set_zone( value:Zone2D ):Zone2D
 	{
 		_zone = value;
 		return _zone;
@@ -103,11 +103,11 @@ class ZonedAction extends ActionBase
 	 * If false (the default), the action is applied only to particles inside 
 	 * the zone. If true, the action is applied only to particles outside the zone.
 	 */
-	private function invertZoneGetter():Bool
+	private function get_invertZone():Bool
 	{
 		return _invert;
 	}
-	private function invertZoneSetter( value:Bool ):Bool
+	private function set_invertZone( value:Bool ):Bool
 	{
 		_invert = value;
 		return _invert;
@@ -118,11 +118,11 @@ class ZonedAction extends ActionBase
 	 * 
 	 * @see org.flintparticles.common.actions.Action#getDefaultPriority()
 	 */
-	override private function priorityGetter():Int
+	override private function get_priority():Int
 	{
 		return _action.priority;
 	}
-	override private function prioritySetter( value:Int ):Int
+	override private function set_priority( value:Int ):Int
 	{
 		_action.priority = value;
 		return value;

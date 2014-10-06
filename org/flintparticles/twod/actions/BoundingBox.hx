@@ -49,11 +49,11 @@ import org.flintparticles.twod.particles.Particle2D;
 
 class BoundingBox extends ActionBase
 {
-	public var top(topGetter,topSetter):Float;
-	public var bounce(bounceGetter,bounceSetter):Float;
-	public var right(rightGetter,rightSetter):Float;
-	public var left(leftGetter,leftSetter):Float;
-	public var bottom(bottomGetter, bottomSetter):Float;
+	public var top(get, set):Float;
+	public var bounce(get, set):Float;
+	public var right(get, set):Float;
+	public var left(get, set):Float;
+	public var bottom(get, set):Float;
 	
 	private var _left : Float;
 	private var _top : Float;
@@ -91,11 +91,11 @@ class BoundingBox extends ActionBase
 	/**
 	 * The left coordinate of the bounding box.
 	 */
-	public function leftGetter():Float
+	public function get_left():Float
 	{
 		return _left;
 	}
-	public function leftSetter( value:Float ):Float
+	public function set_left( value:Float ):Float
 	{
 		_left = value;
 		return _left;
@@ -104,11 +104,11 @@ class BoundingBox extends ActionBase
 	/**
 	 * The top coordinate of the bounding box.
 	 */
-	public function topGetter():Float
+	public function get_top():Float
 	{
 		return _top;
 	}
-	public function topSetter( value:Float ):Float
+	public function set_top( value:Float ):Float
 	{
 		_top = value;
 		return _top;
@@ -117,11 +117,11 @@ class BoundingBox extends ActionBase
 	/**
 	 * The left coordinate of the bounding box.
 	 */
-	public function rightGetter():Float
+	public function get_right():Float
 	{
 		return _right;
 	}
-	public function rightSetter( value:Float ):Float
+	public function set_right( value:Float ):Float
 	{
 		_right = value;
 		return _right;
@@ -130,11 +130,11 @@ class BoundingBox extends ActionBase
 	/**
 	 * The left coordinate of the bounding box.
 	 */
-	public function bottomGetter():Float
+	public function get_bottom():Float
 	{
 		return _bottom;
 	}
-	public function bottomSetter( value:Float ):Float
+	public function set_bottom( value:Float ):Float
 	{
 		_bottom = value;
 		return _bottom;
@@ -146,11 +146,11 @@ class BoundingBox extends ActionBase
 	 * A value between 0 and 1 causes the particle to loose enegy in the collision. A value 
 	 * greater than 1 causes the particle to gain energy in the collision.
 	 */
-	public function bounceGetter():Float
+	public function get_bounce():Float
 	{
 		return _bounce;
 	}
-	public function bounceSetter( value:Float ):Float
+	public function set_bounce( value:Float ):Float
 	{
 		_bounce = value;
 		return _bounce;

@@ -30,8 +30,8 @@
 
 package org.flintparticles.common.displayobjects;
 
-import nme.display.Shape;
-import nme.display.BlendMode;
+import flash.display.Shape;
+import flash.display.BlendMode;
 
 /**
  * The Rect class is a DisplayObject that is a rectangle shape. The 
@@ -41,10 +41,10 @@ import nme.display.BlendMode;
 
 class Rect extends Shape 
 {
-	override public var width(widthGetter, widthSetter):Float;
+	override public var width(get, set):Float;
 	//override public var width(nmeGetWidth, nmeSetWidth):Float;
-	override public var height(heightGetter, heightSetter):Float;
-	public var color(colorGetter,colorSetter):Int;
+	override public var height(get, set):Float;
+	public var color(get, set):Int;
 	
 	private var _width:Float;
 	private var _height:Float;
@@ -77,33 +77,33 @@ class Rect extends Shape
 		graphics.endFill();
 	}
 	
-	private function widthGetter():Float
+	private function get_width():Float
 	{
 		return _width;
 	}
-	private function widthSetter( value:Float ):Float
+	private function set_width( value:Float ):Float
 	{
 		_width = value;
 		draw();
 		return _width;
 	}
 	
-	public function heightGetter():Float
+	public function get_height():Float
 	{
 		return _height;
 	}
-	public function heightSetter( value:Float ):Float
+	public function set_height( value:Float ):Float
 	{
 		_height = value;
 		draw();
 		return _height;
 	}
 
-	public function colorGetter():Int
+	public function get_color():Int
 	{
 		return _color;
 	}
-	public function colorSetter( value:Int ):Int
+	public function set_color( value:Int ):Int
 	{
 		_color = value;
 		draw();

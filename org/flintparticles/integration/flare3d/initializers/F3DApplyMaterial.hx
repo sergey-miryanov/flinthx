@@ -45,7 +45,7 @@ package org.flintparticles.integration.flare3d.initializers;
 	 */
 	class F3DApplyMaterial extends InitializerBase
 	{
-		public var material(materialGetter,null):Material3D;
+		public var material(get, set):Material3D;
 		private var _material:Material3D;
 		
 		/**
@@ -66,13 +66,13 @@ package org.flintparticles.integration.flare3d.initializers;
 		/**
 		 * The material to use for the particle.
 		 */
-		public function materialGetter():Material3D
+		public function get_material():Material3D
 		{
 			return _material;
 		}
-		public function set material( value:Material3D ):Void
+		public function set_material( value:Material3D ):Material3D
 		{
-			_material = value;
+			return _material = value;
 		}
 		
 		/**

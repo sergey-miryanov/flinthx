@@ -47,7 +47,7 @@ import org.flintparticles.threed.particles.Particle3D;
 
 class Friction extends ActionBase
 {
-	public var friction(frictionGetter,frictionSetter):Float;
+	public var friction(get, set):Float;
 	
 	private var _friction:Float;
 	
@@ -69,11 +69,11 @@ class Friction extends ActionBase
 	/**
 	 * The amount of friction. A higher number produces a stronger frictional force.
 	 */
-	private function frictionGetter():Float
+	private function get_friction():Float
 	{
 		return _friction;
 	}
-	private function frictionSetter( value:Float ):Float
+	private function set_friction( value:Float ):Float
 	{
 		_friction = value;
 		return _friction;

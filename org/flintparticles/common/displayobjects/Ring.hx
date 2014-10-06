@@ -29,8 +29,8 @@
 
 package org.flintparticles.common.displayobjects;
 
-import nme.display.Shape;
-import nme.display.BlendMode;
+import flash.display.Shape;
+import flash.display.BlendMode;
 
 /**
  * The Ring class is a DisplayObject with a circle shape that contains a hole. 
@@ -39,9 +39,9 @@ import nme.display.BlendMode;
 
 class Ring extends Shape
 {
-	public var outerRadius(outerRadiusGetter,outerRadiusSetter):Float;
-	public var innerRadius(innerRadiusGetter, innerRadiusSetter):Float;
-	public var color(colorGetter,colorSetter):Int;
+	public var outerRadius(get, set):Float;
+	public var innerRadius(get, set):Float;
+	public var color(get, set):Int;
 	
 	private var _outerRadius:Float;
 	private var _innerRadius:Float;
@@ -74,33 +74,33 @@ class Ring extends Shape
 		graphics.endFill();
 	}
 
-	private function outerRadiusGetter():Float
+	private function get_outerRadius():Float
 	{
 		return _outerRadius;
 	}
-	private function outerRadiusSetter( value:Float ):Float
+	private function set_outerRadius( value:Float ):Float
 	{
 		_outerRadius = value;
 		draw();
 		return _outerRadius;
 	}
 
-	private function innerRadiusGetter():Float
+	private function get_innerRadius():Float
 	{
 		return _innerRadius;
 	}
-	private function innerRadiusSetter( value:Float ):Float
+	private function set_innerRadius( value:Float ):Float
 	{
 		_innerRadius = value;
 		draw();
 		return _innerRadius;
 	}
 
-	private function colorGetter():Int
+	private function get_color():Int
 	{
 		return _color;
 	}
-	private function colorSetter( value:Int ):Int
+	private function set_color( value:Int ):Int
 	{
 		_color = value;
 		draw();

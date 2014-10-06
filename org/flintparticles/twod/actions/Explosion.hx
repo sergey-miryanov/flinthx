@@ -45,14 +45,14 @@ import org.flintparticles.twod.particles.Particle2D;
  * out in a shock wave.
  */
 
-class Explosion extends ActionBase, implements Resetable, implements FrameUpdatable
+class Explosion extends ActionBase implements Resetable implements FrameUpdatable
 {
-	public var x(xGetter,xSetter):Float;
-	public var depth(depthGetter,depthSetter):Float;
-	public var y(yGetter,ySetter):Float;
-	public var power(powerGetter,powerSetter):Float;
-	public var epsilon(epsilonGetter,epsilonSetter):Float;
-	public var expansionRate(expansionRateGetter, expansionRateSetter):Float;
+	public var x(get, set):Float;
+	public var depth(get, set):Float;
+	public var y(get, set):Float;
+	public var power(get, set):Float;
+	public var epsilon(get, set):Float;
+	public var expansionRate(get, set):Float;
 	
 	private static inline var POWER_FACTOR:Float = 100000;
 	
@@ -106,11 +106,11 @@ class Explosion extends ActionBase, implements Resetable, implements FrameUpdata
 	/**
 	 * The strength of the explosion - larger numbers produce a stronger force.
 	 */
-	public function powerGetter():Float
+	public function get_power():Float
 	{
 		return _power / POWER_FACTOR;
 	}
-	public function powerSetter( value:Float ):Float
+	public function set_power( value:Float ):Float
 	{
 		_power = value * POWER_FACTOR;
 		return _power;
@@ -120,11 +120,11 @@ class Explosion extends ActionBase, implements Resetable, implements FrameUpdata
 	 * The rate at which the shockwave moves out from the 
 	 * explosion, in pixels per second.
 	 */
-	public function expansionRateGetter():Float
+	public function get_expansionRate():Float
 	{
 		return _expansionRate;
 	}
-	public function expansionRateSetter( value:Float ):Float
+	public function set_expansionRate( value:Float ):Float
 	{
 		_expansionRate = value;
 		return _expansionRate;
@@ -133,11 +133,11 @@ class Explosion extends ActionBase, implements Resetable, implements FrameUpdata
 	/**
 	 * The depth (front-edge to back-edge) of the shock wave.
 	 */
-	public function depthGetter():Float
+	public function get_depth():Float
 	{
 		return _depth * 2;
 	}
-	public function depthSetter( value:Float ):Float
+	public function set_depth( value:Float ):Float
 	{
 		_depth = value * 0.5;
 		_invDepth = 1 / _depth;
@@ -147,11 +147,11 @@ class Explosion extends ActionBase, implements Resetable, implements FrameUpdata
 	/**
 	 * The x coordinate of the center of the explosion.
 	 */
-	public function xGetter():Float
+	public function get_x():Float
 	{
 		return _x;
 	}
-	public function xSetter( value:Float ):Float
+	public function set_x( value:Float ):Float
 	{
 		_x = value;
 		return _x;
@@ -160,11 +160,11 @@ class Explosion extends ActionBase, implements Resetable, implements FrameUpdata
 	/**
 	 * The y coordinate of the center of the explosion.
 	 */
-	public function yGetter():Float
+	public function get_y():Float
 	{
 		return _y;
 	}
-	public function ySetter( value:Float ):Float
+	public function set_y( value:Float ):Float
 	{
 		_y = value;
 		return _y;
@@ -176,11 +176,11 @@ class Explosion extends ActionBase, implements Resetable, implements FrameUpdata
 	 * experience the explosion as it they were this distance away. This 
 	 * stops the explosion effect blowing up as distances get small.
 	 */
-	public function epsilonGetter():Float
+	public function get_epsilon():Float
 	{
 		return Math.sqrt( _epsilonSq );
 	}
-	public function epsilonSetter( value:Float ):Float
+	public function set_epsilon( value:Float ):Float
 	{
 		_epsilonSq = value * value;
 		return _epsilonSq;

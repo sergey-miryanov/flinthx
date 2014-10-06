@@ -30,8 +30,8 @@
 
 package org.flintparticles.threed.zones;
 
-import nme.geom.Matrix3D;
-import nme.geom.Vector3D;
+import flash.geom.Matrix3D;
+import flash.geom.Vector3D;
 import org.flintparticles.threed.geom.Matrix3DUtils;
 import org.flintparticles.threed.geom.Vector3DUtils;
 
@@ -41,9 +41,9 @@ import org.flintparticles.threed.geom.Vector3DUtils;
  */
 class ParallelogramZone implements Zone3D 
 {
-	public var side1(side1Getter,side1Setter):Vector3D;
-	public var side2(side2Getter,side2Setter):Vector3D;
-	public var corner(cornerGetter,cornerSetter):Vector3D;
+	public var side1(get, set):Vector3D;
+	public var side2(get, set):Vector3D;
+	public var corner(get, set):Vector3D;
 	
 	private var _corner : Vector3D;
 	private var _side1 : Vector3D;
@@ -72,11 +72,11 @@ class ParallelogramZone implements Zone3D
 	/**
 	 * A corner of the zone.
 	 */
-	private function cornerGetter() : Vector3D
+	private function get_corner() : Vector3D
 	{
 		return _corner.clone();
 	}
-	private function cornerSetter( value : Vector3D ) : Vector3D
+	private function set_corner( value : Vector3D ) : Vector3D
 	{
 		_corner = Vector3DUtils.clonePoint( value );
 		return _corner;
@@ -86,11 +86,11 @@ class ParallelogramZone implements Zone3D
 	 * One side of the zone from the corner. The length of the vector 
 	 * indicates how long the side is.
 	 */
-	private function side1Getter() : Vector3D
+	private function get_side1() : Vector3D
 	{
 		return _side1.clone();
 	}
-	private function side1Setter( value : Vector3D ) : Vector3D
+	private function set_side1( value : Vector3D ) : Vector3D
 	{
 		_side1 = Vector3DUtils.cloneVector( value );
 		_dirty = true;
@@ -101,11 +101,11 @@ class ParallelogramZone implements Zone3D
 	 * The other side of the zone from the corner. The length of the
 	 * vector indicates how long the side is.
 	 */
-	private function side2Getter() : Vector3D
+	private function get_side2() : Vector3D
 	{
 		return _side2.clone();
 	}
-	private function side2Setter( value : Vector3D ) : Vector3D
+	private function set_side2( value : Vector3D ) : Vector3D
 	{
 		_side2 = Vector3DUtils.cloneVector( value );
 		_dirty = true;

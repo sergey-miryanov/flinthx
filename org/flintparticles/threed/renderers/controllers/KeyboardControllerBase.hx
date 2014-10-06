@@ -30,9 +30,9 @@
 
 package org.flintparticles.threed.renderers.controllers;
 
-import nme.display.DisplayObject;
-import nme.events.KeyboardEvent;
-import nme.ui.Keyboard;
+import flash.display.DisplayObject;
+import flash.events.KeyboardEvent;
+import flash.ui.Keyboard;
 import org.flintparticles.common.events.UpdateEvent;
 import org.flintparticles.common.utils.FrameUpdater;
 import org.flintparticles.threed.renderers.Camera;
@@ -42,11 +42,11 @@ import org.flintparticles.threed.renderers.Camera;
  */
 class KeyboardControllerBase implements CameraController
 {
-	public var maximumFrameTime(maximumFrameTimeGetter,maximumFrameTimeSetter):Float;
-	public var stage(stageGetter,stageSetter):DisplayObject;
-	public var useInternalTick(useInternalTickGetter,useInternalTickSetter):Bool;
-	public var fixedFrameTime(fixedFrameTimeGetter,fixedFrameTimeSetter):Float;
-	public var camera(cameraGetter,cameraSetter):Camera;
+	public var maximumFrameTime(get, set):Float;
+	public var stage(get, set):DisplayObject;
+	public var useInternalTick(get, set):Bool;
+	public var fixedFrameTime(get, set):Float;
+	public var camera(get, set):Camera;
 	
 	private var _stage:DisplayObject;
 	private var _camera:Camera;
@@ -116,11 +116,11 @@ class KeyboardControllerBase implements CameraController
 	 * this duration are ignored. The default value is 0.5 seconds. Developers don't usually
 	 * need to change this from the default value.</p>
 	 */
-	private function maximumFrameTimeGetter() : Float
+	private function get_maximumFrameTime() : Float
 	{
 		return _maximumFrameTime;
 	}
-	private function maximumFrameTimeSetter( value : Float ) : Float
+	private function set_maximumFrameTime( value : Float ) : Float
 	{
 		_maximumFrameTime = value;
 		return _maximumFrameTime;
@@ -139,11 +139,11 @@ class KeyboardControllerBase implements CameraController
 	 * 
 	 * @see #useInternalTick
 	 */		
-	private function fixedFrameTimeGetter():Float
+	private function get_fixedFrameTime():Float
 	{
 		return _fixedFrameTime;
 	}
-	private function fixedFrameTimeSetter( value:Float ):Float
+	private function set_fixedFrameTime( value:Float ):Float
 	{
 		_fixedFrameTime = value;
 		return _fixedFrameTime;
@@ -158,11 +158,11 @@ class KeyboardControllerBase implements CameraController
 	 * the controller's update method with the appropriate time parameter every
 	 * time they want the controller to update the camera.</p>
 	 */		
-	private function useInternalTickGetter():Bool
+	private function get_useInternalTick():Bool
 	{
 		return _useInternalTick;
 	}
-	private function useInternalTickSetter( value:Bool ):Bool
+	private function set_useInternalTick( value:Bool ):Bool
 	{
 		if( _useInternalTick != value )
 		{
@@ -186,11 +186,11 @@ class KeyboardControllerBase implements CameraController
 	/**
 	 * The camera to control with this controller.
 	 */
-	public function cameraGetter():Camera
+	public function get_camera():Camera
 	{
 		return _camera;
 	}
-	public function cameraSetter( value:Camera ):Camera
+	public function set_camera( value:Camera ):Camera
 	{
 		_camera = value;
 		return _camera;
@@ -199,11 +199,11 @@ class KeyboardControllerBase implements CameraController
 	/**
 	 * The stage - used for listening to keyboard events
 	 */
-	private function stageGetter():DisplayObject
+	private function get_stage():DisplayObject
 	{
 		return _stage;
 	}
-	private function stageSetter( value:DisplayObject ):DisplayObject
+	private function set_stage( value:DisplayObject ):DisplayObject
 	{
 		if( _stage != null )
 		{

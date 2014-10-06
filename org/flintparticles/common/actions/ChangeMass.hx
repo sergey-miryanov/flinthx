@@ -51,8 +51,8 @@ import org.flintparticles.common.actions.ActionBase;
 
 class ChangeMass extends ActionBase
 {
-	public var startMass(startMassGetter,startMassSetter):Float;
-	public var endMass(endMassGetter, endMassSetter):Float;
+	public var startMass(get, set):Float;
+	public var endMass(get, set):Float;
 	
 	private var _diffMass:Float;
 	private var _endMass:Float;
@@ -80,11 +80,11 @@ class ChangeMass extends ActionBase
 	 * The mass for the particle when its energy
 	 * is 1 - usually at the start of its lifetime.
 	 */
-	private function startMassGetter():Float
+	private function get_startMass():Float
 	{
 		return _endMass + _diffMass;
 	}
-	private function startMassSetter( value:Float ):Float
+	private function set_startMass( value:Float ):Float
 	{
 		_diffMass = value - _endMass;
 		return _diffMass;
@@ -94,11 +94,11 @@ class ChangeMass extends ActionBase
 	 * The mass for the particle when its energy
 	 * is 0 - usually at the end of its lifetime.
 	 */
-	private function endMassGetter():Float
+	private function get_endMass():Float
 	{
 		return _endMass;
 	}
-	private function endMassSetter( value:Float ):Float
+	private function set_endMass( value:Float ):Float
 	{
 		_diffMass = _endMass + _diffMass - value;
 		_endMass = value;

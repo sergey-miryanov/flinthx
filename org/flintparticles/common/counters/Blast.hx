@@ -41,9 +41,9 @@ import org.flintparticles.common.counters.Blast;
  */
 class Blast implements Counter
 {
-	public var running(runningGetter,null):Bool;
-	public var startCount(startCountGetter,startCountSetter):Float;
-	public var complete(completeGetter, null):Bool;
+	public var running(get, never):Bool;
+	public var startCount(get, set):Float;
+	public var complete(get, never):Bool;
 	
 	private var _startCount:Int;
 	private var _done:Bool;
@@ -66,11 +66,11 @@ class Blast implements Counter
 	/**
 	 * The number of particles to emit when the emitter starts.
 	 */
-	private function startCountGetter():Float
+	private function get_startCount():Float
 	{
 		return _startCount;
 	}
-	private function startCountSetter( value:Float ):Float
+	private function set_startCount( value:Float ):Float
 	{
 		_startCount = Std.int(value);
 		return _startCount;
@@ -132,7 +132,7 @@ class Blast implements Counter
 	/**
 	 * Indicates if the counter has emitted all its particles.
 	 */
-	public function completeGetter():Bool
+	public function get_complete():Bool
 	{
 		return _done;
 	}
@@ -140,7 +140,7 @@ class Blast implements Counter
 	/**
 	 * Indicates if the counter is currently emitting particles
 	 */
-	public function runningGetter():Bool
+	public function get_running():Bool
 	{
 		return false;
 	}

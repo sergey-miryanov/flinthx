@@ -30,7 +30,7 @@
 
 package org.flintparticles.threed.zones;
 
-import nme.geom.Vector3D;
+import flash.geom.Vector3D;
 import org.flintparticles.threed.geom.Vector3DUtils;
 
 
@@ -42,9 +42,9 @@ import org.flintparticles.threed.geom.Vector3DUtils;
 
 class SphereZone implements Zone3D 
 {
-	public var outerRadius(outerRadiusGetter,outerRadiusSetter):Float;
-	public var innerRadius(innerRadiusGetter,innerRadiusSetter):Float;
-	public var center(centerGetter,centerSetter):Vector3D;
+	public var outerRadius(get, set):Float;
+	public var innerRadius(get, set):Float;
+	public var center(get, set):Vector3D;
 	
 	private var _center:Vector3D;
 	private var _innerRadius:Float;
@@ -70,11 +70,11 @@ class SphereZone implements Zone3D
 	/**
 	 * The point at the center of the sphere.
 	 */
-	public function centerGetter() : Vector3D
+	public function get_center() : Vector3D
 	{
 		return _center.clone();
 	}
-	public function centerSetter( value : Vector3D ) : Vector3D
+	public function set_center( value : Vector3D ) : Vector3D
 	{
 		_center = Vector3DUtils.clonePoint( value );
 		return _center;
@@ -83,11 +83,11 @@ class SphereZone implements Zone3D
 	/**
 	 * The radius of the hollow center of the sphere.
 	 */
-	public function innerRadiusGetter() : Float
+	public function get_innerRadius() : Float
 	{
 		return _innerRadius;
 	}
-	public function innerRadiusSetter( value : Float ) : Float
+	public function set_innerRadius( value : Float ) : Float
 	{
 		_innerRadius = value;
 		_innerRadiusSq = _innerRadius * _innerRadius;
@@ -97,11 +97,11 @@ class SphereZone implements Zone3D
 	/**
 	 * The outer radius of the sphere.
 	 */
-	public function outerRadiusGetter() : Float
+	public function get_outerRadius() : Float
 	{
 		return _outerRadius;
 	}
-	public function outerRadiusSetter( value : Float ) : Float
+	public function set_outerRadius( value : Float ) : Float
 	{
 		_outerRadius = value;
 		_outerRadiusSq = _outerRadius * _outerRadius;

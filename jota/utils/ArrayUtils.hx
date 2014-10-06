@@ -1,8 +1,9 @@
 package jota.utils;
 
+    import haxe.ds.ObjectMap;
 	import jota.utils.MathUtils;
 	import jota.utils.ArrayUtils;
-	import nme.Vector;
+	import flash.Vector;
 
 	class ArrayUtils
 	{
@@ -27,9 +28,9 @@ package jota.utils;
 			]);
 		 * get values by using: hash.get(o);
 		 */
-		public static function hashify<T>(values:Array<{key:Dynamic, val:T}>):Hash<T>
+		public static function hashify<T>(values:Array<{key:Dynamic, val:T}>):ObjectMap<Dynamic,T>
 		{
-		   var h:Hash<T> = new Hash();
+           var h = new ObjectMap<Dynamic, T>();
 		   var pair:{key:Dynamic, val:T};
 		   for (pair in values) {
 			  h.set(pair.key, pair.val);

@@ -43,10 +43,10 @@ import org.flintparticles.twod.zones.Zone2D;
 
 class Jet extends ActionBase
 {
-	public var x(xGetter,xSetter):Float;
-	public var y(yGetter,ySetter):Float;
-	public var zone(zoneGetter,zoneSetter):Zone2D;
-	public var invertZone(invertZoneGetter, invertZoneSetter):Bool;
+	public var x(get, set):Float;
+	public var y(get, set):Float;
+	public var zone(get, set):Zone2D;
+	public var invertZone(get, set):Bool;
 	
 	private var _x:Float;
 	private var _y:Float;
@@ -82,11 +82,11 @@ class Jet extends ActionBase
 	 * The x component of the acceleration to apply, in 
 	 * pixels per second per second.
 	 */
-	private function xGetter():Float
+	private function get_x():Float
 	{
 		return _x;
 	}
-	private function xSetter( value:Float ):Float
+	private function set_x( value:Float ):Float
 	{
 		_x = value;
 		return _x;
@@ -96,11 +96,11 @@ class Jet extends ActionBase
 	 * The y component of the acceleration to apply, in 
 	 * pixels per second per second.
 	 */
-	private function yGetter():Float
+	private function get_y():Float
 	{
 		return _y;
 	}
-	private function ySetter( value:Float ):Float
+	private function set_y( value:Float ):Float
 	{
 		_y = value;
 		return _y;
@@ -109,11 +109,11 @@ class Jet extends ActionBase
 	/**
 	 * The zone in which to apply the acceleration.
 	 */
-	private function zoneGetter():Zone2D
+	private function get_zone():Zone2D
 	{
 		return _zone;
 	}
-	private function zoneSetter( value:Zone2D ):Zone2D
+	private function set_zone( value:Zone2D ):Zone2D
 	{
 		_zone = value;
 		return _zone;
@@ -124,11 +124,11 @@ class Jet extends ActionBase
 	 * only to particles inside the zone. If true the acceleration is applied 
 	 * only to particles outside the zone.
 	 */
-	private function invertZoneGetter():Bool
+	private function get_invertZone():Bool
 	{
 		return _invert;
 	}
-	private function invertZoneSetter( value:Bool ):Bool
+	private function set_invertZone( value:Bool ):Bool
 	{
 		_invert = value;
 		return _invert;

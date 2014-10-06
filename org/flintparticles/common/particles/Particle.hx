@@ -31,7 +31,7 @@
 package org.flintparticles.common.particles;
 
 import jota.utils.Dictionary;
-import nme.geom.ColorTransform;
+import flash.geom.ColorTransform;
 import org.flintparticles.common.particles.ParticleFactory;
 import org.flintparticles.common.particles.Particle;
 
@@ -48,9 +48,9 @@ import org.flintparticles.common.particles.Particle;
  */
 class Particle
 {
-	public var dictionary(dictionaryGetter,null):Dictionary;
-	public var colorTransform(colorTransformGetter,null):ColorTransform;
-	public var alpha(alphaGetter,null):Float;
+	public var dictionary(get, never):Dictionary;
+	public var colorTransform(get, never):ColorTransform;
+	public var alpha(get, never):Float;
 	/**
 	 * The 32bit ARGB color of the particle. The initial value is 0xFFFFFFFF (white).
 	 */
@@ -108,7 +108,7 @@ class Particle
 	 * key, thus ensuring it doesn't clash with other object's properties. If multiple properties are
 	 * needed, the dictionary value can be an object with a number of properties.
 	 */
-	private function dictionaryGetter():Dictionary
+	private function get_dictionary():Dictionary
 	{
 		if( _dictionary == null )
 		{
@@ -158,7 +158,7 @@ class Particle
 	/**
 	 * A ColorTransform object that converts white to the colour of the particle.
 	 */
-	private function colorTransformGetter():ColorTransform
+	private function get_colorTransform():ColorTransform
 	{
 		if( _colorTransform == null || _previousColor != color )
 		{
@@ -172,7 +172,7 @@ class Particle
 		return _colorTransform;
 	}
 	
-	private function alphaGetter():Float
+	private function get_alpha():Float
 	{
 		return ( ( color & 0xFF000000 ) >>> 24 ) / 255;
 	}

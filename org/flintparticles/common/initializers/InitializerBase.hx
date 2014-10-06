@@ -55,7 +55,7 @@ import org.flintparticles.common.initializers.Initializer;
  */
 class InitializerBase implements Initializer
 {
-	public var priority(priorityGetter, prioritySetter):Int;
+	public var priority(get, set):Int;
 	
 	private var _priority:Int;
 
@@ -74,11 +74,11 @@ class InitializerBase implements Initializer
 	 * 
 	 * @see org.flintparticles.common.initializers.Initializer#getDefaultPriority()
 	 */
-	private function priorityGetter():Int
+	private function get_priority():Int
 	{
 		return _priority;
 	}
-	private function prioritySetter( value:Int ):Int
+	private function set_priority( value:Int ):Int
 	{
 		_priority = value;
 		return _priority;

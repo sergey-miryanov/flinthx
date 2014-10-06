@@ -31,7 +31,7 @@
 package org.flintparticles.common.initializers;
 
 import jota.utils.ArrayUtils;
-import nme.Vector;
+import flash.Vector;
 import org.flintparticles.common.particles.Particle;
 import org.flintparticles.common.emitters.Emitter;
 import org.flintparticles.common.initializers.Initializer;
@@ -49,7 +49,7 @@ import org.flintparticles.common.initializers.InitializerBase;
 
 class InitializerGroup extends InitializerBase
 {
-	public var initializers(initializersGetter, null):Vector<Initializer>;
+	public var initializers(get, never):Vector<Initializer>;
 	
 	private var _initializers:Vector<Initializer>;
 	private var _emitter:Emitter;
@@ -69,11 +69,11 @@ class InitializerGroup extends InitializerBase
 		}
 	}
 	
-	public function initializersGetter():Vector<Initializer>
+	public function get_initializers():Vector<Initializer>
 	{
 		return _initializers;
 	}
-	public function initializersSetter( value:Vector<Initializer> ):Vector<Initializer>
+	public function set_initializers( value:Vector<Initializer> ):Vector<Initializer>
 	{
 		var initializer:Initializer;
 		if( _emitter != null )

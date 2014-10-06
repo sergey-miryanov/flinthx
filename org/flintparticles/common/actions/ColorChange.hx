@@ -51,8 +51,8 @@ import org.flintparticles.common.utils.InterpolateColors;
 
 class ColorChange extends ActionBase
 {
-	public var endColor(endColorGetter,endColorSetter):Int;
-	public var startColor(startColorGetter,startColorSetter):Int;
+	public var endColor(get, set):Int;
+	public var startColor(get, set):Int;
 	
 	private var _startColor:Int;
 	private var _endColor:Int;
@@ -79,11 +79,11 @@ class ColorChange extends ActionBase
 	/**
 	 * The color of the particle when its energy is 1.
 	 */
-	private function startColorGetter():Int
+	private function get_startColor():Int
 	{
 		return _startColor;
 	}
-	private function startColorSetter( value:Int ):Int
+	private function set_startColor( value:Int ):Int
 	{
 		_startColor = value;
 		return value;
@@ -92,11 +92,11 @@ class ColorChange extends ActionBase
 	/**
 	 * The color of the particle when its energy is zero.
 	 */
-	private function endColorGetter():Int
+	private function get_endColor():Int
 	{
 		return _endColor;
 	}
-	private function endColorSetter( value:Int ):Int
+	private function set_endColor( value:Int ):Int
 	{
 		_endColor = value;
 		return value;

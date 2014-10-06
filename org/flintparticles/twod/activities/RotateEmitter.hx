@@ -39,7 +39,7 @@ import org.flintparticles.twod.emitters.Emitter2D;
  */
 class RotateEmitter extends ActivityBase
 {
-	public var angularVelocity(angularVelocityGetter, angularVelocitySetter):Float;
+	public var angularVelocity(get, set):Float;
 	
 	private var _angularVelocity:Float;
 	
@@ -63,11 +63,11 @@ class RotateEmitter extends ActivityBase
 	 * The angular velocity for the emitter in 
 	 * radians per second.
 	 */
-	private function angularVelocityGetter():Float
+	private function get_angularVelocity():Float
 	{
 		return _angularVelocity;
 	}
-	private function angularVelocitySetter( value:Float ):Float
+	private function set_angularVelocity( value:Float ):Float
 	{
 		_angularVelocity = value;
 		return _angularVelocity;

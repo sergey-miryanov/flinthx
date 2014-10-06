@@ -69,17 +69,18 @@ import org.flintparticles.common.particles.Particle;
 
 class Emitter2D extends Emitter
 {
-	public var x(xGetter,xSetter):Float;
+	public var x(get, set):Float;
 	//public var defaultParticleFactory(defaultParticleFactoryGetter,null):ParticleFactory;
-	public var y(yGetter,ySetter):Float;
-	public var rotation(rotationGetter,rotationSetter):Float;
-	public var rotRadians(rotRadiansGetter,rotRadiansSetter):Float;
+	public var y(get, set):Float;
+	public var rotation(get, set):Float;
+	public var rotRadians(get, set):Float;
+    
 	/**
 	 * @private
 	 * 
 	 * default factory to manage the creation, reuse and destruction of particles
 	 */
-	private static inline var _creator:ParticleCreator2D = new ParticleCreator2D();
+	private static var _creator:ParticleCreator2D = new ParticleCreator2D();
 	
 	/**
 	 * The default particle factory used to manage the creation, reuse and destruction of particles.
@@ -125,11 +126,11 @@ class Emitter2D extends Emitter
 	/**
 	 * Indicates the x coordinate of the Emitter within the particle system's coordinate space.
 	 */
-	private function xGetter():Float
+	private function get_x():Float
 	{
 		return _x;
 	}
-	private function xSetter( value:Float ):Float
+	private function set_x( value:Float ):Float
 	{
 		_x = value;
 		return value;
@@ -137,11 +138,11 @@ class Emitter2D extends Emitter
 	/**
 	 * Indicates the y coordinate of the Emitter within the particle system's coordinate space.
 	 */
-	private function yGetter():Float
+	private function get_y():Float
 	{
 		return _y;
 	}
-	private function ySetter( value:Float ):Float
+	private function set_y( value:Float ):Float
 	{
 		_y = value;
 		return value;
@@ -149,11 +150,11 @@ class Emitter2D extends Emitter
 	/**
 	 * Indicates the rotation of the Emitter, in degrees, within the particle system's coordinate space.
 	 */
-	private function rotationGetter():Float
+	private function get_rotation():Float
 	{
 		return Maths.asDegrees( _rotation );
 	}
-	private function rotationSetter( value:Float ):Float
+	private function set_rotation( value:Float ):Float
 	{
 		_rotation = Maths.asRadians( value );
 		return value;
@@ -161,11 +162,11 @@ class Emitter2D extends Emitter
 	/**
 	 * Indicates the rotation of the Emitter, in radians, within the particle system's coordinate space.
 	 */
-	private function rotRadiansGetter():Float
+	private function get_rotRadians():Float
 	{
 		return _rotation;
 	}
-	private function rotRadiansSetter( value:Float ):Float
+	private function set_rotRadians( value:Float ):Float
 	{
 		_rotation = value;
 		return value;

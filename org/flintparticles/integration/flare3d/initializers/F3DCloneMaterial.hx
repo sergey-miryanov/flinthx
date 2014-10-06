@@ -10,7 +10,7 @@ package org.flintparticles.integration.flare3d.initializers;
 	 */
 	class F3DCloneMaterial extends InitializerBase
 	{
-		public var material(materialGetter,null):Material3D;
+		public var material(get, set):Material3D;
 		private var _material : Material3D;
 
 		public function new( material : Material3D )
@@ -19,14 +19,14 @@ package org.flintparticles.integration.flare3d.initializers;
 			_priority = -10;
 		}
 		
-		public function materialGetter() : Material3D
+		public function get_material() : Material3D
 		{
 			return _material;
 		}
 		
-		public function set material( value:Material3D ):Void
+		public function set_material( value:Material3D ):Material3D
 		{
-			_material = material;
+			return _material = material;
 		}
 		
 		override public function initialize( emitter:Emitter, particle:Particle ) : Void

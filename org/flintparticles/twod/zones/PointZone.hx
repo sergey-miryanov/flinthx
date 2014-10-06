@@ -30,7 +30,7 @@
 
 package org.flintparticles.twod.zones;
 
-import nme.geom.Point;
+import flash.geom.Point;
 import org.flintparticles.twod.particles.Particle2D;
 
 /**
@@ -39,9 +39,9 @@ import org.flintparticles.twod.particles.Particle2D;
 
 class PointZone implements Zone2D
 {
-	public var x(xGetter,xSetter):Float;
-	public var y(yGetter,ySetter):Float;
-	public var point(pointGetter,pointSetter):Point;
+	public var x(get, set):Float;
+	public var y(get, set):Float;
+	public var point(get, set):Point;
 	
 	private var _point:Point;
 	
@@ -65,11 +65,11 @@ class PointZone implements Zone2D
 	/**
 	 * The point that is the zone.
 	 */
-	private function pointGetter() : Point
+	private function get_point() : Point
 	{
 		return _point;
 	}
-	private function pointSetter( value : Point ) : Point
+	private function set_point( value : Point ) : Point
 	{
 		_point = value;
 		return _point;
@@ -78,11 +78,11 @@ class PointZone implements Zone2D
 	/**
 	 * The x coordinate of the point that is the zone.
 	 */
-	private function xGetter() : Float
+	private function get_x() : Float
 	{
 		return _point.x;
 	}
-	private function xSetter( value : Float ) : Float
+	private function set_x( value : Float ) : Float
 	{
 		_point.x = value;
 		return value;
@@ -91,11 +91,11 @@ class PointZone implements Zone2D
 	/**
 	 * The y coordinate of the point that is the zone.
 	 */
-	private function yGetter() : Float
+	private function get_y() : Float
 	{
 		return _point.y;
 	}
-	private function ySetter( value : Float ) : Float
+	private function set_y( value : Float ) : Float
 	{
 		_point.y = value;
 		return value;

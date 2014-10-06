@@ -47,11 +47,11 @@ import org.flintparticles.common.counters.Counter;
  */
 class TimePeriod implements Counter
 {
-	public var numParticles(numParticlesGetter,numParticlesSetter):Int;
-	public var running(runningGetter,null):Bool;
-	public var complete(completeGetter,null):Bool;
-	public var easing(easingGetter,easingSetter):Dynamic;
-	public var duration(durationGetter, durationSetter):Float;
+	public var numParticles(get, set):Int;
+	public var running(get, never):Bool;
+	public var complete(get, never):Bool;
+	public var easing(get, set):Dynamic;
+	public var duration(get, set):Float;
 	
 	private var _particles : Int;
 	private var _duration : Float;
@@ -94,11 +94,11 @@ class TimePeriod implements Counter
 	 * The number of particles to emit over the full duration
 	 * of the time period.
 	 */
-	private function numParticlesGetter():Int
+	private function get_numParticles():Int
 	{
 		return _particles;
 	}
-	private function numParticlesSetter( value:Int ):Int
+	private function set_numParticles( value:Int ):Int
 	{
 		_particles = value;
 		return _particles;
@@ -108,11 +108,11 @@ class TimePeriod implements Counter
 	 * The duration of the time period. After this time is up the
 	 * emitter will not release any more particles.
 	 */
-	private function durationGetter():Float
+	private function get_duration():Float
 	{
 		return _duration;
 	}
-	private function durationSetter( value:Float ):Float
+	private function set_duration( value:Float ):Float
 	{
 		_duration = value;
 		return _duration;
@@ -122,11 +122,11 @@ class TimePeriod implements Counter
 	 * An easing function used to distribute the emission of the
 	 * particles over the time period.
 	 */
-	private function easingGetter():Dynamic
+	private function get_easing():Dynamic
 	{
 		return _easing;
 	}
-	private function easingSetter( value:Dynamic ):Dynamic
+	private function set_easing( value:Dynamic ):Dynamic
 	{
 		_easing = value;
 		return _easing;
@@ -206,7 +206,7 @@ class TimePeriod implements Counter
 	/**
 	 * Indicates if the counter has emitted all its particles.
 	 */
-	public function completeGetter():Bool
+	public function get_complete():Bool
 	{
 		return _particlesPassed == _particles;
 	}
@@ -214,7 +214,7 @@ class TimePeriod implements Counter
 	/**
 	 * Indicates if the counter is currently emitting particles
 	 */
-	public function runningGetter():Bool
+	public function get_running():Bool
 	{
 		return (_running && _timePassed < _duration);
 	}

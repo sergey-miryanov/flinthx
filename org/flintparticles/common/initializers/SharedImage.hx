@@ -30,7 +30,7 @@
 
 package org.flintparticles.common.initializers;
 
-import nme.display.DisplayObject;
+import flash.display.DisplayObject;
 import org.flintparticles.common.particles.Particle;
 import org.flintparticles.common.emitters.Emitter;
 import org.flintparticles.common.initializers.SharedImage;
@@ -50,7 +50,7 @@ import org.flintparticles.common.initializers.InitializerBase;
 
 class SharedImage extends InitializerBase
 {
-	public var image(imageGetter, imageSetter):DisplayObject;
+	public var image(get, set):DisplayObject;
 	
 	private var _image:DisplayObject;
 	
@@ -72,11 +72,11 @@ class SharedImage extends InitializerBase
 	/**
 	 * The DisplayObject to use for each particle created by the emitter.
 	 */
-	private function imageGetter():DisplayObject
+	private function get_image():DisplayObject
 	{
 		return _image;
 	}
-	private function imageSetter( value:DisplayObject ):DisplayObject
+	private function set_image( value:DisplayObject ):DisplayObject
 	{
 		_image = value;
 		return _image;

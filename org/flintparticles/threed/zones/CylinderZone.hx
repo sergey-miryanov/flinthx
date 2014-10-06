@@ -30,7 +30,7 @@
 
 package org.flintparticles.threed.zones;
 
-import nme.geom.Vector3D;
+import flash.geom.Vector3D;
 import org.flintparticles.threed.geom.Vector3DUtils;
 
 /**
@@ -40,11 +40,11 @@ import org.flintparticles.threed.geom.Vector3DUtils;
  */
 class CylinderZone implements Zone3D 
 {
-	public var length(lengthGetter,lengthSetter):Float;
-	public var outerRadius(outerRadiusGetter,outerRadiusSetter):Float;
-	public var innerRadius(innerRadiusGetter,innerRadiusSetter):Float;
-	public var center(centerGetter,centerSetter):Vector3D;
-	public var axis(axisGetter,axisSetter):Vector3D;
+	public var length(get, set):Float;
+	public var outerRadius(get, set):Float;
+	public var innerRadius(get, set):Float;
+	public var center(get, set):Vector3D;
+	public var axis(get, set):Vector3D;
 	
 	private var _center:Vector3D;
 	private var _axis:Vector3D;
@@ -89,11 +89,11 @@ class CylinderZone implements Zone3D
 	/**
 	 * The point at the center of one end of the cylinder.
 	 */
-	private function centerGetter() : Vector3D
+	private function get_center() : Vector3D
 	{
 		return _center.clone();
 	}
-	private function centerSetter( value : Vector3D ) : Vector3D
+	private function set_center( value : Vector3D ) : Vector3D
 	{
 		_center = Vector3DUtils.clonePoint( value );
 		return _center;
@@ -102,11 +102,11 @@ class CylinderZone implements Zone3D
 	/**
 	 * The central axis of the cylinder, from the center point towards the other end.
 	 */
-	private function axisGetter() : Vector3D
+	private function get_axis() : Vector3D
 	{
 		return _axis.clone();
 	}
-	private function axisSetter( value : Vector3D ) : Vector3D
+	private function set_axis( value : Vector3D ) : Vector3D
 	{
 		_axis = Vector3DUtils.cloneUnit( value );
 		_dirty = true;
@@ -116,11 +116,11 @@ class CylinderZone implements Zone3D
 	/**
 	 * The length of the cylinder.
 	 */
-	private function lengthGetter() : Float
+	private function get_length() : Float
 	{
 		return _length;
 	}
-	private function lengthSetter( value : Float ) : Float
+	private function set_length( value : Float ) : Float
 	{
 		_length = value;
 		return _length;
@@ -129,11 +129,11 @@ class CylinderZone implements Zone3D
 	/**
 	 * The outer radius of the cylinder.
 	 */
-	private function outerRadiusGetter() : Float
+	private function get_outerRadius() : Float
 	{
 		return _outerRadius;
 	}
-	private function outerRadiusSetter( value : Float ) : Float
+	private function set_outerRadius( value : Float ) : Float
 	{
 		_outerRadius = value;
 		_outerRadiusSq = value * value;
@@ -145,11 +145,11 @@ class CylinderZone implements Zone3D
 	 * hole in the center of the cylinder that runs the length of the cylinder.
 	 * If this is set to zero, there is no hole.
 	 */
-	private function innerRadiusGetter() : Float
+	private function get_innerRadius() : Float
 	{
 		return _innerRadius;
 	}
-	private function innerRadiusSetter( value : Float ) : Float
+	private function set_innerRadius( value : Float ) : Float
 	{
 		_innerRadius = value;
 		_innerRadiusSq = value * value;

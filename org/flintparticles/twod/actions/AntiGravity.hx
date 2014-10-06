@@ -69,12 +69,12 @@ class AntiGravity extends GravityWell
 	 * The strength of the anti-gravity force - larger numbers produce a 
 	 * stronger force.
 	 */
-	override private function powerGetter():Float
+	override private function get_power():Float
 	{
 		//return -super.power;
 		return -_power;
 	}
-	override private function powerSetter( value:Float ):Float
+	override private function set_power( value:Float ):Float
 	{
 		//super.power = -value;
 		//return -value;

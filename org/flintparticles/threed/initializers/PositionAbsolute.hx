@@ -49,7 +49,7 @@ import org.flintparticles.threed.zones.Zone3D;
  */
 class PositionAbsolute extends InitializerBase
 {
-	public var zone(zoneGetter,zoneSetter):Zone3D;
+	public var zone(get, set):Zone3D;
 	
 	private var _zone : Zone3D;
 
@@ -71,11 +71,11 @@ class PositionAbsolute extends InitializerBase
 	/**
 	 * The zone.
 	 */
-	private function zoneGetter():Zone3D
+	private function get_zone():Zone3D
 	{
 		return _zone;
 	}
-	private function zoneSetter( value:Zone3D ):Zone3D
+	private function set_zone( value:Zone3D ):Zone3D
 	{
 		_zone = value;
 		return _zone;

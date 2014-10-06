@@ -30,7 +30,7 @@
 
 package org.flintparticles.twod.actions;
 
-import nme.display.DisplayObject;
+import flash.display.DisplayObject;
 
 /**
  * The MouseAntiGravity action applies a force on the particle to push it 
@@ -70,12 +70,12 @@ class MouseAntiGravity extends MouseGravity
 	/**
 	 * The strength of the anti-gravity force.
 	 */
-	override private function powerGetter():Float
+	override private function get_power():Float
 	{
 		//return -super.power;
 		return -_power;
 	}
-	override private function powerSetter( value:Float ):Float
+	override private function set_power( value:Float ):Float
 	{
 		//super.power = -value;
 		//return -super.power;

@@ -30,7 +30,7 @@
 
 package org.flintparticles.twod.actions;
 
-import nme.display.DisplayObject;
+import flash.display.DisplayObject;
 import org.flintparticles.common.particles.Particle;
 import org.flintparticles.common.actions.ActionBase;
 import org.flintparticles.common.emitters.Emitter;
@@ -44,8 +44,8 @@ import org.flintparticles.twod.particles.Particle2D;
 
 class TurnAwayFromMouse extends ActionBase
 {
-	public var renderer(rendererGetter,rendererSetter):DisplayObject;
-	public var power(powerGetter, powerSetter):Float;
+	public var renderer(get, set):DisplayObject;
+	public var power(get, set):Float;
 	
 	private var _power:Float;
 	private var _renderer:DisplayObject;
@@ -71,11 +71,11 @@ class TurnAwayFromMouse extends ActionBase
 	/**
 	 * The strength of the turn action. Higher values produce a sharper turn.
 	 */
-	private function powerGetter():Float
+	private function get_power():Float
 	{
 		return _power;
 	}
-	private function powerSetter( value:Float ):Float
+	private function set_power( value:Float ):Float
 	{
 		_power = value;
 		return _power;
@@ -85,11 +85,11 @@ class TurnAwayFromMouse extends ActionBase
 	 * The display object whose coordinate system the mouse position is converted to. This
 	 * is usually the renderer for the particle system created by the emitter.
 	 */
-	private function rendererGetter():DisplayObject
+	private function get_renderer():DisplayObject
 	{
 		return _renderer;
 	}
-	private function rendererSetter( value:DisplayObject ):DisplayObject
+	private function set_renderer( value:DisplayObject ):DisplayObject
 	{
 		_renderer = value;
 		return _renderer;

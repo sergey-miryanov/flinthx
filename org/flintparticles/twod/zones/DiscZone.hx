@@ -30,8 +30,8 @@
 
 package org.flintparticles.twod.zones;
 
-import nme.errors.Error;
-import nme.geom.Point;
+import flash.errors.Error;
+import flash.geom.Point;
 import org.flintparticles.twod.particles.Particle2D;
 
 /**
@@ -41,19 +41,20 @@ import org.flintparticles.twod.particles.Particle2D;
 
 class DiscZone implements Zone2D
 {
-	public var outerRadius(outerRadiusGetter,outerRadiusSetter):Float;
-	public var centerX(centerXGetter,centerXSetter):Float;
-	public var centerY(centerYGetter,centerYSetter):Float;
-	public var innerRadius(innerRadiusGetter,innerRadiusSetter):Float;
-	public var center(centerGetter, centerSetter):Point;
+	public var outerRadius(get, set):Float;
+	public var centerX(get, set):Float;
+	public var centerY(get, set):Float;
+	public var innerRadius(get, set):Float;
+	public var center(get, set):Point;
 	
 	private var _center:Point;
 	private var _innerRadius:Float;
 	private var _outerRadius:Float;
 	private var _innerSq:Float;
 	private var _outerSq:Float;
-	
-	public static inline var TWOPI:Float = Math.PI * 2;
+
+    // Math.PI * 2
+	public static inline var TWOPI:Float = 6.28318530718;
 	
 	/**
 	 * The constructor defines a DiscZone zone.
@@ -88,11 +89,11 @@ class DiscZone implements Zone2D
 	/**
 	 * The centre of the disc.
 	 */
-	private function centerGetter() : Point
+	private function get_center() : Point
 	{
 		return _center;
 	}
-	private function centerSetter( value : Point ) : Point
+	private function set_center( value : Point ) : Point
 	{
 		_center = value;
 		return _center;
@@ -101,11 +102,11 @@ class DiscZone implements Zone2D
 	/**
 	 * The x coordinate of the point that is the center of the disc.
 	 */
-	private function centerXGetter() : Float
+	private function get_centerX() : Float
 	{
 		return _center.x;
 	}
-	private function centerXSetter( value : Float ) : Float
+	private function set_centerX( value : Float ) : Float
 	{
 		_center.x = value;
 		return value;
@@ -114,11 +115,11 @@ class DiscZone implements Zone2D
 	/**
 	 * The y coordinate of the point that is the center of the disc.
 	 */
-	private function centerYGetter() : Float
+	private function get_centerY() : Float
 	{
 		return _center.y;
 	}
-	private function centerYSetter( value : Float ) : Float
+	private function set_centerY( value : Float ) : Float
 	{
 		_center.y = value;
 		return value;
@@ -127,11 +128,11 @@ class DiscZone implements Zone2D
 	/**
 	 * The radius of the inner edge of the disc.
 	 */
-	private function innerRadiusGetter() : Float
+	private function get_innerRadius() : Float
 	{
 		return _innerRadius;
 	}
-	private function innerRadiusSetter( value : Float ) : Float
+	private function set_innerRadius( value : Float ) : Float
 	{
 		_innerRadius = value;
 		_innerSq = _innerRadius * _innerRadius;
@@ -141,11 +142,11 @@ class DiscZone implements Zone2D
 	/**
 	 * The radius of the outer edge of the disc.
 	 */
-	private function outerRadiusGetter() : Float
+	private function get_outerRadius() : Float
 	{
 		return _outerRadius;
 	}
-	private function outerRadiusSetter( value : Float ) : Float
+	private function set_outerRadius( value : Float ) : Float
 	{
 		_outerRadius = value;
 		_outerSq = _outerRadius * _outerRadius;

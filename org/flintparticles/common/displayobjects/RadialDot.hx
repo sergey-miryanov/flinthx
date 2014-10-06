@@ -30,10 +30,10 @@
 
 package org.flintparticles.common.displayobjects;
 
-import nme.display.GradientType;
-import nme.display.Shape;
-import nme.geom.Matrix;
-import nme.display.BlendMode;
+import flash.display.GradientType;
+import flash.display.Shape;
+import flash.geom.Matrix;
+import flash.display.BlendMode;
 
 /**
  * The RadialDot class is a DisplayObject that is a circle shape with a gradient 
@@ -43,8 +43,8 @@ import nme.display.BlendMode;
 
 class RadialDot extends Shape 
 {
-	public var radius(radiusGetter,radiusSetter):Float;
-	public var color(colorGetter, colorSetter):Int;
+	public var radius(get, set):Float;
+	public var color(get, set):Int;
 	
 	private var _radius:Float;
 	private var _color:Int;
@@ -76,22 +76,22 @@ class RadialDot extends Shape
 		graphics.endFill();
 	}
 	
-	private function radiusGetter():Float
+	private function get_radius():Float
 	{
 		return _radius;
 	}
-	private function radiusSetter( value:Float ):Float
+	private function set_radius( value:Float ):Float
 	{
 		_radius = value;
 		draw();
 		return _radius;
 	}
 	
-	private function colorGetter():Int
+	private function get_color():Int
 	{
 		return _color;
 	}
-	private function colorSetter( value:Int ):Int
+	private function set_color( value:Int ):Int
 	{
 		_color = value;
 		draw();

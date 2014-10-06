@@ -30,8 +30,8 @@
 
 package org.flintparticles.threed.emitters;
 
-import nme.geom.Matrix3D;
-import nme.geom.Vector3D;
+import flash.geom.Matrix3D;
+import flash.geom.Vector3D;
 import org.flintparticles.common.particles.Particle;
 import org.flintparticles.common.emitters.Emitter;
 import org.flintparticles.common.particles.ParticleFactory;
@@ -54,10 +54,10 @@ import org.flintparticles.threed.particles.ParticleCreator3D;
  */
 class Emitter3D extends Emitter
 {
-	public var defaultParticleFactory(defaultParticleFactoryGetter,null):ParticleFactory;
-	public var rotation(rotationGetter,rotationSetter):Quaternion;
-	public var rotationTransform(rotationTransformGetter,null):Matrix3D;
-	public var position(positionGetter, positionSetter):Vector3D;
+	public var defaultParticleFactory(get, never):ParticleFactory;
+	public var rotation(get, set):Quaternion;
+	public var rotationTransform(get, never):Matrix3D;
+	public var position(get, set):Vector3D;
 	
 	/**
 	 * @private
@@ -69,12 +69,12 @@ class Emitter3D extends Emitter
 	/**
 	 * The default particle factory used to manage the creation, reuse and destruction of particles.
 	 */
-	public static function _defaultParticleFactoryGetter():ParticleFactory
+	public static function get__defaultParticleFactory():ParticleFactory
 	{
 		return _creator;
 	}
 	
-	private function defaultParticleFactoryGetter():ParticleFactory
+	private function get_defaultParticleFactory():ParticleFactory
 	{
 		return _creator;
 	}
@@ -119,11 +119,11 @@ class Emitter3D extends Emitter
 	 * Indicates the position of the Emitter instance relative to 
 	 * the local coordinate system of the Renderer.
 	 */
-	private function positionGetter():Vector3D
+	private function get_position():Vector3D
 	{
 		return _position;
 	}
-	private function positionSetter( value:Vector3D ):Vector3D
+	private function set_position( value:Vector3D ):Vector3D
 	{
 		_position = value;
 		_position.w = 1;
@@ -133,11 +133,11 @@ class Emitter3D extends Emitter
 	 * Indicates the rotation of the Emitter instance relative to 
 	 * the local coordinate system of the Renderer.
 	 */
-	private function rotationGetter():Quaternion
+	private function get_rotation():Quaternion
 	{
 		return _rotation;
 	}
-	private function rotationSetter( value:Quaternion ):Quaternion
+	private function set_rotation( value:Quaternion ):Quaternion
 	{
 		_rotation = value;
 		return _rotation;
@@ -148,7 +148,7 @@ class Emitter3D extends Emitter
 	 * the local coordinate system of the Renderer, as a matrix
 	 * transformation.
 	 */
-	private function rotationTransformGetter():Matrix3D
+	private function get_rotationTransform():Matrix3D
 	{
 		if( !_rotTransformRotation.equals( _rotation ) )
 		{

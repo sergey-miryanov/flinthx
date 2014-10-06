@@ -30,8 +30,8 @@
 
 package org.flintparticles.twod.zones;
 
-import nme.display.BitmapData;
-import nme.geom.Point;
+import flash.display.BitmapData;
+import flash.geom.Point;
 import org.flintparticles.common.utils.FastWeightedArray;
 import org.flintparticles.twod.particles.Particle2D;
 
@@ -44,11 +44,11 @@ import org.flintparticles.twod.particles.Particle2D;
 
 class BitmapDataZone implements Zone2D 
 {
-	public var offsetX(offsetXGetter,offsetXSetter):Float;
-	public var offsetY(offsetYGetter,offsetYSetter):Float;
-	public var bitmapData(bitmapDataGetter,bitmapDataSetter):BitmapData;
-	public var scaleY(scaleYGetter,scaleYSetter):Float;
-	public var scaleX(scaleXGetter, scaleXSetter):Float;
+	public var offsetX(get, set):Float;
+	public var offsetY(get, set):Float;
+	public var bitmapData(get, set):BitmapData;
+	public var scaleY(get, set):Float;
+	public var scaleX(get, set):Float;
 	
 	private var _bitmapData : BitmapData;
 	private var _offsetX : Float;
@@ -81,11 +81,11 @@ class BitmapDataZone implements Zone2D
 	/**
 	 * The bitmapData object that defines the zone.
 	 */
-	private function bitmapDataGetter() : BitmapData
+	private function get_bitmapData() : BitmapData
 	{
 		return _bitmapData;
 	}
-	private function bitmapDataSetter( value : BitmapData ) : BitmapData
+	private function set_bitmapData( value : BitmapData ) : BitmapData
 	{
 		_bitmapData = value;
 		invalidate();
@@ -96,11 +96,11 @@ class BitmapDataZone implements Zone2D
 	 * A horizontal offset to apply to the pixels in the BitmapData object 
 	 * to reposition the zone
 	 */
-	private function offsetXGetter() : Float
+	private function get_offsetX() : Float
 	{
 		return _offsetX;
 	}
-	private function offsetXSetter( value : Float ) : Float
+	private function set_offsetX( value : Float ) : Float
 	{
 		_offsetX = value;
 		return _offsetX;
@@ -110,11 +110,11 @@ class BitmapDataZone implements Zone2D
 	 * A vertical offset to apply to the pixels in the BitmapData object 
 	 * to reposition the zone
 	 */
-	private function offsetYGetter() : Float
+	private function get_offsetY() : Float
 	{
 		return _offsetY;
 	}
-	private function offsetYSetter( value : Float ) : Float
+	private function set_offsetY( value : Float ) : Float
 	{
 		_offsetY = value;
 		return _offsetY;
@@ -123,11 +123,11 @@ class BitmapDataZone implements Zone2D
 	/**
 	 * A scale factor to stretch the bitmap horizontally
 	 */
-	private function scaleXGetter() : Float
+	private function get_scaleX() : Float
 	{
 		return _scaleX;
 	}
-	private function scaleXSetter( value : Float ) : Float
+	private function set_scaleX( value : Float ) : Float
 	{
 		_scaleX = value;
 		return _scaleX;
@@ -136,11 +136,11 @@ class BitmapDataZone implements Zone2D
 	/**
 	 * A scale factor to stretch the bitmap vertically
 	 */
-	private function scaleYGetter() : Float
+	private function get_scaleY() : Float
 	{
 		return _scaleY;
 	}
-	private function scaleYSetter( value : Float ) : Float
+	private function set_scaleY( value : Float ) : Float
 	{
 		_scaleY = value;
 		return _scaleY;

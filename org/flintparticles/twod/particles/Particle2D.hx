@@ -30,7 +30,7 @@
 
 package org.flintparticles.twod.particles;
 
-import nme.geom.Matrix;
+import flash.geom.Matrix;
 import org.flintparticles.common.particles.Particle;
 import org.flintparticles.common.particles.ParticleFactory;
 
@@ -47,8 +47,8 @@ import org.flintparticles.common.particles.ParticleFactory;
  */
 class Particle2D extends Particle
 {
-	public var matrixTransform(matrixTransformGetter,null):Matrix;
-	public var inertia(inertiaGetter, null):Float;
+	public var matrixTransform(get, never):Matrix;
+	public var inertia(get, never):Float;
 	
 	/**
 	 * The x coordinate of the particle in pixels.
@@ -91,7 +91,7 @@ class Particle2D extends Particle
 	/**
 	 * The moment of inertia of the particle about its center point
 	 */
-	private function inertiaGetter():Float
+	private function get_inertia():Float
 	{
 		if( mass != _previousMass || collisionRadius != _previousRadius )
 		{
@@ -146,7 +146,7 @@ class Particle2D extends Particle
 	/**
 	 * A transformation matrix for the position, scale and rotation of the particle.
 	 */
-	private function matrixTransformGetter():Matrix
+	private function get_matrixTransform():Matrix
 	{
 		var cos:Float = scale * Math.cos( rotation );
 		var sin:Float = scale * Math.sin( rotation );

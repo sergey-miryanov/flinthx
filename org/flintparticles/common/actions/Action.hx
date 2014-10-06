@@ -55,7 +55,7 @@ import org.flintparticles.common.actions.Action;
  * @see org.flintparticles.common.emitters.Emitter#addAction()
  * @see org.flintparticles.common.emitters.Emitter#removeAction()
  */
-interface Action implements Behaviour
+interface Action extends Behaviour
 {
 	/**
 	 * The update method is used by the emitter to apply the action

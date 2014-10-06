@@ -30,7 +30,7 @@
 
 package org.flintparticles.threed.actions;
 
-import nme.geom.Vector3D;
+import flash.geom.Vector3D;
 import org.flintparticles.common.particles.Particle;
 import org.flintparticles.common.actions.ActionBase;
 import org.flintparticles.common.emitters.Emitter;
@@ -46,9 +46,9 @@ import org.flintparticles.threed.particles.Particle3D;
  */
 class MutualGravity extends ActionBase
 {
-	public var power(powerGetter,powerSetter):Float;
-	public var epsilon(epsilonGetter,epsilonSetter):Float;
-	public var maxDistance(maxDistanceGetter,maxDistanceSetter):Float;
+	public var power(get, set):Float;
+	public var epsilon(get, set):Float;
+	public var maxDistance(get, set):Float;
 	
 	private var _power:Float;
 	private var _maxDistance:Float;
@@ -88,11 +88,11 @@ class MutualGravity extends ActionBase
 	/**
 	 * The strength of the gravity force.
 	 */
-	private function powerGetter():Float
+	private function get_power():Float
 	{
 		return _power / _gravityConst;
 	}
-	private function powerSetter( value:Float ):Float
+	private function set_power( value:Float ):Float
 	{
 		_power = value * _gravityConst;
 		return _power;
@@ -104,11 +104,11 @@ class MutualGravity extends ActionBase
 	 * since often only the closest other particles have a significant effect on the 
 	 * motion of a particle.
 	 */
-	private function maxDistanceGetter():Float
+	private function get_maxDistance():Float
 	{
 		return _maxDistance;
 	}
-	private function maxDistanceSetter( value:Float ):Float
+	private function set_maxDistance( value:Float ):Float
 	{
 		_maxDistance = value;
 		_maxDistanceSq = value * value;
@@ -121,11 +121,11 @@ class MutualGravity extends ActionBase
 	 * this distance away. This stops the gravity effect blowing up as distances get 
 	 * small.
 	 */
-	private function epsilonGetter():Float
+	private function get_epsilon():Float
 	{
 		return Math.sqrt( _epsilonSq );
 	}
-	private function epsilonSetter( value:Float ):Float
+	private function set_epsilon( value:Float ):Float
 	{
 		_epsilonSq = value * value;
 		return _epsilonSq;

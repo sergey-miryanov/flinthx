@@ -40,7 +40,7 @@ import org.flintparticles.common.initializers.DictionaryInitializer;
  */
 class DictionaryInitializer extends InitializerBase 
 {
-	public var initValues(initValuesGetter,initValuesSetter):Dynamic;
+	public var initValues(get, set):Dynamic;
 	private var _initValues:Dynamic;
 	
 	/**
@@ -63,11 +63,11 @@ class DictionaryInitializer extends InitializerBase
 	 * The object containing the properties for copying to the particle's dictionary.
 	 * May be an object or a dictionary.
 	 */
-	private function initValuesGetter():Dynamic
+	private function get_initValues():Dynamic
 	{
 		return _initValues;
 	}
-	private function initValuesSetter( value:Dynamic ):Dynamic
+	private function set_initValues( value:Dynamic ):Dynamic
 	{
 		_initValues = value;
 		return _initValues;

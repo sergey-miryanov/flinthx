@@ -30,7 +30,7 @@
 
 package org.flintparticles.threed.zones;
 
-import nme.geom.Vector3D;
+import flash.geom.Vector3D;
 import org.flintparticles.threed.geom.Vector3DUtils;
 
 /**
@@ -38,8 +38,8 @@ import org.flintparticles.threed.geom.Vector3DUtils;
  */
 class LineZone implements Zone3D 
 {
-	public var end(endGetter,null):Vector3D;
-	public var start(startGetter,null):Vector3D;
+	public var end(get, set):Vector3D;
+	public var start(get, set):Vector3D;
 	
 	private var _start:Vector3D;
 	private var _end:Vector3D;
@@ -60,11 +60,11 @@ class LineZone implements Zone3D
 	/**
 	 * The point at one end of the line.
 	 */
-	private function startGetter() : Vector3D
+	private function get_start() : Vector3D
 	{
 		return _start.clone();
 	}
-	private function startSetter( value : Vector3D ) : Void
+	private function set_start( value : Vector3D ) : Void
 	{
 		_start = Vector3DUtils.clonePoint( value );
 		setLength();
@@ -73,11 +73,11 @@ class LineZone implements Zone3D
 	/**
 	 * The point at the other end of the line.
 	 */
-	private function endGetter() : Vector3D
+	private function get_end() : Vector3D
 	{
 		return _end.clone();
 	}
-	private function endSetter( value : Vector3D ) : Void
+	private function set_end( value : Vector3D ) : Void
 	{
 		_end = Vector3DUtils.clonePoint( value );
 		setLength();

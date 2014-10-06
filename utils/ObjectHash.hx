@@ -1,8 +1,6 @@
 package utils;
 
-#if flash
-import flash.utils.TypedDictionary;
-#end
+import haxe.ds.ObjectMap;
 
 /**
 * Example: 
@@ -22,11 +20,11 @@ class ObjectHash {
 	
 	#if flash
 	
-	private var dictionary:TypedDictionary <Dynamic,Dynamic>;
+	private var dictionary:ObjectMap <Dynamic,Dynamic>;
 	
 	#else
 	
-	private var hash:IntHash <Dynamic>;
+	private var hash:Map <Int,Dynamic>;
 	
 	#end
 	
@@ -36,11 +34,11 @@ class ObjectHash {
 		
 		#if flash
 		
-		dictionary = new TypedDictionary <Dynamic,Dynamic> ();
+		dictionary = new ObjectMap <Dynamic,Dynamic> ();
 		
 		#else
 		
-		hash = new IntHash <Dynamic> ();
+		hash = new Map <Int,Dynamic> ();
 		
 		#end
 		
@@ -130,7 +128,7 @@ class ObjectHash {
 		
 		#if flash
 		
-		dictionary.delete (key);
+		dictionary.remove (key);
 		
 		#else
 		

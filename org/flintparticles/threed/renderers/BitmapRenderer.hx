@@ -30,18 +30,18 @@
 
 package org.flintparticles.threed.renderers;
 
-import nme.display.Bitmap;
-import nme.display.BitmapData;
-import nme.display.BlendMode;
-import nme.display.DisplayObject;
-import nme.display.PixelSnapping;
-import nme.filters.BitmapFilter;
-import nme.geom.Matrix;
-import nme.geom.Matrix3D;
-import nme.geom.Point;
-import nme.geom.Rectangle;
-import nme.geom.Vector3D;
-import nme.Vector;
+import flash.display.Bitmap;
+import flash.display.BitmapData;
+import flash.display.BlendMode;
+import flash.display.DisplayObject;
+import flash.display.PixelSnapping;
+import flash.filters.BitmapFilter;
+import flash.geom.Matrix;
+import flash.geom.Matrix3D;
+import flash.geom.Point;
+import flash.geom.Rectangle;
+import flash.geom.Vector3D;
+import flash.Vector;
 import org.flintparticles.common.renderers.SpriteRendererBase;
 import org.flintparticles.threed.geom.Quaternion;
 import org.flintparticles.threed.particles.Particle3D;
@@ -76,13 +76,13 @@ import org.flintparticles.threed.particles.Particle3D;
  */
 class BitmapRenderer extends SpriteRendererBase
 {
-	public var preFilters(preFiltersGetter,preFiltersSetter):Array<Dynamic>;
-	public var postFilters(postFiltersGetter,postFiltersSetter):Array<Dynamic>;
-	public var canvas(canvasGetter,canvasSetter):Rectangle;
-	public var smoothing(smoothingGetter,smoothingSetter):Bool;
-	public var camera(cameraGetter,cameraSetter):Camera;
-	public var zSort(zSortGetter,zSortSetter):Bool;
-	public var bitmapData(bitmapDataGetter,null):BitmapData;
+	public var preFilters(get, set):Array<Dynamic>;
+	public var postFilters(get, set):Array<Dynamic>;
+	public var canvas(get, set):Rectangle;
+	public var smoothing(get, set):Bool;
+	public var camera(get, set):Camera;
+	public var zSort(get, set):Bool;
+	public var bitmapData(get, never):BitmapData;
 	
 	public static inline var ZERO_POINT:Point = new Point( 0, 0 );
 
@@ -176,11 +176,11 @@ class BitmapRenderer extends SpriteRendererBase
 	/**
 	 * Indicates whether the particles should be sorted in distance order for display.
 	 */
-	private function zSortGetter():Bool
+	private function get_zSort():Bool
 	{
 		return _zSort;
 	}
-	private function zSortSetter( value:Bool ):Bool
+	private function set_zSort( value:Bool ):Bool
 	{
 		_zSort = value;
 		return _zSort;
@@ -189,11 +189,11 @@ class BitmapRenderer extends SpriteRendererBase
 	/**
 	 * The camera controls the view for the renderer
 	 */
-	private function cameraGetter():Camera
+	private function get_camera():Camera
 	{
 		return _camera;
 	}
-	private function cameraSetter( value:Camera ):Camera
+	private function set_camera( value:Camera ):Camera
 	{
 		_camera = value;
 		return _camera;
@@ -258,11 +258,11 @@ class BitmapRenderer extends SpriteRendererBase
 	/**
 	 * The array of all filters being applied before rendering.
 	 */
-	private function preFiltersGetter():Array<Dynamic>
+	private function get_preFilters():Array<Dynamic>
 	{
 		return _preFilters.slice(_preFilters.length);
 	}
-	private function preFiltersSetter( value:Array<Dynamic> ):Array<Dynamic>
+	private function set_preFilters( value:Array<Dynamic> ):Array<Dynamic>
 	{
 		var filter:BitmapFilter;
 		for( filter in _preFilters )
@@ -279,11 +279,11 @@ class BitmapRenderer extends SpriteRendererBase
 	/**
 	 * The array of all filters being applied before rendering.
 	 */
-	private function postFiltersGetter():Array<Dynamic>
+	private function get_postFilters():Array<Dynamic>
 	{
 		return _postFilters.slice(_postFilters.length);
 	}
-	private function postFiltersSetter( value:Array<Dynamic> ):Array<Dynamic>
+	private function set_postFilters( value:Array<Dynamic> ):Array<Dynamic>
 	{
 		var filter:BitmapFilter;
 		for( filter in _postFilters )
@@ -351,22 +351,22 @@ class BitmapRenderer extends SpriteRendererBase
 	 * The canvas is the area within the renderer on which particles can be drawn.
 	 * Particles outside this area will not be drawn.
 	 */
-	private function canvasGetter():Rectangle
+	private function get_canvas():Rectangle
 	{
 		return _canvas;
 	}
-	private function canvasSetter( value:Rectangle ):Rectangle
+	private function set_canvas( value:Rectangle ):Rectangle
 	{
 		_canvas = value;
 		createBitmap();
 		return _canvas;
 	}
 
-	private function smoothingGetter():Bool
+	private function get_smoothing():Bool
 	{
 		return _smoothing;
 	}
-	private function smoothingSetter( value:Bool ):Bool
+	private function set_smoothing( value:Bool ):Bool
 	{
 		_smoothing = value;
 		if( _bitmap != null )
@@ -555,7 +555,7 @@ class BitmapRenderer extends SpriteRendererBase
 	/**
 	 * The bitmap data of the renderer.
 	 */
-	private function bitmapDataGetter() : BitmapData
+	private function get_bitmapData() : BitmapData
 	{
 		return _bitmapData;
 	}

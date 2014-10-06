@@ -30,7 +30,7 @@
 
 package org.flintparticles.threed.actions;
 
-import nme.geom.Vector3D;
+import flash.geom.Vector3D;
 import org.flintparticles.common.particles.Particle;
 import org.flintparticles.common.actions.ActionBase;
 import org.flintparticles.common.emitters.Emitter;
@@ -45,8 +45,8 @@ import org.flintparticles.threed.particles.Particle3D;
 
 class TweenPosition extends ActionBase
 {
-	public var end(endGetter,endSetter):Vector3D;
-	public var start(startGetter,startSetter):Vector3D;
+	public var end(get, set):Vector3D;
+	public var start(get, set):Vector3D;
 	
 	private var _start:Vector3D;
 	private var _end:Vector3D;
@@ -78,11 +78,11 @@ class TweenPosition extends ActionBase
 	/**
 	 * The x position for the particle at the start of its life.
 	 */
-	private function startGetter():Vector3D
+	private function get_start():Vector3D
 	{
 		return _start;
 	}
-	private function startSetter( value:Vector3D ):Vector3D
+	private function set_start( value:Vector3D ):Vector3D
 	{
 		_start = Vector3DUtils.clonePoint( value );
 		if( _end != null )
@@ -95,11 +95,11 @@ class TweenPosition extends ActionBase
 	/**
 	 * The X value for the particle at the end of its life.
 	 */
-	private function endGetter():Vector3D
+	private function get_end():Vector3D
 	{
 		return _end;
 	}
-	private function endSetter( value:Vector3D ):Vector3D
+	private function set_end( value:Vector3D ):Vector3D
 	{
 		_end = Vector3DUtils.clonePoint( value );
 		if( _start != null )

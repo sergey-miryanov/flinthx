@@ -42,9 +42,9 @@ import org.flintparticles.twod.particles.Particle2D;
 
 class TurnTowardsPoint extends ActionBase
 {
-	public var x(xGetter,xSetter):Float;
-	public var y(yGetter,ySetter):Float;
-	public var power(powerGetter, powerSetter):Float;
+	public var x(get, set):Float;
+	public var y(get, set):Float;
+	public var power(get, set):Float;
 	
 	private var _x:Float;
 	private var _y:Float;
@@ -72,11 +72,11 @@ class TurnTowardsPoint extends ActionBase
 	/**
 	 * The strength of the turn action. Higher values produce a sharper turn.
 	 */
-	private function powerGetter():Float
+	private function get_power():Float
 	{
 		return _power;
 	}
-	private function powerSetter( value:Float ):Float
+	private function set_power( value:Float ):Float
 	{
 		_power = value;
 		return _power;
@@ -85,11 +85,11 @@ class TurnTowardsPoint extends ActionBase
 	/**
 	 * The x coordinate of the point that the particle turns towards.
 	 */
-	private function xGetter():Float
+	private function get_x():Float
 	{
 		return _x;
 	}
-	private function xSetter( value:Float ):Float
+	private function set_x( value:Float ):Float
 	{
 		_x = value;
 		return _x;
@@ -98,11 +98,11 @@ class TurnTowardsPoint extends ActionBase
 	/**
 	 * The y coordinate of the point that the particle turns towards.
 	 */
-	private function yGetter():Float
+	private function get_y():Float
 	{
 		return _y;
 	}
-	private function ySetter( value:Float ):Float
+	private function set_y( value:Float ):Float
 	{
 		_y = value;
 		return _y;

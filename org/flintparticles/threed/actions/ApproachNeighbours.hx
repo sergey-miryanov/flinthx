@@ -30,7 +30,7 @@
 
 package org.flintparticles.threed.actions;
 
-import nme.geom.Vector3D;
+import flash.geom.Vector3D;
 import org.flintparticles.common.particles.Particle;
 import org.flintparticles.common.actions.ActionBase;
 import org.flintparticles.common.emitters.Emitter;
@@ -49,8 +49,8 @@ import org.flintparticles.threed.particles.Particle3D;
 
 class ApproachNeighbours extends ActionBase
 {
-	public var acceleration(accelerationGetter,accelerationSetter):Float;
-	public var maxDistance(maxDistanceGetter, maxDistanceSetter):Float;
+	public var acceleration(get, set):Float;
+	public var maxDistance(get, set):Float;
 	
 	private var _max:Float;
 	private var _acc:Float;
@@ -88,11 +88,11 @@ class ApproachNeighbours extends ActionBase
 	 * The maximum distance, in pixels, over which this action operates. Particles
 	 * further away than this distance are ignored.
 	 */
-	private function maxDistanceGetter():Float
+	private function get_maxDistance():Float
 	{
 		return _max;
 	}
-	private function maxDistanceSetter( value:Float ):Float
+	private function set_maxDistance( value:Float ):Float
 	{
 		_max = value;
 		_maxSq = value * value;
@@ -102,11 +102,11 @@ class ApproachNeighbours extends ActionBase
 	/**
 	 * The acceleration force applied to approach the other particles.
 	 */
-	private function accelerationGetter():Float
+	private function get_acceleration():Float
 	{
 		return _acc;
 	}
-	private function accelerationSetter( value:Float ):Float
+	private function set_acceleration( value:Float ):Float
 	{
 		_acc = value;
 		return _acc;

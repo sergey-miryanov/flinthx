@@ -53,7 +53,7 @@ import org.flintparticles.common.activities.Activity;
  */
 class ActivityBase implements Activity
 {
-	public var priority(priorityGetter,prioritySetter):Int;
+	public var priority(get, set):Int;
 	private var _priority:Int;
 
 	/**
@@ -71,11 +71,11 @@ class ActivityBase implements Activity
 	 * 
 	 * @see org.flintparticles.common.actions.Activity#getDefaultPriority()
 	 */
-	private function priorityGetter():Int
+	private function get_priority():Int
 	{
 		return _priority;
 	}
-	private function prioritySetter( value:Int ):Int
+	private function set_priority( value:Int ):Int
 	{
 		_priority = value;
 		return _priority;

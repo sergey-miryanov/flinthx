@@ -41,9 +41,9 @@ import org.flintparticles.common.counters.Counter;
  */
 class Steady implements Counter
 {
-	public var running(runningGetter,null):Bool;
-	public var complete(completeGetter,null):Bool;
-	public var rate(rateGetter, rateSetter):Float;
+	public var running(get, never):Bool;
+	public var complete(get, never):Bool;
+	public var rate(get, set):Float;
 	
 	private var _timeToNext:Float;
 	private var _rate:Float;
@@ -83,11 +83,12 @@ class Steady implements Counter
 	/**
 	 * The number of particles to emit per second.
 	 */
-	private function rateGetter():Float
+	private function get_rate():Float
 	{
 		return _rate;
 	}
-	private function rateSetter( value:Float ):Float
+    
+	private function set_rate( value:Float ):Float
 	{
 		//if( !value || value < 0 )
 		if( value < 0 )
@@ -165,7 +166,7 @@ class Steady implements Counter
 	 * Indicates if the counter has emitted all its particles. For this counter
 	 * this will always be false.
 	 */
-	public function completeGetter():Bool
+	public function get_complete():Bool
 	{
 		return false;
 	}
@@ -173,7 +174,7 @@ class Steady implements Counter
 	/**
 	 * Indicates if the counter is currently emitting particles
 	 */
-	public function runningGetter():Bool
+	public function get_running():Bool
 	{
 		return _running;
 	}

@@ -45,8 +45,8 @@ import org.flintparticles.common.initializers.ImageClass;
  */
 class ImageClass extends ImageInitializerBase
 {
-	public var imageClass(imageClassGetter,imageClassSetter):Dynamic;
-	public var parameters(parametersGetter, parametersSetter):Array<Dynamic>;
+	public var imageClass(get, set):Dynamic;
+	public var parameters(get, set):Array<Dynamic>;
 	
 	private var _imageClass:Dynamic;
 	private var _parameters:Array<Dynamic>;
@@ -82,11 +82,11 @@ class ImageClass extends ImageInitializerBase
 	 * The class to use when creating
 	 * the particles' DisplayObjects.
 	 */
-	private function imageClassGetter():Dynamic
+	private function get_imageClass():Dynamic
 	{
 		return _imageClass;
 	}
-	private function imageClassSetter( value:Dynamic ):Dynamic
+	private function set_imageClass( value:Dynamic ):Dynamic
 	{
 		_imageClass = value;
 		if( _usePool )
@@ -100,11 +100,11 @@ class ImageClass extends ImageInitializerBase
 	 * The parameters to pass to the constructor
 	 * for the image class.
 	 */
-	private function parametersGetter():Array<Dynamic>
+	private function get_parameters():Array<Dynamic>
 	{
 		return _parameters;
 	}
-	private function parametersSetter( value:Array<Dynamic> ):Array<Dynamic>
+	private function set_parameters( value:Array<Dynamic> ):Array<Dynamic>
 	{
 		_parameters = value;
 		if( _usePool )

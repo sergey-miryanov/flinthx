@@ -48,7 +48,7 @@ import org.flintparticles.common.activities.Activity;
  * @see org.flintparticles.common.emitters.Emitter#addActivity()
  * @see org.flintparticles.common.emitters.Emitter#removeActivity()
  */
-interface Activity implements Behaviour
+interface Activity extends Behaviour
 {
 	/**
 	 * The initialize method is used by the emitter to start the activity.

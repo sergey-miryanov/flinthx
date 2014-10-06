@@ -55,7 +55,7 @@ import org.flintparticles.common.behaviours.Behaviour;
  * @see org.flintparticles.common.emitters.Emitter#addInitializer()
  * @see org.flintparticles.common.emitters.Emitter#removeInitializer()
  */
-interface Initializer implements Behaviour
+interface Initializer extends Behaviour
 {
 	/**
 	 * The initialize method is used by the emitter to apply the initialization

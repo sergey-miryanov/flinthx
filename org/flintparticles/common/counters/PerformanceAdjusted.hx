@@ -30,8 +30,8 @@
 
 package org.flintparticles.common.counters;
 
-import nme.Lib;
-import nme.Vector;
+import flash.Lib;
+import flash.Vector;
 import org.flintparticles.common.particles.Particle;
 import org.flintparticles.common.emitters.Emitter;
 import org.flintparticles.common.counters.PerformanceAdjusted;
@@ -46,11 +46,11 @@ import org.flintparticles.common.counters.Counter;
  */
 class PerformanceAdjusted implements Counter
 {
-	public var targetFrameRate(targetFrameRateGetter,targetFrameRateSetter):Float;
-	public var running(runningGetter,null):Bool;
-	public var rateMin(rateMinGetter,rateMinSetter):Float;
-	public var complete(completeGetter,null):Bool;
-	public var rateMax(rateMaxGetter, rateMaxSetter):Float;
+	public var targetFrameRate(get, set):Float;
+	public var running(get, never):Bool;
+	public var rateMin(get, set):Float;
+	public var complete(get, never):Bool;
+	public var rateMax(get, set):Float;
 	
 	private var _timeToNext:Float;
 	private var _rateMin:Float;
@@ -91,11 +91,11 @@ class PerformanceAdjusted implements Counter
 	 * The minimum number of particles to emit per second. The counter
 	 * will never drop the rate below this value.
 	 */
-	public function rateMinGetter():Float
+	public function get_rateMin():Float
 	{
 		return _rateMin;
 	}
-	public function rateMinSetter( value:Float ):Float
+	public function set_rateMin( value:Float ):Float
 	{
 		_rateMin = value;
 		_timeToRateCheck = 0;
@@ -107,11 +107,11 @@ class PerformanceAdjusted implements Counter
 	 * will start at this rate and adjust downwards if the frame rate is
 	 * below the target frame rate.
 	 */
-	public function rateMaxGetter():Float
+	public function get_rateMax():Float
 	{
 		return _rateMax;
 	}
-	public function rateMaxSetter( value:Float ):Float
+	public function set_rateMax( value:Float ):Float
 	{
 		_rate = _rateMax = value;
 		_timeToRateCheck = 0;
@@ -125,11 +125,11 @@ class PerformanceAdjusted implements Counter
 	 * movie's frame rate is 30fps and you want to target this rate, set the 
 	 * target rate to 26fps.
 	 */
-	public function targetFrameRateGetter():Float
+	public function get_targetFrameRate():Float
 	{
 		return _target;
 	}
-	public function targetFrameRateSetter( value:Float ):Float
+	public function set_targetFrameRate( value:Float ):Float
 	{
 		_target = value;
 		return _target;
@@ -235,7 +235,7 @@ class PerformanceAdjusted implements Counter
 	 * Indicates if the counter has emitted all its particles. For this counter
 	 * this will always be false.
 	 */
-	public function completeGetter():Bool
+	public function get_complete():Bool
 	{
 		return false;
 	}
@@ -243,7 +243,7 @@ class PerformanceAdjusted implements Counter
 	/**
 	 * Indicates if the counter is currently emitting particles
 	 */
-	public function runningGetter():Bool
+	public function get_running():Bool
 	{
 		return _running;
 	}

@@ -30,7 +30,7 @@
 
 package org.flintparticles.threed.actions;
 
-import nme.geom.Vector3D;
+import flash.geom.Vector3D;
 import org.flintparticles.common.particles.Particle;
 import org.flintparticles.common.actions.ActionBase;
 import org.flintparticles.common.emitters.Emitter;
@@ -44,10 +44,10 @@ import org.flintparticles.threed.particles.Particle3D;
  */
 class Accelerate extends ActionBase
 {
-	public var x(xGetter,xSetter):Float;
-	public var y(yGetter,ySetter):Float;
-	public var z(zGetter,zSetter):Float;
-	public var acceleration(accelerationGetter, accelerationSetter):Vector3D;
+	public var x(get, set):Float;
+	public var y(get, set):Float;
+	public var z(get, set):Float;
+	public var acceleration(get, set):Vector3D;
 	
 	private var _acc:Vector3D;
 	
@@ -70,11 +70,11 @@ class Accelerate extends ActionBase
 	/**
 	 * The acceleration, in coordinate units per second per second.
 	 */
-	private function accelerationGetter():Vector3D
+	private function get_acceleration():Vector3D
 	{
 		return _acc;
 	}
-	private function accelerationSetter( value:Vector3D ):Vector3D
+	private function set_acceleration( value:Vector3D ):Vector3D
 	{
 		_acc = value.clone();
 		_acc.w = 0;
@@ -85,11 +85,11 @@ class Accelerate extends ActionBase
 	 * The x coordinate of the acceleration, in
 	 * coordinate units per second per second.
 	 */
-	private function xGetter():Float
+	private function get_x():Float
 	{
 		return _acc.x;
 	}
-	private function xSetter( value:Float ):Float
+	private function set_x( value:Float ):Float
 	{
 		_acc.x = value;
 		return value;
@@ -99,11 +99,11 @@ class Accelerate extends ActionBase
 	 * The y coordinate of the acceleration, in
 	 * coordinate units per second per second.
 	 */
-	private function yGetter():Float
+	private function get_y():Float
 	{
 		return _acc.y;
 	}
-	private function ySetter( value:Float ):Float
+	private function set_y( value:Float ):Float
 	{
 		_acc.y = value;
 		return value;
@@ -113,11 +113,11 @@ class Accelerate extends ActionBase
 	 * The z coordinate of the acceleration, in
 	 * coordinate units per second per second.
 	 */
-	private function zGetter():Float
+	private function get_z():Float
 	{
 		return _acc.z;
 	}
-	private function zSetter( value:Float ):Float
+	private function set_z( value:Float ):Float
 	{
 		_acc.z = value;
 		return value;

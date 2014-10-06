@@ -42,9 +42,9 @@ import org.flintparticles.common.initializers.InitializerBase;
  */
 class Lifetime extends InitializerBase
 {
-	public var maxLifetime(maxLifetimeGetter,maxLifetimeSetter):Float;
-	public var lifetime(lifetimeGetter,lifetimeSetter):Float;
-	public var minLifetime(minLifetimeGetter, minLifetimeSetter):Float;
+	public var maxLifetime(get, set):Float;
+	public var lifetime(get, set):Float;
+	public var minLifetime(get, set):Float;
 	
 	private var _max:Float;
 	private var _min:Float;
@@ -77,11 +77,11 @@ class Lifetime extends InitializerBase
 	 * The minimum lifetime for particles initialised by 
 	 * this initializer. Should be between 0 and 1.
 	 */
-	private function minLifetimeGetter():Float
+	private function get_minLifetime():Float
 	{
 		return _min;
 	}
-	private function minLifetimeSetter( value:Float ):Float
+	private function set_minLifetime( value:Float ):Float
 	{
 		_min = value;
 		return _min;
@@ -91,11 +91,11 @@ class Lifetime extends InitializerBase
 	 * The maximum lifetime for particles initialised by 
 	 * this initializer. Should be between 0 and 1.
 	 */
-	private function maxLifetimeGetter():Float
+	private function get_maxLifetime():Float
 	{
 		return _max;
 	}
-	private function maxLifetimeSetter( value:Float ):Float
+	private function set_maxLifetime( value:Float ):Float
 	{
 		_max = value;
 		return _max;
@@ -106,11 +106,11 @@ class Lifetime extends InitializerBase
 	 * When writing this sets both maxLifetime and minLifetime to the 
 	 * same lifetime value.
 	 */
-	private function lifetimeGetter():Float
+	private function get_lifetime():Float
 	{
 		return _min == _max ? _min : ( _max + _min ) * 0.5;
 	}
-	private function lifetimeSetter( value:Float ):Float
+	private function set_lifetime( value:Float ):Float
 	{
 		_max = _min = value;
 		return value;

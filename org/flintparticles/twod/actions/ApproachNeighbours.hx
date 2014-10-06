@@ -57,8 +57,8 @@ import org.flintparticles.twod.particles.Particle2D;
 
 class ApproachNeighbours extends ActionBase
 {
-	public var acceleration(accelerationGetter,accelerationSetter):Float;
-	public var maxDistance(maxDistanceGetter, maxDistanceSetter):Float;
+	public var acceleration(get, set):Float;
+	public var maxDistance(get, set):Float;
 	
 	private var _max:Float;
 	private var _acc:Float;
@@ -88,11 +88,11 @@ class ApproachNeighbours extends ActionBase
 	 * The maximum distance, in pixels, over which this action operates.
 	 * Particles further apart than this distance ignore each other.
 	 */
-	public function maxDistanceGetter():Float
+	public function get_maxDistance():Float
 	{
 		return _max;
 	}
-	public function maxDistanceSetter( value:Float ):Float
+	public function set_maxDistance( value:Float ):Float
 	{
 		_max = value;
 		_maxSq = value * value;
@@ -102,11 +102,11 @@ class ApproachNeighbours extends ActionBase
 	/**
 	 * The acceleration applied to approach the other particles.
 	 */
-	public function accelerationGetter():Float
+	public function get_acceleration():Float
 	{
 		return _acc;
 	}
-	public function accelerationSetter( value:Float ):Float
+	public function set_acceleration( value:Float ):Float
 	{
 		_acc = value;
 		return _acc;

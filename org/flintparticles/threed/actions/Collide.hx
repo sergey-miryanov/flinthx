@@ -30,7 +30,7 @@
 
 package org.flintparticles.threed.actions;
 
-import nme.geom.Vector3D;
+import flash.geom.Vector3D;
 import org.flintparticles.common.particles.Particle;
 import org.flintparticles.common.actions.ActionBase;
 import org.flintparticles.common.activities.FrameUpdatable;
@@ -54,9 +54,9 @@ import org.flintparticles.threed.particles.Particle3D;
  * after other actions.</p>
  */
 
-class Collide extends ActionBase, implements FrameUpdatable
+class Collide extends ActionBase implements FrameUpdatable
 {
-	public var bounce(bounceGetter, bounceSetter):Float;
+	public var bounce(get, set):Float;
 	
 	private var _bounce:Float;
 	private var _maxDistance:Float;
@@ -98,11 +98,11 @@ class Collide extends ActionBase, implements FrameUpdatable
 	 * between 0 and 1 causes the particle to loose enegy in the collision. A value greater 
 	 * than 1 causes the particle to gain energy in the collision.
 	 */
-	private function bounceGetter():Float
+	private function get_bounce():Float
 	{
 		return _bounce;
 	}
-	private function bounceSetter( value:Float ):Float
+	private function set_bounce( value:Float ):Float
 	{
 		_bounce = value;
 		return _bounce;

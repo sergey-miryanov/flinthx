@@ -30,7 +30,7 @@
 
 package org.flintparticles.common.events;
 
-import nme.events.Event;
+import flash.events.Event;
 import org.flintparticles.common.particles.Particle;
 import org.flintparticles.common.events.ParticleEvent;
 

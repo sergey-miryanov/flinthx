@@ -40,11 +40,11 @@ import org.flintparticles.common.counters.Counter;
  */
 class SineCounter implements Counter
 {
-	public var running(runningGetter,null):Bool;
-	public var period(periodGetter,periodSetter):Float;
-	public var rateMin(rateMinGetter,rateMinSetter):Float;
-	public var complete(completeGetter,null):Bool;
-	public var rateMax(rateMaxGetter, rateMaxSetter):Float;
+	public var running(get, never):Bool;
+	public var period(get, set):Float;
+	public var rateMin(get, set):Float;
+	public var complete(get, never):Bool;
+	public var rateMax(get, set):Float;
 	
 	private var _emitted:Float;
 	private var _rateMin:Float;
@@ -98,11 +98,11 @@ class SineCounter implements Counter
 	 * The number of particles to emit per second at the bottom
 	 * of the sine wave.
 	 */
-	private function rateMinGetter():Float
+	private function get_rateMin():Float
 	{
 		return _rateMin;
 	}
-	private function rateMinSetter( value:Float ):Float
+	private function set_rateMin( value:Float ):Float
 	{
 		_rateMin = value;
 		_scale = 0.5 * ( _rateMax - _rateMin );
@@ -113,11 +113,11 @@ class SineCounter implements Counter
 	 * The number of particles emitted per second at the peak of
 	 * the sine wave.
 	 */
-	private function rateMaxGetter():Float
+	private function get_rateMax():Float
 	{
 		return _rateMax;
 	}
-	private function rateMaxSetter( value:Float ):Float
+	private function set_rateMax( value:Float ):Float
 	{
 		_rateMax = value;
 		_scale = 0.5 * ( _rateMax - _rateMin );
@@ -127,11 +127,11 @@ class SineCounter implements Counter
 	/**
 	 * The period of the sine wave used, in seconds.
 	 */
-	private function periodGetter():Float
+	private function get_period():Float
 	{
 		return _period;
 	}
-	private function periodSetter( value:Float ):Float
+	private function set_period( value:Float ):Float
 	{
 		_period = value;
 		_factor = 2 * Math.PI / _period;
@@ -188,7 +188,7 @@ class SineCounter implements Counter
 	 * Indicates if the counter has emitted all its particles. For this counter
 	 * this will always be false.
 	 */
-	public function completeGetter():Bool
+	public function get_complete():Bool
 	{
 		return false;
 	}
@@ -196,7 +196,7 @@ class SineCounter implements Counter
 	/**
 	 * Indicates if the counter is currently emitting particles
 	 */
-	public function runningGetter():Bool
+	public function get_running():Bool
 	{
 		return _running;
 	}

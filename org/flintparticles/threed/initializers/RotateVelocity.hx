@@ -30,7 +30,7 @@
 
 package org.flintparticles.threed.initializers;
 
-import nme.geom.Vector3D;
+import flash.geom.Vector3D;
 import org.flintparticles.common.particles.Particle;
 import org.flintparticles.common.emitters.Emitter;
 import org.flintparticles.common.initializers.InitializerBase;
@@ -45,10 +45,10 @@ import org.flintparticles.threed.particles.Particle3D;
 
 class RotateVelocity extends InitializerBase
 {
-	public var maxAngVelocity(maxAngVelocityGetter,maxAngVelocitySetter):Float;
-	public var angVelocity(angVelocityGetter,angVelocitySetter):Float;
-	public var axis(axisGetter,axisSetter):Vector3D;
-	public var minAngVelocity(minAngVelocityGetter,minAngVelocitySetter):Float;
+	public var maxAngVelocity(get, set):Float;
+	public var angVelocity(get, set):Float;
+	public var axis(get, set):Vector3D;
+	public var minAngVelocity(get, set):Float;
 	
 	private var _max:Float;
 	private var _min:Float;
@@ -82,11 +82,11 @@ class RotateVelocity extends InitializerBase
 	/**
 	 * The axis for the rotation.
 	 */
-	private function axisGetter():Vector3D
+	private function get_axis():Vector3D
 	{
 		return _axis;
 	}
-	private function axisSetter( value:Vector3D ):Vector3D
+	private function set_axis( value:Vector3D ):Vector3D
 	{
 		_axis = Vector3DUtils.cloneUnit( value );
 		return _axis;
@@ -96,11 +96,11 @@ class RotateVelocity extends InitializerBase
 	 * The minimum angular velocity value for particles initialised by 
 	 * this initializer. Should be between 0 and 1.
 	 */
-	private function minAngVelocityGetter():Float
+	private function get_minAngVelocity():Float
 	{
 		return _min;
 	}
-	private function minAngVelocitySetter( value:Float ):Float
+	private function set_minAngVelocity( value:Float ):Float
 	{
 		_min = value;
 		return value;
@@ -110,11 +110,11 @@ class RotateVelocity extends InitializerBase
 	 * The maximum angular velocity value for particles initialised by 
 	 * this initializer. Should be between 0 and 1.
 	 */
-	private function maxAngVelocityGetter():Float
+	private function get_maxAngVelocity():Float
 	{
 		return _max;
 	}
-	private function maxAngVelocitySetter( value:Float ):Float
+	private function set_maxAngVelocity( value:Float ):Float
 	{
 		_max = value;
 		return value;
@@ -125,7 +125,7 @@ class RotateVelocity extends InitializerBase
 	 * When writing this sets both maxAngVelocity and minAngVelocity to the 
 	 * same angular velocity value.
 	 */
-	public function angVelocityGetter():Float
+	public function get_angVelocity():Float
 	{
 		if( Math.isNaN( _max ) || _min == _max )
 		{
@@ -133,7 +133,7 @@ class RotateVelocity extends InitializerBase
 		}
 		return ( _max + _min ) / 2;
 	}
-	public function angVelocitySetter( value:Float ):Float
+	public function set_angVelocity( value:Float ):Float
 	{
 		_max = _min = value;
 		return value;

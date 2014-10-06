@@ -30,7 +30,7 @@
 
 package org.flintparticles.common.utils;
 
-import nme.Vector;
+import flash.Vector;
 import org.flintparticles.common.utils.FastWeightedArray;
 
 /**
@@ -50,8 +50,8 @@ import org.flintparticles.common.utils.FastWeightedArray;
  */
 class FastWeightedArray
 {
-	public var length(lengthGetter,null):Int;
-	public var totalRatios(totalRatiosGetter, null):Float;
+	public var length(get, never):Int;
+	public var totalRatios(get, never):Float;
 	
 	private var _values:Vector<Pair>;
 	private var _totalRatios:Float;
@@ -92,7 +92,7 @@ class FastWeightedArray
 	/**
 	 * The number of items in the FastWeightedArray
 	 */
-	private function lengthGetter():Int
+	private function get_length():Int
 	{
 		return _values.length;
 	}
@@ -100,7 +100,7 @@ class FastWeightedArray
 	/**
 	 * The sum of the weights of all the values.
 	 */
-	private function totalRatiosGetter():Float
+	private function get_totalRatios():Float
 	{
 		return _totalRatios;
 	}

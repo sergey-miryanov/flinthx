@@ -43,8 +43,8 @@ import org.flintparticles.twod.particles.Particle2D;
 
 class DeathSpeed extends ActionBase
 {
-	public var isMinimum(isMinimumGetter,isMinimumSetter):Bool;
-	public var limit(limitGetter, limitSetter):Float;
+	public var isMinimum(get, set):Bool;
+	public var limit(get, set):Float;
 	
 	private var _limit:Float;
 	private var _limitSq:Float;
@@ -72,11 +72,11 @@ class DeathSpeed extends ActionBase
 	/**
 	 * The speed limit beyond which the particle dies.
 	 */
-	public function limitGetter():Float
+	public function get_limit():Float
 	{
 		return _limit;
 	}
-	public function limitSetter( value:Float ):Float
+	public function set_limit( value:Float ):Float
 	{
 		_limit = value;
 		_limitSq = value * value;
@@ -86,11 +86,11 @@ class DeathSpeed extends ActionBase
 	/**
 	 * Whether the speed is a minimum (true) or maximum (false) speed.
 	 */
-	public function isMinimumGetter():Bool
+	public function get_isMinimum():Bool
 	{
 		return _isMinimum;
 	}
-	public function isMinimumSetter( value:Bool ):Bool
+	public function set_isMinimum( value:Bool ):Bool
 	{
 		_isMinimum = value;
 		return _isMinimum;

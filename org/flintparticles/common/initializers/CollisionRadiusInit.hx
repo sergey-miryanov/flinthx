@@ -43,7 +43,7 @@ import org.flintparticles.common.initializers.CollisionRadiusInit;
 
 class CollisionRadiusInit extends InitializerBase
 {
-	public var radius(radiusGetter,radiusSetter):Float;
+	public var radius(get, set):Float;
 	private var _radius:Float;
 	
 	/**
@@ -66,11 +66,11 @@ class CollisionRadiusInit extends InitializerBase
 	 * The collision radius for particles
 	 * initialized by the instance.
 	 */
-	private function radiusGetter():Float
+	private function get_radius():Float
 	{
 		return _radius;
 	}
-	private function radiusSetter( value:Float ):Float
+	private function set_radius( value:Float ):Float
 	{
 		_radius = value;
 		return _radius;

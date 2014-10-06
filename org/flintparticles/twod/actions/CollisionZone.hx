@@ -49,8 +49,8 @@ import org.flintparticles.twod.zones.Zone2D;
 
 class CollisionZone extends ActionBase
 {
-	public var zone(zoneGetter,zoneSetter):Zone2D;
-	public var bounce(bounceGetter, bounceSetter):Float;
+	public var zone(get, set):Zone2D;
+	public var bounce(get, set):Float;
 	
 	private var _bounce:Float;
 	private var _zone:Zone2D;
@@ -80,11 +80,11 @@ class CollisionZone extends ActionBase
 	/**
 	 * The zone that the particles should collide with.
 	 */
-	public function zoneGetter():Zone2D
+	public function get_zone():Zone2D
 	{
 		return _zone;
 	}
-	public function zoneSetter( value:Zone2D ):Zone2D
+	public function set_zone( value:Zone2D ):Zone2D
 	{
 		_zone = value;
 		return _zone;
@@ -96,11 +96,11 @@ class CollisionZone extends ActionBase
 	 * between 0 and 1 causes the particles to loose enegy in the collision. 
 	 * A value greater than 1 causes the particles to gain energy in the collision.
 	 */
-	public function bounceGetter():Float
+	public function get_bounce():Float
 	{
 		return _bounce;
 	}
-	public function bounceSetter( value:Float ):Float
+	public function set_bounce( value:Float ):Float
 	{
 		_bounce = value;
 		return _bounce;

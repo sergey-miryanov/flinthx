@@ -30,9 +30,9 @@
 
 package org.flintparticles.common.displayobjects;
 
-import nme.display.Shape;
-import nme.display.BlendMode;
-import nme.geom.Point;
+import flash.display.Shape;
+import flash.display.BlendMode;
+import flash.geom.Point;
 
 /**
  * The Star class is a DisplayObject that is the shape of a five point star. 
@@ -41,8 +41,8 @@ import nme.geom.Point;
 
 class Star extends Shape 
 {
-	public var radius(radiusGetter,radiusSetter):Float;
-	public var color(colorGetter, colorSetter):Int;
+	public var radius(get, set):Float;
+	public var color(get, set):Int;
 	
 	private var _radius:Float;
 	private var _color:Int;
@@ -96,22 +96,22 @@ class Star extends Shape
 		graphics.endFill();
 	}
 	
-	private function radiusGetter():Float
+	private function get_radius():Float
 	{
 		return _radius;
 	}
-	private function radiusSetter( value:Float ):Float
+	private function set_radius( value:Float ):Float
 	{
 		_radius = value;
 		draw();
 		return _radius;
 	}
 	
-	private function colorGetter():Int
+	private function get_color():Int
 	{
 		return _color;
 	}
-	private function colorSetter( value:Int ):Int
+	private function set_color( value:Int ):Int
 	{
 		_color = value;
 		draw();
